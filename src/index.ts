@@ -13,6 +13,7 @@
 // @run-at       document-start
 // @license      MIT
 // ==/UserScript==
+// Auto-synced with Greasy Fork Webhook
 
 import { dispatchResponseHook } from './parser';
 import { ajaxHooker } from './core/ajaxHooker';
