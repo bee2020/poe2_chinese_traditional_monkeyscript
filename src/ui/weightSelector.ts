@@ -53,7 +53,7 @@ export function initWeightSelector() {
         const statsDiv = targetSelect.closest('span')?.closest('div');
         if (!statsDiv) return;
 
-        if (statsDiv.querySelector('.preset-weight-select')) return;
+        if (statsDiv.querySelector('.preset-weight-container')) return;
 
         // 动态选项定义（文案 100% 归口 uiMapping 繁中）
         const presetOptions = [
@@ -61,9 +61,9 @@ export function initWeightSelector() {
             { key: 'critDamage', label: UI_TEXT.presetCritDamage, matcher: isCritDamage }
         ];
 
-        // 🌟 声明式创建下拉选择框
+        // 🌟 声明式创建下拉选择框 (样式与下方已保存预设输入框完全一致)
         const selectBox = createSelect({
-            className: 'multiselect filter-select filter-group-select preset-weight-select',
+            className: 'multiselect',
             style: {
                 width: '50%',
                 background: '#1e2124',
@@ -72,7 +72,7 @@ export function initWeightSelector() {
                 marginLeft: '50%',
                 marginTop: '20px',
                 padding: '5px',
-                border: '1px solid #444',
+                border: 'none',
                 borderRadius: '4px'
             },
             options: [
@@ -98,25 +98,37 @@ export function initWeightSelector() {
             }
         });
 
-        statsDiv.appendChild(selectBox);
+        const container = createEl('div', {
+            className: 'multiselect filter-select filter-group-select preset-weight-container',
+            children: [selectBox]
+        });
+
+        statsDiv.appendChild(container);
 
         initSlectMy();
         clearInterval(initSumSelect);
     }, 1000);
 
-    // 2. 动态注入「保存预设」按钮到每个词缀组头部
-    setInterval(() => {
+    // 2. 动态注入「保存预设」按钮到词缀组头部 (仅第一次注入成功后即停止，不再无限循环)
+    const addBtnInterval = setInterval(() => {
         if (!document.querySelector('.multiselect.filter-select.filter-group-select')) return;
-        const statsDivs = document.querySelectorAll('.search-advanced-pane.brown .filter-group-header .filter-body');
-        statsDivs.forEach(div => {
-            const nextSibling = div.nextElementSibling;
-            if (!nextSibling || !nextSibling.classList.contains('saveStat')) {
-                const saveBtnSpan = createEl('span', {
-                    className: 'input-group-btn saveStat',
-                    html: `<button class="btn" style="margin-left:5px;cursor:pointer;">${UI_TEXT.btnSavePreset}</button>`
-                });
-                div.insertAdjacentElement('afterend', saveBtnSpan);
-            }
-        });
+
+        const mainStatDiv = document.querySelector('.search-advanced-pane.brown .filter-group-header .filter-body');
+        if (!mainStatDiv) return;
+
+        const nextSibling = mainStatDiv.nextElementSibling;
+        if (!nextSibling || !nextSibling.classList.contains('saveStat')) {
+            const saveBtnSpan = createEl('span', {
+                className: 'input-group-btn saveStat',
+                html: `<button class="btn" style="margin-left:5px;cursor:pointer;">${UI_TEXT.btnSavePreset}</button>`
+            });
+            mainStatDiv.insertAdjacentElement('afterend', saveBtnSpan);
+
+            // 🌟 第一次成功加入后，立即清除定时器，彻底停止！
+            clearInterval(addBtnInterval);
+        } else {
+            // 页面如果已存在该按钮，也立即销毁定时器
+            clearInterval(addBtnInterval);
+        }
     }, 1000);
 }
