@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         POE2 trade 繁體優化增強版
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
-// @description  POE2 官方交易市集繁體中文優化增強版油猴腳本 (基於官方權威雙源字典純動態構建)
-// @author       Antigravity
+// @version      1.2.3
+// @description  POE2 交易网站繁体以及搜索优化
+// @author       bee2020
 // @match        https://www.pathofexile.com/trade2*
 // @match        https://pathofexile.com/trade2*
 // @grant        GM_xmlhttpRequest
