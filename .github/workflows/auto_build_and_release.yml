@@ -31,7 +31,22 @@ jobs:
       - name: 5. 运行完整性与有效性回归测试
         run: npm test
 
-      - name: 6. 检测更新并自动提交
+      - name: 6. 产物体积安全熔断与有效性检查
+        run: |
+          FILE="dist/poe_trade.user.js"
+          if [ ! -f "$FILE" ]; then
+            echo "❌ 错误: 产物文件 $FILE 不存在！"
+            exit 1
+          fi
+          SIZE=$(stat -c%s "$FILE" 2>/dev/null || stat -f%z "$FILE")
+          echo "产物大小: $SIZE 字节"
+          if [ "$SIZE" -lt 1000000 ]; then
+            echo "❌ 错误: 产物体积异常过小 (< 1MB)，疑似构建损坏，终止发布！"
+            exit 1
+          fi
+          echo "✅ 产物大小校验通过。"
+
+      - name: 7. 检测官方数据是否有实质更新
         id: git_check
         run: |
           git config --global user.name "github-actions[bot]"
@@ -39,17 +54,17 @@ jobs:
           git add build_dict/ src/dict/ dist/
           if git diff --staged --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
-            echo "✅ 官方数据与油猴脚本均无变化，无需提交新版本。"
+            echo "ℹ️ 官方数据与油猴脚本均无实质变动，无需提交，跳过 Release 更新。"
           else
             echo "has_changes=true" >> $GITHUB_OUTPUT
-            echo "🚀 检测到更新，正在提交并推送..."
+            echo "🚀 检测到官方数据更新，正在提交新版本..."
             git commit -m "chore(auto-sync): update POE2 dictionaries and rebuild userscript [skip ci]"
             git push
           fi
 
-      - name: 7. 发布或更新 GitHub Release
+      - name: 8. 仅在有实质变动时发布/更新 GitHub Release
         uses: softprops/action-gh-release@v2
-        if: steps.git_check.outputs.has_changes == 'true' || github.event_name == 'workflow_dispatch'
+        if: steps.git_check.outputs.has_changes == 'true'
         with:
           tag_name: latest
           name: POE2 官方交易市集繁体中文增强版 (最新自动构建)
