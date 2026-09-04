@@ -19,10 +19,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 2. 设置 Node.js 环境
+      - name: 2. 设置 Node.js 环境 (动态匹配最新稳定版)
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 'lts/*'
 
       - name: 3. 依赖缓存检查与恢复
         uses: actions/cache@v4
