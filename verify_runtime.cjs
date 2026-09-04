@@ -9,7 +9,8 @@ const distFile = path.resolve(__dirname, 'dist/poe_trade.user.js');
 assert(fs.existsSync(distFile), 'dist/poe_trade.user.js 文件不存在！');
 const distContent = fs.readFileSync(distFile, 'utf8');
 
-console.log('✅ [1/5] 编译产物存在性验证通过 (体积: ' + (distContent.length / 1024 / 1024).toFixed(2) + ' MB)');
+console.log('✅ [1/5] 编译产物存在性验证通过 (体积: ' + (distContent.length / 1024 / 1024).toFixed(2) + ' MB, ' + distContent.length + ' 字符)');
+assert(distContent.length <= 2097152, `编译产物体积超出 Greasy Fork 2,097,152 字符限制！当前: ${distContent.length} 字符`);
 
 // 2. 验证 UserScript Header
 assert(distContent.includes('// ==UserScript=='), '缺少 UserScript Header 开头');

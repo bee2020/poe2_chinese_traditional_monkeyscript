@@ -15,13 +15,124 @@ const userScriptHeader = headerMatch ? headerMatch[1] : '';
 
 console.log('🚀 [esbuild] 正在启动 TypeScript 模块化工程构建...');
 
-// 2. 针对 src 目录下所有 JSON 字典启用紧凑单行打包插件 (保证业务代码可读，字典紧凑轻量)
+// 2. 针对 src 目录下 JSON 字典启用深度精简插件 (剔除无用冗余元数据与长 URL，确保产物体积严格低于 Greasy Fork 2,097,152 字符限制)
+function cleanStats(data) {
+    if (!data || !Array.isArray(data.result)) return data;
+    return {
+        result: data.result.map(cat => ({
+            id: cat.id,
+            label: cat.label,
+            ...(cat.zh_tw?.label ? { zh_tw: { label: cat.zh_tw.label } } : {}),
+            entries: (cat.entries || []).map(e => {
+                const item = { id: e.id, text: e.text };
+                if (e.zh_tw && e.zh_tw.text) {
+                    item.zh_tw = { text: e.zh_tw.text };
+                }
+                if (e.option && Array.isArray(e.option.options)) {
+                    item.option = {
+                        options: e.option.options.map(o => {
+                            const opt = { id: o.id, text: o.text };
+                            if (o.zh_tw && o.zh_tw.text) {
+                                opt.zh_tw = { text: o.zh_tw.text };
+                            }
+                            return opt;
+                        })
+                    };
+                }
+                return item;
+            })
+        }))
+    };
+}
+
+function cleanStatic(data) {
+    if (!data || !Array.isArray(data.result)) return data;
+    return {
+        result: data.result.map(cat => ({
+            id: cat.id,
+            label: cat.label,
+            ...(cat.zh_tw?.label ? { zh_tw: { label: cat.zh_tw.label } } : {}),
+            entries: (cat.entries || []).map(e => {
+                const item = { id: e.id, text: e.text };
+                if (e.zh_tw && e.zh_tw.text) {
+                    item.zh_tw = { text: e.zh_tw.text };
+                }
+                return item;
+            })
+        }))
+    };
+}
+
+function cleanItems(data) {
+    if (!Array.isArray(data)) return data;
+    return data.map(group => ({
+        id: group.id,
+        label: group.label,
+        ...(group.zh_tw?.label ? { zh_tw: { label: group.zh_tw.label } } : {}),
+        entries: (group.entries || []).map(entry => {
+            const clean = {};
+            if (entry.type) clean.type = entry.type;
+            if (entry.name) clean.name = entry.name;
+            if (entry.text) clean.text = entry.text;
+            if (entry.zh_tw) {
+                clean.zh_tw = {};
+                if (entry.zh_tw.type) clean.zh_tw.type = entry.zh_tw.type;
+                if (entry.zh_tw.name) clean.zh_tw.name = entry.zh_tw.name;
+                if (entry.zh_tw.text) clean.zh_tw.text = entry.zh_tw.text;
+            }
+            return clean;
+        })
+    }));
+}
+
+function cleanFilters(data) {
+    if (!data || !Array.isArray(data.result)) return data;
+    return {
+        result: data.result.map(type => ({
+            id: type.id,
+            title: type.title,
+            ...(type.zh_tw?.title ? { zh_tw: { title: type.zh_tw.title } } : {}),
+            filters: (type.filters || []).map(f => {
+                const item = { id: f.id, text: f.text, title: f.title };
+                if (f.zh_tw?.text) {
+                    item.zh_tw = { text: f.zh_tw.text };
+                }
+                if (f.option && Array.isArray(f.option.options)) {
+                    item.option = {
+                        options: f.option.options.map(o => {
+                            const opt = { id: o.id, text: o.text };
+                            if (o.zh_tw?.text) {
+                                opt.zh_tw = { text: o.zh_tw.text };
+                            }
+                            return opt;
+                        })
+                    };
+                }
+                return item;
+            })
+        }))
+    };
+}
+
 const minifyDictPlugin = {
     name: 'minify-dict-json',
     setup(build) {
         build.onLoad({ filter: /[\\/]src[\\/].*\.json$/ }, async (args) => {
             const jsonText = await fs.promises.readFile(args.path, 'utf8');
-            const minified = JSON.stringify(JSON.parse(jsonText));
+            let parsed = JSON.parse(jsonText);
+            const baseName = path.basename(args.path);
+
+            if (baseName === 'stats.json') {
+                parsed = cleanStats(parsed);
+            } else if (baseName === 'static.json') {
+                parsed = cleanStatic(parsed);
+            } else if (baseName === 'items.json') {
+                parsed = cleanItems(parsed);
+            } else if (baseName === 'filters.json') {
+                parsed = cleanFilters(parsed);
+            }
+
+            const minified = JSON.stringify(parsed);
             return {
                 contents: `export default ${minified};`,
                 loader: 'js'
