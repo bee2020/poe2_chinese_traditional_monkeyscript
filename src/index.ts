@@ -12,8 +12,6 @@
 // @grant        unsafeWindow
 // @run-at       document-start
 // @license      MIT
-// @downloadURL  https://update.greasyfork.org/scripts/593126/POE2%20trade%20%E7%B9%81%E9%AB%94%E5%84%AA%E5%8C%96%E5%A2%9E%E5%BC%B7%E7%89%88.user.js
-// @updateURL    https://update.greasyfork.org/scripts/593126/POE2%20trade%20%E7%B9%81%E9%AB%94%E5%84%AA%E5%8C%96%E5%A2%9E%E5%BC%B7%E7%89%88.meta.js
 // ==/UserScript==
 // Auto-synced with Greasy Fork Webhook
 
