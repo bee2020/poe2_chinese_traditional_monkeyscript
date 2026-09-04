@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: 1. 检出仓库代码
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: 2. 设置 Node.js 环境
         uses: actions/setup-node@v4
@@ -59,7 +61,8 @@ jobs:
             echo "has_changes=true" >> $GITHUB_OUTPUT
             echo "🚀 检测到官方数据更新，正在提交新版本..."
             git commit -m "chore(auto-sync): update POE2 dictionaries and rebuild userscript [skip ci]"
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi
 
       - name: 8. 仅在有实质变动时发布/更新 GitHub Release
