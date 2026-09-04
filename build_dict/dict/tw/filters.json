@@ -1,0 +1,1777 @@
+{
+  "result": [
+    {
+      "id": "status_filters",
+      "filters": [
+        {
+          "id": "status",
+          "option": {
+            "options": [
+              {
+                "id": "available",
+                "text": "Instant Buyout and In Person",
+                "zh_tw": {
+                  "text": "即刻購買以及面對面交易",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "securable",
+                "text": "Instant Buyout",
+                "zh_tw": {
+                  "text": "即刻購買",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "onlineleague",
+                "text": "In Person (Online in League)",
+                "zh_tw": {
+                  "text": "面對面交易(聯盟在線)",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "online",
+                "text": "In Person (Online)",
+                "zh_tw": {
+                  "text": "面對面交易(在線)",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "any",
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "type_filters",
+      "title": "Type Filters",
+      "filters": [
+        {
+          "id": "category",
+          "text": "Item Category",
+          "fullSpan": true,
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon",
+                "text": "Any Weapon",
+                "zh_tw": {
+                  "text": "武器",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.onemelee",
+                "text": "Any One-Handed Melee Weapon",
+                "zh_tw": {
+                  "text": "任何單手近戰武器",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.unarmed",
+                "text": "Unarmed",
+                "zh_tw": {
+                  "text": "空手",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.claw",
+                "text": "Claw",
+                "zh_tw": {
+                  "text": "爪",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.dagger",
+                "text": "Dagger",
+                "zh_tw": {
+                  "text": "匕首",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.onesword",
+                "text": "One-Handed Sword",
+                "zh_tw": {
+                  "text": "單手劍",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.oneaxe",
+                "text": "One-Handed Axe",
+                "zh_tw": {
+                  "text": "單手斧",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.onemace",
+                "text": "One-Handed Mace",
+                "zh_tw": {
+                  "text": "單手錘",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.spear",
+                "text": "Spear",
+                "zh_tw": {
+                  "text": "長鋒",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.flail",
+                "text": "Flail",
+                "zh_tw": {
+                  "text": "鏈錘",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.twomelee",
+                "text": "Any Two-Handed Melee Weapon",
+                "zh_tw": {
+                  "text": "任何雙手近戰武器",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.twosword",
+                "text": "Two-Handed Sword",
+                "zh_tw": {
+                  "text": "雙手劍",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.twoaxe",
+                "text": "Two-Handed Axe",
+                "zh_tw": {
+                  "text": "雙手斧",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.twomace",
+                "text": "Two-Handed Mace",
+                "zh_tw": {
+                  "text": "雙手錘",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.warstaff",
+                "text": "Quarterstaff",
+                "zh_tw": {
+                  "text": "細杖",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.talisman",
+                "text": "Talisman",
+                "zh_tw": {
+                  "text": "魔符",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.ranged",
+                "text": "Any Ranged Weapon",
+                "zh_tw": {
+                  "text": "任何遠程武器",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.bow",
+                "text": "Bow",
+                "zh_tw": {
+                  "text": "弓",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.crossbow",
+                "text": "Crossbow",
+                "zh_tw": {
+                  "text": "十字弓",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.caster",
+                "text": "Any Caster Weapon",
+                "zh_tw": {
+                  "text": "任何法術武器",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.wand",
+                "text": "Wand",
+                "zh_tw": {
+                  "text": "法杖",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.sceptre",
+                "text": "Sceptre",
+                "zh_tw": {
+                  "text": "權杖",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.staff",
+                "text": "Staff",
+                "zh_tw": {
+                  "text": "長杖",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "weapon.rod",
+                "text": "Fishing Rod",
+                "zh_tw": {
+                  "text": "釣竿",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "armour",
+                "text": "Any Armour",
+                "zh_tw": {
+                  "text": "任意護甲",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "armour.helmet",
+                "text": "Helmet",
+                "zh_tw": {
+                  "text": "頭盔",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "armour.chest",
+                "text": "Body Armour",
+                "zh_tw": {
+                  "text": "胸甲",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "armour.gloves",
+                "text": "Gloves",
+                "zh_tw": {
+                  "text": "手套",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "armour.boots",
+                "text": "Boots",
+                "zh_tw": {
+                  "text": "鞋子",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "armour.quiver",
+                "text": "Quiver",
+                "zh_tw": {
+                  "text": "箭袋",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "armour.shield",
+                "text": "Shield",
+                "zh_tw": {
+                  "text": "盾",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "armour.focus",
+                "text": "Focus",
+                "zh_tw": {
+                  "text": "法器",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "armour.buckler",
+                "text": "Buckler",
+                "zh_tw": {
+                  "text": "輕盾",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "accessory",
+                "text": "Any Accessory",
+                "zh_tw": {
+                  "text": "配件",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "accessory.amulet",
+                "text": "Amulet",
+                "zh_tw": {
+                  "text": "項鍊",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "accessory.belt",
+                "text": "Belt",
+                "zh_tw": {
+                  "text": "腰帶",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "accessory.ring",
+                "text": "Ring",
+                "zh_tw": {
+                  "text": "戒指",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "gem",
+                "text": "Any Gem",
+                "zh_tw": {
+                  "text": "任何寶石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "gem.activegem",
+                "text": "Skill Gem",
+                "zh_tw": {
+                  "text": "技能寶石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "gem.supportgem",
+                "text": "Support Gem",
+                "zh_tw": {
+                  "text": "輔助寶石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "gem.metagem",
+                "text": "Meta Gem",
+                "zh_tw": {
+                  "text": "主要寶石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "jewel",
+                "text": "Any Jewel",
+                "zh_tw": {
+                  "text": "任何珠寶",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "flask",
+                "text": "Any Flask",
+                "zh_tw": {
+                  "text": "任何藥劑",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "flask.life",
+                "text": "Life Flask",
+                "zh_tw": {
+                  "text": "生命藥劑",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "flask.mana",
+                "text": "Mana Flask",
+                "zh_tw": {
+                  "text": "魔力藥劑",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "flask.charm",
+                "text": "Charm",
+                "zh_tw": {
+                  "text": "護符",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "map",
+                "text": "Any Endgame Item",
+                "zh_tw": {
+                  "text": "任何終局物品",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "map.waystone",
+                "text": "Waystone",
+                "zh_tw": {
+                  "text": "換界石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "map.fragment",
+                "text": "Map Fragment",
+                "zh_tw": {
+                  "text": "地圖碎片",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "map.logbook",
+                "text": "Logbook",
+                "zh_tw": {
+                  "text": "日誌",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "map.breachstone",
+                "text": "Breachstone",
+                "zh_tw": {
+                  "text": "裂痕石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "map.barya",
+                "text": "Barya",
+                "zh_tw": {
+                  "text": "巨靈之幣",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "map.bosskey",
+                "text": "Pinnacle Key",
+                "zh_tw": {
+                  "text": "巔峰鑰匙",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "map.ultimatum",
+                "text": "Ultimatum Key",
+                "zh_tw": {
+                  "text": "通牒鑰匙",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "map.tablet",
+                "text": "Tablet",
+                "zh_tw": {
+                  "text": "碑牌",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "card",
+                "text": "Divination Card",
+                "zh_tw": {
+                  "text": "命運卡",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "sanctum.relic",
+                "text": "Relic",
+                "zh_tw": {
+                  "text": "古典",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "currency",
+                "text": "Any Currency",
+                "zh_tw": {
+                  "text": "任何通貨",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "currency.omen",
+                "text": "Omen",
+                "zh_tw": {
+                  "text": "預兆",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "currency.socketable",
+                "text": "Any Augment",
+                "zh_tw": {
+                  "text": "任何增幅",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "currency.rune",
+                "text": "Rune",
+                "zh_tw": {
+                  "text": "符文",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "currency.soulcore",
+                "text": "Soul Core",
+                "zh_tw": {
+                  "text": "靈魂核心",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "currency.idol",
+                "text": "Idol",
+                "zh_tw": {
+                  "text": "魔偶",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "道具分類",
+            "source": "official"
+          }
+        },
+        {
+          "id": "rarity",
+          "text": "Item Rarity",
+          "fullSpan": true,
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "normal",
+                "text": "Normal",
+                "zh_tw": {
+                  "text": "一般",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "magic",
+                "text": "Magic",
+                "zh_tw": {
+                  "text": "魔法",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "rare",
+                "text": "Rare",
+                "zh_tw": {
+                  "text": "稀有",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "unique",
+                "text": "Unique",
+                "zh_tw": {
+                  "text": "傳奇",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "uniquefoil",
+                "text": "Unique (Foil)",
+                "zh_tw": {
+                  "text": "傳奇 (貼模)",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "nonunique",
+                "text": "Any Non-Unique",
+                "zh_tw": {
+                  "text": "非傳奇道具",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "物品稀有度",
+            "source": "official"
+          }
+        },
+        {
+          "id": "ilvl",
+          "text": "Item Level",
+          "minMax": true,
+          "zh_tw": {
+            "text": "物品等級",
+            "source": "official"
+          }
+        },
+        {
+          "id": "quality",
+          "text": "Item Quality",
+          "minMax": true,
+          "zh_tw": {
+            "text": "道具品質",
+            "source": "official"
+          }
+        }
+      ],
+      "zh_tw": {
+        "title": "類別過濾",
+        "source": "official"
+      }
+    },
+    {
+      "id": "equipment_filters",
+      "title": "Equipment Filters",
+      "hidden": true,
+      "filters": [
+        {
+          "id": "damage",
+          "text": "Damage",
+          "minMax": true,
+          "zh_tw": {
+            "text": "傷害",
+            "source": "official"
+          }
+        },
+        {
+          "id": "aps",
+          "text": "Attacks per Second",
+          "minMax": true,
+          "zh_tw": {
+            "text": "每秒攻擊速度",
+            "source": "official"
+          }
+        },
+        {
+          "id": "crit",
+          "text": "Critical Chance",
+          "minMax": true,
+          "zh_tw": {
+            "text": "暴擊機率",
+            "source": "official"
+          }
+        },
+        {
+          "id": "dps",
+          "text": "Damage per Second",
+          "minMax": true,
+          "zh_tw": {
+            "text": "每秒傷害",
+            "source": "official"
+          }
+        },
+        {
+          "id": "pdps",
+          "text": "Physical DPS",
+          "minMax": true,
+          "zh_tw": {
+            "text": "物理傷害",
+            "source": "official"
+          }
+        },
+        {
+          "id": "edps",
+          "text": "Elemental DPS",
+          "minMax": true,
+          "zh_tw": {
+            "text": "元素傷害",
+            "source": "official"
+          }
+        },
+        {
+          "id": "reload_time",
+          "text": "Reload Time",
+          "minMax": true,
+          "halfSpan": true,
+          "zh_tw": {
+            "text": "重新載入時間",
+            "source": "official"
+          }
+        },
+        {
+          "id": "ar",
+          "text": "Armour",
+          "tip": "Includes base value, local modifiers, and maximum quality",
+          "minMax": true,
+          "zh_tw": {
+            "text": "護甲",
+            "source": "official"
+          }
+        },
+        {
+          "id": "ev",
+          "text": "Evasion",
+          "tip": "Includes base value, local modifiers, and maximum quality",
+          "minMax": true,
+          "zh_tw": {
+            "text": "閃避",
+            "source": "official"
+          }
+        },
+        {
+          "id": "es",
+          "text": "Energy Shield",
+          "tip": "Includes base value, local modifiers, and maximum quality",
+          "minMax": true,
+          "zh_tw": {
+            "text": "能量護盾",
+            "source": "official"
+          }
+        },
+        {
+          "id": "ward",
+          "text": "Runic Ward",
+          "tip": "Includes base value, local modifiers, and maximum quality",
+          "minMax": true,
+          "zh_tw": {
+            "text": "符文保護",
+            "source": "official"
+          }
+        },
+        {
+          "id": "block",
+          "text": "Block",
+          "tip": "Includes base value and local modifiers",
+          "minMax": true,
+          "zh_tw": {
+            "text": "格擋",
+            "source": "official"
+          }
+        },
+        {
+          "id": "spirit",
+          "text": "Spirit",
+          "tip": "Includes base value, local modifiers, and maximum quality",
+          "minMax": true,
+          "zh_tw": {
+            "text": "精魂",
+            "source": "official"
+          }
+        },
+        {
+          "id": "rune_sockets",
+          "text": "Augmentable Sockets",
+          "minMax": true,
+          "zh_tw": {
+            "text": "可增幅插槽",
+            "source": "official"
+          }
+        }
+      ],
+      "zh_tw": {
+        "title": "裝備篩選器",
+        "source": "official"
+      }
+    },
+    {
+      "id": "req_filters",
+      "title": "Requirements",
+      "hidden": true,
+      "filters": [
+        {
+          "id": "lvl",
+          "text": "Level",
+          "minMax": true,
+          "zh_tw": {
+            "text": "等級",
+            "source": "official"
+          }
+        },
+        {
+          "id": "str",
+          "text": "Strength",
+          "minMax": true,
+          "zh_tw": {
+            "text": "力量",
+            "source": "official"
+          }
+        },
+        {
+          "id": "dex",
+          "text": "Dexterity",
+          "minMax": true,
+          "zh_tw": {
+            "text": "敏捷",
+            "source": "official"
+          }
+        },
+        {
+          "id": "int",
+          "text": "Intelligence",
+          "minMax": true,
+          "zh_tw": {
+            "text": "智慧",
+            "source": "official"
+          }
+        }
+      ],
+      "zh_tw": {
+        "title": "物品需求",
+        "source": "official"
+      }
+    },
+    {
+      "id": "map_filters",
+      "title": "Endgame Filters",
+      "hidden": true,
+      "filters": [
+        {
+          "id": "map_tier",
+          "text": "Waystone Tier",
+          "minMax": true,
+          "zh_tw": {
+            "text": "換界石階級",
+            "source": "official"
+          }
+        },
+        {
+          "id": "map_packsize",
+          "text": "Waystone Packsize",
+          "minMax": true,
+          "zh_tw": {
+            "text": "換界石怪物群大小",
+            "source": "official"
+          }
+        },
+        {
+          "id": "map_magic_monsters",
+          "text": "Monster Effectiveness",
+          "minMax": true,
+          "zh_tw": {
+            "text": "怪物效用",
+            "source": "official"
+          }
+        },
+        {
+          "id": "map_iir",
+          "text": "Waystone IIR",
+          "tip": "Increased Item Rarity",
+          "minMax": true,
+          "zh_tw": {
+            "text": "換界石物品稀有度",
+            "source": "official"
+          }
+        },
+        {
+          "id": "map_rare_monsters",
+          "text": "Monster Rarity",
+          "minMax": true,
+          "zh_tw": {
+            "text": "怪物稀有度",
+            "source": "official"
+          }
+        },
+        {
+          "id": "map_revives",
+          "text": "Waystone Revives",
+          "minMax": true,
+          "zh_tw": {
+            "text": "換界石復活次數",
+            "source": "official"
+          }
+        },
+        {
+          "id": "map_bonus",
+          "text": "Waystone Drop Chance",
+          "minMax": true,
+          "zh_tw": {
+            "text": "換界石掉落機率",
+            "source": "official"
+          }
+        },
+        {
+          "id": "map_gold",
+          "text": "Waystone Gold",
+          "minMax": true,
+          "zh_tw": {
+            "text": "換界石金幣數量",
+            "source": "official"
+          }
+        },
+        {
+          "id": "map_experience",
+          "text": "Waystone Experience",
+          "minMax": true,
+          "zh_tw": {
+            "text": "換界石經驗值獲取",
+            "source": "official"
+          }
+        },
+        {
+          "id": "ultimatum_hint",
+          "text": "Ultimatum Trial Hint",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "Victorious",
+                "text": "Victorious",
+                "zh_tw": {
+                  "text": "勝利",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "Cowardly",
+                "text": "Cowardly",
+                "zh_tw": {
+                  "text": "怯懦",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "Deadly",
+                "text": "Deadly",
+                "zh_tw": {
+                  "text": "致命",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "最後通牒試煉提示",
+            "source": "official"
+          }
+        }
+      ],
+      "zh_tw": {
+        "title": "終局篩選器",
+        "source": "official"
+      }
+    },
+    {
+      "id": "misc_filters",
+      "title": "Miscellaneous",
+      "hidden": true,
+      "filters": [
+        {
+          "id": "gem_level",
+          "text": "Gem Level",
+          "minMax": true,
+          "zh_tw": {
+            "text": "寶石等級",
+            "source": "official"
+          }
+        },
+        {
+          "id": "gem_sockets",
+          "text": "Gem Sockets",
+          "minMax": true,
+          "zh_tw": {
+            "text": "寶石插槽",
+            "source": "official"
+          }
+        },
+        {
+          "id": "area_level",
+          "text": "Area Level",
+          "minMax": true,
+          "zh_tw": {
+            "text": "區域等級",
+            "source": "official"
+          }
+        },
+        {
+          "id": "stack_size",
+          "text": "Stack Size",
+          "minMax": true,
+          "zh_tw": {
+            "text": "堆疊數量",
+            "source": "official"
+          }
+        },
+        {
+          "id": "identified",
+          "text": "Identified",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "false",
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "已鑑定",
+            "source": "official"
+          }
+        },
+        {
+          "id": "fractured_item",
+          "text": "Fractured",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "false",
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "破裂",
+            "source": "official"
+          }
+        },
+        {
+          "id": "corrupted",
+          "text": "Corrupted",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "false",
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "已汙染",
+            "source": "official"
+          }
+        },
+        {
+          "id": "sanctified",
+          "text": "Sanctified",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "false",
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "聖化",
+            "source": "official"
+          }
+        },
+        {
+          "id": "twice_corrupted",
+          "text": "Twice Corrupted",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "false",
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "雙重腐化",
+            "source": "official"
+          }
+        },
+        {
+          "id": "mutated",
+          "text": "Cultivated Vaal Unique",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "false",
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "已培育的瓦爾傳奇",
+            "source": "official"
+          }
+        },
+        {
+          "id": "veiled",
+          "text": "Unrevealed",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "false",
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "未揭露",
+            "source": "official"
+          }
+        },
+        {
+          "id": "desecrated",
+          "text": "Desecrated",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "false",
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "褻瀆",
+            "source": "official"
+          }
+        },
+        {
+          "id": "crafted",
+          "text": "Crafted",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "false",
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "已工藝",
+            "source": "official"
+          }
+        },
+        {
+          "id": "foreseeing",
+          "text": "Foreseeing",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "false",
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "預見",
+            "source": "official"
+          }
+        },
+        {
+          "id": "mirrored",
+          "text": "Mirrored",
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "false",
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "已複製",
+            "source": "official"
+          }
+        },
+        {
+          "id": "sanctum_gold",
+          "text": "Barya Sacred Water",
+          "minMax": true,
+          "zh_tw": {
+            "text": "巨靈之幣神聖之水",
+            "source": "official"
+          }
+        },
+        {
+          "id": "unidentified_tier",
+          "text": "Unidentified Tier",
+          "minMax": true,
+          "zh_tw": {
+            "text": "未鑑定階級",
+            "source": "official"
+          }
+        }
+      ],
+      "zh_tw": {
+        "title": "其它",
+        "source": "official"
+      }
+    },
+    {
+      "id": "trade_filters",
+      "title": "Trade Filters",
+      "hidden": true,
+      "filters": [
+        {
+          "id": "account",
+          "text": "Seller Account",
+          "fullSpan": true,
+          "input": {
+            "placeholder": "Enter account name..."
+          },
+          "zh_tw": {
+            "text": "賣家帳號",
+            "source": "official"
+          }
+        },
+        {
+          "id": "collapse",
+          "text": "Collapse Listings by Account",
+          "fullSpan": true,
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "No",
+                "zh_tw": {
+                  "text": "否",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "true",
+                "text": "Yes",
+                "zh_tw": {
+                  "text": "是",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "透過帳號摺疊名單",
+            "source": "official"
+          }
+        },
+        {
+          "id": "indexed",
+          "text": "Listed",
+          "fullSpan": true,
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Any Time",
+                "zh_tw": {
+                  "text": "任何時間",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "1hour",
+                "text": "Up to an Hour Ago",
+                "zh_tw": {
+                  "text": "1 小時前",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "3hours",
+                "text": "Up to 3 Hours Ago",
+                "zh_tw": {
+                  "text": "3 小時前",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "12hours",
+                "text": "Up to 12 Hours Ago",
+                "zh_tw": {
+                  "text": "12 小時前",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "1day",
+                "text": "Up to a Day Ago",
+                "zh_tw": {
+                  "text": "至多 1 天前",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "3days",
+                "text": "Up to 3 Days Ago",
+                "zh_tw": {
+                  "text": "至多 3 天前",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "1week",
+                "text": "Up to a Week Ago",
+                "zh_tw": {
+                  "text": "至多 1 個禮拜前",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "2weeks",
+                "text": "Up to 2 Weeks Ago",
+                "zh_tw": {
+                  "text": "至多 2 個禮拜前",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "1month",
+                "text": "Up to 1 Month Ago",
+                "zh_tw": {
+                  "text": "至多 1 個月前",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "2months",
+                "text": "Up to 2 Months Ago",
+                "zh_tw": {
+                  "text": "至多 2 個月前",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "標示",
+            "source": "official"
+          }
+        },
+        {
+          "id": "sale_type",
+          "text": "Sale Type",
+          "fullSpan": true,
+          "option": {
+            "options": [
+              {
+                "id": "any",
+                "text": "Any",
+                "zh_tw": {
+                  "text": "任何",
+                  "source": "official"
+                }
+              },
+              {
+                "id": null,
+                "text": "Buyout or Fixed Price",
+                "zh_tw": {
+                  "text": "直購價或定價",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "priced_with_info",
+                "text": "Price with Note",
+                "zh_tw": {
+                  "text": "標價：",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "unpriced",
+                "text": "No Listed Price",
+                "zh_tw": {
+                  "text": "無定價",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "zh_tw": {
+            "text": "販售型式",
+            "source": "official"
+          }
+        },
+        {
+          "id": "fee",
+          "text": "Gold Fee",
+          "fullSpan": true,
+          "minMax": true,
+          "zh_tw": {
+            "text": "金幣手續費",
+            "source": "official"
+          }
+        },
+        {
+          "id": "price",
+          "text": "Buyout Price",
+          "fullSpan": true,
+          "option": {
+            "options": [
+              {
+                "id": null,
+                "text": "Exalted Orb Equivalent",
+                "zh_tw": {
+                  "text": "等同崇高石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "exalted_divine",
+                "text": "Exalted or Divine Orbs",
+                "zh_tw": {
+                  "text": "崇高石或神聖石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "aug",
+                "text": "Orb of Augmentation",
+                "zh_tw": {
+                  "text": "增幅石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "transmute",
+                "text": "Orb of Transmutation",
+                "zh_tw": {
+                  "text": "蛻變石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "exalted",
+                "text": "Exalted Orb",
+                "zh_tw": {
+                  "text": "崇高石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "regal",
+                "text": "Regal Orb",
+                "zh_tw": {
+                  "text": "富豪石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "chaos",
+                "text": "Chaos Orb",
+                "zh_tw": {
+                  "text": "混沌石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "vaal",
+                "text": "Vaal Orb",
+                "zh_tw": {
+                  "text": "瓦爾寶珠",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "alch",
+                "text": "Orb of Alchemy",
+                "zh_tw": {
+                  "text": "點金石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "divine",
+                "text": "Divine Orb",
+                "zh_tw": {
+                  "text": "神聖石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "annul",
+                "text": "Orb of Annulment",
+                "zh_tw": {
+                  "text": "無效石",
+                  "source": "official"
+                }
+              },
+              {
+                "id": "mirror",
+                "text": "Mirror of Kalandra",
+                "zh_tw": {
+                  "text": "卡蘭德魔鏡",
+                  "source": "official"
+                }
+              }
+            ]
+          },
+          "minMax": true,
+          "zh_tw": {
+            "text": "直購價",
+            "source": "official"
+          }
+        }
+      ],
+      "zh_tw": {
+        "title": "交易過濾",
+        "source": "official"
+      }
+    }
+  ]
+}

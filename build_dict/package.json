@@ -1,0 +1,15 @@
+{
+  "name": "poe2_chinese-traditional_dict",
+  "version": "1.0.0",
+  "description": "Path of Exile 2 官方交易市集 4 大核心字典全自动双源同步与繁中对齐流水线",
+  "main": "pipeline.cjs",
+  "scripts": {
+    "step1:fetch": "node scripts/fetch.cjs",
+    "step2:build": "node scripts/build.cjs",
+    "step3:diff": "node scripts/diff.cjs",
+    "pipeline": "node pipeline.cjs"
+  },
+  "keywords": ["poe2", "path-of-exile-2", "trade", "traditional-chinese", "dictionary", "i18n"],
+  "author": "Antigravity",
+  "license": "MIT"
+}

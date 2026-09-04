@@ -1,0 +1,62 @@
+name: POE2 Trade Userscript Auto Sync & Release
+
+on:
+  schedule:
+    # 每天 UTC 0 点 (北京时间早 8 点) 自动运行
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 允许在 GitHub Actions 页面随时手动一键触发
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. 检出仓库代码
+        uses: actions/checkout@v4
+
+      - name: 2. 设置 Node.js 环境
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 3. 安装依赖
+        run: npm ci || npm install
+
+      - name: 4. 全自动拉取官方最新数据、同步并编译油猴脚本
+        run: npm run build:all
+
+      - name: 5. 运行完整性与有效性回归测试
+        run: npm test
+
+      - name: 6. 检测更新并自动提交
+        id: git_check
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add build_dict/ src/dict/ dist/
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "✅ 官方数据与油猴脚本均无变化，无需提交新版本。"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "🚀 检测到更新，正在提交并推送..."
+            git commit -m "chore(auto-sync): update POE2 dictionaries and rebuild userscript [skip ci]"
+            git push
+          fi
+
+      - name: 7. 发布或更新 GitHub Release
+        uses: softprops/action-gh-release@v2
+        if: steps.git_check.outputs.has_changes == 'true' || github.event_name == 'workflow_dispatch'
+        with:
+          tag_name: latest
+          name: POE2 官方交易市集繁体中文增强版 (最新自动构建)
+          files: dist/poe_trade.user.js
+          body: |
+            ## 自动构建说明
+            本版本由 GitHub Actions 基于 GGG 国际服与台服官方 API 全自动拉取、构建并经过完整回归测试。
+
+            - **油猴脚本直接安装地址**：[poe_trade.user.js](https://github.com/${{ github.repository }}/releases/download/latest/poe_trade.user.js)
+            - **自动构建频率**：每天北京时间 08:00

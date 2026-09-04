@@ -1,0 +1,28 @@
+{
+  "name": "poe2_chinese_traditional_monkeyscript",
+  "version": "1.0.0",
+  "description": "POE2 官方交易市集繁体中文优化增强版油猴脚本 (基于官方权威双源字典纯动态构建)",
+  "main": "dist/poe_trade.user.js",
+  "scripts": {
+    "sync:dict": "node scripts/sync-dict.cjs",
+    "build:dict": "node build_dict/pipeline.cjs",
+    "build": "node scripts/sync-dict.cjs && node build.js",
+    "build:all": "node build_dict/pipeline.cjs && node scripts/sync-dict.cjs && node build.js",
+    "test": "node verify_runtime.cjs"
+  },
+  "keywords": [
+    "tampermonkey",
+    "userscript",
+    "poe2",
+    "path-of-exile-2",
+    "traditional-chinese",
+    "trade"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/tampermonkey": "^5.5.0",
+    "esbuild": "^0.25.12",
+    "typescript": "^5.9.3"
+  }
+}
