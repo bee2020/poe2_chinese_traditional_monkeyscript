@@ -8,7 +8,7 @@ poe2_chinese_traditional_monkeyscript/
 │   └── auto_build_and_release.yml  # GitHub Actions 每日自动构建与发布
 ├── build_dict/                     # 官方字典抓取翻译
 │   ├── raw/                        # 官方原始 JSON (en / tw)
-│   ├── dict/tw/                    # 繁中 4 大字典 (items/stats/static/filters)
+│   ├── dict/tw/                    # 繁体 4 大字典 (items/stats/static/filters)
 │   ├── changelogs/                 # 字典更新日志
 │   ├── scripts/                    # 抓取与对齐脚本
 │   └── pipeline.cjs                # 字典构建总入口
