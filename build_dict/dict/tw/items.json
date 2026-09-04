@@ -19362,7 +19362,7 @@
       {
         "type": "Warding Rune of Stability",
         "zh_tw": {
-          "type": "義許塔��偶",
+          "type": "義許塔魔���",
           "source": "official"
         }
       },
@@ -19628,7 +19628,7 @@
       {
         "type": "Soul Core of Xopec",
         "zh_tw": {
-          "type": "柔派克靈魂核��",
+          "type": "柔派克靈魂核心",
           "source": "poe2db"
         }
       },
@@ -20676,7 +20676,7 @@
       {
         "type": "Freezing Salvo",
         "zh_tw": {
-          "type": "��結齊射",
+          "type": "凍���齊射",
           "source": "official"
         }
       },
@@ -21796,7 +21796,7 @@
       {
         "type": "Frostflame Nova",
         "zh_tw": {
-          "type": "霜火���星",
+          "type": "霜火新星",
           "source": "official"
         }
       },
@@ -25296,7 +25296,7 @@
       {
         "type": "Hulking Minions",
         "zh_tw": {
-          "type": "��除",
+          "type": "切���",
           "source": "official"
         }
       },
@@ -26521,7 +26521,7 @@
       {
         "type": "Unerring Power",
         "zh_tw": {
-          "type": "動��� I",
+          "type": "動亂 I",
           "source": "official"
         }
       },
@@ -28499,7 +28499,7 @@
       {
         "type": "Runemastered Runic Fork",
         "zh_tw": {
-          "type": "紋刻十字弓",
+          "type": "���刻十字弓",
           "source": "official"
         }
       },
@@ -31132,9 +31132,9 @@
         },
         "zh_tw": {
           "type": "原始魔符",
-          "name": "摩蹉",
-          "text": "摩蹉",
-          "source": "poe2db"
+          "name": "未完成",
+          "text": "未完成 原始魔符",
+          "source": "official"
         }
       },
       {
@@ -31146,9 +31146,9 @@
         },
         "zh_tw": {
           "type": "拱形巨斧",
-          "name": "摩蹉",
-          "text": "摩蹉",
-          "source": "poe2db"
+          "name": "未完成",
+          "text": "未完成 拱形巨斧",
+          "source": "official"
         }
       },
       {
@@ -31314,8 +31314,8 @@
         },
         "zh_tw": {
           "type": "翠玉魔符",
-          "name": "血��傀儡",
-          "text": "血��傀儡 翠玉魔符",
+          "name": "血肉���儡",
+          "text": "血肉���儡 翠玉魔符",
           "source": "official"
         }
       },
@@ -31328,8 +31328,8 @@
         },
         "zh_tw": {
           "type": "符煉家族魔符",
-          "name": "血��傀儡",
-          "text": "血��傀儡 符煉家族魔符",
+          "name": "血肉���儡",
+          "text": "血肉���儡 符煉家族魔符",
           "source": "official"
         }
       },
@@ -31342,8 +31342,8 @@
         },
         "zh_tw": {
           "type": "符鍛惡毒魔符",
-          "name": "血��傀儡",
-          "text": "血��傀儡 符鍛惡毒魔符",
+          "name": "血肉���儡",
+          "text": "血肉���儡 符鍛惡毒魔符",
           "source": "official"
         }
       },
@@ -31481,7 +31481,7 @@
           "unique": true
         },
         "zh_tw": {
-          "type": "紋刻十字弓",
+          "type": "���刻十字弓",
           "name": "符文探求者之喚",
           "text": "符文探求者之喚",
           "source": "poe2db"
