@@ -12,7 +12,7 @@
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        unsafeWindow
-// @run-at       document-start
+// @run-at       document-end
 // @license      MIT
 // ==/UserScript==
 
