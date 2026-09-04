@@ -1,8 +1,10 @@
 // ==UserScript==
-// @name         POE2 trade 繁體優化增強版
+// @name         POE2-Trade-Traditional-Chinese
+// @name:zh-TW   POE2 trade 繁體優化增強版
 // @namespace    http://tampermonkey.net/
 // @version      1.2.3
 // @description  POE2 交易网站繁体以及搜索优化
+// @description:zh-TW POE2 交易網站繁體以及搜尋優化
 // @author       bee2020
 // @match        https://www.pathofexile.com/trade2*
 // @match        https://pathofexile.com/trade2*

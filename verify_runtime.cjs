@@ -15,7 +15,8 @@ assert(distContent.length <= 2097152, `编译产物体积超出 Greasy Fork 2,09
 // 2. 验证 UserScript Header
 assert(distContent.includes('// ==UserScript=='), '缺少 UserScript Header 开头');
 assert(distContent.includes('// ==/UserScript=='), '缺少 UserScript Header 结尾');
-assert(distContent.includes('@name         POE2 trade 繁體優化增強版'), '脚本名称未正确写入');
+assert(distContent.includes('@name         POE2-Trade-Traditional-Chinese'), '主脚本名称未正确写入');
+assert(distContent.includes('@name:zh-TW   POE2 trade 繁體優化增強版'), '繁体本地化名称未正确写入');
 assert(distContent.includes('@match        https://www.pathofexile.com/trade2*'), '缺少 match 规则');
 
 console.log('✅ [2/5] UserScript Header 规范性验证通过');
