@@ -2,9 +2,9 @@
 // @name         POE2-Trade-Traditional-Chinese
 // @name:zh-TW   POE2 trade 繁體優化增強版
 // @namespace    http://tampermonkey.net/
-// @version      1.2.3
-// @description  POE2 交易网站繁体以及搜索优化
-// @description:zh-TW POE2 交易網站繁體以及搜尋優化
+// @version      1.2.4
+// @description  POE2 交易网站繁体以及搜索优化 (内置 Cloudflare 安全验证静默守护)
+// @description:zh-TW POE2 交易網站繁體以及搜尋優化 (內建 Cloudflare 安全驗證靜默守護)
 // @author       bee2020
 // @match        https://www.pathofexile.com/trade2*
 // @match        https://pathofexile.com/trade2*
@@ -1735,37 +1735,77 @@
 
   // src/index.ts
   // @license      MIT
+  function isCloudflareChallenge() {
+    return !!(document.getElementById("challenge-stage") || document.getElementById("challenge-form") || document.querySelector("#cf-wrapper") || document.querySelector(".cf-browser-verification") || document.title && document.title.includes("Just a moment"));
+  }
+  function isMarketPageReady() {
+    return !!(document.querySelector("#trade") || document.querySelector("ul.nav.nav-tabs.account") || document.querySelector(".trade-container"));
+  }
+  function runWhenMarketReady(startApp) {
+    if (isCloudflareChallenge()) {
+      console.log("[POE2-Trade] 检测到 Cloudflare 安全验证页，脚本保持静默守护中...");
+      const timer = setInterval(() => {
+        if (!isCloudflareChallenge() && isMarketPageReady()) {
+          clearInterval(timer);
+          console.log("[POE2-Trade] 安全验证已通过，唤醒启动集市增强逻辑");
+          startApp();
+        }
+      }, 1e3);
+      return;
+    }
+    startApp();
+  }
   (async () => {
     "use strict";
     const applyState = GM_getValue("applyState") !== void 0 ? GM_getValue("applyState") : 1;
     const dataMap = GM_getValue("dataMap") ? GM_getValue("dataMap") : {};
     const whisperMap = {};
     ajaxHooker.hook((request) => {
+      if (!request.url.includes("/api/trade2/")) return;
       request.response = (res) => {
         dispatchResponseHook(request, res, applyState, dataMap, whisperMap);
       };
     });
-    const checkInterval = 5e3;
-    function checkLocalStorage() {
-      const hasAllCaches = localStorage.getItem("lscache-trade2data") && localStorage.getItem("lscache-trade2items") && localStorage.getItem("lscache-trade2stats") && localStorage.getItem("lscache-trade2filters");
-      const span = document.querySelector(".applyTw a span");
-      if (hasAllCaches && span) {
-        try {
-          const trade2filters = JSON.parse(localStorage.getItem("lscache-trade2filters") || "[]");
-          if (Array.isArray(trade2filters) && trade2filters.some((a) => a.title === "交易過濾" || a.title === "交易过滤")) {
-            GM_setValue("applyState", 1);
-            span.textContent = "取消繁體化";
-          } else if (Array.isArray(trade2filters) && trade2filters.length > 0) {
-            GM_setValue("applyState", 2);
-            span.textContent = "開啟繁體化";
+    runWhenMarketReady(() => {
+      initMarketApp();
+    });
+    function initMarketApp() {
+      const checkInterval = 5e3;
+      function checkLocalStorage() {
+        const hasAllCaches = localStorage.getItem("lscache-trade2data") && localStorage.getItem("lscache-trade2items") && localStorage.getItem("lscache-trade2stats") && localStorage.getItem("lscache-trade2filters");
+        const span = document.querySelector(".applyTw a span");
+        if (hasAllCaches && span) {
+          try {
+            const trade2filters = JSON.parse(localStorage.getItem("lscache-trade2filters") || "[]");
+            if (Array.isArray(trade2filters) && trade2filters.some((a) => a.title === "交易過濾" || a.title === "交易过滤")) {
+              GM_setValue("applyState", 1);
+              span.textContent = "取消繁體化";
+            } else if (Array.isArray(trade2filters) && trade2filters.length > 0) {
+              GM_setValue("applyState", 2);
+              span.textContent = "開啟繁體化";
+            }
+          } catch (e) {
+            console.error(e);
           }
-        } catch (e) {
-          console.error(e);
         }
       }
+      setInterval(checkLocalStorage, checkInterval);
+      checkLocalStorage();
+      const initUI = () => {
+        setupUIEventListeners();
+        mountNavButtons();
+        initWeightSelector();
+      };
+      if (document.readyState === "complete" || document.readyState === "interactive") {
+        initUI();
+      } else {
+        window.addEventListener("load", initUI);
+      }
+      if (applyState === 1) {
+        initLiveDOMTranslator();
+      }
     }
-    setInterval(checkLocalStorage, checkInterval);
-    window.addEventListener("load", function() {
+    function setupUIEventListeners() {
       document.addEventListener("click", function(event) {
         if (event.target.closest(".applyTw")) {
           event.preventDefault();
@@ -1790,36 +1830,45 @@
           openSaveModal(index);
         }
       });
-      const tabList = document.querySelector("ul.nav.nav-tabs.account");
-      if (!tabList) {
-        return;
-      }
-      const applyLi = createEl("li", {
-        className: "applyTw",
-        attrs: { role: "presentation" },
-        style: { float: "right", height: "32px" },
-        children: [
-          createEl("a", {
-            attrs: { href: "#" },
-            html: `<span>${applyState === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw}</span>`
-          })
-        ]
-      });
-      tabList.appendChild(applyLi);
-      const autoLgLi = createEl("li", {
-        className: "applyAutoLg",
-        attrs: { role: "presentation" },
-        style: { float: "right", height: "32px" },
-        children: [
-          createEl("a", {
-            attrs: { href: "#" },
-            html: `<span>${UI_TEXT.btnAutoLg}</span>`
-          })
-        ]
-      });
-      tabList.appendChild(autoLgLi);
-      initWeightSelector();
-    });
+    }
+    function mountNavButtons() {
+      let retries = 0;
+      const tryMount = () => {
+        const tabList = document.querySelector("ul.nav.nav-tabs.account");
+        if (!tabList) {
+          if (retries++ < 20) {
+            setTimeout(tryMount, 500);
+          }
+          return;
+        }
+        if (tabList.querySelector(".applyTw")) return;
+        const applyLi = createEl("li", {
+          className: "applyTw",
+          attrs: { role: "presentation" },
+          style: { float: "right", height: "32px" },
+          children: [
+            createEl("a", {
+              attrs: { href: "#" },
+              html: `<span>${applyState === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw}</span>`
+            })
+          ]
+        });
+        tabList.appendChild(applyLi);
+        const autoLgLi = createEl("li", {
+          className: "applyAutoLg",
+          attrs: { role: "presentation" },
+          style: { float: "right", height: "32px" },
+          children: [
+            createEl("a", {
+              attrs: { href: "#" },
+              html: `<span>${UI_TEXT.btnAutoLg}</span>`
+            })
+          ]
+        });
+        tabList.appendChild(autoLgLi);
+      };
+      tryMount();
+    }
     function ajax(url, method, data2, successCallback, errorCallback) {
       const xhr = new XMLHttpRequest();
       xhr.open(method, url, true);
@@ -1899,13 +1948,6 @@
           replaceTextInNode(document.body);
         }
       }, 2e3);
-    }
-    if (applyState === 1) {
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initLiveDOMTranslator);
-      } else {
-        initLiveDOMTranslator();
-      }
     }
   })();
 })();

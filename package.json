@@ -1,6 +1,6 @@
 {
   "name": "poe2_chinese_traditional_monkeyscript",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "POE2 官方交易市集繁体中文优化增强版油猴脚本 (基于官方权威双源字典纯动态构建)",
   "main": "dist/poe_trade.user.js",
   "scripts": {

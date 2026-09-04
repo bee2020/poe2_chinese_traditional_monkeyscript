@@ -2,9 +2,9 @@
 // @name         POE2-Trade-Traditional-Chinese
 // @name:zh-TW   POE2 trade 繁體優化增強版
 // @namespace    http://tampermonkey.net/
-// @version      1.2.3
-// @description  POE2 交易网站繁体以及搜索优化
-// @description:zh-TW POE2 交易網站繁體以及搜尋優化
+// @version      1.2.4
+// @description  POE2 交易网站繁体以及搜索优化 (内置 Cloudflare 安全验证静默守护)
+// @description:zh-TW POE2 交易網站繁體以及搜尋優化 (內建 Cloudflare 安全驗證靜默守護)
 // @author       bee2020
 // @match        https://www.pathofexile.com/trade2*
 // @match        https://pathofexile.com/trade2*
@@ -24,46 +24,118 @@ import { initWeightSelector } from './ui/weightSelector';
 import { domTranslations, UI_TEXT } from './ui/uiMapping';
 import { createEl } from './ui/domHelper';
 
+/**
+ * 🛡️ Cloudflare 验证检测守卫
+ * 检测当前页面是否处于 Cloudflare 安全验证盾/挑战页状态
+ */
+function isCloudflareChallenge(): boolean {
+    return !!(
+        document.getElementById('challenge-stage') ||
+        document.getElementById('challenge-form') ||
+        document.querySelector('#cf-wrapper') ||
+        document.querySelector('.cf-browser-verification') ||
+        (document.title && document.title.includes('Just a moment'))
+    );
+}
+
+/**
+ * 🛡️ 判断是否已进入真实的 POE2 集市页面
+ */
+function isMarketPageReady(): boolean {
+    return !!(
+        document.querySelector('#trade') ||
+        document.querySelector('ul.nav.nav-tabs.account') ||
+        document.querySelector('.trade-container')
+    );
+}
+
+/**
+ * 🛡️ 静默守护协调器：
+ * 遇到 Cloudflare 安全验证页时保持绝对静默，绝不触碰 DOM 或开启轮询/Observer；
+ * 验证通过进入真实集市后，再唤醒启动主程序。
+ */
+function runWhenMarketReady(startApp: () => void) {
+    if (isCloudflareChallenge()) {
+        console.log('[POE2-Trade] 检测到 Cloudflare 安全验证页，脚本保持静默守护中...');
+        const timer = setInterval(() => {
+            if (!isCloudflareChallenge() && isMarketPageReady()) {
+                clearInterval(timer);
+                console.log('[POE2-Trade] 安全验证已通过，唤醒启动集市增强逻辑');
+                startApp();
+            }
+        }, 1000);
+        return;
+    }
+
+    // 非验证盾页面，立即执行
+    startApp();
+}
+
 (async () => {
     'use strict';
     const applyState: number = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
     const dataMap = GM_getValue('dataMap') ? GM_getValue('dataMap') : {};
     const whisperMap: Record<string, string> = {};
 
-    // 🌟 最早时刻挂载网络拦截器 (在页面发起任何 fetch/xhr 请求前生效)
+    // 🌟 最早时刻挂载网络拦截器 (严格白名单限制，对 CF 验证及非交易请求完全无感放行)
     ajaxHooker.hook((request: any) => {
+        if (!request.url.includes('/api/trade2/')) return;
         request.response = (res: any) => {
             dispatchResponseHook(request, res, applyState, dataMap, whisperMap);
         };
     });
 
-    const checkInterval = 5000;
+    // 🛡️ DOM 与业务生命周期守卫：遇到 Cloudflare 安全验证页时保持静默，等待进入真实集市
+    runWhenMarketReady(() => {
+        initMarketApp();
+    });
 
-    function checkLocalStorage() {
-        const hasAllCaches = localStorage.getItem('lscache-trade2data') &&
-                             localStorage.getItem('lscache-trade2items') &&
-                             localStorage.getItem('lscache-trade2stats') &&
-                             localStorage.getItem('lscache-trade2filters');
-        const span = document.querySelector('.applyTw a span');
-        if (hasAllCaches && span) {
-            try {
-                const trade2filters = JSON.parse(localStorage.getItem('lscache-trade2filters') || '[]');
-                if (Array.isArray(trade2filters) && trade2filters.some((a: any) => a.title === '交易過濾' || a.title === '交易过滤')) {
-                    GM_setValue('applyState', 1);
-                    span.textContent = '取消繁體化';
-                } else if (Array.isArray(trade2filters) && trade2filters.length > 0) {
-                    GM_setValue('applyState', 2);
-                    span.textContent = '開啟繁體化';
+    function initMarketApp() {
+        const checkInterval = 5000;
+
+        function checkLocalStorage() {
+            const hasAllCaches = localStorage.getItem('lscache-trade2data') &&
+                                 localStorage.getItem('lscache-trade2items') &&
+                                 localStorage.getItem('lscache-trade2stats') &&
+                                 localStorage.getItem('lscache-trade2filters');
+            const span = document.querySelector('.applyTw a span');
+            if (hasAllCaches && span) {
+                try {
+                    const trade2filters = JSON.parse(localStorage.getItem('lscache-trade2filters') || '[]');
+                    if (Array.isArray(trade2filters) && trade2filters.some((a: any) => a.title === '交易過濾' || a.title === '交易过滤')) {
+                        GM_setValue('applyState', 1);
+                        span.textContent = '取消繁體化';
+                    } else if (Array.isArray(trade2filters) && trade2filters.length > 0) {
+                        GM_setValue('applyState', 2);
+                        span.textContent = '開啟繁體化';
+                    }
+                } catch (e) {
+                    console.error(e);
                 }
-            } catch (e) {
-                console.error(e);
             }
+        }
+
+        setInterval(checkLocalStorage, checkInterval);
+        checkLocalStorage();
+
+        const initUI = () => {
+            setupUIEventListeners();
+            mountNavButtons();
+            initWeightSelector();
+        };
+
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initUI();
+        } else {
+            window.addEventListener('load', initUI);
+        }
+
+        if (applyState === 1) {
+            initLiveDOMTranslator();
         }
     }
 
-    setInterval(checkLocalStorage, checkInterval);
-
-    window.addEventListener('load', function() {
+    function setupUIEventListeners() {
         document.addEventListener('click', function(event: any) {
             if (event.target.closest('.applyTw')) {
                 event.preventDefault();
@@ -88,44 +160,52 @@ import { createEl } from './ui/domHelper';
                 openSaveModal(index);
             }
         });
+    }
 
-        // 查找顶部导航栏 ul 元素
-        const tabList = document.querySelector('ul.nav.nav-tabs.account');
-        if (!tabList) {
-            return;
-        }
+    function mountNavButtons() {
+        let retries = 0;
+        const tryMount = () => {
+            const tabList = document.querySelector('ul.nav.nav-tabs.account');
+            if (!tabList) {
+                if (retries++ < 20) {
+                    setTimeout(tryMount, 500);
+                }
+                return;
+            }
 
-        // 1. 创建繁体化开关按钮
-        const applyLi = createEl('li', {
-            className: 'applyTw',
-            attrs: { role: 'presentation' },
-            style: { float: 'right', height: '32px' },
-            children: [
-                createEl('a', {
-                    attrs: { href: '#' },
-                    html: `<span>${applyState === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw}</span>`
-                })
-            ]
-        });
-        tabList.appendChild(applyLi);
+            if (tabList.querySelector('.applyTw')) return;
 
-        // 2. 创建仓库定位快捷按钮
-        const autoLgLi = createEl('li', {
-            className: 'applyAutoLg',
-            attrs: { role: 'presentation' },
-            style: { float: 'right', height: '32px' },
-            children: [
-                createEl('a', {
-                    attrs: { href: '#' },
-                    html: `<span>${UI_TEXT.btnAutoLg}</span>`
-                })
-            ]
-        });
-        tabList.appendChild(autoLgLi);
+            // 1. 创建繁体化开关按钮
+            const applyLi = createEl('li', {
+                className: 'applyTw',
+                attrs: { role: 'presentation' },
+                style: { float: 'right', height: '32px' },
+                children: [
+                    createEl('a', {
+                        attrs: { href: '#' },
+                        html: `<span>${applyState === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw}</span>`
+                    })
+                ]
+            });
+            tabList.appendChild(applyLi);
 
-        // 3. 🌟 初始化综合权重选项与词缀保存按钮
-        initWeightSelector();
-    });
+            // 2. 创建仓库定位快捷按钮
+            const autoLgLi = createEl('li', {
+                className: 'applyAutoLg',
+                attrs: { role: 'presentation' },
+                style: { float: 'right', height: '32px' },
+                children: [
+                    createEl('a', {
+                        attrs: { href: '#' },
+                        html: `<span>${UI_TEXT.btnAutoLg}</span>`
+                    })
+                ]
+            });
+            tabList.appendChild(autoLgLi);
+        };
+
+        tryMount();
+    }
 
     function ajax(url: string, method: string, data: any, successCallback?: (res: any) => void, errorCallback?: (err: any) => void) {
         const xhr = new XMLHttpRequest();
@@ -219,13 +299,5 @@ import { createEl } from './ui/domHelper';
                 replaceTextInNode(document.body);
             }
         }, 2000);
-    }
-
-    if (applyState === 1) {
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initLiveDOMTranslator);
-        } else {
-            initLiveDOMTranslator();
-        }
     }
 })();
