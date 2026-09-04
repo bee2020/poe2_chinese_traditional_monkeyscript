@@ -24,16 +24,24 @@ jobs:
         with:
           node-version: '20'
 
-      - name: 3. 安装依赖
+      - name: 3. 依赖缓存检查与恢复
+        uses: actions/cache@v4
+        id: npm-cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: 4. 安装依赖 (命中缓存则秒级跳过)
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm ci || npm install
 
-      - name: 4. 全自动拉取官方最新数据、同步并编译油猴脚本
+      - name: 5. 全自动拉取官方最新数据、同步并编译油猴脚本
         run: npm run build:all
 
-      - name: 5. 运行完整性与有效性回归测试
+      - name: 6. 运行完整性与有效性回归测试
         run: npm test
 
-      - name: 6. 产物体积安全熔断与有效性检查
+      - name: 7. 产物体积安全熔断与有效性检查
         run: |
           FILE="dist/poe_trade.user.js"
           if [ ! -f "$FILE" ]; then
