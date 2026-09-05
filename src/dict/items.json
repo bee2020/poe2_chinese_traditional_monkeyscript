@@ -19717,6 +19717,13 @@
         }
       },
       {
+        "type": "Jiquani's Soul Core of Munitions",
+        "zh_tw": {
+          "type": "吉卡尼的彈藥靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
         "type": "Jiquani's Soul Core of Squalls",
         "zh_tw": {
           "type": "吉卡尼的狂風靈魂核心",
@@ -31167,8 +31174,8 @@
         },
         "zh_tw": {
           "type": "Totemic Greatclub",
-          "name": "爾奇的巨靈之錘",
-          "text": "爾奇的巨靈之錘",
+          "name": "爾奇的巨靈��錘",
+          "text": "爾奇的巨靈��錘",
           "source": "poe2db"
         }
       },
