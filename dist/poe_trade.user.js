@@ -214,11 +214,14 @@
     try {
       const result = response.result;
       if (!Array.isArray(result) || !twFilters || !Array.isArray(twFilters.result)) return response;
+      let translatedTypes = 0;
+      let translatedFilters = 0;
       result.forEach((type) => {
         const findTwType = twFilters.result.find((s) => s.id === type.id);
         if (findTwType) {
           if (findTwType.zh_tw?.title) {
             type.title = findTwType.zh_tw.title;
+            translatedTypes++;
           }
           if (Array.isArray(type.filters)) {
             type.filters.forEach((f) => {
@@ -227,9 +230,11 @@
                 if (findtwf.zh_tw?.text) {
                   f.text = findtwf.zh_tw.text;
                   f.title = findtwf.zh_tw.text;
+                  translatedFilters++;
                 } else if (f.id === "ward") {
                   f.text = "符文護盾";
                   f.title = "符文護盾";
+                  translatedFilters++;
                 }
                 if (f.option && Array.isArray(f.option.options) && findtwf.option && Array.isArray(findtwf.option.options)) {
                   f.option.options.forEach((o) => {
@@ -244,12 +249,13 @@
           }
         }
       });
+      console.log(`[POE2繁中增强] 📊 filtersParser 处理完成: 成功汉化 ${translatedTypes} 个分类大标题，${translatedFilters} 个过滤项标签`);
       response.result = result;
       dataMap["filters"] = result;
       GM_setValue("dataMap", dataMap);
       return response;
     } catch (e) {
-      console.error("[FiltersParser Error]", e);
+      console.error("[POE2繁中增强] ❌ [FiltersParser Error]", e);
       return response;
     }
   }
@@ -419,8 +425,13 @@
         const response = typeof responseText === "string" ? JSON.parse(responseText) : responseText;
         const modified = parseFetchResults(response, dataMap, whisperMap);
         res.responseText = JSON.stringify(modified);
+        if ("json" in res) {
+          res.json = modified;
+        }
+        const count = Array.isArray(modified?.result) ? modified.result.length : 0;
+        console.log(`[POE2繁中增强] ✅ fetch 搜索结果注入成功 (${count} 件装备已繁中化)`);
       } catch (e) {
-        console.error("[Dispatch Fetch Error]", e);
+        console.error("[POE2繁中增强] ❌ [Dispatch Fetch Error]", e);
       }
       return;
     }
@@ -432,21 +443,27 @@
         let modified = response;
         if (key === "items") {
           modified = parseItemsData(response, dataMap);
+          console.log("[POE2繁中增强] 📦 items 元数据解析完成");
         } else if (key === "stats") {
           modified = parseStatsData(response, dataMap);
+          console.log("[POE2繁中增强] 📦 stats 词缀元数据解析完成");
         } else if (key === "static") {
           modified = parseStaticData(response, dataMap);
+          console.log("[POE2繁中增强] 📦 static 静态资源元数据解析完成");
         } else if (key === "filters") {
           modified = parseFiltersData(response, dataMap);
+          console.log("[POE2繁中增强] 📦 filters 过滤器元数据解析完成");
         }
-        if (modified !== response) {
-          res.responseText = JSON.stringify(modified);
-          if (res.response && typeof res.response === "object") {
-            res.response = modified;
-          }
+        res.responseText = JSON.stringify(modified);
+        if (res.response && typeof res.response === "object") {
+          res.response = modified;
         }
+        if ("json" in res) {
+          res.json = modified;
+        }
+        console.log(`[POE2繁中增强] 🚀 [${key}] 繁中元数据已成功写回浏览器响应！`);
       } catch (e) {
-        console.error(`[Dispatch ${key} Error]`, e);
+        console.error(`[POE2繁中增强] ❌ [Dispatch ${key} Error]`, e);
       }
     }
   }

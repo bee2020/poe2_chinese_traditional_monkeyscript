@@ -11,12 +11,16 @@ export function parseFiltersData(response: any, dataMap: any): any {
         const result = response.result;
         if (!Array.isArray(result) || !twFilters || !Array.isArray(twFilters.result)) return response;
 
+        let translatedTypes = 0;
+        let translatedFilters = 0;
+
         result.forEach((type: any) => {
             const findTwType = twFilters.result.find((s: any) => s.id === type.id);
             if (findTwType) {
                 // 1. 动态注入分类标题繁中 (如 裝備篩選器, 物品需求, 終局篩選器)
                 if (findTwType.zh_tw?.title) {
                     type.title = findTwType.zh_tw.title;
+                    translatedTypes++;
                 }
                 if (Array.isArray(type.filters)) {
                     type.filters.forEach((f: any) => {
@@ -26,10 +30,12 @@ export function parseFiltersData(response: any, dataMap: any): any {
                             if (findtwf.zh_tw?.text) {
                                 f.text = findtwf.zh_tw.text;
                                 f.title = findtwf.zh_tw.text;
+                                translatedFilters++;
                             } else if (f.id === 'ward') {
                                 // 针对官方 API 原生唯一遗漏的 Runic Ward 做兜底
                                 f.text = '符文護盾';
                                 f.title = '符文護盾';
+                                translatedFilters++;
                             }
 
                             // 3. 动态注入下拉框选项繁中 (如 崇高石, 混沌石, 是, 否, 任何)
@@ -47,12 +53,14 @@ export function parseFiltersData(response: any, dataMap: any): any {
             }
         });
 
+        console.log(`[POE2繁中增强] 📊 filtersParser 处理完成: 成功汉化 ${translatedTypes} 个分类大标题，${translatedFilters} 个过滤项标签`);
+
         response.result = result;
         dataMap['filters'] = result;
         GM_setValue('dataMap', dataMap);
         return response;
     } catch (e) {
-        console.error('[FiltersParser Error]', e);
+        console.error('[POE2繁中增强] ❌ [FiltersParser Error]', e);
         return response;
     }
 }
