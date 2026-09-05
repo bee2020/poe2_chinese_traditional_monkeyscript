@@ -22,6 +22,7 @@ export function parseFetchResults(response: any, dataMap: any, whisperMap: Recor
             if (!item.item) return;
 
             // 1. 纯动态翻译暗金名称与基底
+            const rawBaseType = item.item.baseType;
             fieldsToTranslate.forEach(field => {
                 if (item.item[field]) {
                     const translated = translateItemText(item.item[field]);
@@ -30,6 +31,19 @@ export function parseFetchResults(response: any, dataMap: any, whisperMap: Recor
                     }
                 }
             });
+
+            // 针对 Rare/Magic 黄装随机命名：若 name 未被直接翻译但基底存在繁中，替换其中包含的基底英文
+            if (rawBaseType && item.item.name) {
+                const twBase = translateItemText(rawBaseType);
+                if (twBase && twBase !== rawBaseType) {
+                    if (item.item.name.includes(rawBaseType)) {
+                        item.item.name = item.item.name.replace(new RegExp(rawBaseType, 'g'), twBase);
+                    }
+                    if (item.item.typeLine && item.item.typeLine.includes(rawBaseType)) {
+                        item.item.typeLine = item.item.typeLine.replace(new RegExp(rawBaseType, 'g'), twBase);
+                    }
+                }
+            }
 
             // 2. 词缀属性多维度翻译与数值填充
             if (dataMap['stats'] && dataMap['stats'].length && item.item.extended && item.item.extended.hashes) {

@@ -52,51 +52,30 @@ export function dispatchResponseHook(
 
     // 4. 处理元数据字典接口 (/api/trade2/data/*)
     if (request.url.includes('api/trade2/data')) {
-        const key = request.url.split('/').pop();
-        if (key === 'items') {
-            res.responseText = new Promise(resolve => {
-                try {
-                    const response = typeof responseText === 'string' ? JSON.parse(responseText) : responseText;
-                    const modified = parseItemsData(response, dataMap);
-                    resolve(JSON.stringify(modified));
-                } catch (e) {
-                    console.error('[Dispatch Items Error]', e);
-                    resolve(responseText);
+        const cleanUrl = request.url.split('?')[0];
+        const key = cleanUrl.split('/').pop();
+        try {
+            const response = typeof responseText === 'string' ? JSON.parse(responseText) : responseText;
+            let modified = response;
+
+            if (key === 'items') {
+                modified = parseItemsData(response, dataMap);
+            } else if (key === 'stats') {
+                modified = parseStatsData(response, dataMap);
+            } else if (key === 'static') {
+                modified = parseStaticData(response, dataMap);
+            } else if (key === 'filters') {
+                modified = parseFiltersData(response, dataMap);
+            }
+
+            if (modified !== response) {
+                res.responseText = JSON.stringify(modified);
+                if (res.response && typeof res.response === 'object') {
+                    res.response = modified;
                 }
-            });
-        } else if (key === 'stats') {
-            res.responseText = new Promise(resolve => {
-                try {
-                    const response = typeof responseText === 'string' ? JSON.parse(responseText) : responseText;
-                    const modified = parseStatsData(response, dataMap);
-                    resolve(JSON.stringify(modified));
-                } catch (e) {
-                    console.error('[Dispatch Stats Error]', e);
-                    resolve(responseText);
-                }
-            });
-        } else if (key === 'static') {
-            res.responseText = new Promise(resolve => {
-                try {
-                    const response = typeof responseText === 'string' ? JSON.parse(responseText) : responseText;
-                    const modified = parseStaticData(response, dataMap);
-                    resolve(JSON.stringify(modified));
-                } catch (e) {
-                    console.error('[Dispatch Static Error]', e);
-                    resolve(responseText);
-                }
-            });
-        } else if (key === 'filters') {
-            res.responseText = new Promise(resolve => {
-                try {
-                    const response = typeof responseText === 'string' ? JSON.parse(responseText) : responseText;
-                    const modified = parseFiltersData(response, dataMap);
-                    resolve(JSON.stringify(modified));
-                } catch (e) {
-                    console.error('[Dispatch Filters Error]', e);
-                    resolve(responseText);
-                }
-            });
+            }
+        } catch (e) {
+            console.error(`[Dispatch ${key} Error]`, e);
         }
     }
 }

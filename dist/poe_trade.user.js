@@ -12,7 +12,7 @@
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        unsafeWindow
-// @run-at       document-end
+// @run-at       document-start
 // @license      MIT
 // ==/UserScript==
 
@@ -289,6 +289,7 @@
           whisperMap[item.listing.whisper_token] = item.listing.whisper;
         }
         if (!item.item) return;
+        const rawBaseType = item.item.baseType;
         fieldsToTranslate.forEach((field) => {
           if (item.item[field]) {
             const translated = translateItemText(item.item[field]);
@@ -297,6 +298,17 @@
             }
           }
         });
+        if (rawBaseType && item.item.name) {
+          const twBase = translateItemText(rawBaseType);
+          if (twBase && twBase !== rawBaseType) {
+            if (item.item.name.includes(rawBaseType)) {
+              item.item.name = item.item.name.replace(new RegExp(rawBaseType, "g"), twBase);
+            }
+            if (item.item.typeLine && item.item.typeLine.includes(rawBaseType)) {
+              item.item.typeLine = item.item.typeLine.replace(new RegExp(rawBaseType, "g"), twBase);
+            }
+          }
+        }
         if (dataMap["stats"] && dataMap["stats"].length && item.item.extended && item.item.extended.hashes) {
           const keys = Object.keys(item.item.extended.hashes);
           keys.forEach((key) => {
@@ -413,51 +425,28 @@
       return;
     }
     if (request.url.includes("api/trade2/data")) {
-      const key = request.url.split("/").pop();
-      if (key === "items") {
-        res.responseText = new Promise((resolve) => {
-          try {
-            const response = typeof responseText === "string" ? JSON.parse(responseText) : responseText;
-            const modified = parseItemsData(response, dataMap);
-            resolve(JSON.stringify(modified));
-          } catch (e) {
-            console.error("[Dispatch Items Error]", e);
-            resolve(responseText);
+      const cleanUrl = request.url.split("?")[0];
+      const key = cleanUrl.split("/").pop();
+      try {
+        const response = typeof responseText === "string" ? JSON.parse(responseText) : responseText;
+        let modified = response;
+        if (key === "items") {
+          modified = parseItemsData(response, dataMap);
+        } else if (key === "stats") {
+          modified = parseStatsData(response, dataMap);
+        } else if (key === "static") {
+          modified = parseStaticData(response, dataMap);
+        } else if (key === "filters") {
+          modified = parseFiltersData(response, dataMap);
+        }
+        if (modified !== response) {
+          res.responseText = JSON.stringify(modified);
+          if (res.response && typeof res.response === "object") {
+            res.response = modified;
           }
-        });
-      } else if (key === "stats") {
-        res.responseText = new Promise((resolve) => {
-          try {
-            const response = typeof responseText === "string" ? JSON.parse(responseText) : responseText;
-            const modified = parseStatsData(response, dataMap);
-            resolve(JSON.stringify(modified));
-          } catch (e) {
-            console.error("[Dispatch Stats Error]", e);
-            resolve(responseText);
-          }
-        });
-      } else if (key === "static") {
-        res.responseText = new Promise((resolve) => {
-          try {
-            const response = typeof responseText === "string" ? JSON.parse(responseText) : responseText;
-            const modified = parseStaticData(response, dataMap);
-            resolve(JSON.stringify(modified));
-          } catch (e) {
-            console.error("[Dispatch Static Error]", e);
-            resolve(responseText);
-          }
-        });
-      } else if (key === "filters") {
-        res.responseText = new Promise((resolve) => {
-          try {
-            const response = typeof responseText === "string" ? JSON.parse(responseText) : responseText;
-            const modified = parseFiltersData(response, dataMap);
-            resolve(JSON.stringify(modified));
-          } catch (e) {
-            console.error("[Dispatch Filters Error]", e);
-            resolve(responseText);
-          }
-        });
+        }
+      } catch (e) {
+        console.error(`[Dispatch ${key} Error]`, e);
       }
     }
   }
@@ -1763,7 +1752,8 @@
     ajaxHooker.hook((request) => {
       if (!request.url.includes("/api/trade2/")) return;
       request.response = (res) => {
-        dispatchResponseHook(request, res, applyState, dataMap, whisperMap);
+        const currentApplyState = GM_getValue("applyState") !== void 0 ? GM_getValue("applyState") : 1;
+        dispatchResponseHook(request, res, currentApplyState, dataMap, whisperMap);
       };
     });
     runWhenMarketReady(() => {
@@ -1776,14 +1766,8 @@
         const span = document.querySelector(".applyTw a span");
         if (hasAllCaches && span) {
           try {
-            const trade2filters = JSON.parse(localStorage.getItem("lscache-trade2filters") || "[]");
-            if (Array.isArray(trade2filters) && trade2filters.some((a) => a.title === "交易過濾" || a.title === "交易过滤")) {
-              GM_setValue("applyState", 1);
-              span.textContent = "取消繁體化";
-            } else if (Array.isArray(trade2filters) && trade2filters.length > 0) {
-              GM_setValue("applyState", 2);
-              span.textContent = "開啟繁體化";
-            }
+            const currentApplyState = GM_getValue("applyState") !== void 0 ? GM_getValue("applyState") : 1;
+            span.textContent = currentApplyState === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw;
           } catch (e) {
             console.error(e);
           }

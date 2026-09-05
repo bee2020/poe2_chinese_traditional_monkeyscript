@@ -12,7 +12,7 @@
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        unsafeWindow
-// @run-at       document-end
+// @run-at       document-start
 // @license      MIT
 // ==/UserScript==
 // Auto-synced with Greasy Fork Webhook
@@ -81,7 +81,8 @@ function runWhenMarketReady(startApp: () => void) {
     ajaxHooker.hook((request: any) => {
         if (!request.url.includes('/api/trade2/')) return;
         request.response = (res: any) => {
-            dispatchResponseHook(request, res, applyState, dataMap, whisperMap);
+            const currentApplyState = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
+            dispatchResponseHook(request, res, currentApplyState, dataMap, whisperMap);
         };
     });
 
@@ -101,14 +102,8 @@ function runWhenMarketReady(startApp: () => void) {
             const span = document.querySelector('.applyTw a span');
             if (hasAllCaches && span) {
                 try {
-                    const trade2filters = JSON.parse(localStorage.getItem('lscache-trade2filters') || '[]');
-                    if (Array.isArray(trade2filters) && trade2filters.some((a: any) => a.title === '交易過濾' || a.title === '交易过滤')) {
-                        GM_setValue('applyState', 1);
-                        span.textContent = '取消繁體化';
-                    } else if (Array.isArray(trade2filters) && trade2filters.length > 0) {
-                        GM_setValue('applyState', 2);
-                        span.textContent = '開啟繁體化';
-                    }
+                    const currentApplyState = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
+                    span.textContent = currentApplyState === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw;
                 } catch (e) {
                     console.error(e);
                 }
