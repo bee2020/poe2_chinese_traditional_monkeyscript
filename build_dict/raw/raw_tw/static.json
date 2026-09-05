@@ -1277,7 +1277,7 @@
         },
         {
           "id": "legacy-of-kingsguard",
-          "text": "傳承．王衛",
+          "text": "傳承．皇家衛甲",
           "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXhwZWRpdGlvbjIvR2FtZVdhcnBSdW5lVW5pcXVlRnJhZ21lbnQiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a24a0bdec3/GameWarpRuneUniqueFragment.png"
         },
         {
@@ -1812,22 +1812,22 @@
         },
         {
           "id": "yaomacs-orb-of-sacrifice",
-          "text": "殘酷奉獻寶珠",
+          "text": "堯馬克奉獻寶珠",
           "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5jdXJzaW9uQ3JhZnRpbmdPcmJzL0luY3Vyc2lvbkNvcnJ1cHRpb25PcmIxIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d8bf3af5d5/IncursionCorruptionOrb1.png"
         },
         {
           "id": "kopecs-orb-of-sacrifice",
-          "text": "堅韌奉獻寶珠",
+          "text": "科佩克奉獻寶珠",
           "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5jdXJzaW9uQ3JhZnRpbmdPcmJzL0luY3Vyc2lvbkNvcnJ1cHRpb25PcmIyIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/911b28ea18/IncursionCorruptionOrb2.png"
         },
         {
           "id": "kamasas-orb-of-sacrifice",
-          "text": "瀆神奉獻寶珠",
+          "text": "卡瑪薩奉獻寶珠",
           "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5jdXJzaW9uQ3JhZnRpbmdPcmJzL0luY3Vyc2lvbkNvcnJ1cHRpb25PcmIzIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/00e0cd1060/IncursionCorruptionOrb3.png"
         },
         {
           "id": "yuguls-orb-of-sacrifice",
-          "text": "皇家奉獻寶珠",
+          "text": "伊果奉獻寶珠",
           "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5jdXJzaW9uQ3JhZnRpbmdPcmJzL0luY3Vyc2lvbkNvcnJ1cHRpb25PcmI0Iiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5102a7c2f5/IncursionCorruptionOrb4.png"
         },
         {
@@ -2037,6 +2037,91 @@
           "id": "xipocados-soul-core-of-dominion",
           "text": "賽匹卡托的支配靈魂核心",
           "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL05ld1NvdWxDb3JlTWluaW9uIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b1e7975db2/NewSoulCoreMinion.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-automation",
+          "text": "吉卡尼的自動化靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVRvdGVtcyIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/71877a6b6e/RareSoulCoreTotems.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-malediction",
+          "text": "吉卡尼的惡語靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZUN1cnNlcyIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/1c32444d33/RareSoulCoreCurses.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-targeting",
+          "text": "吉卡尼的索敵靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZU1hcmtzIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cfe012547b/RareSoulCoreMarks.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-rallying",
+          "text": "吉卡尼的號召靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVdhcmNyaWVzIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/29ccae030b/RareSoulCoreWarcries.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-radiance",
+          "text": "吉卡尼的輝耀靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZUhlcmFsZHMiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/6c7b4a05b7/RareSoulCoreHeralds.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-severing",
+          "text": "吉卡尼的斷切靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVN0cmlrZXMiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a23de522f7/RareSoulCoreStrikes.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-rippling",
+          "text": "吉卡尼的漣漪靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZU5vdmFzIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/28c6fc50b7/RareSoulCoreNovas.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-quaking",
+          "text": "吉卡尼的震顫靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVNsYW1zIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/69ad233e77/RareSoulCoreSlams.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-munitions",
+          "text": "吉卡尼的彈藥靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZUdyZW5hZGVzIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b3566867d7/RareSoulCoreGrenades.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-snares",
+          "text": "吉卡尼的陷阱靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZUhhemFyZHMiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/23c8ce4e3d/RareSoulCoreHazards.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-abundance",
+          "text": "吉卡尼的豐饒靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVBsYW50cyIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ee46e1c420/RareSoulCorePlants.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-squalls",
+          "text": "吉卡尼的狂風靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVdpbmQiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/48023bf3ae/RareSoulCoreWind.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-thundering",
+          "text": "吉卡尼的雷鳴靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVN0b3JtcyIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/21e5b8a994/RareSoulCoreStorms.png"
+        },
+        {
+          "id": "atziris-soul-core-of-devotion",
+          "text": "阿茲里的奉獻靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1NvdWxDb3JlU3BlY2lhbEhlbG1ldCIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/8794f35eaf/SoulCoreSpecialHelmet.png"
+        },
+        {
+          "id": "atziris-soul-core-of-vitality",
+          "text": "阿茲里的活力靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1NvdWxDb3JlU3BlY2lhbEJvZHlBcm1vdXIiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4c31085f18/SoulCoreSpecialBodyArmour.png"
+        },
+        {
+          "id": "atziris-soul-core-of-alacrity",
+          "text": "阿茲里的敏捷靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1NvdWxDb3JlU3BlY2lhbEdsb3ZlcyIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/bfd1353fac/SoulCoreSpecialGloves.png"
+        },
+        {
+          "id": "atziris-soul-core-of-inoculation",
+          "text": "阿茲里的免疫靈魂核心",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1NvdWxDb3JlU3BlY2lhbEJvb3RzIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4770c53928/SoulCoreSpecialBoots.png"
         }
       ]
     },
@@ -2394,6 +2479,11 @@
           "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVlc3RJdGVtcy9LaW5nb2Z0aGVNaXN0SGVhZCIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/254e341ba3/KingoftheMistHead.png"
         },
         {
+          "id": "sacred-bloom",
+          "text": "聖綻之花",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9TYWNyZWRMaWZlZm9yY2UiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/0dcf04819c/SacredLifeforce.png"
+        },
+        {
           "id": "sep",
           "text": "預兆"
         },
@@ -2687,7 +2777,7 @@
         },
         {
           "id": "idol-of-maxarius",
-          "text": "馬薩里斯魔偶",
+          "text": "瑪薩里歐斯魔偶",
           "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVG9ybWVudGVkU3Bpcml0U29ja2V0YWJsZXMvQXptZXJpU29ja2V0YWJsZVN0YWdTcGVjaWFsIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f012409342/AzmeriSocketableStagSpecial.png"
         },
         {

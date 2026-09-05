@@ -1420,8 +1420,8 @@
         "zh_tw": {
           "type": "翠玉護身符",
           "name": "穩健印記",
-          "text": "穩健印記",
-          "source": "poe2db"
+          "text": "穩健印記 翠玉護身符",
+          "source": "official"
         }
       },
       {
@@ -1602,8 +1602,8 @@
         "zh_tw": {
           "type": "綠寶石戒指",
           "name": "警戒之視",
-          "text": "警戒之視",
-          "source": "poe2db"
+          "text": "警戒之視 綠寶石戒指",
+          "source": "official"
         }
       },
       {
@@ -2826,7 +2826,7 @@
       {
         "type": "Rugged Cuirass",
         "zh_tw": {
-          "type": "士��胸甲",
+          "type": "士兵胸甲",
           "source": "official"
         }
       },
@@ -3512,7 +3512,7 @@
       {
         "type": "Runeforged Wolfskin Mantle",
         "zh_tw": {
-          "type": "鎖甲���衣",
+          "type": "鎖甲法衣",
           "source": "official"
         }
       },
@@ -5934,7 +5934,7 @@
       {
         "type": "Plated Mitts",
         "zh_tw": {
-          "type": "符煉��接長手套",
+          "type": "符煉鉚接長手套",
           "source": "official"
         }
       },
@@ -7999,7 +7999,7 @@
       {
         "type": "Saintly Crown",
         "zh_tw": {
-          "type": "符鍛沉重之��",
+          "type": "符鍛沉重之冠",
           "source": "official"
         }
       },
@@ -15428,8 +15428,8 @@
         },
         "zh_tw": {
           "type": "優雅鎧甲",
-          "name": "噬咬狂風",
-          "text": "噬咬狂風 優雅鎧甲",
+          "name": "皇家衛甲",
+          "text": "皇家衛甲 優雅鎧甲",
           "source": "official"
         }
       },
@@ -15442,8 +15442,8 @@
         },
         "zh_tw": {
           "type": "連身鎧甲",
-          "name": "噬咬狂風",
-          "text": "噬咬狂風 連身鎧甲",
+          "name": "皇家衛甲",
+          "text": "皇家衛甲 連身鎧甲",
           "source": "official"
         }
       },
@@ -15736,7 +15736,7 @@
       {
         "type": "Preserved Rib",
         "zh_tw": {
-          "type": "保存良好的肋��",
+          "type": "保存良好的肋骨",
           "source": "official"
         }
       },
@@ -16366,28 +16366,28 @@
       {
         "type": "Core Destabiliser",
         "zh_tw": {
-          "type": "堅韌奉獻寶珠",
+          "type": "科佩克奉獻寶珠",
           "source": "official"
         }
       },
       {
         "type": "Kopec's Orb of Sacrifice",
         "zh_tw": {
-          "type": "皇家奉獻寶珠",
+          "type": "伊果奉獻寶珠",
           "source": "official"
         }
       },
       {
         "type": "Yugul's Orb of Sacrifice",
         "zh_tw": {
-          "type": "瀆神奉獻寶珠",
+          "type": "卡瑪薩奉獻寶珠",
           "source": "official"
         }
       },
       {
         "type": "Kamasa's Orb of Sacrifice",
         "zh_tw": {
-          "type": "殘酷奉獻寶珠",
+          "type": "堯馬克奉獻寶珠",
           "source": "official"
         }
       },
@@ -18779,7 +18779,7 @@
         }
       },
       {
-        "type": "Legacy of Edyrns Tusks",
+        "type": "Legacy of Edyrn's Tusks",
         "zh_tw": {
           "type": "費爾羅的優雅符文",
           "source": "official"
@@ -19362,7 +19362,7 @@
       {
         "type": "Warding Rune of Stability",
         "zh_tw": {
-          "type": "義許塔��偶",
+          "type": "義許塔魔偶",
           "source": "official"
         }
       },
@@ -19376,7 +19376,7 @@
       {
         "type": "Warding Rune of Heart",
         "zh_tw": {
-          "type": "馬薩里斯魔偶",
+          "type": "瑪薩里歐斯魔偶",
           "source": "official"
         }
       },
@@ -19628,7 +19628,7 @@
       {
         "type": "Soul Core of Xopec",
         "zh_tw": {
-          "type": "柔派克靈魂核��",
+          "type": "柔派克靈魂核心",
           "source": "poe2db"
         }
       },
@@ -19682,6 +19682,13 @@
         }
       },
       {
+        "type": "Jiquani's Soul Core of Targeting",
+        "zh_tw": {
+          "type": "吉卡尼的索敵靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
         "type": "Zalatl's Soul Core of Insulation",
         "zh_tw": {
           "type": "札爾特的絕緣靈魂核心",
@@ -19689,9 +19696,51 @@
         }
       },
       {
+        "type": "Jiquani's Soul Core of Radiance",
+        "zh_tw": {
+          "type": "吉卡尼的輝耀靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Severing",
+        "zh_tw": {
+          "type": "吉卡尼的斷切靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Quaking",
+        "zh_tw": {
+          "type": "吉卡尼的震顫靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Squalls",
+        "zh_tw": {
+          "type": "吉卡尼的狂風靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Atziri's Soul Core of Devotion",
+        "zh_tw": {
+          "type": "阿茲里的奉獻靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
         "type": "Topotante's Soul Core of Dampening",
         "zh_tw": {
           "type": "托波譚提的阻挫靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Atziri's Soul Core of Inoculation",
+        "zh_tw": {
+          "type": "阿茲里的免疫靈魂核心",
           "source": "poe2db"
         }
       },
@@ -20676,7 +20725,7 @@
       {
         "type": "Freezing Salvo",
         "zh_tw": {
-          "type": "��結齊射",
+          "type": "凍結齊射",
           "source": "official"
         }
       },
@@ -21796,7 +21845,7 @@
       {
         "type": "Frostflame Nova",
         "zh_tw": {
-          "type": "霜火���星",
+          "type": "霜火新星",
           "source": "official"
         }
       },
@@ -22692,7 +22741,7 @@
       {
         "type": "Bounty II",
         "zh_tw": {
-          "type": "寶物 II",
+          "type": "懸賞 II",
           "source": "official"
         }
       },
@@ -25296,7 +25345,7 @@
       {
         "type": "Hulking Minions",
         "zh_tw": {
-          "type": "��除",
+          "type": "切除",
           "source": "official"
         }
       },
@@ -26521,7 +26570,7 @@
       {
         "type": "Unerring Power",
         "zh_tw": {
-          "type": "動��� I",
+          "type": "動亂 I",
           "source": "official"
         }
       },
@@ -28072,7 +28121,7 @@
       {
         "type": "Sword Spear",
         "zh_tw": {
-          "type": "彎刀",
+          "type": "短彎刀",
           "source": "official"
         }
       },
@@ -28387,7 +28436,7 @@
       {
         "type": "Cutlass",
         "zh_tw": {
-          "type": "Runeforged Warden Bow",
+          "type": "符鍛守護者之弓",
           "source": "official"
         }
       },
@@ -30773,20 +30822,6 @@
         }
       },
       {
-        "type": "Iron Greatsword",
-        "text": "INCOMPLETE Iron Greatsword",
-        "name": "INCOMPLETE",
-        "flags": {
-          "unique": true
-        },
-        "zh_tw": {
-          "type": "Iron Greatsword",
-          "name": "布林漢的印記",
-          "text": "布林漢的印記 Iron Greatsword",
-          "source": "official"
-        }
-      },
-      {
         "type": "Broadsword",
         "text": "INCOMPLETE Broadsword",
         "name": "INCOMPLETE",
@@ -30811,6 +30846,20 @@
           "type": "Executioner Greataxe",
           "name": "布林漢的印記",
           "text": "布林漢的印記 Executioner Greataxe",
+          "source": "official"
+        }
+      },
+      {
+        "type": "Iron Greatsword",
+        "text": "INCOMPLETE Iron Greatsword",
+        "name": "INCOMPLETE",
+        "flags": {
+          "unique": true
+        },
+        "zh_tw": {
+          "type": "Iron Greatsword",
+          "name": "布林漢的印記",
+          "text": "布林漢的印記 Iron Greatsword",
           "source": "official"
         }
       },
@@ -31132,9 +31181,9 @@
         },
         "zh_tw": {
           "type": "原始魔符",
-          "name": "摩蹉",
-          "text": "摩蹉",
-          "source": "poe2db"
+          "name": "未完成",
+          "text": "未完成 原始魔符",
+          "source": "official"
         }
       },
       {
@@ -31146,9 +31195,9 @@
         },
         "zh_tw": {
           "type": "拱形巨斧",
-          "name": "摩蹉",
-          "text": "摩蹉",
-          "source": "poe2db"
+          "name": "未完成",
+          "text": "未完成 拱形巨斧",
+          "source": "official"
         }
       },
       {
@@ -31314,8 +31363,8 @@
         },
         "zh_tw": {
           "type": "翠玉魔符",
-          "name": "血��傀儡",
-          "text": "血��傀儡 翠玉魔符",
+          "name": "血肉傀儡",
+          "text": "血肉傀儡 翠玉魔符",
           "source": "official"
         }
       },
@@ -31328,8 +31377,8 @@
         },
         "zh_tw": {
           "type": "符煉家族魔符",
-          "name": "血��傀儡",
-          "text": "血��傀儡 符煉家族魔符",
+          "name": "血肉傀儡",
+          "text": "血肉傀儡 符煉家族魔符",
           "source": "official"
         }
       },
@@ -31342,8 +31391,8 @@
         },
         "zh_tw": {
           "type": "符鍛惡毒魔符",
-          "name": "血��傀儡",
-          "text": "血��傀儡 符鍛惡毒魔符",
+          "name": "血肉傀儡",
+          "text": "血肉傀儡 符鍛惡毒魔符",
           "source": "official"
         }
       },

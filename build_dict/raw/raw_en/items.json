@@ -9140,7 +9140,7 @@
           "type": "Legacy of Dusk Vigil"
         },
         {
-          "type": "Legacy of Edyrns Tusks"
+          "type": "Legacy of Edyrn's Tusks"
         },
         {
           "type": "Legacy of Elevore"
@@ -9527,10 +9527,31 @@
           "type": "Xipocado's Soul Core of Dominion"
         },
         {
+          "type": "Jiquani's Soul Core of Targeting"
+        },
+        {
           "type": "Zalatl's Soul Core of Insulation"
         },
         {
+          "type": "Jiquani's Soul Core of Radiance"
+        },
+        {
+          "type": "Jiquani's Soul Core of Severing"
+        },
+        {
+          "type": "Jiquani's Soul Core of Quaking"
+        },
+        {
+          "type": "Jiquani's Soul Core of Squalls"
+        },
+        {
+          "type": "Atziri's Soul Core of Devotion"
+        },
+        {
           "type": "Topotante's Soul Core of Dampening"
+        },
+        {
+          "type": "Atziri's Soul Core of Inoculation"
         },
         {
           "type": "Atmohua's Soul Core of Retreat"
@@ -14508,14 +14529,6 @@
           }
         },
         {
-          "type": "Iron Greatsword",
-          "text": "INCOMPLETE Iron Greatsword",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
           "type": "Broadsword",
           "text": "INCOMPLETE Broadsword",
           "name": "INCOMPLETE",
@@ -14526,6 +14539,14 @@
         {
           "type": "Executioner Greataxe",
           "text": "INCOMPLETE Executioner Greataxe",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
+          "type": "Iron Greatsword",
+          "text": "INCOMPLETE Iron Greatsword",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
