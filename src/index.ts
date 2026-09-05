@@ -73,67 +73,80 @@ function runWhenMarketReady(startApp: () => void) {
 
 (async () => {
     'use strict';
-    const applyState: number = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
-    const dataMap = GM_getValue('dataMap') ? GM_getValue('dataMap') : {};
-    const whisperMap: Record<string, string> = {};
+    try {
+        const applyState: number = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
+        const dataMap = GM_getValue('dataMap') ? GM_getValue('dataMap') : {};
+        const whisperMap: Record<string, string> = {};
 
-    console.log('%c[POE2繁中增强]%c 脚本已挂载 | 状态: ' + (applyState === 1 ? '繁体化已开启' : '繁体化已关闭'), 'background:#2196F3;color:#fff;font-weight:bold;padding:2px 6px;border-radius:3px;', '');
+        console.log('%c[POE2繁中增强]%c 脚本已挂载 | 状态: ' + (applyState === 1 ? '繁体化已开启' : '繁体化已关闭'), 'background:#2196F3;color:#fff;font-weight:bold;padding:2px 6px;border-radius:3px;', '');
 
-    // 🌟 最早时刻挂载网络拦截器 (严格白名单限制，对 CF 验证及非交易请求完全无感放行)
-    ajaxHooker.hook((request: any) => {
-        if (!request.url.includes('/api/trade2/')) return;
-        console.log('[POE2繁中增强] 📡 成功拦截交易接口:', request.url);
-        request.response = (res: any) => {
-            const currentApplyState = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
-            dispatchResponseHook(request, res, currentApplyState, dataMap, whisperMap);
-        };
-    });
-
-    // 🛡️ DOM 与业务生命周期守卫：遇到 Cloudflare 安全验证页时保持静默，等待进入真实集市
-    runWhenMarketReady(() => {
-        initMarketApp();
-    });
-
-    function initMarketApp() {
-        const checkInterval = 5000;
-
-        function checkLocalStorage() {
-            const hasAllCaches = localStorage.getItem('lscache-trade2data') &&
-                                 localStorage.getItem('lscache-trade2items') &&
-                                 localStorage.getItem('lscache-trade2stats') &&
-                                 localStorage.getItem('lscache-trade2filters');
-            const span = document.querySelector('.applyTw a span');
-            if (hasAllCaches && span) {
+        // 🌟 最早时刻挂载网络拦截器 (严格白名单限制，对 CF 验证及非交易请求完全无感放行)
+        ajaxHooker.hook((request: any) => {
+            if (!request.url.includes('/api/trade2/')) return;
+            console.log('[POE2繁中增强] 📡 拦截到交易接口请求:', request.url);
+            request.response = (res: any) => {
                 try {
                     const currentApplyState = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
-                    span.textContent = currentApplyState === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw;
+                    dispatchResponseHook(request, res, currentApplyState, dataMap, whisperMap);
+                } catch (hookErr) {
+                    console.error('[POE2繁中增强] 响应拦截处理异常:', hookErr);
+                }
+            };
+        });
+
+        // 🛡️ DOM 与业务生命周期守卫：遇到 Cloudflare 安全验证页时保持静默，等待进入真实集市
+        runWhenMarketReady(() => {
+            try {
+                initMarketApp();
+            } catch (initErr) {
+                console.error('[POE2繁中增强] 集市初始化异常:', initErr);
+            }
+        });
+
+        function initMarketApp() {
+            const checkInterval = 5000;
+
+            function checkLocalStorage() {
+                try {
+                    const hasAllCaches = localStorage.getItem('lscache-trade2data') &&
+                                         localStorage.getItem('lscache-trade2items') &&
+                                         localStorage.getItem('lscache-trade2stats') &&
+                                         localStorage.getItem('lscache-trade2filters');
+                    const span = document.querySelector('.applyTw a span');
+                    if (hasAllCaches && span) {
+                        const currentApplyState = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
+                        span.textContent = currentApplyState === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw;
+                    }
                 } catch (e) {
-                    console.error('[checkLocalStorage Error]', e);
+                    console.error('[POE2繁中增强] checkLocalStorage Error:', e);
                 }
             }
+
+            setInterval(checkLocalStorage, checkInterval);
+            checkLocalStorage();
+
+            const initUI = () => {
+                try {
+                    setupUIEventListeners();
+                    mountNavButtons();
+                    initWeightSelector();
+                } catch (uiErr) {
+                    console.error('[POE2繁中增强] UI 初始化异常:', uiErr);
+                }
+            };
+
+            if (document.readyState === 'complete' || document.readyState === 'interactive') {
+                initUI();
+            } else {
+                window.addEventListener('load', initUI);
+            }
+
+            const currentApplyState = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
+            if (currentApplyState === 1) {
+                console.log('[POE2繁中增强] 🎨 DOM 实时繁中化监听已启动');
+                initLiveDOMTranslator();
+            }
         }
-
-        setInterval(checkLocalStorage, checkInterval);
-        checkLocalStorage();
-
-        const initUI = () => {
-            setupUIEventListeners();
-            mountNavButtons();
-            initWeightSelector();
-        };
-
-        if (document.readyState === 'complete' || document.readyState === 'interactive') {
-            initUI();
-        } else {
-            window.addEventListener('load', initUI);
-        }
-
-        const currentApplyState = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
-        if (currentApplyState === 1) {
-            console.log('[POE2繁中增强] 🎨 DOM 实时繁中化监听已就绪，已装载', Object.keys(domTranslations).length, '项词条');
-            initLiveDOMTranslator();
-        }
-    }
 
     function setupUIEventListeners() {
         document.addEventListener('click', function(event: any) {
@@ -300,4 +313,8 @@ function runWhenMarketReady(startApp: () => void) {
             }
         }, 2000);
     }
+} catch (globalErr) {
+    console.error('[POE2繁中增强 致命错误]', globalErr);
+}
 })();
+

@@ -974,11 +974,8 @@
 
   // src/ui/uiMapping.ts
   var domTranslations = {
-    // 导航与基础
     "Search Listed Items": "市集搜尋",
-    "SEARCH LISTED ITEMS": "市集搜尋",
     "Bulk Item Exchange": "大宗交易",
-    "BULK ITEM EXCHANGE": "大宗交易",
     "Online Only": "僅在線",
     "Online In League": "賽季在線",
     "Whisper Language": "私聊語言",
@@ -986,69 +983,8 @@
     "Show Filters": "顯示過濾條件",
     "Hide Filters": "隱藏過濾條件",
     "Settings": "設定",
-    "SETTINGS": "設定",
     "About": "關於",
-    "ABOUT": "關於",
-    "English": "英文",
-    "Search Items...": "搜尋物品...",
-    "SEARCH ITEMS...": "搜尋物品...",
-    // 过滤器大分类折叠标题 (大小写全面兼容)
-    "Type Filters": "類別過濾",
-    "TYPE FILTERS": "類別過濾",
-    "Stat Filters": "屬性過濾",
-    "STAT FILTERS": "屬性過濾",
-    "Equipment Filters": "裝備過濾",
-    "EQUIPMENT FILTERS": "裝備過濾",
-    "Requirements": "需求過濾",
-    "REQUIREMENTS": "需求過濾",
-    "Endgame Filters": "終局過濾",
-    "ENDGAME FILTERS": "終局過濾",
-    "Map Filters": "地圖過濾",
-    "MAP FILTERS": "地圖過濾",
-    "Miscellaneous": "其它過濾",
-    "MISCELLANEOUS": "其它過濾",
-    "Trade Filters": "交易過濾",
-    "TRADE FILTERS": "交易過濾",
-    // 过滤器内部条目名
-    "Item Category": "道具分類",
-    "ITEM CATEGORY": "道具分類",
-    "Item Rarity": "物品稀有度",
-    "ITEM RARITY": "物品稀有度",
-    "Item Level": "物品等級",
-    "ITEM LEVEL": "物品等級",
-    "Item Quality": "物品品質",
-    "ITEM QUALITY": "物品品質",
-    "Damage": "傷害",
-    "DAMAGE": "傷害",
-    "Attacks per Second": "每秒攻擊次數",
-    "ATTACKS PER SECOND": "每秒攻擊次數",
-    "Critical Chance": "暴擊率",
-    "CRITICAL CHANCE": "暴擊率",
-    "Damage per Second": "每秒傷害",
-    "DAMAGE PER SECOND": "每秒傷害",
-    "Physical DPS": "物理每秒傷害",
-    "PHYSICAL DPS": "物理每秒傷害",
-    "Elemental DPS": "元素每秒傷害",
-    "ELEMENTAL DPS": "元素每秒傷害",
-    "Reload Time": "填裝時間",
-    "RELOAD TIME": "填裝時間",
-    "Armour": "護甲",
-    "ARMOUR": "護甲",
-    "Evasion": "閃避",
-    "EVASION": "閃避",
-    "Energy Shield": "能量護盾",
-    "ENERGY SHIELD": "能量護盾",
-    // 常用按钮与占位
-    "+ Add Stat Filter": "+ 新增屬性過濾",
-    "+ ADD STAT FILTER": "+ 新增屬性過濾",
-    "+ Add Stat Group": "+ 新增屬性分組",
-    "+ ADD STAT GROUP": "+ 新增屬性分組",
-    "Any": "任何",
-    "ANY": "任何",
-    "Min": "最小",
-    "MIN": "最小",
-    "Max": "最大",
-    "MAX": "最大"
+    "English": "英文"
   };
   var UI_TEXT = {
     // 頂欄切換按鈕
@@ -1810,196 +1746,205 @@
   }
   (async () => {
     "use strict";
-    const applyState = GM_getValue("applyState") !== void 0 ? GM_getValue("applyState") : 1;
-    const dataMap = GM_getValue("dataMap") ? GM_getValue("dataMap") : {};
-    const whisperMap = {};
-    console.log("%c[POE2繁中增强]%c 脚本已挂载 | 状态: " + (applyState === 1 ? "繁体化已开启" : "繁体化已关闭"), "background:#2196F3;color:#fff;font-weight:bold;padding:2px 6px;border-radius:3px;", "");
-    ajaxHooker.hook((request) => {
-      if (!request.url.includes("/api/trade2/")) return;
-      console.log("[POE2繁中增强] 📡 成功拦截交易接口:", request.url);
-      request.response = (res) => {
-        const currentApplyState = GM_getValue("applyState") !== void 0 ? GM_getValue("applyState") : 1;
-        dispatchResponseHook(request, res, currentApplyState, dataMap, whisperMap);
-      };
-    });
-    runWhenMarketReady(() => {
-      initMarketApp();
-    });
-    function initMarketApp() {
-      const checkInterval = 5e3;
-      function checkLocalStorage() {
-        const hasAllCaches = localStorage.getItem("lscache-trade2data") && localStorage.getItem("lscache-trade2items") && localStorage.getItem("lscache-trade2stats") && localStorage.getItem("lscache-trade2filters");
-        const span = document.querySelector(".applyTw a span");
-        if (hasAllCaches && span) {
+    try {
+      let initMarketApp = function() {
+        const checkInterval = 5e3;
+        function checkLocalStorage() {
           try {
-            const currentApplyState2 = GM_getValue("applyState") !== void 0 ? GM_getValue("applyState") : 1;
-            span.textContent = currentApplyState2 === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw;
+            const hasAllCaches = localStorage.getItem("lscache-trade2data") && localStorage.getItem("lscache-trade2items") && localStorage.getItem("lscache-trade2stats") && localStorage.getItem("lscache-trade2filters");
+            const span = document.querySelector(".applyTw a span");
+            if (hasAllCaches && span) {
+              const currentApplyState2 = GM_getValue("applyState") !== void 0 ? GM_getValue("applyState") : 1;
+              span.textContent = currentApplyState2 === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw;
+            }
           } catch (e) {
-            console.error("[checkLocalStorage Error]", e);
+            console.error("[POE2繁中增强] checkLocalStorage Error:", e);
           }
         }
-      }
-      setInterval(checkLocalStorage, checkInterval);
-      checkLocalStorage();
-      const initUI = () => {
-        setupUIEventListeners();
-        mountNavButtons();
-        initWeightSelector();
-      };
-      if (document.readyState === "complete" || document.readyState === "interactive") {
-        initUI();
-      } else {
-        window.addEventListener("load", initUI);
-      }
-      const currentApplyState = GM_getValue("applyState") !== void 0 ? GM_getValue("applyState") : 1;
-      if (currentApplyState === 1) {
-        console.log("[POE2繁中增强] 🎨 DOM 实时繁中化监听已就绪，已装载", Object.keys(domTranslations).length, "项词条");
-        initLiveDOMTranslator();
-      }
-    }
-    function setupUIEventListeners() {
-      document.addEventListener("click", function(event) {
-        if (event.target.closest(".applyTw")) {
-          event.preventDefault();
-          const currentApplyState = GM_getValue("applyState") || 1;
-          GM_setValue("applyState", currentApplyState === 1 ? 2 : 1);
-          localStorage.clear();
-          location.reload();
-        }
-        if (event.target.closest(".applyAutoLg")) {
-          event.preventDefault();
-          putPromise("/api/trade2/settings", { "language": "" }).then(() => {
-            alert(UI_TEXT.autoLgSuccess);
-          }).catch(() => {
-            alert(UI_TEXT.autoLgFailed);
-          });
-        }
-        if (event.target.closest(".saveStat")) {
-          const saveStatElements = document.querySelectorAll(".saveStat");
-          const saveStatArray = Array.from(saveStatElements);
-          const clickedElement = event.target.closest(".saveStat");
-          const index = saveStatArray.indexOf(clickedElement);
-          openSaveModal(index);
-        }
-      });
-    }
-    function mountNavButtons() {
-      let retries = 0;
-      const tryMount = () => {
-        const tabList = document.querySelector("ul.nav.nav-tabs.account");
-        if (!tabList) {
-          if (retries++ < 20) {
-            setTimeout(tryMount, 500);
+        setInterval(checkLocalStorage, checkInterval);
+        checkLocalStorage();
+        const initUI = () => {
+          try {
+            setupUIEventListeners();
+            mountNavButtons();
+            initWeightSelector();
+          } catch (uiErr) {
+            console.error("[POE2繁中增强] UI 初始化异常:", uiErr);
           }
-          return;
+        };
+        if (document.readyState === "complete" || document.readyState === "interactive") {
+          initUI();
+        } else {
+          window.addEventListener("load", initUI);
         }
-        if (tabList.querySelector(".applyTw")) return;
-        const applyLi = createEl("li", {
-          className: "applyTw",
-          attrs: { role: "presentation" },
-          style: { float: "right", height: "32px" },
-          children: [
-            createEl("a", {
-              attrs: { href: "#" },
-              html: `<span>${applyState === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw}</span>`
-            })
-          ]
-        });
-        tabList.appendChild(applyLi);
-        const autoLgLi = createEl("li", {
-          className: "applyAutoLg",
-          attrs: { role: "presentation" },
-          style: { float: "right", height: "32px" },
-          children: [
-            createEl("a", {
-              attrs: { href: "#" },
-              html: `<span>${UI_TEXT.btnAutoLg}</span>`
-            })
-          ]
-        });
-        tabList.appendChild(autoLgLi);
-      };
-      tryMount();
-    }
-    function ajax(url, method, data2, successCallback, errorCallback) {
-      const xhr = new XMLHttpRequest();
-      xhr.open(method, url, true);
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr.setRequestHeader("x-requested-with", "XMLHttpRequest");
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            if (successCallback) successCallback(xhr.responseText);
-          } else {
-            if (errorCallback) errorCallback(xhr.statusText);
+        const currentApplyState = GM_getValue("applyState") !== void 0 ? GM_getValue("applyState") : 1;
+        if (currentApplyState === 1) {
+          console.log("[POE2繁中增强] 🎨 DOM 实时繁中化监听已启动");
+          initLiveDOMTranslator();
+        }
+      }, setupUIEventListeners = function() {
+        document.addEventListener("click", function(event) {
+          if (event.target.closest(".applyTw")) {
+            event.preventDefault();
+            const currentApplyState = GM_getValue("applyState") || 1;
+            GM_setValue("applyState", currentApplyState === 1 ? 2 : 1);
+            localStorage.clear();
+            location.reload();
           }
-        }
-      };
-      if (method === "POST" || method === "PUT") {
-        xhr.send(JSON.stringify(data2));
-      } else {
-        xhr.send();
-      }
-    }
-    function putPromise(url, data2) {
-      return new Promise((resolve, reject) => {
-        ajax(url, "PUT", data2, (response) => resolve(response), (error) => reject(error));
-      });
-    }
-    function replaceText(node) {
-      let text = node.textContent;
-      if (!text || !text.trim()) return;
-      let modified = false;
-      for (const [original, translated] of Object.entries(domTranslations)) {
-        if (text.includes(original)) {
-          text = text.split(original).join(translated);
-          modified = true;
-        }
-      }
-      if (modified) {
-        node.textContent = text;
-      }
-    }
-    function replaceTextInNode(node) {
-      if (!node) return;
-      const tag = node.tagName ? node.tagName.toUpperCase() : "";
-      if (tag === "SCRIPT" || tag === "STYLE" || tag === "TEMPLATE" || tag === "NOSCRIPT") return;
-      node.childNodes.forEach((child) => {
-        if (child.nodeType === 3) {
-          replaceText(child);
-        } else if (child.nodeType === 1) {
-          replaceTextInNode(child);
-        }
-      });
-    }
-    function initLiveDOMTranslator() {
-      if (document.body) {
-        replaceTextInNode(document.body);
-      }
-      const filterObserver = new MutationObserver((mutations) => {
-        for (const mutation of mutations) {
-          if (mutation.type === "childList") {
-            mutation.addedNodes.forEach((node) => {
-              replaceTextInNode(node);
+          if (event.target.closest(".applyAutoLg")) {
+            event.preventDefault();
+            putPromise("/api/trade2/settings", { "language": "" }).then(() => {
+              alert(UI_TEXT.autoLgSuccess);
+            }).catch(() => {
+              alert(UI_TEXT.autoLgFailed);
             });
-          } else if (mutation.type === "characterData" && mutation.target) {
-            replaceText(mutation.target);
+          }
+          if (event.target.closest(".saveStat")) {
+            const saveStatElements = document.querySelectorAll(".saveStat");
+            const saveStatArray = Array.from(saveStatElements);
+            const clickedElement = event.target.closest(".saveStat");
+            const index = saveStatArray.indexOf(clickedElement);
+            openSaveModal(index);
+          }
+        });
+      }, mountNavButtons = function() {
+        let retries = 0;
+        const tryMount = () => {
+          const tabList = document.querySelector("ul.nav.nav-tabs.account");
+          if (!tabList) {
+            if (retries++ < 20) {
+              setTimeout(tryMount, 500);
+            }
+            return;
+          }
+          if (tabList.querySelector(".applyTw")) return;
+          const applyLi = createEl("li", {
+            className: "applyTw",
+            attrs: { role: "presentation" },
+            style: { float: "right", height: "32px" },
+            children: [
+              createEl("a", {
+                attrs: { href: "#" },
+                html: `<span>${applyState === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw}</span>`
+              })
+            ]
+          });
+          tabList.appendChild(applyLi);
+          const autoLgLi = createEl("li", {
+            className: "applyAutoLg",
+            attrs: { role: "presentation" },
+            style: { float: "right", height: "32px" },
+            children: [
+              createEl("a", {
+                attrs: { href: "#" },
+                html: `<span>${UI_TEXT.btnAutoLg}</span>`
+              })
+            ]
+          });
+          tabList.appendChild(autoLgLi);
+        };
+        tryMount();
+      }, ajax = function(url, method, data2, successCallback, errorCallback) {
+        const xhr = new XMLHttpRequest();
+        xhr.open(method, url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("x-requested-with", "XMLHttpRequest");
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              if (successCallback) successCallback(xhr.responseText);
+            } else {
+              if (errorCallback) errorCallback(xhr.statusText);
+            }
+          }
+        };
+        if (method === "POST" || method === "PUT") {
+          xhr.send(JSON.stringify(data2));
+        } else {
+          xhr.send();
+        }
+      }, putPromise = function(url, data2) {
+        return new Promise((resolve, reject) => {
+          ajax(url, "PUT", data2, (response) => resolve(response), (error) => reject(error));
+        });
+      }, replaceText = function(node) {
+        let text = node.textContent;
+        if (!text || !text.trim()) return;
+        let modified = false;
+        for (const [original, translated] of Object.entries(domTranslations)) {
+          if (text.includes(original)) {
+            text = text.split(original).join(translated);
+            modified = true;
           }
         }
-      });
-      const target = document.documentElement || document.body;
-      if (target) {
-        filterObserver.observe(target, {
-          childList: true,
-          subtree: true,
-          characterData: true
+        if (modified) {
+          node.textContent = text;
+        }
+      }, replaceTextInNode = function(node) {
+        if (!node) return;
+        const tag = node.tagName ? node.tagName.toUpperCase() : "";
+        if (tag === "SCRIPT" || tag === "STYLE" || tag === "TEMPLATE" || tag === "NOSCRIPT") return;
+        node.childNodes.forEach((child) => {
+          if (child.nodeType === 3) {
+            replaceText(child);
+          } else if (child.nodeType === 1) {
+            replaceTextInNode(child);
+          }
         });
-      }
-      setInterval(() => {
+      }, initLiveDOMTranslator = function() {
         if (document.body) {
           replaceTextInNode(document.body);
         }
-      }, 2e3);
+        const filterObserver = new MutationObserver((mutations) => {
+          for (const mutation of mutations) {
+            if (mutation.type === "childList") {
+              mutation.addedNodes.forEach((node) => {
+                replaceTextInNode(node);
+              });
+            } else if (mutation.type === "characterData" && mutation.target) {
+              replaceText(mutation.target);
+            }
+          }
+        });
+        const target = document.documentElement || document.body;
+        if (target) {
+          filterObserver.observe(target, {
+            childList: true,
+            subtree: true,
+            characterData: true
+          });
+        }
+        setInterval(() => {
+          if (document.body) {
+            replaceTextInNode(document.body);
+          }
+        }, 2e3);
+      };
+      const applyState = GM_getValue("applyState") !== void 0 ? GM_getValue("applyState") : 1;
+      const dataMap = GM_getValue("dataMap") ? GM_getValue("dataMap") : {};
+      const whisperMap = {};
+      console.log("%c[POE2繁中增强]%c 脚本已挂载 | 状态: " + (applyState === 1 ? "繁体化已开启" : "繁体化已关闭"), "background:#2196F3;color:#fff;font-weight:bold;padding:2px 6px;border-radius:3px;", "");
+      ajaxHooker.hook((request) => {
+        if (!request.url.includes("/api/trade2/")) return;
+        console.log("[POE2繁中增强] 📡 拦截到交易接口请求:", request.url);
+        request.response = (res) => {
+          try {
+            const currentApplyState = GM_getValue("applyState") !== void 0 ? GM_getValue("applyState") : 1;
+            dispatchResponseHook(request, res, currentApplyState, dataMap, whisperMap);
+          } catch (hookErr) {
+            console.error("[POE2繁中增强] 响应拦截处理异常:", hookErr);
+          }
+        };
+      });
+      runWhenMarketReady(() => {
+        try {
+          initMarketApp();
+        } catch (initErr) {
+          console.error("[POE2繁中增强] 集市初始化异常:", initErr);
+        }
+      });
+    } catch (globalErr) {
+      console.error("[POE2繁中增强 致命错误]", globalErr);
     }
   })();
 })();
