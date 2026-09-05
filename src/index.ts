@@ -77,9 +77,12 @@ function runWhenMarketReady(startApp: () => void) {
     const dataMap = GM_getValue('dataMap') ? GM_getValue('dataMap') : {};
     const whisperMap: Record<string, string> = {};
 
+    console.log('%c[POE2繁中增强]%c 脚本已挂载 | 状态: ' + (applyState === 1 ? '繁体化已开启' : '繁体化已关闭'), 'background:#2196F3;color:#fff;font-weight:bold;padding:2px 6px;border-radius:3px;', '');
+
     // 🌟 最早时刻挂载网络拦截器 (严格白名单限制，对 CF 验证及非交易请求完全无感放行)
     ajaxHooker.hook((request: any) => {
         if (!request.url.includes('/api/trade2/')) return;
+        console.log('[POE2繁中增强] 📡 成功拦截交易接口:', request.url);
         request.response = (res: any) => {
             const currentApplyState = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
             dispatchResponseHook(request, res, currentApplyState, dataMap, whisperMap);
@@ -105,7 +108,7 @@ function runWhenMarketReady(startApp: () => void) {
                     const currentApplyState = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
                     span.textContent = currentApplyState === 1 ? UI_TEXT.btnCancelTw : UI_TEXT.btnEnableTw;
                 } catch (e) {
-                    console.error(e);
+                    console.error('[checkLocalStorage Error]', e);
                 }
             }
         }
@@ -125,7 +128,9 @@ function runWhenMarketReady(startApp: () => void) {
             window.addEventListener('load', initUI);
         }
 
-        if (applyState === 1) {
+        const currentApplyState = (GM_getValue('applyState') !== undefined ? GM_getValue('applyState') : 1) as number;
+        if (currentApplyState === 1) {
+            console.log('[POE2繁中增强] 🎨 DOM 实时繁中化监听已就绪，已装载', Object.keys(domTranslations).length, '项词条');
             initLiveDOMTranslator();
         }
     }
@@ -231,14 +236,14 @@ function runWhenMarketReady(startApp: () => void) {
         });
     }
 
-    // 替换文本节点中的静态 UI 内容
+    // 替换文本节点中的静态 UI 内容 (使用安全 split/join 彻底避免 + 号等字符正则语法崩溃)
     function replaceText(node: any) {
         let text = node.textContent;
         if (!text || !text.trim()) return;
         let modified = false;
         for (const [original, translated] of Object.entries(domTranslations)) {
             if (text.includes(original)) {
-                text = text.replace(new RegExp(original, 'g'), translated);
+                text = text.split(original).join(translated);
                 modified = true;
             }
         }
