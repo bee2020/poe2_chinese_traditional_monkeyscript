@@ -8750,6 +8750,9 @@
           "type": "Rogue's Marker"
         },
         {
+          "type": "Sacred Bloom"
+        },
+        {
           "type": "Azmeri Reliquary Key"
         },
         {
@@ -9527,7 +9530,16 @@
           "type": "Xipocado's Soul Core of Dominion"
         },
         {
+          "type": "Jiquani's Soul Core of Automation"
+        },
+        {
+          "type": "Jiquani's Soul Core of Malediction"
+        },
+        {
           "type": "Jiquani's Soul Core of Targeting"
+        },
+        {
+          "type": "Jiquani's Soul Core of Rallying"
         },
         {
           "type": "Zalatl's Soul Core of Insulation"
@@ -9539,19 +9551,37 @@
           "type": "Jiquani's Soul Core of Severing"
         },
         {
+          "type": "Jiquani's Soul Core of Rippling"
+        },
+        {
           "type": "Jiquani's Soul Core of Quaking"
         },
         {
           "type": "Jiquani's Soul Core of Munitions"
         },
         {
+          "type": "Jiquani's Soul Core of Snares"
+        },
+        {
+          "type": "Jiquani's Soul Core of Abundance"
+        },
+        {
           "type": "Jiquani's Soul Core of Squalls"
+        },
+        {
+          "type": "Jiquani's Soul Core of Thundering"
         },
         {
           "type": "Atziri's Soul Core of Devotion"
         },
         {
           "type": "Topotante's Soul Core of Dampening"
+        },
+        {
+          "type": "Atziri's Soul Core of Vitality"
+        },
+        {
+          "type": "Atziri's Soul Core of Alacrity"
         },
         {
           "type": "Atziri's Soul Core of Inoculation"
@@ -14091,16 +14121,16 @@
           }
         },
         {
-          "type": "Runemastered Studded Greatclub",
-          "text": "Brain Rattler Runemastered Studded Greatclub",
+          "type": "Runeforged Studded Greatclub",
+          "text": "Brain Rattler Runeforged Studded Greatclub",
           "name": "Brain Rattler",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Runeforged Studded Greatclub",
-          "text": "Brain Rattler Runeforged Studded Greatclub",
+          "type": "Runemastered Studded Greatclub",
+          "text": "Brain Rattler Runemastered Studded Greatclub",
           "name": "Brain Rattler",
           "flags": {
             "unique": true
@@ -14131,16 +14161,16 @@
           }
         },
         {
-          "type": "Runemastered Wooden Club",
-          "text": "Brynhand's Mark Runemastered Wooden Club",
+          "type": "Runeforged Wooden Club",
+          "text": "Brynhand's Mark Runeforged Wooden Club",
           "name": "Brynhand's Mark",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Runeforged Wooden Club",
-          "text": "Brynhand's Mark Runeforged Wooden Club",
+          "type": "Runemastered Wooden Club",
+          "text": "Brynhand's Mark Runemastered Wooden Club",
           "name": "Brynhand's Mark",
           "flags": {
             "unique": true
@@ -14388,16 +14418,16 @@
           }
         },
         {
-          "type": "Runemastered Felled Greatclub",
-          "text": "Hoghunt Runemastered Felled Greatclub",
+          "type": "Runeforged Felled Greatclub",
+          "text": "Hoghunt Runeforged Felled Greatclub",
           "name": "Hoghunt",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Runeforged Felled Greatclub",
-          "text": "Hoghunt Runeforged Felled Greatclub",
+          "type": "Runemastered Felled Greatclub",
+          "text": "Hoghunt Runemastered Felled Greatclub",
           "name": "Hoghunt",
           "flags": {
             "unique": true
@@ -14412,16 +14442,16 @@
           }
         },
         {
-          "type": "Runemastered Oak Greathammer",
-          "text": "Hrimnor's Hymn Runemastered Oak Greathammer",
+          "type": "Runeforged Oak Greathammer",
+          "text": "Hrimnor's Hymn Runeforged Oak Greathammer",
           "name": "Hrimnor's Hymn",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Runeforged Oak Greathammer",
-          "text": "Hrimnor's Hymn Runeforged Oak Greathammer",
+          "type": "Runemastered Oak Greathammer",
+          "text": "Hrimnor's Hymn Runemastered Oak Greathammer",
           "name": "Hrimnor's Hymn",
           "flags": {
             "unique": true
@@ -14901,16 +14931,16 @@
           }
         },
         {
-          "type": "Runemastered Tense Crossbow",
-          "text": "Rampart Raptor Runemastered Tense Crossbow",
+          "type": "Runeforged Tense Crossbow",
+          "text": "Rampart Raptor Runeforged Tense Crossbow",
           "name": "Rampart Raptor",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Runeforged Tense Crossbow",
-          "text": "Rampart Raptor Runeforged Tense Crossbow",
+          "type": "Runemastered Tense Crossbow",
+          "text": "Rampart Raptor Runemastered Tense Crossbow",
           "name": "Rampart Raptor",
           "flags": {
             "unique": true
