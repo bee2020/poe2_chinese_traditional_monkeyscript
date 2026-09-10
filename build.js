@@ -11,7 +11,13 @@ if (!fs.existsSync(indexTsPath)) {
 
 const indexContent = fs.readFileSync(indexTsPath, 'utf8');
 const headerMatch = indexContent.match(/(\/\/ ==UserScript==[\s\S]*?\/\/ ==\/UserScript==)/);
-const userScriptHeader = headerMatch ? headerMatch[1] : '';
+let userScriptHeader = headerMatch ? headerMatch[1] : '';
+
+// 🌟 自动以 package.json 的版本号为唯一真实源 (SSOT) 动态注入油猴 Header
+const pkg = require('./package.json');
+if (pkg.version) {
+    userScriptHeader = userScriptHeader.replace(/(\/\/\s*@version\s+)[^\r\n]+/, `$1${pkg.version}`);
+}
 
 console.log('🚀 [esbuild] 正在启动 TypeScript 模块化工程构建...');
 

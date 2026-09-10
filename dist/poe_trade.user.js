@@ -1336,9 +1336,10 @@
         optionSpan.addEventListener("click", () => {
           const rawQuery = option.query;
           const queryList = Array.isArray(rawQuery) ? JSON.parse(JSON.stringify(rawQuery)) : [JSON.parse(JSON.stringify(rawQuery))];
-          const store = unsafeWindow?.app?.$store;
+          const win = unsafeWindow;
+          const store = win?.app?.$store;
           const applyRestore = () => {
-            const stats = unsafeWindow?.app?.query?.query?.stats;
+            const stats = win?.app?.query?.query?.stats ?? win?.app?.query?.stats ?? win?.app?.$store?.state?.query?.stats;
             if (stats && Array.isArray(stats)) {
               stats.splice(0, stats.length, ...queryList);
             }

@@ -254,15 +254,17 @@ export function initSlectMy() {
                     ? JSON.parse(JSON.stringify(rawQuery))
                     : [JSON.parse(JSON.stringify(rawQuery))];
 
-                const store = (unsafeWindow as any)?.app?.$store;
+                const win = (unsafeWindow as any);
+                const store = win?.app?.$store;
                 const applyRestore = () => {
-                    const stats = (unsafeWindow as any)?.app?.query?.query?.stats;
+                    // 🌟 同步使用級聯容錯路徑，確保能正確拿到當前頁面的 stats 數組
+                    const stats = win?.app?.query?.query?.stats
+                        ?? win?.app?.query?.stats
+                        ?? win?.app?.$store?.state?.query?.stats;
                     if (stats && Array.isArray(stats)) {
-                        // 🌟 清空页面已有全部组，完全整套还原为保存时的组！
                         stats.splice(0, stats.length, ...queryList);
                     }
                 };
-
                 try {
                     if (store && typeof store._withCommit === 'function') {
                         store._withCommit(applyRestore);
@@ -273,6 +275,7 @@ export function initSlectMy() {
                     console.error("[預設模組] 還原預設異常:", e);
                 }
 
+                
                 inputBox.value = '';
                 closeDropdown();
             });
