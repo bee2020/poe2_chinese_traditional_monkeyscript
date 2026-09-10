@@ -133,6 +133,17 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
         }
     }
 
+    // 🌟 在写入 items.json 前，强制按名称与基底排序
+    for (const cat of builtItems) {
+        if (Array.isArray(cat.entries)) {
+            cat.entries.sort((a, b) => {
+                const keyA = `${a.type || ''}_${a.name || ''}`;
+                const keyB = `${b.type || ''}_${b.name || ''}`;
+                return keyA.localeCompare(keyB);
+            });
+        }
+    }
+
     const targetFile = path.join(dictTwDir, 'items.json');
     fs.writeFileSync(targetFile, JSON.stringify(builtItems, null, 2), 'utf8');
     console.log(`  ✅ items.json 构建完成: 官方对齐 ${officialItemsTranslated} + PoE2DB 补全 ${poe2dbResult.foundCount} = 共 ${finalItemsTranslated} / ${itemsTotal} 件`);

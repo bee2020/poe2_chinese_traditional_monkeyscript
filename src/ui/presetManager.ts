@@ -1,5 +1,5 @@
+import { createButton, createEl, createInput } from './domHelper';
 import { UI_TEXT } from './uiMapping';
-import { createEl, createInput, createButton } from './domHelper';
 
 interface PresetData {
     inputName: string;
@@ -479,28 +479,30 @@ export function initModel() {
 
     // 核心保存逻辑 (整套词缀方案完整全量保存)
     function executeSavePreset(name: string, isOverwrite: boolean) {
-        const allStatsArray = (unsafeWindow as any)?.app?.query?.query?.stats;
+        const win = (unsafeWindow as any);
+        const allStatsArray = win?.app?.query?.query?.stats
+            ?? win?.app?.query?.stats
+            ?? win?.app?.$store?.state?.query?.stats;
+        
+        console.log('allStatsArray', allStatsArray);
+
+        if (!Array.isArray(allStatsArray) || allStatsArray.length === 0) return;
         const newData = {
             name: name,
             query: JSON.parse(JSON.stringify(allStatsArray))
         };
-
         const curList = GM_getValue('saveStats') || presetProxy.saveStats || [];
         const existingIndex = curList.findIndex((a: any) => a.name === name);
-
         if (existingIndex !== -1) {
             curList[existingIndex] = JSON.parse(JSON.stringify(newData));
         } else {
             curList.push(JSON.parse(JSON.stringify(newData)));
         }
-
         presetProxy.saveStats = curList;
         GM_setValue('saveStats', JSON.parse(JSON.stringify(curList)));
-
         if (typeof (window as any).refreshMainPresetDropdown === 'function') {
             (window as any).refreshMainPresetDropdown();
         }
-
         renderModalPresetList();
         input.value = '';
         if (!isOverwrite) {

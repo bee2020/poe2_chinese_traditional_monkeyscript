@@ -103,6 +103,12 @@ async function buildStats(rawEnDir, rawTwDir, dictTwDir) {
             }
         }
     }
+    // 🌟 在写入 stats.json 前，强制按 id 字母升序排序 (消除官方 API 顺序抖动)
+    for (const cat of builtStats) {
+        if (Array.isArray(cat.entries)) {
+            cat.entries.sort((a, b) => (a.id || '').localeCompare(b.id || ''));
+        }
+    }
 
     const targetFile = path.join(dictTwDir, 'stats.json');
     fs.writeFileSync(targetFile, JSON.stringify({ result: builtStats }, null, 2), 'utf8');
