@@ -7525,7 +7525,7 @@
       {
         "type": "Runeforged Hardwood Targe",
         "zh_tw": {
-          "type": "���鍛硬木圓盾",
+          "type": "符鍛硬木圓盾",
           "source": "poe2db"
         }
       },
@@ -7910,7 +7910,7 @@
       {
         "type": "Runeforged Marabout Garb",
         "zh_tw": {
-          "type": "符鍛修士裝束",
+          "type": "符鍛��士裝束",
           "source": "poe2db"
         }
       },
@@ -15840,7 +15840,7 @@
       {
         "type": "Ancient Diluted Liquid Ire",
         "zh_tw": {
-          "type": "遠���稀釋的液態憤怒",
+          "type": "遠古稀釋的液態憤怒",
           "source": "poe2db"
         }
       },
@@ -16051,6 +16051,34 @@
         "type": "Atmohua's Soul Core of Retreat",
         "zh_tw": {
           "type": "艾特瑪哈的撤退靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Atziri's Soul Core of Alacrity",
+        "zh_tw": {
+          "type": "阿茲里的敏捷靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Atziri's Soul Core of Devotion",
+        "zh_tw": {
+          "type": "阿茲里的奉獻靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Atziri's Soul Core of Inoculation",
+        "zh_tw": {
+          "type": "阿茲里的免疫靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Atziri's Soul Core of Vitality",
+        "zh_tw": {
+          "type": "阿茲里的活力靈魂核心",
           "source": "poe2db"
         }
       },
@@ -17203,6 +17231,97 @@
         }
       },
       {
+        "type": "Jiquani's Soul Core of Abundance",
+        "zh_tw": {
+          "type": "吉卡尼的豐饒靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Automation",
+        "zh_tw": {
+          "type": "吉卡尼的自動化靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Malediction",
+        "zh_tw": {
+          "type": "吉卡尼的惡語靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Munitions",
+        "zh_tw": {
+          "type": "吉卡尼的彈藥靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Quaking",
+        "zh_tw": {
+          "type": "吉卡尼的震顫靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Radiance",
+        "zh_tw": {
+          "type": "吉卡尼的輝耀靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Rallying",
+        "zh_tw": {
+          "type": "吉卡尼的號召靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Rippling",
+        "zh_tw": {
+          "type": "吉卡尼的漣漪靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Severing",
+        "zh_tw": {
+          "type": "吉卡尼的斷切靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Snares",
+        "zh_tw": {
+          "type": "吉卡尼的陷阱靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Squalls",
+        "zh_tw": {
+          "type": "吉卡尼的狂風靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Targeting",
+        "zh_tw": {
+          "type": "吉卡尼的索敵靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
+        "type": "Jiquani's Soul Core of Thundering",
+        "zh_tw": {
+          "type": "吉卡尼的雷鳴靈魂核心",
+          "source": "poe2db"
+        }
+      },
+      {
         "type": "Jiquani's Thesis",
         "zh_tw": {
           "type": "吉卡尼的假說",
@@ -17413,7 +17532,7 @@
         }
       },
       {
-        "type": "Legacy of Edyrns Tusks",
+        "type": "Legacy of Edyrn's Tusks",
         "zh_tw": {
           "type": "傳承．埃狄恩的曲牙",
           "source": "poe2db_crawler"
@@ -17521,7 +17640,7 @@
         "type": "Legacy of Mjölner",
         "zh_tw": {
           "type": "傳承．沉默之雷",
-          "source": "poe2db_crawler"
+          "source": "poe2db"
         }
       },
       {
@@ -19107,6 +19226,13 @@
         }
       },
       {
+        "type": "Sacred Bloom",
+        "zh_tw": {
+          "type": "聖綻之花",
+          "source": "poe2db"
+        }
+      },
+      {
         "type": "Saqawal's Rune of Erosion",
         "zh_tw": {
           "type": "斯卡沃的侵蝕符文",
@@ -19380,43 +19506,95 @@
         }
       },
       {
-        "type": "Thaumaturgic Flux (Level 10)"
+        "type": "Thaumaturgic Flux (Level 10)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級10）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 11)"
+        "type": "Thaumaturgic Flux (Level 11)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級11）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 12)"
+        "type": "Thaumaturgic Flux (Level 12)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級12）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 13)"
+        "type": "Thaumaturgic Flux (Level 13)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級13）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 14)"
+        "type": "Thaumaturgic Flux (Level 14)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級14）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 15)"
+        "type": "Thaumaturgic Flux (Level 15)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級15）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 16)"
+        "type": "Thaumaturgic Flux (Level 16)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級16）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 17)"
+        "type": "Thaumaturgic Flux (Level 17)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級17）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 18)"
+        "type": "Thaumaturgic Flux (Level 18)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級18）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 19)"
+        "type": "Thaumaturgic Flux (Level 19)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級19）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 20)"
+        "type": "Thaumaturgic Flux (Level 20)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級20）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 8)"
+        "type": "Thaumaturgic Flux (Level 8)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級8）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Thaumaturgic Flux (Level 9)"
+        "type": "Thaumaturgic Flux (Level 9)",
+        "zh_tw": {
+          "type": "奇術熔劑（等級9）",
+          "source": "poe2db"
+        }
       },
       {
         "type": "The Arbiter's Reliquary Key",
@@ -19652,7 +19830,7 @@
       {
         "type": "Vorana's Saga",
         "zh_tw": {
-          "type": "沃拉娜的傳��",
+          "type": "沃拉娜的傳奇",
           "source": "poe2db"
         }
       },
@@ -19849,14 +20027,14 @@
         "type": "Zarokh's Reliquary Key: Against the Darkness",
         "zh_tw": {
           "type": "澤洛克的寶庫鑰匙：力抗黑暗",
-          "source": "poe2db_crawler"
+          "source": "poe2db"
         }
       },
       {
         "type": "Zarokh's Reliquary Key: Temporalis",
         "zh_tw": {
           "type": "澤洛克的寶庫鑰匙：時空之物",
-          "source": "poe2db_crawler"
+          "source": "poe2db"
         }
       }
     ]
@@ -23956,7 +24134,7 @@
         "type": "Mórrigan's Insight",
         "zh_tw": {
           "type": "莫里根的洞察",
-          "source": "poe2db_crawler"
+          "source": "poe2db"
         }
       },
       {
@@ -24054,7 +24232,7 @@
         "type": "Oisín's Oath",
         "zh_tw": {
           "type": "歐辛的誓言",
-          "source": "poe2db_crawler"
+          "source": "poe2db"
         }
       },
       {
@@ -25892,64 +26070,144 @@
         }
       },
       {
-        "type": "Uncut Skill Gem (Level 1)"
+        "type": "Uncut Skill Gem (Level 1)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 1）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 10)"
+        "type": "Uncut Skill Gem (Level 10)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 10）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 11)"
+        "type": "Uncut Skill Gem (Level 11)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 11）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 12)"
+        "type": "Uncut Skill Gem (Level 12)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 12）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 13)"
+        "type": "Uncut Skill Gem (Level 13)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 13）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 14)"
+        "type": "Uncut Skill Gem (Level 14)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 14）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 15)"
+        "type": "Uncut Skill Gem (Level 15)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 15）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 16)"
+        "type": "Uncut Skill Gem (Level 16)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 16）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 17)"
+        "type": "Uncut Skill Gem (Level 17)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 17）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 18)"
+        "type": "Uncut Skill Gem (Level 18)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 18）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 19)"
+        "type": "Uncut Skill Gem (Level 19)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 19）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 2)"
+        "type": "Uncut Skill Gem (Level 2)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 2）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 20)"
+        "type": "Uncut Skill Gem (Level 20)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 20）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 3)"
+        "type": "Uncut Skill Gem (Level 3)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 3）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 4)"
+        "type": "Uncut Skill Gem (Level 4)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 4）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 5)"
+        "type": "Uncut Skill Gem (Level 5)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 5）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 6)"
+        "type": "Uncut Skill Gem (Level 6)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 6）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 7)"
+        "type": "Uncut Skill Gem (Level 7)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 7）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 8)"
+        "type": "Uncut Skill Gem (Level 8)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 8）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Skill Gem (Level 9)"
+        "type": "Uncut Skill Gem (Level 9)",
+        "zh_tw": {
+          "type": "未切割的技能寶石（等級 9）",
+          "source": "dynamic_format"
+        }
       },
       {
         "type": "Uncut Skill Gem",
@@ -25959,55 +26217,123 @@
         }
       },
       {
-        "type": "Uncut Spirit Gem (Level 10)"
+        "type": "Uncut Spirit Gem (Level 10)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 10）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 11)"
+        "type": "Uncut Spirit Gem (Level 11)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 11）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 12)"
+        "type": "Uncut Spirit Gem (Level 12)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 12）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 13)"
+        "type": "Uncut Spirit Gem (Level 13)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 13）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 14)"
+        "type": "Uncut Spirit Gem (Level 14)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 14）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 15)"
+        "type": "Uncut Spirit Gem (Level 15)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 15）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 16)"
+        "type": "Uncut Spirit Gem (Level 16)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 16）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 17)"
+        "type": "Uncut Spirit Gem (Level 17)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 17）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 18)"
+        "type": "Uncut Spirit Gem (Level 18)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 18）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 19)"
+        "type": "Uncut Spirit Gem (Level 19)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 19）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 20)"
+        "type": "Uncut Spirit Gem (Level 20)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 20）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 4)"
+        "type": "Uncut Spirit Gem (Level 4)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 4）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 5)"
+        "type": "Uncut Spirit Gem (Level 5)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 5）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 6)"
+        "type": "Uncut Spirit Gem (Level 6)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 6）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 7)"
+        "type": "Uncut Spirit Gem (Level 7)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 7）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 8)"
+        "type": "Uncut Spirit Gem (Level 8)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 8）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Spirit Gem (Level 9)"
+        "type": "Uncut Spirit Gem (Level 9)",
+        "zh_tw": {
+          "type": "精魂寶石（等級 9）",
+          "source": "dynamic_format"
+        }
       },
       {
         "type": "Uncut Spirit Gem",
@@ -26017,19 +26343,39 @@
         }
       },
       {
-        "type": "Uncut Support Gem (Level 1)"
+        "type": "Uncut Support Gem (Level 1)",
+        "zh_tw": {
+          "type": "未切割的輔助寶石（等級 1）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Support Gem (Level 2)"
+        "type": "Uncut Support Gem (Level 2)",
+        "zh_tw": {
+          "type": "未切割的輔助寶石（等級 2）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Support Gem (Level 3)"
+        "type": "Uncut Support Gem (Level 3)",
+        "zh_tw": {
+          "type": "未切割的輔助寶石（等級 3）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Support Gem (Level 4)"
+        "type": "Uncut Support Gem (Level 4)",
+        "zh_tw": {
+          "type": "未切割的輔助寶石（等級 4）",
+          "source": "dynamic_format"
+        }
       },
       {
-        "type": "Uncut Support Gem (Level 5)"
+        "type": "Uncut Support Gem (Level 5)",
+        "zh_tw": {
+          "type": "未切割的輔助寶石（等級 5）",
+          "source": "dynamic_format"
+        }
       },
       {
         "type": "Uncut Support Gem",
@@ -27178,52 +27524,116 @@
         }
       },
       {
-        "type": "Waystone (Tier 1)"
+        "type": "Waystone (Tier 1)",
+        "zh_tw": {
+          "type": "換界石（階級 1）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 10)"
+        "type": "Waystone (Tier 10)",
+        "zh_tw": {
+          "type": "換界石（階級 10）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 11)"
+        "type": "Waystone (Tier 11)",
+        "zh_tw": {
+          "type": "換界石（階級 11）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 12)"
+        "type": "Waystone (Tier 12)",
+        "zh_tw": {
+          "type": "換界石（階級 12）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 13)"
+        "type": "Waystone (Tier 13)",
+        "zh_tw": {
+          "type": "換界石（階級 13）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 14)"
+        "type": "Waystone (Tier 14)",
+        "zh_tw": {
+          "type": "換界石（階級 14）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 15)"
+        "type": "Waystone (Tier 15)",
+        "zh_tw": {
+          "type": "換界石（階級 15）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 16)"
+        "type": "Waystone (Tier 16)",
+        "zh_tw": {
+          "type": "換界石（階級 16）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 2)"
+        "type": "Waystone (Tier 2)",
+        "zh_tw": {
+          "type": "換界石（階級 2）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 3)"
+        "type": "Waystone (Tier 3)",
+        "zh_tw": {
+          "type": "換界石（階級 3）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 4)"
+        "type": "Waystone (Tier 4)",
+        "zh_tw": {
+          "type": "換界石（階級 4）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 5)"
+        "type": "Waystone (Tier 5)",
+        "zh_tw": {
+          "type": "換界石（階級 5）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 6)"
+        "type": "Waystone (Tier 6)",
+        "zh_tw": {
+          "type": "換界石（階級 6）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 7)"
+        "type": "Waystone (Tier 7)",
+        "zh_tw": {
+          "type": "換界石（階級 7）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 8)"
+        "type": "Waystone (Tier 8)",
+        "zh_tw": {
+          "type": "換界石（階級 8）",
+          "source": "poe2db"
+        }
       },
       {
-        "type": "Waystone (Tier 9)"
+        "type": "Waystone (Tier 9)",
+        "zh_tw": {
+          "type": "換界石（階級 9）",
+          "source": "poe2db"
+        }
       },
       {
         "type": "Weathered Crisis Fragment",
@@ -30875,9 +31285,9 @@
         },
         "zh_tw": {
           "type": "符煉磨難棍棒",
-          "name": "Mjölner",
-          "text": "Mjölner 符煉磨難棍棒",
-          "source": "poe2db_partial"
+          "name": "沉默之雷",
+          "text": "沉默之雷 符煉磨難棍棒",
+          "source": "poe2db"
         }
       },
       {
@@ -31660,9 +32070,9 @@
         },
         "zh_tw": {
           "type": "磨難棍棒",
-          "name": "Mjölner",
-          "text": "Mjölner 磨難棍棒",
-          "source": "poe2db_partial"
+          "name": "沉默之雷",
+          "text": "沉默之雷 磨難棍棒",
+          "source": "poe2db"
         }
       },
       {

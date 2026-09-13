@@ -1,6 +1,6 @@
 # POE2 官方交易字典最新编译报告 (CHANGELOG)
 
-> 编译时间: 2026/9/4 16:33:34  
+> 编译时间: 2026/9/14 01:09:42  
 > 同步状态: 🟢 官方 API 直连 + 机器 ID 强对齐 + PoE2DB 全链路兜底就绪
 
 ---
@@ -9,10 +9,10 @@
 
 | 业务模块 | 国际服总条目 | 官方台服已对齐 | ⚠️ 待补全/缺漏数 | 🌐 使用 poe2db.tw 兜底查找 (成功 / 未查到) | 🎯 最终综合覆盖率 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **通货材料 (static.json)** | **780** | **780** | 🟢 **0 种** | 🟢 无需介入 (100% 官方对齐) | **100.00%** |
+| **通货材料 (static.json)** | **798** | **798** | 🟢 **0 种** | 🟢 无需介入 (100% 官方对齐) | **100.00%** |
 | **市集筛选 (filters.json)** | **undefined** | **undefined** | 🟢 **undefined 项** | 🟢 无需介入 (100% 官方对齐) | **100.00%** |
-| **装备与暗金 (items.json)** | **3882** | **3451** | 🔴 **431 件** | 🟢 **已查到: 431 件** / ⚪ 未查到: 0 件 | **100.00%** |
-| **核心词缀 (stats.json)** | **8258** | **8170** | 🔴 **88 条** | 🟢 **已查到: 76 条** / ⚪ 未查到: 12 条 | **99.85%** |
+| **装备与暗金 (items.json)** | **3900** | **0** | 🔴 **3900 件** | 🟢 **已查到: 3898 件** / ⚪ 未查到: 0 件 | **99.95%** |
+| **核心词缀 (stats.json)** | **8296** | **8197** | 🔴 **99 条** | 🟢 **已查到: 87 条** / ⚪ 未查到: 12 条 | **99.86%** |
 
 ---
 
@@ -22,7 +22,7 @@
   - `dict/tw/static.json` (通货材料: 100% 官方对齐)
   - `dict/tw/filters.json` (市集筛选器: 100% 官方对齐)
   - `dict/tw/items.json` (装备与暗金: 100% 综合覆盖)
-  - `dict/tw/stats.json` (核心词缀与属性: 99.85% 综合覆盖)
+  - `dict/tw/stats.json` (核心词缀与属性: 99.86% 综合覆盖)
 
 ---
 
@@ -39,8 +39,8 @@
 | 1 | `explicit` | `explicit.stat_3762412853` | `Attacks with this Weapon Penetrate #% Chaos Resistance` | 无法匹配 |
 | 2 | `explicit` | `explicit.stat_4011431182` | `Gain #% of Damage as Extra Chaos Damage while you are missing Runic Ward` | 无法匹配 |
 | 3 | `explicit` | `explicit.stat_2888350852` | `Gain #% of Damage as Extra Cold Damage while you are missing Runic Ward` | 无法匹配 |
-| 4 | `explicit` | `explicit.stat_457920946` | `Gain #% of Damage as Extra Lightning Damage while you are missing Runic Ward` | 无法匹配 |
-| 5 | `explicit` | `explicit.stat_915546383` | `Gain #% of Physical Damage as Extra Damage of a random Element` | 无法匹配 |
+| 4 | `explicit` | `explicit.stat_915546383` | `Gain #% of Physical Damage as Extra Damage of a random Element` | 无法匹配 |
+| 5 | `explicit` | `explicit.stat_457920946` | `Gain #% of Damage as Extra Lightning Damage while you are missing Runic Ward` | 无法匹配 |
 | 6 | `crafted` | `crafted.stat_4011431182` | `Gain #% of Damage as Extra Chaos Damage while you are missing Runic Ward` | 无法匹配 |
 | 7 | `crafted` | `crafted.stat_2888350852` | `Gain #% of Damage as Extra Cold Damage while you are missing Runic Ward` | 无法匹配 |
 | 8 | `crafted` | `crafted.stat_457920946` | `Gain #% of Damage as Extra Lightning Damage while you are missing Runic Ward` | 无法匹配 |

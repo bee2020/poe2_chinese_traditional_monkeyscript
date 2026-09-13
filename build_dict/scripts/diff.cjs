@@ -55,10 +55,10 @@ function generateDiffAndChangelog(untranslatedReport) {
     if (!untranslatedReport.items || untranslatedReport.items.length === 0) {
         mainMd += `> 🎉 **全库装备已 100% 全部查找到位，未查到数为 0！**\n\n`;
     } else {
-        mainMd += `| 序号 | 所属分类 | 英文基底 (Type) | 英文名称 (Name) | 完整英文原名 (Text) | 原因说明 |\n`;
+        mainMd += `| 序号 | 所属分类 | 英文基底 (Type) | 英文名称 (Name) | 完整英文原名 (Text) | 状态 |\n`;
         mainMd += `| :---: | :--- | :--- | :--- | :--- | :--- |\n`;
         untranslatedReport.items.forEach((it, idx) => {
-            mainMd += `| ${idx + 1} | \`${it.category || '-'}\` | \`${it.type}\` | \`${it.name || '-'}\` | \`${it.text || it.type}\` | 官方台服与PoE2DB均未收录 |\n`;
+            mainMd += `| ${idx + 1} | \`${it.category || '-'}\` | \`${it.type}\` | \`${it.name || '-'}\` | \`${it.text || it.type}\` | 無法匹配 |\n`;
         });
         mainMd += `\n`;
     }

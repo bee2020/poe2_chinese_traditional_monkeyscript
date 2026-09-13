@@ -1272,7 +1272,7 @@
         },
         {
           "id": "legacy-of-edyrns-tusks",
-          "text": "Legacy of Edyrns Tusks",
+          "text": "Legacy of Edyrn's Tusks",
           "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXhwZWRpdGlvbjIvR2FtZVdhcnBSdW5lVW5pcXVlRnJhZ21lbnQiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a24a0bdec3/GameWarpRuneUniqueFragment.png"
         },
         {
@@ -2037,6 +2037,91 @@
           "id": "xipocados-soul-core-of-dominion",
           "text": "Xipocado's Soul Core of Dominion",
           "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL05ld1NvdWxDb3JlTWluaW9uIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b1e7975db2/NewSoulCoreMinion.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-automation",
+          "text": "Jiquani's Soul Core of Automation",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVRvdGVtcyIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/71877a6b6e/RareSoulCoreTotems.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-malediction",
+          "text": "Jiquani's Soul Core of Malediction",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZUN1cnNlcyIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/1c32444d33/RareSoulCoreCurses.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-targeting",
+          "text": "Jiquani's Soul Core of Targeting",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZU1hcmtzIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cfe012547b/RareSoulCoreMarks.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-rallying",
+          "text": "Jiquani's Soul Core of Rallying",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVdhcmNyaWVzIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/29ccae030b/RareSoulCoreWarcries.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-radiance",
+          "text": "Jiquani's Soul Core of Radiance",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZUhlcmFsZHMiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/6c7b4a05b7/RareSoulCoreHeralds.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-severing",
+          "text": "Jiquani's Soul Core of Severing",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVN0cmlrZXMiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a23de522f7/RareSoulCoreStrikes.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-rippling",
+          "text": "Jiquani's Soul Core of Rippling",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZU5vdmFzIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/28c6fc50b7/RareSoulCoreNovas.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-quaking",
+          "text": "Jiquani's Soul Core of Quaking",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVNsYW1zIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/69ad233e77/RareSoulCoreSlams.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-munitions",
+          "text": "Jiquani's Soul Core of Munitions",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZUdyZW5hZGVzIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b3566867d7/RareSoulCoreGrenades.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-snares",
+          "text": "Jiquani's Soul Core of Snares",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZUhhemFyZHMiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/23c8ce4e3d/RareSoulCoreHazards.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-abundance",
+          "text": "Jiquani's Soul Core of Abundance",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVBsYW50cyIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ee46e1c420/RareSoulCorePlants.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-squalls",
+          "text": "Jiquani's Soul Core of Squalls",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVdpbmQiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/48023bf3ae/RareSoulCoreWind.png"
+        },
+        {
+          "id": "jiquanis-soul-core-of-thundering",
+          "text": "Jiquani's Soul Core of Thundering",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1JhcmVTb3VsQ29yZVN0b3JtcyIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/21e5b8a994/RareSoulCoreStorms.png"
+        },
+        {
+          "id": "atziris-soul-core-of-devotion",
+          "text": "Atziri's Soul Core of Devotion",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1NvdWxDb3JlU3BlY2lhbEhlbG1ldCIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/8794f35eaf/SoulCoreSpecialHelmet.png"
+        },
+        {
+          "id": "atziris-soul-core-of-vitality",
+          "text": "Atziri's Soul Core of Vitality",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1NvdWxDb3JlU3BlY2lhbEJvZHlBcm1vdXIiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4c31085f18/SoulCoreSpecialBodyArmour.png"
+        },
+        {
+          "id": "atziris-soul-core-of-alacrity",
+          "text": "Atziri's Soul Core of Alacrity",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1NvdWxDb3JlU3BlY2lhbEdsb3ZlcyIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/bfd1353fac/SoulCoreSpecialGloves.png"
+        },
+        {
+          "id": "atziris-soul-core-of-inoculation",
+          "text": "Atziri's Soul Core of Inoculation",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU291bENvcmVzL1NvdWxDb3JlU3BlY2lhbEJvb3RzIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4770c53928/SoulCoreSpecialBoots.png"
         }
       ]
     },
@@ -2392,6 +2477,11 @@
           "id": "head-of-the-king",
           "text": "Head of the King",
           "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVlc3RJdGVtcy9LaW5nb2Z0aGVNaXN0SGVhZCIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/254e341ba3/KingoftheMistHead.png"
+        },
+        {
+          "id": "sacred-bloom",
+          "text": "Sacred Bloom",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9TYWNyZWRMaWZlZm9yY2UiLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/0dcf04819c/SacredLifeforce.png"
         },
         {
           "id": "sep",

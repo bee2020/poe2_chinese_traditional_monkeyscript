@@ -20,11 +20,13 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
         throw new Error('无法拉取 PoE2DB 字典文件，请检查网络连接');
     }
 
-    // 2. 建立精准的 Slug 映射表 (支持下划线、连字符、空格、忽略单引号等多种容错)
+    // 2. 建立精准的 Slug 映射表 (通用支持 URL 解码、下划线、连字符、空格、忽略单引号等多种容错)
     const slugMap = new Map();
     for (const item of data) {
         if (!item.value || !item.label) continue;
-        const v = item.value.toLowerCase();
+        let vDecoded = item.value;
+        try { vDecoded = decodeURIComponent(item.value); } catch (_) {}
+        const v = vDecoded.toLowerCase();
         const l = item.label;
         slugMap.set(v, l);
         slugMap.set(v.replace(/_/g, ' '), l);
@@ -82,11 +84,31 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
                     initialMissingItems.push({ cat: cat.id, item });
                 }
             } else {
-                // 普通基底
+                // 普通基底 / 宝石 / 通货
                 if (typeTw) {
                     item.zh_tw = { type: typeTw, source: "poe2db" };
                     poe2dbFound++;
                 } else {
+                    // 通用动态解析带 (Tier/Level X) 的规格后缀（绝不硬编码任何装备/宝石名称）
+                    const bracketMatch = typeKey ? typeKey.match(/^(.+?)\s*\((Tier|Level)\s*(\d+)\)$/i) : null;
+                    if (bracketMatch) {
+                        const baseEn = bracketMatch[1].trim();
+                        const kind = bracketMatch[2].toLowerCase() === 'tier' ? '階級' : '等級';
+                        const num = bracketMatch[3];
+
+                        // 动态查找基底繁中名（支持单数与复数动态容错）
+                        const baseZh = baseMap.get(baseEn)
+                            || slugMap.get(baseEn.toLowerCase())
+                            || slugMap.get(baseEn.toLowerCase().replace(/\s+/g, '_'))
+                            || slugMap.get((baseEn + 's').toLowerCase().replace(/\s+/g, '_'));
+
+                        if (baseZh) {
+                            const formattedType = `${baseZh}（${kind} ${num}）`;
+                            item.zh_tw = { type: formattedType, source: "dynamic_format" };
+                            poe2dbFound++;
+                            continue;
+                        }
+                    }
                     initialMissingItems.push({ cat: cat.id, item });
                 }
             }
@@ -99,13 +121,8 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
         console.log(`  🔍 针对剩余 ${initialMissingItems.length} 件未匹配条目进行定向爬取兜底...`);
         for (const { cat, item } of initialMissingItems) {
             const queryName = item.name || item.type;
+            // 过滤官方内部调试/占位条目 (Do Not Translate)
             if (!queryName || queryName.includes('[DNT]')) {
-                finalUntranslated.push({
-                    cat,
-                    type: item.type || '',
-                    name: item.name || '',
-                    text: item.text || item.type || ''
-                });
                 continue;
             }
 
