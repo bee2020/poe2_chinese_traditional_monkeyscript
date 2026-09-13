@@ -1,139 +1,146 @@
 /**
  * 【独立业务模块 4：装备基底与暗金 (items.json)】
- * 逻辑：官方双源同位自解析 + PoE2DB 二级动态兜底对齐
+ * 架构：彻底废除下标猜测对齐，改用 PoE2DB 官方 CDN Autocomplete 权威中英文全量库
+ * 进行 Slug 级精准对齐 + 定向抓取兜底
  */
 const fs = require('fs');
 const path = require('path');
-const { searchPoe2dbItems } = require('../fallback/fallback_items.cjs');
+const { fetchLatestAutocompleteJson, httpGet } = require('../fallback/poe2db_client.cjs');
+const { cleanAndToSign } = require('../utils/clean_util.cjs');
 
 async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
-    console.log('📦 [业务 4] 正在独立解析构建 items.json...');
+    console.log('📦 [业务 4] 正在独立解析构建 items.json (基于 PoE2DB 权威映射)...');
 
     const enItems = JSON.parse(fs.readFileSync(path.join(rawEnDir, 'items.json'), 'utf8'));
-    const twItems = JSON.parse(fs.readFileSync(path.join(rawTwDir, 'items.json'), 'utf8'));
-
     const enCats = enItems.result || enItems;
-    const twCats = twItems.result || twItems;
 
-    // 1. 基础普通基底 1:1 提取
-    const baseMap = new Map();
-    for (const enCat of enCats) {
-        const twCat = twCats.find(t => t.id === enCat.id);
-        if (!twCat) continue;
-        const enBases = enCat.entries.filter(e => !e.flags?.unique);
-        const twBases = twCat.entries.filter(e => !e.flags?.unique);
-        const limit = Math.min(enBases.length, twBases.length);
-        for (let i = 0; i < limit; i++) {
-            if (enBases[i].type && twBases[i].type) baseMap.set(enBases[i].type, twBases[i].type);
-        }
+    // 1. 获取 PoE2DB 权威中英文词库
+    const data = await fetchLatestAutocompleteJson();
+    if (!data || !Array.isArray(data)) {
+        throw new Error('无法拉取 PoE2DB 字典文件，请检查网络连接');
     }
 
-    // 2. 同一基底下的暗金 1:1 提取
-    const uniqueNameMap = new Map();
-    for (const enCat of enCats) {
-        const twCat = twCats.find(t => t.id === enCat.id);
-        if (!twCat) continue;
-        const enUniques = enCat.entries.filter(e => e.flags?.unique);
-        const twUniques = twCat.entries.filter(e => e.flags?.unique);
+    // 2. 建立精准的 Slug 映射表 (支持下划线、连字符、空格、忽略单引号等多种容错)
+    const slugMap = new Map();
+    for (const item of data) {
+        if (!item.value || !item.label) continue;
+        const v = item.value.toLowerCase();
+        const l = item.label;
+        slugMap.set(v, l);
+        slugMap.set(v.replace(/_/g, ' '), l);
+        slugMap.set(v.replace(/-/g, ' '), l);
+        const noQuote = v.replace(/['’]/g, '');
+        slugMap.set(noQuote, l);
+        slugMap.set(noQuote.replace(/_/g, ' '), l);
+    }
 
-        const enByBase = new Map();
-        for (const u of enUniques) {
-            if (!enByBase.has(u.type)) enByBase.set(u.type, []);
-            enByBase.get(u.type).push(u);
-        }
-        const twByBase = new Map();
-        for (const u of twUniques) {
-            if (!twByBase.has(u.type)) twByBase.set(u.type, []);
-            twByBase.get(u.type).push(u);
-        }
-
-        for (const [enBaseType, uListEn] of enByBase.entries()) {
-            const twBaseType = baseMap.get(enBaseType);
-            const uListTw = twByBase.get(twBaseType);
-            if (uListTw && uListTw.length > 0) {
-                const subLimit = Math.min(uListEn.length, uListTw.length);
-                for (let j = 0; j < subLimit; j++) {
-                    uniqueNameMap.set(uListEn[j].name, uListTw[j].name);
+    // 3. 构建精准的基底映射字典 (Base Types)
+    const baseMap = new Map();
+    for (const cat of enCats) {
+        for (const entry of (cat.entries || [])) {
+            if (!entry.flags?.unique && entry.type) {
+                const raw = entry.type.trim().toLowerCase();
+                const noQuote = raw.replace(/['’]/g, '');
+                const zh = slugMap.get(raw) || slugMap.get(noQuote) || slugMap.get(raw.replace(/\s+/g, '_'));
+                if (zh) {
+                    baseMap.set(entry.type, zh);
                 }
             }
         }
     }
+    console.log(`  🎯 基础装备基底精准对齐完成: ${baseMap.size} 种`);
 
-    // 3. 官方初筛对齐
-    const initialMissingItems = [];
+    // 4. 对齐国际服全量装备 (基底与传奇)
     const builtItems = JSON.parse(JSON.stringify(enCats));
     let itemsTotal = 0;
-    let officialItemsTranslated = 0;
+    let poe2dbFound = 0;
+    const initialMissingItems = [];
 
     for (const cat of builtItems) {
         for (const item of (cat.entries || [])) {
             itemsTotal++;
             const typeKey = item.type;
             const nameKey = item.name;
-
             const typeTw = baseMap.get(typeKey);
-            const nameTw = nameKey ? uniqueNameMap.get(nameKey) : null;
 
             if (nameKey) {
+                // 传奇装备：分别对齐名字与基底
+                const nameRaw = nameKey.trim().toLowerCase();
+                const noQuote = nameRaw.replace(/['’]/g, '');
+                const nameTw = slugMap.get(nameRaw) || slugMap.get(noQuote) || slugMap.get(nameRaw.replace(/\s+/g, '_'));
+
                 if (nameTw && typeTw) {
-                    item.zh_tw = { type: typeTw, name: nameTw, text: `${nameTw} ${typeTw}`, source: "official" };
-                    officialItemsTranslated++;
+                    item.zh_tw = { type: typeTw, name: nameTw, text: `${nameTw} ${typeTw}`, source: "poe2db" };
+                    poe2dbFound++;
                 } else if (nameTw) {
-                    item.zh_tw = { type: typeKey, name: nameTw, text: `${nameTw} ${typeKey}`, source: "official" };
-                    officialItemsTranslated++;
+                    item.zh_tw = { type: typeTw || typeKey, name: nameTw, text: `${nameTw} ${typeTw || typeKey}`, source: "poe2db" };
+                    poe2dbFound++;
+                } else if (typeTw) {
+                    item.zh_tw = { type: typeTw, name: nameKey, text: `${nameKey} ${typeTw}`, source: "poe2db_partial" };
+                    poe2dbFound++;
                 } else {
-                    initialMissingItems.push(item);
+                    initialMissingItems.push({ cat: cat.id, item });
                 }
             } else {
+                // 普通基底
                 if (typeTw) {
-                    item.zh_tw = { type: typeTw, source: "official" };
-                    officialItemsTranslated++;
+                    item.zh_tw = { type: typeTw, source: "poe2db" };
+                    poe2dbFound++;
                 } else {
-                    initialMissingItems.push(item);
+                    initialMissingItems.push({ cat: cat.id, item });
                 }
             }
         }
     }
 
-    // 4. 启动 PoE2DB 二级兜底对齐
-    const poe2dbResult = await searchPoe2dbItems(initialMissingItems);
-    let finalItemsTranslated = officialItemsTranslated;
-    const untranslated = [];
-
-    for (const item of initialMissingItems) {
-        const key = item.name ? `unique_${item.name}` : `base_${item.type}`;
-        const poe2dbZh = poe2dbResult.itemZhMap.get(key);
-
-        if (poe2dbZh) {
-            finalItemsTranslated++;
-            if (item.name) {
-                const parts = poe2dbZh.trim().split(/\s+/);
-                let parsedName = poe2dbZh;
-                let parsedType = baseMap.get(item.type) || item.type;
-
-                if (parts.length >= 2) {
-                    parsedName = parts[0];
-                    parsedType = parts.slice(1).join(' ');
-                }
-
-                item.zh_tw = {
-                    type: parsedType,
-                    name: parsedName,
-                    text: poe2dbZh,
-                    source: 'poe2db'
-                };
-            } else {
-                item.zh_tw = {
-                    type: poe2dbZh,
-                    source: 'poe2db'
-                };
+    // 5. 针对极少数未收录条目发起定向爬取兜底
+    const finalUntranslated = [];
+    if (initialMissingItems.length > 0) {
+        console.log(`  🔍 针对剩余 ${initialMissingItems.length} 件未匹配条目进行定向爬取兜底...`);
+        for (const { cat, item } of initialMissingItems) {
+            const queryName = item.name || item.type;
+            if (!queryName || queryName.includes('[DNT]')) {
+                finalUntranslated.push({
+                    cat,
+                    type: item.type || '',
+                    name: item.name || '',
+                    text: item.text || item.type || ''
+                });
+                continue;
             }
-        } else {
-            untranslated.push(item);
+
+            let foundFromWeb = false;
+            const slug = encodeURIComponent(queryName.replace(/\s+/g, '_'));
+            try {
+                const res = await httpGet(`https://poe2db.tw/tw/${slug}`, { timeout: 4000 });
+                if (res.statusCode === 200) {
+                    const m = res.body.match(/<title>(.*?)<\/title>/i);
+                    if (m) {
+                        const cleanTitle = cleanAndToSign(m[1].replace(/\s*-\s*流亡.*$/, '').trim(), false);
+                        if (cleanTitle && !cleanTitle.includes('404') && !cleanTitle.includes('Home') && !cleanTitle.includes('家園')) {
+                            const curBaseTw = baseMap.get(item.type) || item.type;
+                            item.zh_tw = item.name 
+                                ? { type: curBaseTw, name: cleanTitle, text: `${cleanTitle} ${curBaseTw}`, source: "poe2db_crawler" }
+                                : { type: cleanTitle, source: "poe2db_crawler" };
+                            poe2dbFound++;
+                            foundFromWeb = true;
+                        }
+                    }
+                }
+            } catch (_) {}
+
+            if (!foundFromWeb) {
+                finalUntranslated.push({
+                    cat,
+                    type: item.type || '',
+                    name: item.name || '',
+                    text: item.text || item.type || ''
+                });
+            }
         }
     }
 
-    // 🌟 在写入 items.json 前，强制按名称与基底排序
+    // 6. 排序并写入 dict/tw/items.json
     for (const cat of builtItems) {
         if (Array.isArray(cat.entries)) {
             cat.entries.sort((a, b) => {
@@ -146,17 +153,18 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
 
     const targetFile = path.join(dictTwDir, 'items.json');
     fs.writeFileSync(targetFile, JSON.stringify(builtItems, null, 2), 'utf8');
-    console.log(`  ✅ items.json 构建完成: 官方对齐 ${officialItemsTranslated} + PoE2DB 补全 ${poe2dbResult.foundCount} = 共 ${finalItemsTranslated} / ${itemsTotal} 件`);
+    const finalRate = `${((poe2dbFound / itemsTotal) * 100).toFixed(2)}%`;
+    console.log(`  ✅ items.json 重新构建完成: 成功对齐 ${poe2dbFound} / ${itemsTotal} 件 (${finalRate})`);
 
     return {
         total: itemsTotal,
-        officialTranslated: officialItemsTranslated,
-        missing: initialMissingItems.length,
-        poe2dbFound: poe2dbResult.foundCount,
-        poe2dbNotFound: poe2dbResult.notFoundCount,
-        finalTranslated: finalItemsTranslated,
-        finalRate: `${((finalItemsTranslated / itemsTotal) * 100).toFixed(2)}%`,
-        untranslated
+        officialTranslated: 0,
+        missing: itemsTotal,
+        poe2dbFound: poe2dbFound,
+        poe2dbNotFound: finalUntranslated.length,
+        finalTranslated: poe2dbFound,
+        finalRate: finalRate,
+        untranslated: finalUntranslated
     };
 }
 
