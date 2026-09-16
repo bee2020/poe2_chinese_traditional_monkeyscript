@@ -30,10 +30,11 @@ function fetchEndpoint(host, endpoint) {
             if (res.statusCode !== 200) {
                 return reject(new Error(`HTTP ${res.statusCode} from ${url}`));
             }
-            let data = '';
-            res.on('data', chunk => data += chunk);
+            const chunks = [];
+            res.on('data', chunk => chunks.push(chunk));
             res.on('end', () => {
                 try {
+                    const data = Buffer.concat(chunks).toString('utf8');
                     resolve(JSON.parse(data));
                 } catch (e) {
                     reject(new Error(`JSON 解析失败: ${e.message}`));

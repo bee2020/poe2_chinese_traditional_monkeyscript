@@ -22,9 +22,12 @@ function httpGet(url, options = {}) {
                     : `https://poe2db.tw${res.headers.location}`;
                 return resolve(httpGet(nextUrl, options));
             }
-            let data = '';
-            res.on('data', chunk => data += chunk);
-            res.on('end', () => resolve({ statusCode: res.statusCode, headers: res.headers, body: data }));
+            const chunks = [];
+            res.on('data', chunk => chunks.push(chunk));
+            res.on('end', () => {
+                const body = Buffer.concat(chunks).toString('utf8');
+                resolve({ statusCode: res.statusCode, headers: res.headers, body });
+            });
         });
         req.on('error', err => resolve({ statusCode: 500, error: err }));
         req.on('timeout', () => { req.destroy(); resolve({ statusCode: 408 }); });
