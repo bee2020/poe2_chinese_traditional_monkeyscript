@@ -47,3 +47,5 @@ npm run build:all
 
 - **GitHub 直链**: [poe_trade.user.js](https://raw.githubusercontent.com/bee2020/poe2_chinese_traditional_monkeyscript/main/dist/poe_trade.user.js)
 - **jsDelivr CDN 加速**: [poe_trade.user.js](https://cdn.jsdelivr.net/gh/bee2020/poe2_chinese_traditional_monkeyscript@main/dist/poe_trade.user.js)
+
+- **版本更新日志**: [点击查看 CHANGELOG.md](https://github.com/bee2020/poe2_chinese_traditional_monkeyscript/blob/main/build_dict/changelogs/CHANGELOG.md)
