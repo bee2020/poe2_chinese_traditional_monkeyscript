@@ -4,6 +4,19 @@ import { trans4twProps } from '../core/propsTranslator';
 
 const fieldsToTranslate = ['baseType', 'name', 'typeLine'];
 
+// 🛡️ 辅助函数：提取归一化英文文本模式（抹平符号、换行、中文包装与富文本标签差异）
+function extractNormalizedPattern(text: string): string {
+    if (!text) return '';
+    const pureEn = text.match(/\(([^()]+)\)$/)?.[1] || text;
+    return pureEn
+        .replace(/\[[^|\]]*\||[\][]/g, '')     // 清洗官方标签 [Cold|Cold Damage] -> Cold Damage
+        .toLowerCase()
+        .replace(/[+-]?(\d*\.\d+|\d+)/g, '#') // 数值归一为 #
+        .replace(/[+-]#/g, '#')               // 消除 +# 与 # 的正负号差异
+        .replace(/\s+/g, ' ')                 // 多余空格和换行归一
+        .trim();
+}
+
 /**
  * 🌟 物品搜索结果详情解析与卡片改写 (/api/trade2/fetch)
  * 采用 100% 纯动态内存映射：
@@ -67,15 +80,38 @@ export function parseFetchResults(response: any, dataMap: any, whisperMap: Recor
                             }
 
                             let mod: any = null;
+                            // 1. 若词条对象自带 hash，优先查找
                             if (hash) {
                                 const statId = hash.split('.').pop();
                                 mod = entry.entries.find((a: any) => a.id === statId);
                             }
 
-                            if (!mod && mods) {
-                                const m = mods[index];
-                                if (m) {
-                                    mod = entry.entries.find((a: any) => a.id === m[0]);
+                            // 2. 第一轨：从官方 hashes 中查找声明归属本行 index 的条目，并进行英文语义一致性校验
+                            if (!mod && Array.isArray(mods)) {
+                                const m = mods.find((item: any) => Array.isArray(item[1]) && item[1].includes(index));
+                                if (m && m[0]) {
+                                    const targetId = m[0];
+                                    const candidate = entry.entries.find((a: any) => 
+                                        a.id === targetId || 
+                                        a.id === `${key}.${targetId}` || 
+                                        a.id.endsWith(targetId)
+                                    );
+                                    // 🛡️ 核心质检门：候选条目必须与当前行的英文模式一致，杜绝任何张冠李戴
+                                    if (candidate && candidate.text) {
+                                        if (extractNormalizedPattern(candidate.text) === extractNormalizedPattern(oldText)) {
+                                            mod = candidate;
+                                        }
+                                    }
+                                }
+                            }
+
+                            // 3. 第二轨：若 hashes 缺失（如新赛季符文/命定无 hash），通过纯文本指纹正向兜底查找
+                            if (!mod && entry.entries) {
+                                const currentPattern = extractNormalizedPattern(oldText);
+                                if (currentPattern) {
+                                    mod = entry.entries.find((a: any) => 
+                                        a.text && extractNormalizedPattern(a.text) === currentPattern
+                                    );
                                 }
                             }
 

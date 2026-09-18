@@ -4038,7 +4038,7 @@
       {
         "type": "Glacial Fortress",
         "zh_tw": {
-          "type": "冰川��壘",
+          "type": "冰川堡壘",
           "source": "poe2db"
         }
       },
@@ -4050,9 +4050,9 @@
           "unique": true
         },
         "zh_tw": {
-          "type": "冰川��壘",
+          "type": "冰川堡壘",
           "name": "夜墜",
-          "text": "夜墜 冰川��壘",
+          "text": "夜墜 冰川堡壘",
           "source": "poe2db"
         }
       },
@@ -7910,7 +7910,7 @@
       {
         "type": "Runeforged Marabout Garb",
         "zh_tw": {
-          "type": "符鍛��士裝束",
+          "type": "符鍛修士裝束",
           "source": "poe2db"
         }
       },
@@ -18157,7 +18157,7 @@
       {
         "type": "Olroth's Reliquary Key",
         "zh_tw": {
-          "type": "奧爾羅斯的���庫鑰匙",
+          "type": "奧爾羅斯的寶庫鑰匙",
           "source": "poe2db"
         }
       },

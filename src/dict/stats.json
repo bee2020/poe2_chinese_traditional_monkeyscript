@@ -8844,7 +8844,7 @@
           "text": "Expeditions contain 1 Vaal Relic in Map",
           "type": "explicit",
           "zh_tw": {
-            "text": "Expeditions contain 1 Vaal Relic in Map",
+            "text": "地圖中的探險含有1個瓦爾遺物",
             "source": "official"
           }
         },
@@ -17597,7 +17597,7 @@
           "text": "#% increased Expedition Explosive Area of Effect in Map",
           "type": "explicit",
           "zh_tw": {
-            "text": "#% increased Expedition Explosive Area of Effect in Map",
+            "text": "增加#%地圖中探險炸藥的範圍效果",
             "source": "official"
           }
         },
@@ -20450,7 +20450,7 @@
           "text": "You can only Socket Emerald Jewels in this item",
           "type": "explicit",
           "zh_tw": {
-            "text": "你只能在這件物品上鑲嵌翡翠珠寶",
+            "text": "你只能在這件物品上鑲嵌綠寶石",
             "source": "official"
           }
         },
@@ -23610,7 +23610,7 @@
           "text": "#% increased Magnitude of Impales inflicted with Spells",
           "type": "explicit",
           "zh_tw": {
-            "text": "法術暴擊時，破壞等同於#%造成的物理傷害的護甲",
+            "text": "增加#%完全破甲的效果",
             "source": "poe2db_dynamic"
           }
         },
@@ -26387,7 +26387,7 @@
           "text": "Debilitate Enemies on Hit while you have an Emerald and a Sapphire socketed in your tree",
           "type": "explicit",
           "zh_tw": {
-            "text": "若插槽中的鑲嵌碧綠翠雲和藍寶石，擊中時虛弱敵人",
+            "text": "若你的天賦樹中鑲嵌了一顆綠寶石和藍寶石，擊中時虛弱敵人",
             "source": "official"
           }
         },
@@ -28315,7 +28315,7 @@
           "text": "Has no Accuracy Penalty from Range",
           "type": "implicit",
           "zh_tw": {
-            "text": "遠程無命中懲罰",
+            "text": "必定擊中",
             "source": "poe2db_dynamic"
           }
         },
@@ -40471,7 +40471,7 @@
           "text": "Debilitate Enemies on Hit while you have an Emerald and a Sapphire socketed in your tree",
           "type": "fractured",
           "zh_tw": {
-            "text": "若插槽中的鑲嵌碧綠翠雲和藍寶石，擊中時虛弱敵人",
+            "text": "若你的天賦樹中鑲嵌了一顆綠寶石和藍寶石，擊中時虛弱敵人",
             "source": "official"
           }
         },
@@ -50513,7 +50513,7 @@
           "text": "#% increased Magnitude of Impales inflicted with Spells",
           "type": "crafted",
           "zh_tw": {
-            "text": "法術暴擊時，破壞等同於#%造成的物理傷害的護甲",
+            "text": "增加#%完全破甲的效果",
             "source": "poe2db_dynamic"
           }
         },
@@ -50572,7 +50572,7 @@
           "text": "Debilitate Enemies on Hit while you have an Emerald and a Sapphire socketed in your tree",
           "type": "crafted",
           "zh_tw": {
-            "text": "若插槽中的鑲嵌碧綠翠雲和藍寶石，擊中時虛弱敵人",
+            "text": "若你的天賦樹中鑲嵌了一顆綠寶石和藍寶石，擊中時虛弱敵人",
             "source": "official"
           }
         },
@@ -60347,11 +60347,7 @@
         {
           "id": "rune.stat_138373935",
           "text": "#% to Chaos Resistance for each Corrupted Item Equipped",
-          "type": "augment",
-          "zh_tw": {
-            "text": "每一裝備的���汙染物品#%混沌抗性",
-            "source": "poe2db_dynamic"
-          }
+          "type": "augment"
         },
         {
           "id": "rune.stat_1386257341",
@@ -60520,7 +60516,7 @@
           "text": "Bonded: Knocks Enemies Back on Hit",
           "type": "augment",
           "zh_tw": {
-            "text": "擊中時會擊退敵人",
+            "text": "幻化武器",
             "source": "poe2db_dynamic"
           }
         },
@@ -61119,7 +61115,7 @@
           "text": "Bonded: #% increased Armour while Shapeshifted",
           "type": "augment",
           "zh_tw": {
-            "text": "當你變形時，#%的護甲同時套用至元素傷害",
+            "text": "你變形期間，增加#%暈眩門檻",
             "source": "poe2db_dynamic"
           }
         },
@@ -61488,7 +61484,7 @@
           "text": "#% of Armour also applies to Chaos Damage while on full Energy Shield",
           "type": "augment",
           "zh_tw": {
-            "text": "你的召喚物重塑時，你便會開始能量護盾充能",
+            "text": "獲得等同於所裝備護甲物品總力量需求#%的最大能量護盾",
             "source": "poe2db_dynamic"
           }
         },
@@ -61504,11 +61500,7 @@
         {
           "id": "rune.stat_2203195791",
           "text": "#% increased Skill Speed for each Corrupted Item Equipped",
-          "type": "augment",
-          "zh_tw": {
-            "text": "每裝備一件已汙染物品，即增加#%技能速度",
-            "source": "poe2db_dynamic"
-          }
+          "type": "augment"
         },
         {
           "id": "rune.stat_2211478554",
@@ -61660,7 +61652,7 @@
           "type": "augment",
           "zh_tw": {
             "text": "#全部植物技能寶石等級",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -61678,7 +61670,7 @@
           "type": "augment",
           "zh_tw": {
             "text": "#全部風暴技能寶石等級",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -61866,7 +61858,7 @@
           "text": "#% increased Runic Ward Regeneration Rate while Sprinting",
           "type": "augment",
           "zh_tw": {
-            "text": "衝刺時增加#%符文保護回復率",
+            "text": "增加#%符文保護效用",
             "source": "poe2db_dynamic"
           }
         },
@@ -65206,7 +65198,7 @@
           "text": "# to maximum Mana per 3 Item Armour on Equipped Helmet",
           "type": "augment",
           "zh_tw": {
-            "text": "裝備的頭盔每有#物品護甲即#最大魔力",
+            "text": "裝備的頭盔上每有#點護甲，#最大生命",
             "source": "poe2db_dynamic"
           }
         }
@@ -70923,7 +70915,7 @@
           "text": "#% increased Magnitude of Impales inflicted with Spells",
           "type": "desecrated",
           "zh_tw": {
-            "text": "法術暴擊時，破壞等同於#%造成的物理傷害的護甲",
+            "text": "增加#%完全破甲的效果",
             "source": "poe2db_dynamic"
           }
         },
