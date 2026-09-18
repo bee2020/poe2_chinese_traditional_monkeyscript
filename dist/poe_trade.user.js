@@ -2,7 +2,7 @@
 // @name         POE2-Trade-Traditional-Chinese
 // @name:zh-TW   POE2 trade 繁體優化增強版
 // @namespace    http://tampermonkey.net/
-// @version      1.2.5
+// @version      1.2.6
 // @description  POE2 官方交易市集繁体：基于官网数据每日自动更新、自动匹配汉化，更新日志依据 CHANGELOG.md 供参考，内置 Cloudflare 静默守护
 // @homepageURL  https://github.com/bee2020/poe2_chinese_traditional_monkeyscript
 // @supportURL   https://github.com/bee2020/poe2_chinese_traditional_monkeyscript/issues
