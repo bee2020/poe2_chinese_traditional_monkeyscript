@@ -3,8 +3,9 @@
 // @name:zh-TW   POE2 trade 繁體優化增強版
 // @namespace    http://tampermonkey.net/
 // @version      1.2.4
-// @description  POE2 交易网站繁体以及搜索优化 (内置 Cloudflare 安全验证静默守护)
-// @description:zh-TW POE2 交易網站繁體以及搜尋優化 (內建 Cloudflare 安全驗證靜默守護)
+// @description  POE2 官方交易市集繁体：基于官网数据自动匹配汉化. Cloudflare 静默守护
+// @homepageURL  https://github.com/bee2020/poe2_chinese_traditional_monkeyscript
+// @supportURL   https://github.com/bee2020/poe2_chinese_traditional_monkeyscript/issues
 // @author       bee2020
 // @match        https://www.pathofexile.com/trade2*
 // @match        https://pathofexile.com/trade2*
@@ -17,12 +18,12 @@
 // ==/UserScript==
 // Auto-synced with Greasy Fork Webhook
 
-import { dispatchResponseHook } from './parser';
 import { ajaxHooker } from './core/ajaxHooker';
-import { openSaveModal } from './ui/presetManager';
-import { initWeightSelector } from './ui/weightSelector';
-import { domTranslations, UI_TEXT } from './ui/uiMapping';
+import { dispatchResponseHook } from './parser';
 import { createEl } from './ui/domHelper';
+import { openSaveModal } from './ui/presetManager';
+import { domTranslations, UI_TEXT } from './ui/uiMapping';
+import { initWeightSelector } from './ui/weightSelector';
 
 /**
  * 🛡️ Cloudflare 验证检测守卫
