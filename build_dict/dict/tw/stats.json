@@ -60347,7 +60347,11 @@
         {
           "id": "rune.stat_138373935",
           "text": "#% to Chaos Resistance for each Corrupted Item Equipped",
-          "type": "augment"
+          "type": "augment",
+          "zh_tw": {
+            "text": "每一裝備的已汙染物品#%混沌抗性",
+            "source": "official"
+          }
         },
         {
           "id": "rune.stat_1386257341",
