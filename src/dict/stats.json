@@ -34032,6 +34032,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|24062",
+          "text": "Allocates Immortal Infamy",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置不朽惡名",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|24087",
           "text": "Allocates Everlasting Infusions",
           "type": "fractured",
@@ -61504,7 +61513,11 @@
         {
           "id": "rune.stat_2203195791",
           "text": "#% increased Skill Speed for each Corrupted Item Equipped",
-          "type": "augment"
+          "type": "augment",
+          "zh_tw": {
+            "text": "每裝備一件已汙染物品，即增加#%技能速度",
+            "source": "official"
+          }
         },
         {
           "id": "rune.stat_2211478554",
