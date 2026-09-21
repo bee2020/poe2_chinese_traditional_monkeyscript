@@ -1,6 +1,6 @@
 # POE2 官方交易字典最新编译报告 (CHANGELOG)
 
-> 编译时间: 9/20/2026, 4:04:05 AM  
+> 编译时间: 9/21/2026, 4:01:15 AM  
 > 同步状态: 🟢 官方 API 直连 + 机器 ID 强对齐 + PoE2DB 全链路兜底就绪
 
 ---
@@ -12,7 +12,7 @@
 | **通货材料 (static.json)** | **798** | **798** | 🟢 **0 种** | 🟢 无需介入 (100% 官方对齐) | **100.00%** |
 | **市集筛选 (filters.json)** | **undefined** | **undefined** | 🟢 **undefined 项** | 🟢 无需介入 (100% 官方对齐) | **100.00%** |
 | **装备与暗金 (items.json)** | **3900** | **0** | 🔴 **3900 件** | 🟢 **已查到: 3898 件** / ⚪ 未查到: 0 件 | **99.95%** |
-| **核心词缀 (stats.json)** | **8297** | **8202** | 🔴 **95 条** | 🟢 **已查到: 83 条** / ⚪ 未查到: 12 条 | **99.86%** |
+| **核心词缀 (stats.json)** | **8297** | **8205** | 🔴 **92 条** | 🟢 **已查到: 80 条** / ⚪ 未查到: 12 条 | **99.86%** |
 
 ---
 
@@ -45,27 +45,12 @@
 | 7 | `crafted` | `crafted.stat_2888350852` | `Gain #% of Damage as Extra Cold Damage while you are missing Runic Ward` | 无法匹配 |
 | 8 | `crafted` | `crafted.stat_457920946` | `Gain #% of Damage as Extra Lightning Damage while you are missing Runic Ward` | 无法匹配 |
 | 9 | `rune` | `rune.stat_3353733343` | `When you generate a Frenzy Charge, Allies in your Presence generate that Charge instead` | 无法匹配 |
-| 10 | `rune` | `rune.stat_3257561708` | `When you generate an Endurance Charge, Allies in your Presence generate that Charge instead` | 无法匹配 |
-| 11 | `rune` | `rune.stat_1914815166` | `Recover #% of maximum Life over 2 Seconds when you use a Command Skill` | 无法匹配 |
+| 10 | `rune` | `rune.stat_1914815166` | `Recover #% of maximum Life over 2 Seconds when you use a Command Skill` | 无法匹配 |
+| 11 | `rune` | `rune.stat_3257561708` | `When you generate an Endurance Charge, Allies in your Presence generate that Charge instead` | 无法匹配 |
 | 12 | `desecrated` | `desecrated.stat_3762412853` | `Attacks with this Weapon Penetrate #% Chaos Resistance` | 无法匹配 |
 
 ---
 
 ## 🔄 本次版本实质变动明细 (Diff Changes)
 
-> 📊 **本次构建累计检测到 2 处实质性词条变更**（相较于上一次构建产物）：
-
-### 📦 装备与暗金变动 (items.json)
-> 🟢 无变动
-
-### ⚡ 核心词缀变动 (stats.json)
-
-**🟡 词缀翻译变更 (1 条)**:
-- `[rune] #% increased Skill Speed for each Corrupted Item Equipped`: `(空)` ➔ **`每裝備一件已汙染物品，即增加#%技能速度`**
-
-**🟢 新增词缀 (1 条)**:
-- `[fractured] Allocates Immortal Infamy` ➔ `配置不朽惡名`
-
-### 🪙 通货材料变动 (static.json)
-> 🟢 无变动
-
+> 🎉 **本次官方数据与字典无任何增删或翻译变更（与上一版本完全一致）。**

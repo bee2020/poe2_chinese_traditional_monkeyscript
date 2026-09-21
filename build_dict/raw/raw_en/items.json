@@ -14530,14 +14530,6 @@
           }
         },
         {
-          "type": "Chain Flail",
-          "text": "INCOMPLETE Chain Flail",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
           "type": "Simple Dagger",
           "text": "INCOMPLETE Simple Dagger",
           "name": "INCOMPLETE",
@@ -14548,14 +14540,6 @@
         {
           "type": "Splintered Flail",
           "text": "INCOMPLETE Splintered Flail",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Skinning Knife",
-          "text": "INCOMPLETE Skinning Knife",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14578,8 +14562,32 @@
           }
         },
         {
+          "type": "Skinning Knife",
+          "text": "INCOMPLETE Skinning Knife",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
           "type": "Broadsword",
           "text": "INCOMPLETE Broadsword",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
+          "type": "Arched Greataxe",
+          "text": "INCOMPLETE Arched Greataxe",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
+          "type": "Chain Flail",
+          "text": "INCOMPLETE Chain Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14604,14 +14612,6 @@
         {
           "type": "Broad Greatsword",
           "text": "INCOMPLETE Broad Greatsword",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Arched Greataxe",
-          "text": "INCOMPLETE Arched Greataxe",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
