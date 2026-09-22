@@ -14546,14 +14546,6 @@
           }
         },
         {
-          "type": "Bearded Axe",
-          "text": "INCOMPLETE Bearded Axe",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
           "type": "Iron Greatsword",
           "text": "INCOMPLETE Iron Greatsword",
           "name": "INCOMPLETE",
@@ -14564,6 +14556,14 @@
         {
           "type": "Skinning Knife",
           "text": "INCOMPLETE Skinning Knife",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
+          "type": "Bearded Axe",
+          "text": "INCOMPLETE Bearded Axe",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true

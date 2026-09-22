@@ -1,6 +1,6 @@
 # POE2 官方交易字典最新编译报告 (CHANGELOG)
 
-> 编译时间: 9/21/2026, 4:01:15 AM  
+> 编译时间: 9/22/2026, 3:58:53 AM  
 > 同步状态: 🟢 官方 API 直连 + 机器 ID 强对齐 + PoE2DB 全链路兜底就绪
 
 ---
@@ -44,13 +44,26 @@
 | 6 | `crafted` | `crafted.stat_4011431182` | `Gain #% of Damage as Extra Chaos Damage while you are missing Runic Ward` | 无法匹配 |
 | 7 | `crafted` | `crafted.stat_2888350852` | `Gain #% of Damage as Extra Cold Damage while you are missing Runic Ward` | 无法匹配 |
 | 8 | `crafted` | `crafted.stat_457920946` | `Gain #% of Damage as Extra Lightning Damage while you are missing Runic Ward` | 无法匹配 |
-| 9 | `rune` | `rune.stat_3353733343` | `When you generate a Frenzy Charge, Allies in your Presence generate that Charge instead` | 无法匹配 |
-| 10 | `rune` | `rune.stat_1914815166` | `Recover #% of maximum Life over 2 Seconds when you use a Command Skill` | 无法匹配 |
-| 11 | `rune` | `rune.stat_3257561708` | `When you generate an Endurance Charge, Allies in your Presence generate that Charge instead` | 无法匹配 |
+| 9 | `rune` | `rune.stat_3257561708` | `When you generate an Endurance Charge, Allies in your Presence generate that Charge instead` | 无法匹配 |
+| 10 | `rune` | `rune.stat_3353733343` | `When you generate a Frenzy Charge, Allies in your Presence generate that Charge instead` | 无法匹配 |
+| 11 | `rune` | `rune.stat_1914815166` | `Recover #% of maximum Life over 2 Seconds when you use a Command Skill` | 无法匹配 |
 | 12 | `desecrated` | `desecrated.stat_3762412853` | `Attacks with this Weapon Penetrate #% Chaos Resistance` | 无法匹配 |
 
 ---
 
 ## 🔄 本次版本实质变动明细 (Diff Changes)
 
-> 🎉 **本次官方数据与字典无任何增删或翻译变更（与上一版本完全一致）。**
+> 📊 **本次构建累计检测到 2 处实质性词条变更**（相较于上一次构建产物）：
+
+### 📦 装备与暗金变动 (items.json)
+> 🟢 无变动
+
+### ⚡ 核心词缀变动 (stats.json)
+
+**🟡 词缀翻译变更 (2 条)**:
+- `[rune] #% increased Runic Ward Regeneration Rate while Sprinting`: `增加#%符文保護效用` ➔ **`#%混沌抗性`**
+- `[rune] # to maximum Mana per 3 Item Armour on Equipped Helmet`: `裝備的頭盔上每有#點護甲，#最大生命` ➔ **`當你閃避翻滾時，犧牲#%最大生命來獲得等量的守護`**
+
+### 🪙 通货材料变动 (static.json)
+> 🟢 无变动
+
