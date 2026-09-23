@@ -33024,6 +33024,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|13844",
+          "text": "Allocates Growing Peril",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置危境增長",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|13895",
           "text": "Allocates Precise Point",
           "type": "fractured",
