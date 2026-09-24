@@ -33555,6 +33555,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|1861",
+          "text": "Allocates Knight of Tarcus",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置塔克司之騎士",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|19044",
           "text": "Allocates Arcane Intensity",
           "type": "fractured",
@@ -61884,7 +61893,7 @@
           "text": "#% increased Runic Ward Regeneration Rate while Sprinting",
           "type": "augment",
           "zh_tw": {
-            "text": "#%混沌抗性",
+            "text": "增加#%符文保護效用",
             "source": "poe2db_dynamic"
           }
         },
@@ -65224,7 +65233,7 @@
           "text": "# to maximum Mana per 3 Item Armour on Equipped Helmet",
           "type": "augment",
           "zh_tw": {
-            "text": "當你閃避翻滾時，犧牲#%最大生命來獲得等量的守護",
+            "text": "獲得等同於所裝備護甲物品總力量需求#%的最大能量護盾",
             "source": "poe2db_dynamic"
           }
         }
