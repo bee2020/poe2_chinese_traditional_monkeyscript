@@ -431,6 +431,12 @@
           "id": "rune_sockets",
           "text": "可增幅插槽",
           "minMax": true
+        },
+        {
+          "id": "total_augment_sockets",
+          "text": "Total Augment Sockets",
+          "tip": "Includes sockets with Socket-Bound Augments",
+          "minMax": true
         }
       ]
     },

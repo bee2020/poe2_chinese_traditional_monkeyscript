@@ -20091,7 +20091,7 @@
           "type": "explicit",
           "zh_tw": {
             "text": "增加#%變動魔力詞綴的大小",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -33024,6 +33024,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|13844",
+          "text": "Allocates Growing Peril",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置危境增長",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|13895",
           "text": "Allocates Precise Point",
           "type": "fractured",
@@ -33546,6 +33555,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|1861",
+          "text": "Allocates Knight of Tarcus",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置塔克司之騎士",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|19044",
           "text": "Allocates Arcane Intensity",
           "type": "fractured",
@@ -34028,6 +34046,15 @@
           "type": "fractured",
           "zh_tw": {
             "text": "配置最後一博",
+            "source": "official"
+          }
+        },
+        {
+          "id": "fractured.stat_2954116742|24062",
+          "text": "Allocates Immortal Infamy",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置不朽惡名",
             "source": "official"
           }
         },
@@ -39284,7 +39311,7 @@
           "type": "fractured",
           "zh_tw": {
             "text": "增加#%變動魔力詞綴的大小",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -60347,7 +60374,11 @@
         {
           "id": "rune.stat_138373935",
           "text": "#% to Chaos Resistance for each Corrupted Item Equipped",
-          "type": "augment"
+          "type": "augment",
+          "zh_tw": {
+            "text": "每一裝備的已汙染物品#%混沌抗性",
+            "source": "official"
+          }
         },
         {
           "id": "rune.stat_1386257341",
@@ -61500,7 +61531,11 @@
         {
           "id": "rune.stat_2203195791",
           "text": "#% increased Skill Speed for each Corrupted Item Equipped",
-          "type": "augment"
+          "type": "augment",
+          "zh_tw": {
+            "text": "每裝備一件已汙染物品，即增加#%技能速度",
+            "source": "official"
+          }
         },
         {
           "id": "rune.stat_2211478554",
@@ -61858,7 +61893,7 @@
           "text": "#% increased Runic Ward Regeneration Rate while Sprinting",
           "type": "augment",
           "zh_tw": {
-            "text": "增加#%符文保護效用",
+            "text": "#%混沌抗性",
             "source": "poe2db_dynamic"
           }
         },
@@ -63921,7 +63956,7 @@
           "type": "augment",
           "zh_tw": {
             "text": "增加#%釘身持續時間",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -69696,7 +69731,7 @@
           "type": "desecrated",
           "zh_tw": {
             "text": "增加#%變動魔力詞綴的大小",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
