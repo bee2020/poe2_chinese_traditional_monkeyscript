@@ -23610,7 +23610,7 @@
           "text": "#% increased Magnitude of Impales inflicted with Spells",
           "type": "explicit",
           "zh_tw": {
-            "text": "增加#%完全破甲的效果",
+            "text": "增加#%法術所造成之穿刺的幅度",
             "source": "poe2db_dynamic"
           }
         },
@@ -28315,7 +28315,7 @@
           "text": "Has no Accuracy Penalty from Range",
           "type": "implicit",
           "zh_tw": {
-            "text": "必定擊中",
+            "text": "遠程無命中懲罰",
             "source": "poe2db_dynamic"
           }
         },
@@ -29683,7 +29683,7 @@
           "text": "Breaks # Armour on Critical Hit",
           "type": "implicit",
           "zh_tw": {
-            "text": "#%的護甲值也會套用至元素傷害",
+            "text": "暴擊時破壞#點護甲值",
             "source": "poe2db_dynamic"
           }
         },
@@ -50540,7 +50540,7 @@
           "text": "#% increased Magnitude of Impales inflicted with Spells",
           "type": "crafted",
           "zh_tw": {
-            "text": "增加#%完全破甲的效果",
+            "text": "增加#%法術所造成之穿刺的幅度",
             "source": "poe2db_dynamic"
           }
         },
@@ -60547,7 +60547,7 @@
           "text": "Bonded: Knocks Enemies Back on Hit",
           "type": "augment",
           "zh_tw": {
-            "text": "幻化武器",
+            "text": "擊中時會擊退敵人",
             "source": "poe2db_dynamic"
           }
         },
@@ -60574,7 +60574,7 @@
           "text": "Bonded: #% increased Damage per 15 Strength",
           "type": "augment",
           "zh_tw": {
-            "text": "單手近戰武器增加#%攻擊速度",
+            "text": "每#點力量增加#%傷害",
             "source": "poe2db_dynamic"
           }
         },
@@ -61146,7 +61146,7 @@
           "text": "Bonded: #% increased Armour while Shapeshifted",
           "type": "augment",
           "zh_tw": {
-            "text": "你變形期間，增加#%暈眩門檻",
+            "text": "變形時增加#%護甲",
             "source": "poe2db_dynamic"
           }
         },
@@ -61515,7 +61515,7 @@
           "text": "#% of Armour also applies to Chaos Damage while on full Energy Shield",
           "type": "augment",
           "zh_tw": {
-            "text": "獲得等同於所裝備護甲物品總力量需求#%的最大能量護盾",
+            "text": "能量護盾全滿時，#%的護甲同時套用到混沌傷害",
             "source": "poe2db_dynamic"
           }
         },
@@ -61893,7 +61893,7 @@
           "text": "#% increased Runic Ward Regeneration Rate while Sprinting",
           "type": "augment",
           "zh_tw": {
-            "text": "#%混沌抗性",
+            "text": "衝刺時增加#%符文保護回復率",
             "source": "poe2db_dynamic"
           }
         },
@@ -65233,7 +65233,7 @@
           "text": "# to maximum Mana per 3 Item Armour on Equipped Helmet",
           "type": "augment",
           "zh_tw": {
-            "text": "裝備的頭盔上每有#點護甲，#最大生命",
+            "text": "裝備的頭盔每有#物品護甲即#最大魔力",
             "source": "poe2db_dynamic"
           }
         }
@@ -70950,7 +70950,7 @@
           "text": "#% increased Magnitude of Impales inflicted with Spells",
           "type": "desecrated",
           "zh_tw": {
-            "text": "增加#%完全破甲的效果",
+            "text": "增加#%法術所造成之穿刺的幅度",
             "source": "poe2db_dynamic"
           }
         },

@@ -17,6 +17,23 @@ function extractNormalizedPattern(text: string): string {
         .trim();
 }
 
+import rawTwStats from '../dict/stats.json';
+// 🌟 纯动态词缀模式映射表，用于支持珠宝天赋详细说明的秒级对齐
+const statsPatternMap = new Map<string, string>();
+if (rawTwStats && Array.isArray((rawTwStats as any).result)) {
+    for (const group of (rawTwStats as any).result) {
+        if (!Array.isArray(group.entries)) continue;
+        for (const entry of group.entries) {
+            if (entry.text && entry.zh_tw?.text) {
+                const pat = extractNormalizedPattern(entry.text);
+                if (pat && !statsPatternMap.has(pat)) {
+                    statsPatternMap.set(pat, entry.zh_tw.text);
+                }
+            }
+        }
+    }
+}
+
 /**
  * 🌟 物品搜索结果详情解析与卡片改写 (/api/trade2/fetch)
  * 采用 100% 纯动态内存映射：
@@ -170,6 +187,48 @@ export function parseFetchResults(response: any, dataMap: any, whisperMap: Recor
                     if (p.name) {
                         const simp = p.name.replace(/\[[^|\]]*\||[\][]/g, '');
                         p.name = trans4twProps(simp);
+                    }
+                });
+            }
+
+            // 5. 🌟 专门接管珠宝与特殊天赋详细属性 (notableProperties)
+            if (item.item.notableProperties && Array.isArray(item.item.notableProperties)) {
+                item.item.notableProperties.forEach((notable: any) => {
+                    // 5.1 翻译天赋标题 (如 Replenishing Horde -> 群集復甦 (Replenishing Horde))
+                    if (notable.name) {
+                        const rawName = notable.name.trim();
+                        const rawNoQuote = rawName.replace(/'s/g, 's');
+                        const twName = dynamicAllocatesMap.get(rawName) || dynamicAllocatesMap.get(rawNoQuote);
+                        if (twName && twName !== rawName) {
+                            notable.name = `${twName} (${rawName})`;
+                        }
+                    }
+
+                    // 5.2 翻译天赋具体效果说明行 (values)
+                    if (Array.isArray(notable.values)) {
+                        notable.values.forEach((valArr: any) => {
+                            if (Array.isArray(valArr) && typeof valArr[0] === 'string') {
+                                const rawVal = valArr[0];
+                                // 清洗官方富文本标签与换行：例如 "[Critical|Critical Hit]" -> "Critical Hit"
+                                const pureEn = rawVal
+                                    .replace(/\[[^|\]]*\||[\][]/g, '')
+                                    .replace(/\r?\n/g, ' ')
+                                    .trim();
+                                const pattern = extractNormalizedPattern(pureEn);
+
+                                let matchedTw = pattern ? statsPatternMap.get(pattern) : null;
+                                if (matchedTw) {
+                                    const nums = pureEn.match(/[+-]?(\d*\.\d+|\d+)/g);
+                                    if (nums) {
+                                        let idx = 0;
+                                        matchedTw = matchedTw.replace(/#/g, () => nums[idx++] || '#');
+                                    }
+                                    if (matchedTw !== pureEn) {
+                                        valArr[0] = `${matchedTw} (${pureEn})`;
+                                    }
+                                }
+                            }
+                        });
                     }
                 });
             }

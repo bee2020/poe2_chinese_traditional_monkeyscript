@@ -115,7 +115,23 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
         }
     }
 
-    // 5. 针对极少数未收录条目发起定向爬取兜底
+    // 5. 针对极少数未收录条目发起定向爬取兜底 (支持单引号容错、重试与既有字典缓存继承，绝不因单次超时而抹空)
+    const existingItemsMap = new Map();
+    const existingFile = path.join(dictTwDir, 'items.json');
+    if (fs.existsSync(existingFile)) {
+        try {
+            const oldData = JSON.parse(fs.readFileSync(existingFile, 'utf8'));
+            for (const cat of (oldData || [])) {
+                for (const e of (cat.entries || [])) {
+                    if (e.zh_tw && (e.zh_tw.text || e.zh_tw.type || e.zh_tw.name)) {
+                        const k = `${e.type || ''}__${e.name || ''}`;
+                        existingItemsMap.set(k, e.zh_tw);
+                    }
+                }
+            }
+        } catch (_) {}
+    }
+
     const finalUntranslated = [];
     if (initialMissingItems.length > 0) {
         console.log(`  🔍 针对剩余 ${initialMissingItems.length} 件未匹配条目进行定向爬取兜底...`);
@@ -127,24 +143,41 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
             }
 
             let foundFromWeb = false;
-            const slug = encodeURIComponent(queryName.replace(/\s+/g, '_'));
-            try {
-                const res = await httpGet(`https://poe2db.tw/tw/${slug}`, { timeout: 4000 });
-                if (res.statusCode === 200) {
-                    const m = res.body.match(/<title>(.*?)<\/title>/i);
-                    if (m) {
-                        const cleanTitle = cleanAndToSign(m[1].replace(/\s*-\s*流亡.*$/, '').trim(), false);
-                        if (cleanTitle && !cleanTitle.includes('404') && !cleanTitle.includes('Home') && !cleanTitle.includes('家園')) {
-                            const curBaseTw = baseMap.get(item.type) || item.type;
-                            item.zh_tw = item.name 
-                                ? { type: curBaseTw, name: cleanTitle, text: `${cleanTitle} ${curBaseTw}`, source: "poe2db_crawler" }
-                                : { type: cleanTitle, source: "poe2db_crawler" };
-                            poe2dbFound++;
-                            foundFromWeb = true;
+            const slugVariants = [
+                encodeURIComponent(queryName.replace(/\s+/g, '_')),
+                encodeURIComponent(queryName.replace(/['’]/g, '').replace(/\s+/g, '_'))
+            ];
+
+            for (const slug of slugVariants) {
+                try {
+                    const res = await httpGet(`https://poe2db.tw/tw/${slug}`, { timeout: 8000 });
+                    if (res.statusCode === 200) {
+                        const m = res.body.match(/<title>(.*?)<\/title>/i);
+                        if (m) {
+                            const cleanTitle = cleanAndToSign(m[1].replace(/\s*-\s*流亡.*$/, '').trim(), false);
+                            if (cleanTitle && !cleanTitle.includes('404') && !cleanTitle.includes('Home') && !cleanTitle.includes('家園')) {
+                                const curBaseTw = baseMap.get(item.type) || item.type;
+                                item.zh_tw = item.name 
+                                    ? { type: curBaseTw, name: cleanTitle, text: `${cleanTitle} ${curBaseTw}`, source: "poe2db_crawler" }
+                                    : { type: cleanTitle, source: "poe2db_crawler" };
+                                poe2dbFound++;
+                                foundFromWeb = true;
+                                break;
+                            }
                         }
                     }
+                } catch (_) {}
+            }
+
+            // 若网络偶发超时，安全回退继承上一次已对齐的正确数据
+            if (!foundFromWeb) {
+                const k = `${item.type || ''}__${item.name || ''}`;
+                if (existingItemsMap.has(k)) {
+                    item.zh_tw = existingItemsMap.get(k);
+                    poe2dbFound++;
+                    foundFromWeb = true;
                 }
-            } catch (_) {}
+            }
 
             if (!foundFromWeb) {
                 finalUntranslated.push({
