@@ -61893,7 +61893,7 @@
           "text": "#% increased Runic Ward Regeneration Rate while Sprinting",
           "type": "augment",
           "zh_tw": {
-            "text": "增加#%符文保護效用",
+            "text": "#%混沌抗性",
             "source": "poe2db_dynamic"
           }
         },
@@ -63956,7 +63956,7 @@
           "type": "augment",
           "zh_tw": {
             "text": "增加#%釘身持續時間",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -65233,7 +65233,7 @@
           "text": "# to maximum Mana per 3 Item Armour on Equipped Helmet",
           "type": "augment",
           "zh_tw": {
-            "text": "獲得等同於所裝備護甲物品總力量需求#%的最大能量護盾",
+            "text": "裝備的頭盔上每有#點護甲，#最大生命",
             "source": "poe2db_dynamic"
           }
         }
