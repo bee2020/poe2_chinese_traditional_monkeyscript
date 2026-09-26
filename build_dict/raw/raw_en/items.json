@@ -14498,16 +14498,16 @@
           }
         },
         {
-          "type": "Hook Axe",
-          "text": "INCOMPLETE Hook Axe",
+          "type": "Charred Shortsword",
+          "text": "INCOMPLETE Charred Shortsword",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Charred Shortsword",
-          "text": "INCOMPLETE Charred Shortsword",
+          "type": "Hook Axe",
+          "text": "INCOMPLETE Hook Axe",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14562,22 +14562,6 @@
           }
         },
         {
-          "type": "Chain Flail",
-          "text": "INCOMPLETE Chain Flail",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Broadsword",
-          "text": "INCOMPLETE Broadsword",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
           "type": "Arched Greataxe",
           "text": "INCOMPLETE Arched Greataxe",
           "name": "INCOMPLETE",
@@ -14586,8 +14570,8 @@
           }
         },
         {
-          "type": "Skinning Knife",
-          "text": "INCOMPLETE Skinning Knife",
+          "type": "Broadsword",
+          "text": "INCOMPLETE Broadsword",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14604,6 +14588,22 @@
         {
           "type": "Executioner Greataxe",
           "text": "INCOMPLETE Executioner Greataxe",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
+          "type": "Skinning Knife",
+          "text": "INCOMPLETE Skinning Knife",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
+          "type": "Chain Flail",
+          "text": "INCOMPLETE Chain Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true

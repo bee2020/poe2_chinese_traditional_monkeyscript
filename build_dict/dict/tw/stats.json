@@ -23611,7 +23611,7 @@
           "type": "explicit",
           "zh_tw": {
             "text": "增加#%法術所造成之穿刺的幅度",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -26943,11 +26943,7 @@
         {
           "id": "explicit.stat_679019978",
           "text": "#% of Damage is taken from Mana before Life while not on Low Mana",
-          "type": "explicit",
-          "zh_tw": {
-            "text": "未處於低魔力狀態時，承受的#%傷害會先由魔力而不是生命扣除",
-            "source": "poe2db_dynamic"
-          }
+          "type": "explicit"
         },
         {
           "id": "explicit.stat_679087890",
@@ -50541,7 +50537,7 @@
           "type": "crafted",
           "zh_tw": {
             "text": "增加#%法術所造成之穿刺的幅度",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -70951,7 +70947,7 @@
           "type": "desecrated",
           "zh_tw": {
             "text": "增加#%法術所造成之穿刺的幅度",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
