@@ -14522,16 +14522,16 @@
           }
         },
         {
-          "type": "Corroded Longsword",
-          "text": "INCOMPLETE Corroded Longsword",
+          "type": "Splintered Flail",
+          "text": "INCOMPLETE Splintered Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Splintered Flail",
-          "text": "INCOMPLETE Splintered Flail",
+          "type": "Corroded Longsword",
+          "text": "INCOMPLETE Corroded Longsword",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14562,16 +14562,16 @@
           }
         },
         {
-          "type": "Arched Greataxe",
-          "text": "INCOMPLETE Arched Greataxe",
+          "type": "Skinning Knife",
+          "text": "INCOMPLETE Skinning Knife",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Skinning Knife",
-          "text": "INCOMPLETE Skinning Knife",
+          "type": "Chain Flail",
+          "text": "INCOMPLETE Chain Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14602,8 +14602,8 @@
           }
         },
         {
-          "type": "Chain Flail",
-          "text": "INCOMPLETE Chain Flail",
+          "type": "Arched Greataxe",
+          "text": "INCOMPLETE Arched Greataxe",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
