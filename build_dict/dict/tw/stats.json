@@ -36305,6 +36305,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|47088",
+          "text": "Allocates Sic 'Em",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置禁錮他們",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|4709",
           "text": "Allocates Near Sighted",
           "type": "fractured",
