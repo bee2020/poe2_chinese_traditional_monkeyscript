@@ -14530,16 +14530,16 @@
           }
         },
         {
-          "type": "Splintered Flail",
-          "text": "INCOMPLETE Splintered Flail",
+          "type": "Simple Dagger",
+          "text": "INCOMPLETE Simple Dagger",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Simple Dagger",
-          "text": "INCOMPLETE Simple Dagger",
+          "type": "Splintered Flail",
+          "text": "INCOMPLETE Splintered Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
