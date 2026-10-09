@@ -14522,6 +14522,14 @@
           }
         },
         {
+          "type": "Splintered Flail",
+          "text": "INCOMPLETE Splintered Flail",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
           "type": "Corroded Longsword",
           "text": "INCOMPLETE Corroded Longsword",
           "name": "INCOMPLETE",
@@ -14532,14 +14540,6 @@
         {
           "type": "Simple Dagger",
           "text": "INCOMPLETE Simple Dagger",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Splintered Flail",
-          "text": "INCOMPLETE Splintered Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14562,6 +14562,14 @@
           }
         },
         {
+          "type": "Chain Flail",
+          "text": "INCOMPLETE Chain Flail",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
           "type": "Executioner Greataxe",
           "text": "INCOMPLETE Executioner Greataxe",
           "name": "INCOMPLETE",
@@ -14572,14 +14580,6 @@
         {
           "type": "Skinning Knife",
           "text": "INCOMPLETE Skinning Knife",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Chain Flail",
-          "text": "INCOMPLETE Chain Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true

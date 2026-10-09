@@ -26943,7 +26943,11 @@
         {
           "id": "explicit.stat_679019978",
           "text": "#% of Damage is taken from Mana before Life while not on Low Mana",
-          "type": "explicit"
+          "type": "explicit",
+          "zh_tw": {
+            "text": "未處於低魔力狀態時，承受的#%傷害會先由魔力而不是生命扣除",
+            "source": "poe2db_dynamic"
+          }
         },
         {
           "id": "explicit.stat_679087890",
@@ -38443,6 +38447,15 @@
           "type": "fractured",
           "zh_tw": {
             "text": "配置絕緣步伐",
+            "source": "official"
+          }
+        },
+        {
+          "id": "fractured.stat_2954116742|9863",
+          "text": "Allocates Knight of Izaro",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置伊澤洛之騎士",
             "source": "official"
           }
         },
