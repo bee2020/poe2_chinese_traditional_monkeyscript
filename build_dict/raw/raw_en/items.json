@@ -14490,6 +14490,14 @@
           }
         },
         {
+          "type": "Dull Hatchet",
+          "text": "INCOMPLETE Dull Hatchet",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
           "type": "Hook Axe",
           "text": "INCOMPLETE Hook Axe",
           "name": "INCOMPLETE",
@@ -14500,14 +14508,6 @@
         {
           "type": "Charred Shortsword",
           "text": "INCOMPLETE Charred Shortsword",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Dull Hatchet",
-          "text": "INCOMPLETE Dull Hatchet",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14562,16 +14562,16 @@
           }
         },
         {
-          "type": "Executioner Greataxe",
-          "text": "INCOMPLETE Executioner Greataxe",
+          "type": "Chain Flail",
+          "text": "INCOMPLETE Chain Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Chain Flail",
-          "text": "INCOMPLETE Chain Flail",
+          "type": "Executioner Greataxe",
+          "text": "INCOMPLETE Executioner Greataxe",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
