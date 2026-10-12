@@ -14490,6 +14490,14 @@
           }
         },
         {
+          "type": "Charred Shortsword",
+          "text": "INCOMPLETE Charred Shortsword",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
           "type": "Dull Hatchet",
           "text": "INCOMPLETE Dull Hatchet",
           "name": "INCOMPLETE",
@@ -14500,14 +14508,6 @@
         {
           "type": "Hook Axe",
           "text": "INCOMPLETE Hook Axe",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Charred Shortsword",
-          "text": "INCOMPLETE Charred Shortsword",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14546,6 +14546,14 @@
           }
         },
         {
+          "type": "Chain Flail",
+          "text": "INCOMPLETE Chain Flail",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
           "type": "Bearded Axe",
           "text": "INCOMPLETE Bearded Axe",
           "name": "INCOMPLETE",
@@ -14562,8 +14570,8 @@
           }
         },
         {
-          "type": "Chain Flail",
-          "text": "INCOMPLETE Chain Flail",
+          "type": "Skinning Knife",
+          "text": "INCOMPLETE Skinning Knife",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14596,14 +14604,6 @@
         {
           "type": "Arched Greataxe",
           "text": "INCOMPLETE Arched Greataxe",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Skinning Knife",
-          "text": "INCOMPLETE Skinning Knife",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
