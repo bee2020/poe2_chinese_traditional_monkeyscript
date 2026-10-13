@@ -14490,6 +14490,14 @@
           }
         },
         {
+          "type": "Hook Axe",
+          "text": "INCOMPLETE Hook Axe",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
           "type": "Charred Shortsword",
           "text": "INCOMPLETE Charred Shortsword",
           "name": "INCOMPLETE",
@@ -14500,14 +14508,6 @@
         {
           "type": "Dull Hatchet",
           "text": "INCOMPLETE Dull Hatchet",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Hook Axe",
-          "text": "INCOMPLETE Hook Axe",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
