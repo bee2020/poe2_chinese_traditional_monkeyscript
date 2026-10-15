@@ -36485,6 +36485,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|48240",
+          "text": "Allocates Quick Recovery",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置快速回復",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|48418",
           "text": "Allocates Hefty Unit",
           "type": "fractured",
