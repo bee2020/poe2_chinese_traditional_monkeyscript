@@ -34685,6 +34685,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|31129",
+          "text": "Allocates Lifelong Friend",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置一生之友",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|31172",
           "text": "Allocates Falcon Technique",
           "type": "fractured",
@@ -64897,7 +64906,7 @@
           "type": "augment",
           "zh_tw": {
             "text": "#全部捷光環技能寶石等級",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {

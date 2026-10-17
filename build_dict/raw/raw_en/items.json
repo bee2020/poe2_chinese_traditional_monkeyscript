@@ -14570,16 +14570,16 @@
           }
         },
         {
-          "type": "Skinning Knife",
-          "text": "INCOMPLETE Skinning Knife",
+          "type": "Executioner Greataxe",
+          "text": "INCOMPLETE Executioner Greataxe",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Executioner Greataxe",
-          "text": "INCOMPLETE Executioner Greataxe",
+          "type": "Skinning Knife",
+          "text": "INCOMPLETE Skinning Knife",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
