@@ -14490,14 +14490,6 @@
           }
         },
         {
-          "type": "Hook Axe",
-          "text": "INCOMPLETE Hook Axe",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
           "type": "Charred Shortsword",
           "text": "INCOMPLETE Charred Shortsword",
           "name": "INCOMPLETE",
@@ -14514,16 +14506,16 @@
           }
         },
         {
-          "type": "Splitting Greataxe",
-          "text": "INCOMPLETE Splitting Greataxe",
+          "type": "Hook Axe",
+          "text": "INCOMPLETE Hook Axe",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Splintered Flail",
-          "text": "INCOMPLETE Splintered Flail",
+          "type": "Splitting Greataxe",
+          "text": "INCOMPLETE Splitting Greataxe",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14538,16 +14530,16 @@
           }
         },
         {
-          "type": "Simple Dagger",
-          "text": "INCOMPLETE Simple Dagger",
+          "type": "Splintered Flail",
+          "text": "INCOMPLETE Splintered Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
           }
         },
         {
-          "type": "Chain Flail",
-          "text": "INCOMPLETE Chain Flail",
+          "type": "Simple Dagger",
+          "text": "INCOMPLETE Simple Dagger",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14564,6 +14556,22 @@
         {
           "type": "Iron Greatsword",
           "text": "INCOMPLETE Iron Greatsword",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
+          "type": "Chain Flail",
+          "text": "INCOMPLETE Chain Flail",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
+          "type": "Holy Flail",
+          "text": "INCOMPLETE Holy Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14628,14 +14636,6 @@
         {
           "type": "Moon Dagger",
           "text": "INCOMPLETE Moon Dagger",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Holy Flail",
-          "text": "INCOMPLETE Holy Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true

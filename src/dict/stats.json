@@ -37610,6 +37610,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|59387",
+          "text": "Allocates Infusion of Power",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置力量灌注",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|59541",
           "text": "Allocates Necrotised Flesh",
           "type": "fractured",
