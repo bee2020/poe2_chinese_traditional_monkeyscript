@@ -36584,6 +36584,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|4931",
+          "text": "Allocates Dependable Ward",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置穩固護盾",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|49356",
           "text": "Allocates First Principle of the Hollow",
           "type": "fractured",

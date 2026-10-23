@@ -1,6 +1,6 @@
 # POE2 官方交易字典最新编译报告 (CHANGELOG)
 
-> 编译时间: 10/22/2026, 3:51:40 AM  
+> 编译时间: 10/23/2026, 3:55:55 AM  
 > 同步状态: 🟢 官方 API 直连 + 机器 ID 强对齐 + PoE2DB 全链路兜底就绪
 
 ---
@@ -12,7 +12,7 @@
 | **通货材料 (static.json)** | **798** | **798** | 🟢 **0 种** | 🟢 无需介入 (100% 官方对齐) | **100.00%** |
 | **市集筛选 (filters.json)** | **undefined** | **undefined** | 🟢 **undefined 项** | 🟢 无需介入 (100% 官方对齐) | **100.00%** |
 | **装备与暗金 (items.json)** | **3900** | **0** | 🔴 **3900 件** | 🟢 **已查到: 3898 件** / ⚪ 未查到: 0 件 | **99.95%** |
-| **核心词缀 (stats.json)** | **8307** | **8225** | 🔴 **82 条** | 🟢 **已查到: 69 条** / ⚪ 未查到: 13 条 | **99.84%** |
+| **核心词缀 (stats.json)** | **8308** | **8226** | 🔴 **82 条** | 🟢 **已查到: 69 条** / ⚪ 未查到: 13 条 | **99.84%** |
 
 ---
 
@@ -39,8 +39,8 @@
 | 1 | `explicit` | `explicit.stat_679019978` | `#% of Damage is taken from Mana before Life while not on Low Mana` | 无法匹配 |
 | 2 | `explicit` | `explicit.stat_3762412853` | `Attacks with this Weapon Penetrate #% Chaos Resistance` | 无法匹配 |
 | 3 | `explicit` | `explicit.stat_4011431182` | `Gain #% of Damage as Extra Chaos Damage while you are missing Runic Ward` | 无法匹配 |
-| 4 | `explicit` | `explicit.stat_457920946` | `Gain #% of Damage as Extra Lightning Damage while you are missing Runic Ward` | 无法匹配 |
-| 5 | `explicit` | `explicit.stat_2888350852` | `Gain #% of Damage as Extra Cold Damage while you are missing Runic Ward` | 无法匹配 |
+| 4 | `explicit` | `explicit.stat_2888350852` | `Gain #% of Damage as Extra Cold Damage while you are missing Runic Ward` | 无法匹配 |
+| 5 | `explicit` | `explicit.stat_457920946` | `Gain #% of Damage as Extra Lightning Damage while you are missing Runic Ward` | 无法匹配 |
 | 6 | `explicit` | `explicit.stat_915546383` | `Gain #% of Physical Damage as Extra Damage of a random Element` | 无法匹配 |
 | 7 | `crafted` | `crafted.stat_4011431182` | `Gain #% of Damage as Extra Chaos Damage while you are missing Runic Ward` | 无法匹配 |
 | 8 | `crafted` | `crafted.stat_2888350852` | `Gain #% of Damage as Extra Cold Damage while you are missing Runic Ward` | 无法匹配 |
@@ -62,7 +62,7 @@
 ### ⚡ 核心词缀变动 (stats.json)
 
 **🟢 新增词缀 (1 条)**:
-- `[fractured] Allocates Infusion of Power` ➔ `配置力量灌注`
+- `[fractured] Allocates Dependable Ward` ➔ `配置穩固護盾`
 
 ### 🪙 通货材料变动 (static.json)
 > 🟢 无变动
