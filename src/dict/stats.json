@@ -34874,6 +34874,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|32932",
+          "text": "Allocates Ichlotl's Inferno",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置伊克羅特之獄炎",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|32951",
           "text": "Allocates Preservation",
           "type": "fractured",
