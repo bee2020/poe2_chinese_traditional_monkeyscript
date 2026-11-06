@@ -8,3 +8,5 @@ build_dict/temp/
 .github_token.json
 push_to_github.py
 push.bat
+tests/
+*.bat
