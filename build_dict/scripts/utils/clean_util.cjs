@@ -3,9 +3,9 @@
  */
 
 /**
- * 统一清洗文本并生成通用数值通配签名 (#)
+ * 清洗文本并保留变量 #、固定常量和范围结构
  * @param {string} text 待清洗的原始 HTML / 文本
- * @param {boolean} isStat 是否为属性词缀（如果是，将数值归一化为 #）
+ * @param {boolean} isStat 是否为属性词缀（只规范已有占位符，不猜测数值是否可变）
  * @returns {string} 清洗后的标准化文本/签名
  */
 function cleanAndToSign(text, isStat = false) {
@@ -18,7 +18,8 @@ function cleanAndToSign(text, isStat = false) {
         .replace(/<\/?[^>]+(>|$)/g, '')
         .replace(/[\r\n\t]+/g, ' ')
         // 3. HTML 实体转义与特殊符号归一化
-        .replace(/&ndash;|&mdash;|—|-/g, '—')
+        .replace(/&ndash;/g, '–')
+        .replace(/&mdash;/g, '—')
         .replace(/&#39;|'/g, "'")
         .replace(/&quot;|"/g, '"')
         .replace(/&amp;/g, '&')
@@ -31,22 +32,9 @@ function cleanAndToSign(text, isStat = false) {
         .replace(/\s+/g, ' ')
         .trim();
 
-    // 5. 词缀数值与百分比通配符归一化
+    // 保留所有原始数值和范围端点。具体数值不能无依据地变成变量。
     if (isStat) {
-        clean = clean
-            .replace(/([-|+]?\d+(?:\.\d+)?)/g, '#')
-            .replace(/(#\s*—\s*#)/g, '#')
-            .replace(/#\s*至\s*#/g, '#')
-            .replace(/\+#/g, '#')
-            // 归一化包裹数值的各种小括号 (例如 (#)%、(#%) 统一转为 #%)
-            .replace(/\(\s*[#\s\d—至+-]+\s*\)%/g, '#%')
-            .replace(/\(\s*[#\s\d—至+-]+%\s*\)/g, '#%')
-            .replace(/\([#\s\d—至+-]+\)/g, '#')
-            .replace(/\(#\)/g, '#')
-            .replace(/\(\+#\)/g, '#')
-            .replace(/\bevery second\b/gi, 'every # seconds')
-            .replace(/\s+/g, ' ')
-            .trim();
+        clean = clean.replace(/\(\s*(\+?#)\s*\)/g, '$1');
     }
     return clean;
 }

@@ -8,11 +8,13 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { summarizeEntries } = require('./utils/report_util.cjs');
 
 const { buildStatic } = require('./builders/build_static.cjs');
 const { buildFilters } = require('./builders/build_filters.cjs');
 const { buildStats } = require('./builders/build_stats.cjs');
 const { buildItems } = require('./builders/build_items.cjs');
+const { buildPassives } = require('./builders/build_passives.cjs');
 
 const RAW_EN_DIR = path.resolve(__dirname, '../raw/raw_en');
 const RAW_TW_DIR = path.resolve(__dirname, '../raw/raw_tw');
@@ -38,30 +40,16 @@ async function buildTwDictionaries() {
 
     // 业务 4: 装备基底与暗金 (items - 含双源对齐 + PoE2DB 兜底)
     const itemsReport = await buildItems(RAW_EN_DIR, RAW_TW_DIR, DICT_TW_DIR);
+    const passivesReport = await buildPassives(DICT_TW_DIR);
 
     return {
         generatedAt: new Date().toISOString(),
         summary: {
             items: itemsReport,
+            passives: passivesReport,
             stats: statsReport,
-            static: {
-                total: staticReport.total,
-                officialTranslated: staticReport.translated,
-                missing: staticReport.missing,
-                poe2dbFound: 0,
-                poe2dbNotFound: 0,
-                finalTranslated: staticReport.translated,
-                finalRate: '100.00%'
-            },
-            filters: {
-                total: filtersReport.total,
-                officialTranslated: filtersReport.translated,
-                missing: filtersReport.missing,
-                poe2dbFound: 0,
-                poe2dbNotFound: 0,
-                finalTranslated: filtersReport.translated,
-                finalRate: '100.00%'
-            }
+            static: summarizeEntries(JSON.parse(fs.readFileSync(path.join(DICT_TW_DIR, 'static.json'), 'utf8'))),
+            filters: filtersReport
         },
         items: itemsReport.untranslated,
         stats: statsReport.untranslated,

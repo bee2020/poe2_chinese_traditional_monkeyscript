@@ -502,7 +502,12 @@
           "type": "explicit",
           "zh_tw": {
             "text": "你身上每有一個詛咒，增加#%傷害",
-            "source": "poe2db_dynamic"
+            "template": "你身上每有一個詛咒，增加{0}%傷害",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Unique_item",
+              "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
+            }
           }
         },
         {
@@ -1111,11 +1116,7 @@
         {
           "id": "explicit.stat_1138742368",
           "text": "Increases and Reductions to Light Radius also apply to Area of Effect at #% of their value",
-          "type": "explicit",
-          "zh_tw": {
-            "text": "增加和減少照亮範圍以#%它們的值套用至範圍效果",
-            "source": "poe2db_dynamic"
-          }
+          "type": "explicit"
         },
         {
           "id": "explicit.stat_1143240184",
@@ -2353,11 +2354,7 @@
         {
           "id": "explicit.stat_1400313697",
           "text": "Increases and Reductions to\n Cold and Lightning Damage in Radius are transformed to apply to Fire Damage",
-          "type": "explicit",
-          "zh_tw": {
-            "text": "範圍內對冰冷和閃電傷害的增減 會改為套用至火焰傷害",
-            "source": "poe2db_dynamic"
-          }
+          "type": "explicit"
         },
         {
           "id": "explicit.stat_1404134612",
@@ -3532,11 +3529,7 @@
         {
           "id": "explicit.stat_1687542781",
           "text": "Notable Passive Skills in Radius also grant #% to Lightning Resistance",
-          "type": "explicit",
-          "zh_tw": {
-            "text": "範圍內核心天賦也會賦予 #%閃電抗性",
-            "source": "poe2db_dynamic"
-          }
+          "type": "explicit"
         },
         {
           "id": "explicit.stat_1688294122",
@@ -3841,7 +3834,12 @@
           "type": "explicit",
           "zh_tw": {
             "text": "荊棘傷害的#%轉化為生命偷取",
-            "source": "poe2db_dynamic"
+            "template": "荊棘傷害的{0}%轉化為生命偷取",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Unique_item",
+              "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
+            }
           }
         },
         {
@@ -5089,11 +5087,7 @@
         {
           "id": "explicit.stat_2103621252",
           "text": "Eat a Soul when you Hit a Unique Enemy, no more than once every second",
-          "type": "explicit",
-          "zh_tw": {
-            "text": "當你擊中傳奇敵人吞噬#個靈魂，每#秒不超過#次",
-            "source": "poe2db_dynamic"
-          }
+          "type": "explicit"
         },
         {
           "id": "explicit.stat_2103650854",
@@ -5749,7 +5743,12 @@
           "type": "explicit",
           "zh_tw": {
             "text": "冰凍處於滿血狀態的敵人",
-            "source": "poe2db_dynamic"
+            "template": "冰凍處於滿血狀態的敵人",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Cold_Damage",
+              "key": "[\"Winters_Bite\",\"explicitMod\",\"\",[\"Freeze\"]]"
+            }
           }
         },
         {
@@ -6010,7 +6009,12 @@
           "type": "explicit",
           "zh_tw": {
             "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
-            "source": "poe2db_dynamic"
+            "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Unique_item",
+              "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
+            }
           }
         },
         {
@@ -6792,7 +6796,7 @@
           "text": "Passives in Radius of Crimson Assault can be Allocated\nwithout being connected to your tree",
           "type": "explicit",
           "zh_tw": {
-            "text": "範圍緋紅攻擊內的天賦可以在沒有連結你的天賦樹下被配置",
+            "text": "範圍緋紅突擊內的天賦可以在沒有連結你的天賦樹下被配置",
             "source": "official"
           }
         },
@@ -9425,7 +9429,7 @@
           "text": "Allocates Javelin",
           "type": "explicit",
           "zh_tw": {
-            "text": "配置長矛：傷害核心",
+            "text": "配置標槍",
             "source": "official"
           }
         },
@@ -9839,7 +9843,7 @@
           "text": "Allocates Loose Flesh",
           "type": "explicit",
           "zh_tw": {
-            "text": "配置鬆散肌肉",
+            "text": "配置鬆弛血肉",
             "source": "official"
           }
         },
@@ -12728,7 +12732,7 @@
           "text": "Allocates Heart Tissue",
           "type": "explicit",
           "zh_tw": {
-            "text": "配置心臟疾病",
+            "text": "配置心臟組織",
             "source": "official"
           }
         },
@@ -12998,7 +13002,7 @@
           "text": "Allocates Pliable Flesh",
           "type": "explicit",
           "zh_tw": {
-            "text": "配置可塑肉體",
+            "text": "配置柔韌血肉",
             "source": "official"
           }
         },
@@ -13610,7 +13614,7 @@
           "text": "Allocates Versatile Arms",
           "type": "explicit",
           "zh_tw": {
-            "text": "配置萬能雙手",
+            "text": "配置萬用武器",
             "source": "official"
           }
         },
@@ -14546,7 +14550,7 @@
           "text": "Allocates Taut Flesh",
           "type": "explicit",
           "zh_tw": {
-            "text": "配置繃緊肌肉",
+            "text": "配置緊繃血肉",
             "source": "official"
           }
         },
@@ -15761,7 +15765,7 @@
           "text": "Allocates Infused Flesh",
           "type": "explicit",
           "zh_tw": {
-            "text": "配置注入肉體",
+            "text": "配置灌注血肉",
             "source": "official"
           }
         },
@@ -15905,7 +15909,7 @@
           "text": "Allocates Sanguimantic Rituals",
           "type": "explicit",
           "zh_tw": {
-            "text": "配置血咒儀式",
+            "text": "配置占血儀式",
             "source": "official"
           }
         },
@@ -17246,7 +17250,7 @@
           "text": "Allocates Heartstopping Presence",
           "type": "explicit",
           "zh_tw": {
-            "text": "配置停頓心跳",
+            "text": "配置懾心氣場",
             "source": "official"
           }
         },
@@ -18570,7 +18574,7 @@
           "type": "explicit",
           "zh_tw": {
             "text": "增加#%變動冰冷詞綴的大小",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -19197,11 +19201,7 @@
         {
           "id": "explicit.stat_3368921525",
           "text": "Increases and Reductions to\n Fire and Lightning Damage in Radius are transformed to apply to Cold Damage",
-          "type": "explicit",
-          "zh_tw": {
-            "text": "範圍內對火焰和閃電傷害的增減 會改為套用至冰冷傷害",
-            "source": "poe2db_dynamic"
-          }
+          "type": "explicit"
         },
         {
           "id": "explicit.stat_3371085671",
@@ -21418,7 +21418,7 @@
           "text": "Ancestral Bond",
           "type": "explicit",
           "zh_tw": {
-            "text": "Ancestral Bond",
+            "text": "先祖魂約",
             "source": "official"
           }
         },
@@ -21427,7 +21427,7 @@
           "text": "Mind Over Matter",
           "type": "explicit",
           "zh_tw": {
-            "text": "Mind Over Matter",
+            "text": "心靈昇華",
             "source": "official"
           }
         },
@@ -21436,7 +21436,7 @@
           "text": "Whispers of Doom",
           "type": "explicit",
           "zh_tw": {
-            "text": "Whispers of Doom",
+            "text": "滅世之語",
             "source": "official"
           }
         },
@@ -21445,7 +21445,7 @@
           "text": "Necromantic Talisman",
           "type": "explicit",
           "zh_tw": {
-            "text": "Necromantic Talisman",
+            "text": "靈能魔符",
             "source": "official"
           }
         },
@@ -21454,8 +21454,16 @@
           "text": "Conduit",
           "type": "explicit",
           "zh_tw": {
-            "text": "Conduit",
-            "source": "official"
+            "text": "能量連結",
+            "source": "poe2db_verified_name",
+            "evidence": {
+              "urls": [
+                "https://poe2db.tw/us/Conduit",
+                "https://poe2db.tw/tw/Conduit"
+              ],
+              "passiveId": "passive_keystone_conduit",
+              "hash": "33979"
+            }
           }
         },
         {
@@ -21463,7 +21471,7 @@
           "text": "Resonance",
           "type": "explicit",
           "zh_tw": {
-            "text": "Resonance",
+            "text": "共鳴",
             "source": "official"
           }
         },
@@ -21472,7 +21480,7 @@
           "text": "Eternal Youth",
           "type": "explicit",
           "zh_tw": {
-            "text": "Eternal Youth",
+            "text": "青春永駐",
             "source": "official"
           }
         },
@@ -21481,7 +21489,7 @@
           "text": "Primal Hunger",
           "type": "explicit",
           "zh_tw": {
-            "text": "Primal Hunger",
+            "text": "原初飢餓",
             "source": "official"
           }
         },
@@ -21490,7 +21498,7 @@
           "text": "Dance With Death",
           "type": "explicit",
           "zh_tw": {
-            "text": "Dance With Death",
+            "text": "和死共舞",
             "source": "official"
           }
         },
@@ -21499,8 +21507,16 @@
           "text": "Heartstopper",
           "type": "explicit",
           "zh_tw": {
-            "text": "Heartstopper",
-            "source": "official"
+            "text": "心靈永止",
+            "source": "poe2db_verified_name",
+            "evidence": {
+              "urls": [
+                "https://poe2db.tw/us/Heartstopper",
+                "https://poe2db.tw/tw/Heartstopper"
+              ],
+              "passiveId": "passive_keystone_heartstopper",
+              "hash": "34497"
+            }
           }
         },
         {
@@ -21508,8 +21524,16 @@
           "text": "Oasis",
           "type": "explicit",
           "zh_tw": {
-            "text": "Oasis",
-            "source": "official"
+            "text": "幻景綠洲",
+            "source": "poe2db_verified_name",
+            "evidence": {
+              "urls": [
+                "https://poe2db.tw/us/Oasis",
+                "https://poe2db.tw/tw/Oasis"
+              ],
+              "passiveId": "passive_keystone_oasis",
+              "hash": "25100"
+            }
           }
         },
         {
@@ -21517,7 +21541,7 @@
           "text": "Giant's Blood",
           "type": "explicit",
           "zh_tw": {
-            "text": "Giant's Blood",
+            "text": "巨人之血",
             "source": "official"
           }
         },
@@ -21526,7 +21550,7 @@
           "text": "Vaal Pact",
           "type": "explicit",
           "zh_tw": {
-            "text": "Vaal Pact",
+            "text": "瓦爾冥約",
             "source": "official"
           }
         },
@@ -21535,7 +21559,7 @@
           "text": "Iron Reflexes",
           "type": "explicit",
           "zh_tw": {
-            "text": "Iron Reflexes",
+            "text": "霸體",
             "source": "official"
           }
         },
@@ -21544,7 +21568,7 @@
           "text": "Glancing Blows",
           "type": "explicit",
           "zh_tw": {
-            "text": "Glancing Blows",
+            "text": "側身之擊",
             "source": "official"
           }
         },
@@ -21553,7 +21577,7 @@
           "text": "Elemental Equilibrium",
           "type": "explicit",
           "zh_tw": {
-            "text": "Elemental Equilibrium",
+            "text": "元素之相",
             "source": "official"
           }
         },
@@ -21562,8 +21586,16 @@
           "text": "Bulwark",
           "type": "explicit",
           "zh_tw": {
-            "text": "Bulwark",
-            "source": "official"
+            "text": "守護",
+            "source": "poe2db_verified_name",
+            "evidence": {
+              "urls": [
+                "https://poe2db.tw/us/Bulwark",
+                "https://poe2db.tw/tw/Bulwark"
+              ],
+              "passiveId": "passive_keystone_bulwark",
+              "hash": "56605"
+            }
           }
         },
         {
@@ -21571,7 +21603,7 @@
           "text": "Trusted Kinship",
           "type": "explicit",
           "zh_tw": {
-            "text": "Trusted Kinship",
+            "text": "可信之情",
             "source": "official"
           }
         },
@@ -21580,7 +21612,7 @@
           "text": "Crimson Assault",
           "type": "explicit",
           "zh_tw": {
-            "text": "Crimson Assault",
+            "text": "緋紅突擊",
             "source": "official"
           }
         },
@@ -21589,7 +21621,7 @@
           "text": "Hollow Palm Technique",
           "type": "explicit",
           "zh_tw": {
-            "text": "Hollow Palm Technique",
+            "text": "空掌之術",
             "source": "official"
           }
         },
@@ -21598,7 +21630,7 @@
           "text": "Blackflame Covenant",
           "type": "explicit",
           "zh_tw": {
-            "text": "Blackflame Covenant",
+            "text": "黯炎盟約",
             "source": "official"
           }
         },
@@ -21607,7 +21639,7 @@
           "text": "Ritual Cadence",
           "type": "explicit",
           "zh_tw": {
-            "text": "Ritual Cadence",
+            "text": "祭祀終章",
             "source": "official"
           }
         },
@@ -21616,7 +21648,7 @@
           "text": "Unwavering Stance",
           "type": "explicit",
           "zh_tw": {
-            "text": "Unwavering Stance",
+            "text": "烈士意志",
             "source": "official"
           }
         },
@@ -21625,7 +21657,7 @@
           "text": "Scarred Faith",
           "type": "explicit",
           "zh_tw": {
-            "text": "Scarred Faith",
+            "text": "創傷信仰",
             "source": "official"
           }
         },
@@ -21634,7 +21666,7 @@
           "text": "Lord of the Wilds",
           "type": "explicit",
           "zh_tw": {
-            "text": "Lord of the Wilds",
+            "text": "荒野領主",
             "source": "official"
           }
         },
@@ -21643,7 +21675,7 @@
           "text": "Wildsurge Incantation",
           "type": "explicit",
           "zh_tw": {
-            "text": "Wildsurge Incantation",
+            "text": "荒野湧浪咒",
             "source": "official"
           }
         },
@@ -21652,7 +21684,7 @@
           "text": "Zealot's Oath",
           "type": "explicit",
           "zh_tw": {
-            "text": "Zealot's Oath",
+            "text": "狂熱者的誓言",
             "source": "official"
           }
         },
@@ -21661,7 +21693,7 @@
           "text": "Avatar of Fire",
           "type": "explicit",
           "zh_tw": {
-            "text": "Avatar of Fire",
+            "text": "火之化身",
             "source": "official"
           }
         },
@@ -21670,7 +21702,7 @@
           "text": "Blood Magic",
           "type": "explicit",
           "zh_tw": {
-            "text": "Blood Magic",
+            "text": "祭血術",
             "source": "official"
           }
         },
@@ -21679,7 +21711,7 @@
           "text": "Resolute Technique",
           "type": "explicit",
           "zh_tw": {
-            "text": "Resolute Technique",
+            "text": "堅毅之心",
             "source": "official"
           }
         },
@@ -21688,7 +21720,7 @@
           "text": "Pain Attunement",
           "type": "explicit",
           "zh_tw": {
-            "text": "Pain Attunement",
+            "text": "苦痛靈曲",
             "source": "official"
           }
         },
@@ -21697,7 +21729,7 @@
           "text": "Chaos Inoculation",
           "type": "explicit",
           "zh_tw": {
-            "text": "Chaos Inoculation",
+            "text": "異靈之體",
             "source": "official"
           }
         },
@@ -21706,7 +21738,7 @@
           "text": "Eldritch Battery",
           "type": "explicit",
           "zh_tw": {
-            "text": "Eldritch Battery",
+            "text": "異能魔力",
             "source": "official"
           }
         },
@@ -22289,11 +22321,7 @@
         {
           "id": "explicit.stat_3946450303",
           "text": "Notable Passive Skills in Radius also grant #% to Cold Resistance",
-          "type": "explicit",
-          "zh_tw": {
-            "text": "範圍內核心天賦也會賦予 #%冰冷抗性",
-            "source": "poe2db_dynamic"
-          }
+          "type": "explicit"
         },
         {
           "id": "explicit.stat_3947672598",
@@ -23611,7 +23639,7 @@
           "type": "explicit",
           "zh_tw": {
             "text": "增加#%法術所造成之穿刺的幅度",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -26943,11 +26971,7 @@
         {
           "id": "explicit.stat_679019978",
           "text": "#% of Damage is taken from Mana before Life while not on Low Mana",
-          "type": "explicit",
-          "zh_tw": {
-            "text": "未處於低魔力狀態時，承受的#%傷害會先由魔力而不是生命扣除",
-            "source": "poe2db_dynamic"
-          }
+          "type": "explicit"
         },
         {
           "id": "explicit.stat_679087890",
@@ -27870,11 +27894,7 @@
         {
           "id": "explicit.stat_895564377",
           "text": "Increases and Reductions to\n Cold and Fire Damage in Radius are transformed to apply to Lightning Damage",
-          "type": "explicit",
-          "zh_tw": {
-            "text": "範圍內對冰冷和火焰傷害的增減 會改為套用至閃電傷害",
-            "source": "poe2db_dynamic"
-          }
+          "type": "explicit"
         },
         {
           "id": "explicit.stat_900933517",
@@ -28316,7 +28336,12 @@
           "type": "implicit",
           "zh_tw": {
             "text": "遠程無命中懲罰",
-            "source": "poe2db_dynamic"
+            "template": "遠程無命中懲罰",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Physical_Damage",
+              "key": "[\"Extended_Cleaver\",\"implicitMod\",\"\",[\"Accuracy\"]]"
+            }
           }
         },
         {
@@ -29474,11 +29499,7 @@
         {
           "id": "implicit.stat_3691641145",
           "text": "#% increased Damage taken",
-          "type": "implicit",
-          "zh_tw": {
-            "text": "增加#%承受傷害",
-            "source": "poe2db_dynamic"
-          }
+          "type": "implicit"
         },
         {
           "id": "implicit.stat_3695891184",
@@ -29684,7 +29705,12 @@
           "type": "implicit",
           "zh_tw": {
             "text": "暴擊時破壞#點護甲值",
-            "source": "poe2db_dynamic"
+            "template": "暴擊時破壞{0}點護甲值",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Daggers",
+              "key": "[\"Mail_Breaker\",\"implicitMod\",\"\",[\"Armour\",\"Critical\"]]"
+            }
           }
         },
         {
@@ -32677,7 +32703,7 @@
           "text": "Allocates Javelin",
           "type": "fractured",
           "zh_tw": {
-            "text": "配置長矛：傷害核心",
+            "text": "配置標槍",
             "source": "official"
           }
         },
@@ -32992,7 +33018,7 @@
           "text": "Allocates Loose Flesh",
           "type": "fractured",
           "zh_tw": {
-            "text": "配置鬆散肌肉",
+            "text": "配置鬆弛血肉",
             "source": "official"
           }
         },
@@ -33978,6 +34004,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|2344",
+          "text": "Allocates Dimensional Weakspot",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置維度弱點",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|23630",
           "text": "Allocates Self Immolation",
           "type": "fractured",
@@ -34680,6 +34715,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|31129",
+          "text": "Allocates Lifelong Friend",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置一生之友",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|31172",
           "text": "Allocates Falcon Technique",
           "type": "fractured",
@@ -34856,6 +34900,15 @@
           "type": "fractured",
           "zh_tw": {
             "text": "配置干擾目標",
+            "source": "official"
+          }
+        },
+        {
+          "id": "fractured.stat_2954116742|32932",
+          "text": "Allocates Ichlotl's Inferno",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置伊克羅特之獄炎",
             "source": "official"
           }
         },
@@ -35076,6 +35129,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|35564",
+          "text": "Allocates Turn the Clock Back",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置時光倒流",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|35581",
           "text": "Allocates Near at Hand",
           "type": "fractured",
@@ -35161,7 +35223,7 @@
           "text": "Allocates Heart Tissue",
           "type": "fractured",
           "zh_tw": {
-            "text": "配置心臟疾病",
+            "text": "配置心臟組織",
             "source": "official"
           }
         },
@@ -35359,7 +35421,7 @@
           "text": "Allocates Pliable Flesh",
           "type": "fractured",
           "zh_tw": {
-            "text": "配置可塑肉體",
+            "text": "配置柔韌血肉",
             "source": "official"
           }
         },
@@ -35787,6 +35849,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|41905",
+          "text": "Allocates Gravedigger",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置掘墓者",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|41972",
           "text": "Allocates Glaciation",
           "type": "fractured",
@@ -35881,7 +35952,7 @@
           "text": "Allocates Versatile Arms",
           "type": "fractured",
           "zh_tw": {
-            "text": "配置萬能雙手",
+            "text": "配置萬用武器",
             "source": "official"
           }
         },
@@ -36183,6 +36254,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|4579",
+          "text": "Allocates Unbothering Cold",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置無礙嚴寒",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|46024",
           "text": "Allocates Sigil of Lightning",
           "type": "fractured",
@@ -36305,6 +36385,15 @@
           "type": "fractured",
           "zh_tw": {
             "text": "配置秘能混合物",
+            "source": "official"
+          }
+        },
+        {
+          "id": "fractured.stat_2954116742|47088",
+          "text": "Allocates Sic 'Em",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置禁錮他們",
             "source": "official"
           }
         },
@@ -36462,6 +36551,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|48240",
+          "text": "Allocates Quick Recovery",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置快速回復",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|48418",
           "text": "Allocates Hefty Unit",
           "type": "fractured",
@@ -36539,6 +36637,15 @@
           "type": "fractured",
           "zh_tw": {
             "text": "配置分裂力量",
+            "source": "official"
+          }
+        },
+        {
+          "id": "fractured.stat_2954116742|4931",
+          "text": "Allocates Dependable Ward",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置穩固護盾",
             "source": "official"
           }
         },
@@ -37492,7 +37599,7 @@
           "text": "Allocates Sanguimantic Rituals",
           "type": "fractured",
           "zh_tw": {
-            "text": "配置血咒儀式",
+            "text": "配置占血儀式",
             "source": "official"
           }
         },
@@ -37565,6 +37672,15 @@
           "type": "fractured",
           "zh_tw": {
             "text": "配置幸運兔腳",
+            "source": "official"
+          }
+        },
+        {
+          "id": "fractured.stat_2954116742|59387",
+          "text": "Allocates Infusion of Power",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置力量灌注",
             "source": "official"
           }
         },
@@ -37700,6 +37816,15 @@
           "type": "fractured",
           "zh_tw": {
             "text": "配置閃電之息",
+            "source": "official"
+          }
+        },
+        {
+          "id": "fractured.stat_2954116742|61354",
+          "text": "Allocates Infernal Limit",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置煉獄上限",
             "source": "official"
           }
         },
@@ -38433,6 +38558,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|9863",
+          "text": "Allocates Knight of Izaro",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置伊澤洛之騎士",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|9908",
           "text": "Allocates Price of Freedom",
           "type": "fractured",
@@ -38825,7 +38959,7 @@
           "type": "fractured",
           "zh_tw": {
             "text": "增加#%變動冰冷詞綴的大小",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -39038,11 +39172,7 @@
         {
           "id": "fractured.stat_3368921525",
           "text": "Increases and Reductions to\n Fire and Lightning Damage in Radius are transformed to apply to Cold Damage",
-          "type": "fractured",
-          "zh_tw": {
-            "text": "範圍內對火焰和閃電傷害的增減 會改為套用至冰冷傷害",
-            "source": "poe2db_dynamic"
-          }
+          "type": "fractured"
         },
         {
           "id": "fractured.stat_3372524247",
@@ -39884,11 +40014,7 @@
         {
           "id": "fractured.stat_3946450303",
           "text": "Notable Passive Skills in Radius also grant #% to Cold Resistance",
-          "type": "fractured",
-          "zh_tw": {
-            "text": "範圍內核心天賦也會賦予 #%冰冷抗性",
-            "source": "poe2db_dynamic"
-          }
+          "type": "fractured"
         },
         {
           "id": "fractured.stat_3962278098",
@@ -40782,6 +40908,15 @@
           }
         },
         {
+          "id": "fractured.stat_731781020",
+          "text": "Flasks gain # charges per Second",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "藥劑每秒獲得#充能",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_734614379",
           "text": "#% increased Strength",
           "type": "fractured",
@@ -41411,11 +41546,7 @@
         {
           "id": "crafted.stat_1400313697",
           "text": "Increases and Reductions to\n Cold and Lightning Damage in Radius are transformed to apply to Fire Damage",
-          "type": "crafted",
-          "zh_tw": {
-            "text": "範圍內對冰冷和閃電傷害的增減 會改為套用至火焰傷害",
-            "source": "poe2db_dynamic"
-          }
+          "type": "crafted"
         },
         {
           "id": "crafted.stat_1417267954",
@@ -41519,11 +41650,7 @@
         {
           "id": "crafted.stat_1687542781",
           "text": "Notable Passive Skills in Radius also grant #% to Lightning Resistance",
-          "type": "crafted",
-          "zh_tw": {
-            "text": "範圍內核心天賦也會賦予 #%閃電抗性",
-            "source": "poe2db_dynamic"
-          }
+          "type": "crafted"
         },
         {
           "id": "crafted.stat_1691403182",
@@ -42093,7 +42220,7 @@
           "text": "Allocates Javelin",
           "type": "crafted",
           "zh_tw": {
-            "text": "配置長矛：傷害核心",
+            "text": "配置標槍",
             "source": "official"
           }
         },
@@ -42507,7 +42634,7 @@
           "text": "Allocates Loose Flesh",
           "type": "crafted",
           "zh_tw": {
-            "text": "配置鬆散肌肉",
+            "text": "配置鬆弛血肉",
             "source": "official"
           }
         },
@@ -45396,7 +45523,7 @@
           "text": "Allocates Heart Tissue",
           "type": "crafted",
           "zh_tw": {
-            "text": "配置心臟疾病",
+            "text": "配置心臟組織",
             "source": "official"
           }
         },
@@ -45666,7 +45793,7 @@
           "text": "Allocates Pliable Flesh",
           "type": "crafted",
           "zh_tw": {
-            "text": "配置可塑肉體",
+            "text": "配置柔韌血肉",
             "source": "official"
           }
         },
@@ -46278,7 +46405,7 @@
           "text": "Allocates Versatile Arms",
           "type": "crafted",
           "zh_tw": {
-            "text": "配置萬能雙手",
+            "text": "配置萬用武器",
             "source": "official"
           }
         },
@@ -47214,7 +47341,7 @@
           "text": "Allocates Taut Flesh",
           "type": "crafted",
           "zh_tw": {
-            "text": "配置繃緊肌肉",
+            "text": "配置緊繃血肉",
             "source": "official"
           }
         },
@@ -48429,7 +48556,7 @@
           "text": "Allocates Infused Flesh",
           "type": "crafted",
           "zh_tw": {
-            "text": "配置注入肉體",
+            "text": "配置灌注血肉",
             "source": "official"
           }
         },
@@ -48573,7 +48700,7 @@
           "text": "Allocates Sanguimantic Rituals",
           "type": "crafted",
           "zh_tw": {
-            "text": "配置血咒儀式",
+            "text": "配置占血儀式",
             "source": "official"
           }
         },
@@ -49914,7 +50041,7 @@
           "text": "Allocates Heartstopping Presence",
           "type": "crafted",
           "zh_tw": {
-            "text": "配置停頓心跳",
+            "text": "配置懾心氣場",
             "source": "official"
           }
         },
@@ -50164,11 +50291,7 @@
         {
           "id": "crafted.stat_3368921525",
           "text": "Increases and Reductions to\n Fire and Lightning Damage in Radius are transformed to apply to Cold Damage",
-          "type": "crafted",
-          "zh_tw": {
-            "text": "範圍內對火焰和閃電傷害的增減 會改為套用至冰冷傷害",
-            "source": "poe2db_dynamic"
-          }
+          "type": "crafted"
         },
         {
           "id": "crafted.stat_3372524247",
@@ -50398,11 +50521,7 @@
         {
           "id": "crafted.stat_3946450303",
           "text": "Notable Passive Skills in Radius also grant #% to Cold Resistance",
-          "type": "crafted",
-          "zh_tw": {
-            "text": "範圍內核心天賦也會賦予 #%冰冷抗性",
-            "source": "poe2db_dynamic"
-          }
+          "type": "crafted"
         },
         {
           "id": "crafted.stat_3962278098",
@@ -50541,7 +50660,7 @@
           "type": "crafted",
           "zh_tw": {
             "text": "增加#%法術所造成之穿刺的幅度",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -50804,11 +50923,7 @@
         {
           "id": "crafted.stat_895564377",
           "text": "Increases and Reductions to\n Cold and Fire Damage in Radius are transformed to apply to Lightning Damage",
-          "type": "crafted",
-          "zh_tw": {
-            "text": "範圍內對冰冷和火焰傷害的增減 會改為套用至閃電傷害",
-            "source": "poe2db_dynamic"
-          }
+          "type": "crafted"
         },
         {
           "id": "crafted.stat_915769802",
@@ -51442,7 +51557,7 @@
           "text": "Allocates Javelin",
           "type": "enchant",
           "zh_tw": {
-            "text": "配置長矛：傷害核心",
+            "text": "配置標槍",
             "source": "official"
           }
         },
@@ -51856,7 +51971,7 @@
           "text": "Allocates Loose Flesh",
           "type": "enchant",
           "zh_tw": {
-            "text": "配置鬆散肌肉",
+            "text": "配置鬆弛血肉",
             "source": "official"
           }
         },
@@ -54745,7 +54860,7 @@
           "text": "Allocates Heart Tissue",
           "type": "enchant",
           "zh_tw": {
-            "text": "配置心臟疾病",
+            "text": "配置心臟組織",
             "source": "official"
           }
         },
@@ -55015,7 +55130,7 @@
           "text": "Allocates Pliable Flesh",
           "type": "enchant",
           "zh_tw": {
-            "text": "配置可塑肉體",
+            "text": "配置柔韌血肉",
             "source": "official"
           }
         },
@@ -55627,7 +55742,7 @@
           "text": "Allocates Versatile Arms",
           "type": "enchant",
           "zh_tw": {
-            "text": "配置萬能雙手",
+            "text": "配置萬用武器",
             "source": "official"
           }
         },
@@ -56563,7 +56678,7 @@
           "text": "Allocates Taut Flesh",
           "type": "enchant",
           "zh_tw": {
-            "text": "配置繃緊肌肉",
+            "text": "配置緊繃血肉",
             "source": "official"
           }
         },
@@ -57778,7 +57893,7 @@
           "text": "Allocates Infused Flesh",
           "type": "enchant",
           "zh_tw": {
-            "text": "配置注入肉體",
+            "text": "配置灌注血肉",
             "source": "official"
           }
         },
@@ -57922,7 +58037,7 @@
           "text": "Allocates Sanguimantic Rituals",
           "type": "enchant",
           "zh_tw": {
-            "text": "配置血咒儀式",
+            "text": "配置占血儀式",
             "source": "official"
           }
         },
@@ -59263,7 +59378,7 @@
           "text": "Allocates Heartstopping Presence",
           "type": "enchant",
           "zh_tw": {
-            "text": "配置停頓心跳",
+            "text": "配置懾心氣場",
             "source": "official"
           }
         },
@@ -59999,17 +60114,18 @@
           "type": "augment",
           "zh_tw": {
             "text": "#層最大盛怒",
-            "source": "poe2db_dynamic"
+            "template": "{0}層最大盛怒",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Soul_Core",
+              "key": "[\"Tzamotos_Soul_Core_of_Ferocity\",\"implicitMod\",\"Helmets\",[\"Rage\"]]"
+            }
           }
         },
         {
           "id": "rune.stat_1062190843",
           "text": "# to Level of all Storm Skill Gems",
-          "type": "augment",
-          "zh_tw": {
-            "text": "#全部風暴技能寶石等級",
-            "source": "poe2db_dynamic"
-          }
+          "type": "augment"
         },
         {
           "id": "rune.stat_1073847159",
@@ -60023,11 +60139,7 @@
         {
           "id": "rune.stat_1078570138",
           "text": "# to Level of all Hazard Skill Gems",
-          "type": "augment",
-          "zh_tw": {
-            "text": "#全部危險技能寶石等級",
-            "source": "poe2db_dynamic"
-          }
+          "type": "augment"
         },
         {
           "id": "rune.stat_1083521623",
@@ -60071,7 +60183,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "#最大符文保護",
-            "source": "poe2db_dynamic"
+            "template": "{0}最大符文保護",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Runic_Ward",
+              "key": "[\"Svalinn\",\"explicitMod\",\"\",[\"Ward\"]]"
+            }
           }
         },
         {
@@ -60116,7 +60233,7 @@
           "type": "augment",
           "zh_tw": {
             "text": "鬥旗同時賦予被其影響的目標#%每秒生命回復",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -60269,7 +60386,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "對癱瘓的敵人增加#%攻擊傷害",
-            "source": "poe2db_dynamic"
+            "template": "對癱瘓的敵人增加{0}%攻擊傷害",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Hoghunt\",\"bondedMod\",\"Two_Hand_Maces\",[\"Attack\"]]"
+            }
           }
         },
         {
@@ -60287,7 +60409,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "增加#%命中值",
-            "source": "poe2db_dynamic"
+            "template": "增加{0}%命中值",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Bonded_Modifiers",
+              "key": "[\"Cat_Idol\",\"implicitMod\",\"Gloves\",[\"Accuracy\"]]"
+            }
           }
         },
         {
@@ -60341,7 +60468,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "使用技能時每消耗一個連擊可獲得終極#秒",
-            "source": "poe2db_dynamic"
+            "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
+            }
           }
         },
         {
@@ -60485,7 +60617,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "你自身使用的重擊技能有#%機率造成額外一次餘震",
-            "source": "poe2db_dynamic"
+            "template": "你自身使用的重擊技能有{0}%機率造成額外一次餘震",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Ancient_Rune_of_the_Titan\",\"implicitMod\",\"Two_Hand_Maces\",[\"Aftershock\",\"Slam\"]]"
+            }
           }
         },
         {
@@ -60548,7 +60685,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "擊中時會擊退敵人",
-            "source": "poe2db_dynamic"
+            "template": "擊中時會擊退敵人",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Tyrannys_Grip\",\"bondedMod\",\"Spears\",[\"Hit\",\"Knockback\"]]"
+            }
           }
         },
         {
@@ -60574,8 +60716,13 @@
           "text": "Bonded: #% increased Damage per 15 Strength",
           "type": "augment",
           "zh_tw": {
-            "text": "每#點力量增加#%傷害",
-            "source": "poe2db_dynamic"
+            "text": "每15點力量增加#%傷害",
+            "template": "每15點力量增加{0}%傷害",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Facebreaker\",\"bondedMod\",\"Gloves\",[\"Strength\"]]"
+            }
           }
         },
         {
@@ -60773,7 +60920,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "觸發法術增加#%造成的法術傷害",
-            "source": "poe2db_dynamic"
+            "template": "觸發法術增加{0}%造成的法術傷害",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Dusk_Vigil\",\"bondedMod\",\"Staves\",[\"Spell\",\"Trigger\"]]"
+            }
           }
         },
         {
@@ -60863,7 +61015,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "你存在中的敵人被阻礙",
-            "source": "poe2db_dynamic"
+            "template": "你存在中的敵人被阻礙",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Amor_Mandragora\",\"bondedMod\",\"Talismans\",[\"Hinder\",\"Presence\"]]"
+            }
           }
         },
         {
@@ -60953,7 +61110,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "增加#%藥劑魔力恢復率",
-            "source": "poe2db_dynamic"
+            "template": "增加{0}%藥劑魔力恢復率",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Briskwrap\",\"bondedMod\",\"Body_Armours\",[\"Flask\"]]"
+            }
           }
         },
         {
@@ -61040,11 +61202,7 @@
         {
           "id": "rune.stat_1839315243",
           "text": "# to Level of all Slam Skill Gems",
-          "type": "augment",
-          "zh_tw": {
-            "text": "#全部重擊技能寶石等級",
-            "source": "poe2db_dynamic"
-          }
+          "type": "augment"
         },
         {
           "id": "rune.stat_185580205",
@@ -61088,7 +61246,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "如果你會獲得一顆耐力球，改為由你存在中的友方獲得該能量球",
-            "source": "poe2db_dynamic"
+            "template": "如果你會獲得一顆耐力球，改為由你存在中的友方獲得該能量球",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Bonded_Modifiers",
+              "key": "[\"Idol_of_Oak\",\"implicitMod\",\"Sceptres\",[\"Allies\",\"Charges\",\"Presence\"]]"
+            }
           }
         },
         {
@@ -61096,8 +61259,13 @@
           "text": "Bonded: Adds # to # Physical Damage",
           "type": "augment",
           "zh_tw": {
-            "text": "附加#物理傷害",
-            "source": "poe2db_dynamic"
+            "text": "附加#至#物理傷害",
+            "template": "附加{0}至{1}物理傷害",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Lesser_Tempered_Rune\",\"implicitMod\",\"Martial_Weapons\",[\"Physical\"]]"
+            }
           }
         },
         {
@@ -61147,7 +61315,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "變形時增加#%護甲",
-            "source": "poe2db_dynamic"
+            "template": "變形時增加{0}%護甲",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_The_Unleashed\",\"bondedMod\",\"Body_Armours\",[\"Armour\",\"Shapeshift\"]]"
+            }
           }
         },
         {
@@ -61174,7 +61347,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "獲得等同於#%物理傷害的額外火焰傷害",
-            "source": "poe2db_dynamic"
+            "template": "獲得等同於{0}%物理傷害的額外火焰傷害",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Dusk_Vigil\",\"implicitMod\",\"Staves\",[\"Fire\",\"Gain\",\"Physical\"]]"
+            }
           }
         },
         {
@@ -61183,7 +61361,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "你補償#%你的奉獻召喚物所承受的傷害為生命",
-            "source": "poe2db_dynamic"
+            "template": "你補償{0}%你的奉獻召喚物所承受的傷害為生命",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Soul_Core",
+              "key": "[\"Citaqualotls_Thesis\",\"implicitMod\",\"Body_Armours\",[\"Offering\",\"Recoup\"]]"
+            }
           }
         },
         {
@@ -61498,7 +61681,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "減少#%你身上的冰緩持續時間",
-            "source": "poe2db_dynamic"
+            "template": "減少{0}%你身上的冰緩持續時間",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Unique_item",
+              "key": "[\"Oberns_Bastion\",\"explicitMod\",\"\",[\"Chill\"]]"
+            }
           }
         },
         {
@@ -61516,7 +61704,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "能量護盾全滿時，#%的護甲同時套用到混沌傷害",
-            "source": "poe2db_dynamic"
+            "template": "能量護盾全滿時，{0}%的護甲同時套用到混沌傷害",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Soul_Core",
+              "key": "[\"Quipolatls_Thesis\",\"implicitMod\",\"Body_Armours\",[\"Armour\",\"Chaos\",\"EnergyShield\"]]"
+            }
           }
         },
         {
@@ -61668,8 +61861,13 @@
           "text": "Bonded: Every five Rage also grants you #% increased Movement Speed",
           "type": "augment",
           "zh_tw": {
-            "text": "每#盛怒同時使你增加#%移動速度",
-            "source": "poe2db_dynamic"
+            "text": "每5盛怒同時使你增加#%移動速度",
+            "template": "每5盛怒同時使你增加{0}%移動速度",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Wings_of_Caelyn\",\"bondedMod\",\"Helmets\",[\"Rage\"]]"
+            }
           }
         },
         {
@@ -61894,7 +62092,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "衝刺時增加#%符文保護回復率",
-            "source": "poe2db_dynamic"
+            "template": "衝刺時增加{0}%符文保護回復率",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
+            }
           }
         },
         {
@@ -62047,7 +62250,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "被包圍時，每秒回復#%生命",
-            "source": "poe2db_dynamic"
+            "template": "被包圍時，每秒回復{0}%生命",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Bramblejack\",\"bondedMod\",\"Body_Armours\",[\"Surrounded\"]]"
+            }
           }
         },
         {
@@ -62161,11 +62369,7 @@
         {
           "id": "rune.stat_2621116283",
           "text": "Gain #% of damage as Fire damage per 2% Chance to Block",
-          "type": "augment",
-          "zh_tw": {
-            "text": "每擁有#%格擋率，獲得等同於#%傷害的火焰傷害",
-            "source": "poe2db_dynamic"
-          }
+          "type": "augment"
         },
         {
           "id": "rune.stat_262946222",
@@ -62335,7 +62539,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "強化攻擊的技能有#%機率不計該次攻擊",
-            "source": "poe2db_dynamic"
+            "template": "強化攻擊的技能有{0}%機率不計該次攻擊",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Serles_Grit\",\"bondedMod\",\"One_Hand_Maces\",[\"Attack\",\"Empowered\"]]"
+            }
           }
         },
         {
@@ -62440,11 +62649,7 @@
         {
           "id": "rune.stat_2849118560",
           "text": "Bonded: #% reduced Damage taken from Projectile Hits",
-          "type": "augment",
-          "zh_tw": {
-            "text": "減少#%承受來自投射物擊中的傷害",
-            "source": "poe2db_dynamic"
-          }
+          "type": "augment"
         },
         {
           "id": "rune.stat_2854751904",
@@ -62470,7 +62675,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "減少#%你身上的冰凍持續時間",
-            "source": "poe2db_dynamic"
+            "template": "減少{0}%你身上的冰凍持續時間",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Unique_item",
+              "key": "[\"Oberns_Bastion\",\"explicitMod\",\"\",[\"Freeze\"]]"
+            }
           }
         },
         {
@@ -62533,7 +62743,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "增加#%存在範圍的範圍效果",
-            "source": "poe2db_dynamic"
+            "template": "增加{0}%存在範圍的範圍效果",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_The_Vile_Knight\",\"bondedMod\",\"Helmets\",[\"Presence\"]]"
+            }
           }
         },
         {
@@ -62640,8 +62855,13 @@
           "text": "When you stop Sprinting, gain Guard equal to #% of maximum Life per second spent Sprinting, up to a maximum of 20%, for 4 seconds",
           "type": "augment",
           "zh_tw": {
-            "text": "當你停止衝刺時每已衝刺一秒，即獲得等同於#%最大生命的保護，最高#%，持續#秒",
-            "source": "poe2db_dynamic"
+            "text": "當你停止衝刺時每已衝刺一秒，即獲得等同於#%最大生命的保護，最高20%，持續4秒",
+            "template": "當你停止衝刺時每已衝刺一秒，即獲得等同於{0}%最大生命的保護，最高20%，持續4秒",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Emergent_Protection\",\"implicitMod\",\"Boots\",[\"Guard\"]]"
+            }
           }
         },
         {
@@ -62758,7 +62978,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "若你近期有消耗一顆耐力球，增加#%護甲值",
-            "source": "poe2db_dynamic"
+            "template": "若你近期有消耗一顆耐力球，增加{0}%護甲值",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Bonded_Modifiers",
+              "key": "[\"Idol_of_Oak\",\"bondedMod\",\"Sceptres\",[\"Armour\",\"Charges\",\"Recently\"]]"
+            }
           }
         },
         {
@@ -62830,7 +63055,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "增加#%招架距離",
-            "source": "poe2db_dynamic"
+            "template": "增加{0}%招架距離",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Bonded_Modifiers",
+              "key": "[\"Idol_of_Silk\",\"bondedMod\",\"Bucklers\",[\"Parry\"]]"
+            }
           }
         },
         {
@@ -63209,7 +63439,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "增加#%敵人點燃持續時間",
-            "source": "poe2db_dynamic"
+            "template": "增加{0}%敵人點燃持續時間",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Candlemaker\",\"bondedMod\",\"Gloves\",[]]"
+            }
           }
         },
         {
@@ -63353,7 +63588,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "格擋的傷害補償為魔力",
-            "source": "poe2db_dynamic"
+            "template": "格擋的傷害補償為魔力",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Unique_item",
+              "key": "[\"Alkem_Eira\",\"explicitMod\",\"\",[\"Block\",\"Recoup\"]]"
+            }
           }
         },
         {
@@ -63389,7 +63629,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "增加#%荊棘暴擊傷害加成",
-            "source": "poe2db_dynamic"
+            "template": "增加{0}%荊棘暴擊傷害加成",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Briarpatch\",\"bondedMod\",\"Boots\",[\"CriticalDamageBonus\",\"Thorns\"]]"
+            }
           }
         },
         {
@@ -63506,7 +63751,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "若你近期以一枚舉起的盾牌格擋，#%最大格擋機率",
-            "source": "poe2db_dynamic"
+            "template": "若你近期以一枚舉起的盾牌格擋，{0}%最大格擋機率",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Bonded_Modifiers",
+              "key": "[\"Carved_Mischief\",\"implicitMod\",\"Gloves\",[\"Block\",\"Recently\",\"Shield\"]]"
+            }
           }
         },
         {
@@ -63524,7 +63774,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "增加#%最大符文保護",
-            "source": "poe2db_dynamic"
+            "template": "增加{0}%最大符文保護",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
+            }
           }
         },
         {
@@ -63911,7 +64166,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "戰吼技能增加#%範圍效果",
-            "source": "poe2db_dynamic"
+            "template": "戰吼技能增加{0}%範圍效果",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Deidbell\",\"bondedMod\",\"Helmets\",[\"Warcry\"]]"
+            }
           }
         },
         {
@@ -64001,7 +64261,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "傷害穿透#%閃電抗性",
-            "source": "poe2db_dynamic"
+            "template": "傷害穿透{0}%閃電抗性",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Brain_Rattler\",\"bondedMod\",\"Two_Hand_Maces\",[\"Penetration\",\"Resistances\"]]"
+            }
           }
         },
         {
@@ -64145,7 +64410,12 @@
           "type": "augment",
           "zh_tw": {
             "text": "滿血的敵人無法閃避你的擊中",
-            "source": "poe2db_dynamic"
+            "template": "滿血的敵人無法閃避你的擊中",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Bonded_Modifiers",
+              "key": "[\"Carved_Cunning\",\"implicitMod\",\"Helmets\",[\"Evasion\",\"Hit\"]]"
+            }
           }
         },
         {
@@ -64558,8 +64828,13 @@
           "text": "Bonded: #% increased Block chance per 100 total Item Armour on Equipped Armour Items",
           "type": "augment",
           "zh_tw": {
-            "text": "裝備護甲物品每擁有#總物品護甲值，即增加#%格擋機率",
-            "source": "poe2db_dynamic"
+            "text": "裝備護甲物品每擁有100總物品護甲值，即增加#%格擋機率",
+            "template": "裝備護甲物品每擁有100總物品護甲值，即增加{0}%格擋機率",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Ironbound\",\"bondedMod\",\"Bows\",[\"Block\",\"EquipArmour\",\"ItemArmour\"]]"
+            }
           }
         },
         {
@@ -64847,7 +65122,7 @@
           "type": "augment",
           "zh_tw": {
             "text": "#全部捷光環技能寶石等級",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -64990,8 +65265,8 @@
           "text": "Bonded: #% increased Magnitude of Bleeding you inflict",
           "type": "augment",
           "zh_tw": {
-            "text": "增加#%你所施加之流血的幅度",
-            "source": "poe2db_dynamic"
+            "text": "命定: 增加#%你所施加之流血的幅度",
+            "source": "official"
           }
         },
         {
@@ -65233,8 +65508,13 @@
           "text": "# to maximum Mana per 3 Item Armour on Equipped Helmet",
           "type": "augment",
           "zh_tw": {
-            "text": "裝備的頭盔每有#物品護甲即#最大魔力",
-            "source": "poe2db_dynamic"
+            "text": "裝備的頭盔每有3物品護甲即#最大魔力",
+            "template": "裝備的頭盔每有3物品護甲即{0}最大魔力",
+            "source": "poe2db_verified_html",
+            "evidence": {
+              "url": "https://poe2db.tw/us/Soul_Core",
+              "key": "[\"Jiquanis_Thesis\",\"implicitMod\",\"Helmets\",[\"Equipped\",\"ItemArmour\"]]"
+            }
           }
         }
       ]
@@ -69137,7 +69417,7 @@
           "type": "desecrated",
           "zh_tw": {
             "text": "增加#%變動冰冷詞綴的大小",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {
@@ -70951,7 +71231,7 @@
           "type": "desecrated",
           "zh_tw": {
             "text": "增加#%法術所造成之穿刺的幅度",
-            "source": "poe2db_dynamic"
+            "source": "official"
           }
         },
         {

@@ -14490,6 +14490,14 @@
           }
         },
         {
+          "type": "Charred Shortsword",
+          "text": "INCOMPLETE Charred Shortsword",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
           "type": "Dull Hatchet",
           "text": "INCOMPLETE Dull Hatchet",
           "name": "INCOMPLETE",
@@ -14500,14 +14508,6 @@
         {
           "type": "Hook Axe",
           "text": "INCOMPLETE Hook Axe",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Charred Shortsword",
-          "text": "INCOMPLETE Charred Shortsword",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true
@@ -14562,30 +14562,6 @@
           }
         },
         {
-          "type": "Chain Flail",
-          "text": "INCOMPLETE Chain Flail",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Broadsword",
-          "text": "INCOMPLETE Broadsword",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Arched Greataxe",
-          "text": "INCOMPLETE Arched Greataxe",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
           "type": "Skinning Knife",
           "text": "INCOMPLETE Skinning Knife",
           "name": "INCOMPLETE",
@@ -14610,6 +14586,38 @@
           }
         },
         {
+          "type": "Arched Greataxe",
+          "text": "INCOMPLETE Arched Greataxe",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
+          "type": "Chain Flail",
+          "text": "INCOMPLETE Chain Flail",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
+          "type": "Holy Flail",
+          "text": "INCOMPLETE Holy Flail",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
+          "type": "Broadsword",
+          "text": "INCOMPLETE Broadsword",
+          "name": "INCOMPLETE",
+          "flags": {
+            "unique": true
+          }
+        },
+        {
           "type": "Broad Greatsword",
           "text": "INCOMPLETE Broad Greatsword",
           "name": "INCOMPLETE",
@@ -14628,14 +14636,6 @@
         {
           "type": "Moon Dagger",
           "text": "INCOMPLETE Moon Dagger",
-          "name": "INCOMPLETE",
-          "flags": {
-            "unique": true
-          }
-        },
-        {
-          "type": "Holy Flail",
-          "text": "INCOMPLETE Holy Flail",
           "name": "INCOMPLETE",
           "flags": {
             "unique": true

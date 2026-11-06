@@ -1,6 +1,7 @@
 const esbuild = require('esbuild');
 const fs = require('fs');
 const path = require('path');
+const { auditStatTemplates } = require('./scripts/stat-template-tools.cjs');
 
 // 1. 读取 UserScript 元数据 Header
 const indexTsPath = path.join(__dirname, 'src', 'index.ts');
@@ -33,6 +34,7 @@ function cleanStats(data) {
                 const item = { id: e.id, text: e.text };
                 if (e.zh_tw && e.zh_tw.text) {
                     item.zh_tw = { text: e.zh_tw.text };
+                    if (e.zh_tw.template) item.zh_tw.template = e.zh_tw.template;
                 }
                 if (e.option && Array.isArray(e.option.options)) {
                     item.option = {
@@ -136,6 +138,8 @@ const minifyDictPlugin = {
                 parsed = cleanItems(parsed);
             } else if (baseName === 'filters.json') {
                 parsed = cleanFilters(parsed);
+            } else if (baseName === 'passives.json') {
+                parsed = { entries: parsed.entries.map(({ id, enName, twName, en, tw }) => ({ id, enName, twName, en, tw })) };
             }
 
             const minified = JSON.stringify(parsed);
@@ -149,6 +153,11 @@ const minifyDictPlugin = {
 
 async function buildProject() {
     try {
+        const audit = auditStatTemplates(JSON.parse(fs.readFileSync(path.join(__dirname, 'src/dict/stats.json'), 'utf8')));
+        const auditDir = path.join(__dirname, 'temp');
+        fs.mkdirSync(auditDir, { recursive: true });
+        fs.writeFileSync(path.join(auditDir, 'stat-template-audit.json'), JSON.stringify(audit, null, 2), 'utf8');
+        console.log(`[模板校验] 可用 ${audit.usable}，不安全 ${audit.unsafe}，缺失 ${audit.missing}；异常条目保留英文，详见 temp/stat-template-audit.json`);
         const outDir = path.join(__dirname, 'dist');
         if (!fs.existsSync(outDir)) {
             fs.mkdirSync(outDir, { recursive: true });

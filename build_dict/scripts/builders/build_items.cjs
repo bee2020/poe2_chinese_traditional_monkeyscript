@@ -7,18 +7,18 @@ const fs = require('fs');
 const path = require('path');
 const { fetchLatestAutocompleteJson, httpGet } = require('../fallback/poe2db_client.cjs');
 const { cleanAndToSign } = require('../utils/clean_util.cjs');
+const { summarizeItems, translated, itemState } = require('../utils/report_util.cjs');
 
-async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
+async function buildItems(rawEnDir, rawTwDir, dictTwDir, services = { fetchLatestAutocompleteJson, httpGet }) {
     console.log('📦 [业务 4] 正在独立解析构建 items.json (基于 PoE2DB 权威映射)...');
 
     const enItems = JSON.parse(fs.readFileSync(path.join(rawEnDir, 'items.json'), 'utf8'));
     const enCats = enItems.result || enItems;
 
     // 1. 获取 PoE2DB 权威中英文词库
-    const data = await fetchLatestAutocompleteJson();
-    if (!data || !Array.isArray(data)) {
-        throw new Error('无法拉取 PoE2DB 字典文件，请检查网络连接');
-    }
+    const fetched = await services.fetchLatestAutocompleteJson();
+    const data = Array.isArray(fetched) ? fetched : [];
+    if (!Array.isArray(fetched)) console.warn('PoE2DB 索引不可用，将逐字段尝试已有缓存与定向补全。');
 
     // 2. 建立精准的 Slug 映射表 (通用支持 URL 解码、下划线、连字符、空格、忽略单引号等多种容错)
     const slugMap = new Map();
@@ -40,11 +40,11 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
     const baseMap = new Map();
     for (const cat of enCats) {
         for (const entry of (cat.entries || [])) {
-            if (!entry.flags?.unique && entry.type) {
+            if (entry.type) {
                 const raw = entry.type.trim().toLowerCase();
                 const noQuote = raw.replace(/['’]/g, '');
                 const zh = slugMap.get(raw) || slugMap.get(noQuote) || slugMap.get(raw.replace(/\s+/g, '_'));
-                if (zh) {
+                if (translated(entry.type, zh)) {
                     baseMap.set(entry.type, zh);
                 }
             }
@@ -54,13 +54,11 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
 
     // 4. 对齐国际服全量装备 (基底与传奇)
     const builtItems = JSON.parse(JSON.stringify(enCats));
-    let itemsTotal = 0;
-    let poe2dbFound = 0;
     const initialMissingItems = [];
 
     for (const cat of builtItems) {
         for (const item of (cat.entries || [])) {
-            itemsTotal++;
+            if (itemState(item) === 'excluded') continue;
             const typeKey = item.type;
             const nameKey = item.name;
             const typeTw = baseMap.get(typeKey);
@@ -69,17 +67,17 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
                 // 传奇装备：分别对齐名字与基底
                 const nameRaw = nameKey.trim().toLowerCase();
                 const noQuote = nameRaw.replace(/['’]/g, '');
-                const nameTw = slugMap.get(nameRaw) || slugMap.get(noQuote) || slugMap.get(nameRaw.replace(/\s+/g, '_'));
+                const mappedName = slugMap.get(nameRaw) || slugMap.get(noQuote) || slugMap.get(nameRaw.replace(/\s+/g, '_'));
+                const nameTw = translated(nameKey, mappedName) ? mappedName : undefined;
 
                 if (nameTw && typeTw) {
                     item.zh_tw = { type: typeTw, name: nameTw, text: `${nameTw} ${typeTw}`, source: "poe2db" };
-                    poe2dbFound++;
                 } else if (nameTw) {
-                    item.zh_tw = { type: typeTw || typeKey, name: nameTw, text: `${nameTw} ${typeTw || typeKey}`, source: "poe2db" };
-                    poe2dbFound++;
+                    item.zh_tw = { type: typeTw || typeKey, name: nameTw, text: `${nameTw} ${typeTw || typeKey}`, source: "poe2db_partial" };
+                    initialMissingItems.push({ cat: cat.id, item });
                 } else if (typeTw) {
                     item.zh_tw = { type: typeTw, name: nameKey, text: `${nameKey} ${typeTw}`, source: "poe2db_partial" };
-                    poe2dbFound++;
+                    initialMissingItems.push({ cat: cat.id, item });
                 } else {
                     initialMissingItems.push({ cat: cat.id, item });
                 }
@@ -87,7 +85,6 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
                 // 普通基底 / 宝石 / 通货
                 if (typeTw) {
                     item.zh_tw = { type: typeTw, source: "poe2db" };
-                    poe2dbFound++;
                 } else {
                     // 通用动态解析带 (Tier/Level X) 的规格后缀（绝不硬编码任何装备/宝石名称）
                     const bracketMatch = typeKey ? typeKey.match(/^(.+?)\s*\((Tier|Level)\s*(\d+)\)$/i) : null;
@@ -105,7 +102,6 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
                         if (baseZh) {
                             const formattedType = `${baseZh}（${kind} ${num}）`;
                             item.zh_tw = { type: formattedType, source: "dynamic_format" };
-                            poe2dbFound++;
                             continue;
                         }
                     }
@@ -132,61 +128,41 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
         } catch (_) {}
     }
 
-    const finalUntranslated = [];
-    if (initialMissingItems.length > 0) {
-        console.log(`  🔍 针对剩余 ${initialMissingItems.length} 件未匹配条目进行定向爬取兜底...`);
-        for (const { cat, item } of initialMissingItems) {
-            const queryName = item.name || item.type;
-            // 过滤官方内部调试/占位条目 (Do Not Translate)
-            if (!queryName || queryName.includes('[DNT]')) {
+    for (const { item } of initialMissingItems) {
+        // 按字段补全；部分翻译不能因名称或基底已命中而提前退出。
+        const cached = existingItemsMap.get(`${item.type || ''}__${item.name || ''}`) || {};
+        const zh = { ...item.zh_tw };
+        for (const field of ['type', 'name']) {
+            if (!item[field] || translated(item[field], zh[field])) continue;
+            if (translated(item[field], cached[field])) {
+                zh[field] = cached[field];
+                zh.source = 'cache';
                 continue;
             }
-
-            let foundFromWeb = false;
-            const slugVariants = [
-                encodeURIComponent(queryName.replace(/\s+/g, '_')),
-                encodeURIComponent(queryName.replace(/['’]/g, '').replace(/\s+/g, '_'))
-            ];
-
-            for (const slug of slugVariants) {
+            const query = item[field];
+            const variants = new Set([
+                encodeURIComponent(query.replace(/\s+/g, '_')),
+                encodeURIComponent(query.replace(/['’]/g, '').replace(/\s+/g, '_'))
+            ]);
+            for (const slug of variants) {
                 try {
-                    const res = await httpGet(`https://poe2db.tw/tw/${slug}`, { timeout: 8000 });
-                    if (res.statusCode === 200) {
-                        const m = res.body.match(/<title>(.*?)<\/title>/i);
-                        if (m) {
-                            const cleanTitle = cleanAndToSign(m[1].replace(/\s*-\s*流亡.*$/, '').trim(), false);
-                            if (cleanTitle && !cleanTitle.includes('404') && !cleanTitle.includes('Home') && !cleanTitle.includes('家園')) {
-                                const curBaseTw = baseMap.get(item.type) || item.type;
-                                item.zh_tw = item.name 
-                                    ? { type: curBaseTw, name: cleanTitle, text: `${cleanTitle} ${curBaseTw}`, source: "poe2db_crawler" }
-                                    : { type: cleanTitle, source: "poe2db_crawler" };
-                                poe2dbFound++;
-                                foundFromWeb = true;
-                                break;
-                            }
-                        }
-                    }
-                } catch (_) {}
+                    const url = `https://poe2db.tw/tw/${slug}`;
+                    const res = await services.httpGet(url, { timeout: 8000 });
+                    if (res.statusCode !== 200 || typeof res.body !== 'string') continue;
+                    if (res.url && decodeURIComponent(new URL(res.url).pathname) !== decodeURIComponent(new URL(url).pathname)) continue;
+                    const match = res.body.match(/<title>(.*?)<\/title>/i);
+                    if (!match) continue;
+                    const title = cleanAndToSign(match[1].replace(/\s*-\s*(?:流亡|PoE).*$/i, '').trim());
+                    if (!/[\u3400-\u9fff]/.test(title) || /404|Home|家園/i.test(title)) continue;
+                    zh[field] = title;
+                    zh.source = 'poe2db_crawler';
+                    break;
+                } catch (_) { /* 请求失败时保留已经获得的字段。 */ }
             }
-
-            // 若网络偶发超时，安全回退继承上一次已对齐的正确数据
-            if (!foundFromWeb) {
-                const k = `${item.type || ''}__${item.name || ''}`;
-                if (existingItemsMap.has(k)) {
-                    item.zh_tw = existingItemsMap.get(k);
-                    poe2dbFound++;
-                    foundFromWeb = true;
-                }
-            }
-
-            if (!foundFromWeb) {
-                finalUntranslated.push({
-                    cat,
-                    type: item.type || '',
-                    name: item.name || '',
-                    text: item.text || item.type || ''
-                });
-            }
+        }
+        if (['type', 'name'].some(field => translated(item[field], zh[field]))) {
+            if (item.name) zh.text = `${zh.name || item.name} ${zh.type || item.type}`;
+            item.zh_tw = zh;
         }
     }
 
@@ -203,19 +179,9 @@ async function buildItems(rawEnDir, rawTwDir, dictTwDir) {
 
     const targetFile = path.join(dictTwDir, 'items.json');
     fs.writeFileSync(targetFile, JSON.stringify(builtItems, null, 2), 'utf8');
-    const finalRate = `${((poe2dbFound / itemsTotal) * 100).toFixed(2)}%`;
-    console.log(`  ✅ items.json 重新构建完成: 成功对齐 ${poe2dbFound} / ${itemsTotal} 件 (${finalRate})`);
-
-    return {
-        total: itemsTotal,
-        officialTranslated: 0,
-        missing: itemsTotal,
-        poe2dbFound: poe2dbFound,
-        poe2dbNotFound: finalUntranslated.length,
-        finalTranslated: poe2dbFound,
-        finalRate: finalRate,
-        untranslated: finalUntranslated
-    };
+    const summary = summarizeItems(builtItems);
+    console.log(`  ✅ items.json: 完整 ${summary.complete}，部分 ${summary.partial}，缺失 ${summary.missing}，排除 ${summary.excluded}；完整率 ${summary.finalRate}`);
+    return { ...summary, lookupStatus: Array.isArray(fetched) ? 'index-available' : 'cache-fallback' };
 }
 
 module.exports = { buildItems };

@@ -4,13 +4,27 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { auditStatTemplates, compileStatTemplate } = require('../../../scripts/stat-template-tools.cjs');
 const { searchPoe2dbStats } = require('../fallback/fallback_stats.cjs');
+const { resolveNames } = require('../fallback/stat_evidence.cjs');
+const { httpGet } = require('../fallback/poe2db_client.cjs');
 
-async function buildStats(rawEnDir, rawTwDir, dictTwDir) {
+async function buildStats(rawEnDir, rawTwDir, dictTwDir, services = { searchPoe2dbStats, resolveNames, httpGet }) {
     console.log('⚔️ [业务 3] 正在独立解析构建 stats.json (官方机器 ID 强对齐 + PoE2DB 兜底)...');
 
     const enStats = JSON.parse(fs.readFileSync(path.join(rawEnDir, 'stats.json'), 'utf8'));
     const twStats = JSON.parse(fs.readFileSync(path.join(rawTwDir, 'stats.json'), 'utf8'));
+
+    const oldPath = path.join(dictTwDir, 'stats.json');
+    const previous = new Map(fs.existsSync(oldPath)
+        ? JSON.parse(fs.readFileSync(oldPath, 'utf8')).result.flatMap(cat => cat.entries).map(entry => [entry.id, entry]) : []);
+    const certifiedCache = entry => {
+        const old = previous.get(entry.id);
+        if (!old || old.text !== entry.text || !old.zh_tw?.evidence || !old.zh_tw.source?.startsWith('poe2db_verified')) return null;
+        return compileStatTemplate(entry.text, old.zh_tw.template || old.zh_tw.text).template
+            ? { ...old.zh_tw, source: 'poe2db_verified_cache' } : null;
+    };
+    const unchangedNames = [];
 
     // 1. 建立台服官方机器 ID 映射 (支持精确 ID 与剥离分类前缀的核心编号)
     const exactStatsMap = new Map();
@@ -53,6 +67,7 @@ async function buildStats(rawEnDir, rawTwDir, dictTwDir) {
                 entry.zh_tw = { text: twText, source: "official" };
                 officialStatsTranslated++;
                 officialPairs.push({ en: entry.text, tw: twText });
+                if (twText === entry.text && !entry.text.includes('#')) unchangedNames.push(entry);
             } else {
                 initialMissingStats.push({ category: cat.id, id: entry.id, text: entry.text, entryRef: entry });
             }
@@ -60,18 +75,24 @@ async function buildStats(rawEnDir, rawTwDir, dictTwDir) {
     }
 
     // 3. 启动通用匹配引擎 (传入官方双语作为语料学习基底)
-    const poe2dbResult = await searchPoe2dbStats(initialMissingStats, officialPairs);
+    const poe2dbResult = await services.searchPoe2dbStats(initialMissingStats, officialPairs);
     let finalStatsTranslated = officialStatsTranslated;
     const finalUntranslated = [];
 
     for (const item of initialMissingStats) {
-        const poe2dbZh = poe2dbResult.statZhMap.get(item.id);
+        const poe2dbZh = poe2dbResult.statZhMap.get(item.id) || certifiedCache(item);
         if (poe2dbZh) {
             finalStatsTranslated++;
-            item.entryRef.zh_tw = { text: poe2dbZh.text, source: poe2dbZh.source || "poe2db" };
+            item.entryRef.zh_tw = { ...poe2dbZh, source: poe2dbZh.source || "poe2db" };
         } else {
             finalUntranslated.push({ category: item.category, id: item.id, en: item.text });
         }
+    }
+
+    const nameTranslations = await services.resolveNames(unchangedNames, services.httpGet);
+    for (const entry of unchangedNames) {
+        const translated = nameTranslations.get(entry.id) || certifiedCache(entry);
+        if (translated) { entry.zh_tw = translated; officialStatsTranslated--; }
     }
 
     // 4. 母子分类血缘穿透对齐 (fractured / crafted / desecrated 衍生分类继承显式母词缀)
@@ -94,7 +115,7 @@ async function buildStats(rawEnDir, rawTwDir, dictTwDir) {
                     const coreId = entry.id.replace(new RegExp(`^${cat.id}\\.`), '');
                     const parent = explicitMap.get(coreId);
                     if (parent) {
-                        entry.zh_tw = { text: parent.text, source: "parent_explicit" };
+                        entry.zh_tw = { ...parent, source: parent.evidence ? "poe2db_verified_parent" : "parent_explicit" };
                         finalStatsTranslated++;
                         const unIdx = finalUntranslated.findIndex(u => u.id === entry.id);
                         if (unIdx !== -1) finalUntranslated.splice(unIdx, 1);
@@ -110,11 +131,14 @@ async function buildStats(rawEnDir, rawTwDir, dictTwDir) {
         }
     }
 
+    const templateAudit = auditStatTemplates(builtStats);
+    console.log(`  模板结构校验: ${templateAudit.usable} 条可用，${templateAudit.unsafe} 条不安全（运行时保留英文）`);
     const targetFile = path.join(dictTwDir, 'stats.json');
     fs.writeFileSync(targetFile, JSON.stringify({ result: builtStats }, null, 2), 'utf8');
-    console.log(`  ✅ stats.json 构建完成: 官方对齐 ${officialStatsTranslated} + PoE2DB 兜底 ${poe2dbResult.foundCount} = 共 ${finalStatsTranslated} / ${totalCount} 条`);
+    console.log(`  ✅ stats.json 构建完成: 官方对齐 ${officialStatsTranslated} + 补全/已核对缓存 ${finalStatsTranslated - officialStatsTranslated} = 共 ${finalStatsTranslated} / ${totalCount} 条`);
 
     return {
+        templateAudit,
         total: totalCount,
         officialTranslated: officialStatsTranslated,
         missing: initialMissingStats.length,

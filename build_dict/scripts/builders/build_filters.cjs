@@ -8,6 +8,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { summarizeFilters } = require('../utils/report_util.cjs');
 
 function buildFilters(rawEnDir, rawTwDir, dictTwDir) {
     console.log('🔍 [业务 2] 正在独立解析构建 filters.json...');
@@ -25,8 +26,8 @@ function buildFilters(rawEnDir, rawTwDir, dictTwDir) {
             twCatMap.set(cat.id, cat.title);
         }
         for (const f of (cat.filters || [])) {
-            if (f.text) {
-                twFilterItemMap.set(`${cat.id}_${f.id}`, f.text);
+            if (f.text || f.title) {
+                twFilterItemMap.set(`${cat.id}_${f.id}`, f.text || f.title);
             }
             for (const opt of (f.option?.options || [])) {
                 twOptionMap.set(`${cat.id}_${f.id}_${opt.id}`, opt.text);
@@ -74,6 +75,7 @@ function buildFilters(rawEnDir, rawTwDir, dictTwDir) {
     console.log(`  ✅ filters.json 构建完成: 成功对齐 ${translatedFilters} / ${totalFilters} 个筛选器条目, ${translatedOpts} / ${totalOpts} 个下拉选项`);
 
     return {
+        ...summarizeFilters({ result: builtFilters }),
         totalFilters,
         translatedFilters,
         totalOpts,

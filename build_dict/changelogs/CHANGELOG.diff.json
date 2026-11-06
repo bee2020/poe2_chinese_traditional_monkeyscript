@@ -1,0 +1,1015 @@
+{
+  "baselineAvailable": true,
+  "changes": {
+    "items": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "stats": {
+      "added": [],
+      "removed": [],
+      "modified": [
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_10502714\"]",
+          "desc": "[rune] Bonded: # to Maximum Rage",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: # to Maximum Rage",
+            "original": {
+              "id": "rune.stat_10502714",
+              "text": "Bonded: # to Maximum Rage",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "#層最大盛怒",
+              "template": "{0}層最大盛怒",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Bristleboar\",\"bondedMod\",\"Body_Armours\",[\"Rage\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: # to Maximum Rage",
+            "original": {
+              "id": "rune.stat_10502714",
+              "text": "Bonded: # to Maximum Rage",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "#層最大盛怒",
+              "template": "{0}層最大盛怒",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Soul_Core",
+                "key": "[\"Tzamotos_Soul_Core_of_Ferocity\",\"implicitMod\",\"Helmets\",[\"Rage\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        }
+      ]
+    },
+    "static": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "filters": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    }
+  },
+  "summary": {
+    "items": {
+      "total": 3900,
+      "eligible": 3898,
+      "complete": 3895,
+      "partial": 2,
+      "missing": 1,
+      "excluded": 2,
+      "untranslated": [
+        {
+          "category": "armour",
+          "type": "Chain Tiara",
+          "name": "Forbidden Gaze",
+          "text": "Forbidden Gaze Chain Tiara",
+          "missingFields": [
+            "name"
+          ],
+          "state": "partial"
+        },
+        {
+          "category": "currency",
+          "type": "Aldur's Legacy",
+          "name": "",
+          "text": "Aldur's Legacy",
+          "missingFields": [
+            "type"
+          ],
+          "state": "missing"
+        },
+        {
+          "category": "weapon",
+          "type": "Shrine Sceptre",
+          "name": "Guiding Palm",
+          "text": "Guiding Palm Shrine Sceptre (Legacy)",
+          "missingFields": [
+            "name"
+          ],
+          "state": "partial"
+        }
+      ],
+      "finalTranslated": 3895,
+      "finalRate": "99.92%"
+    },
+    "stats": {
+      "total": 8312,
+      "eligible": 8312,
+      "complete": 8279,
+      "partial": 0,
+      "missing": 33,
+      "excluded": 0,
+      "untranslated": [
+        {
+          "category": "explicit",
+          "id": "explicit.stat_1138742368",
+          "en": "Increases and Reductions to Light Radius also apply to Area of Effect at #% of their value",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_1400313697",
+          "en": "Increases and Reductions to\n Cold and Lightning Damage in Radius are transformed to apply to Fire Damage",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_1687542781",
+          "en": "Notable Passive Skills in Radius also grant #% to Lightning Resistance",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_2103621252",
+          "en": "Eat a Soul when you Hit a Unique Enemy, no more than once every second",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_2888350852",
+          "en": "Gain #% of Damage as Extra Cold Damage while you are missing Runic Ward",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_3368921525",
+          "en": "Increases and Reductions to\n Fire and Lightning Damage in Radius are transformed to apply to Cold Damage",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_3762412853",
+          "en": "Attacks with this Weapon Penetrate #% Chaos Resistance",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_3946450303",
+          "en": "Notable Passive Skills in Radius also grant #% to Cold Resistance",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_4011431182",
+          "en": "Gain #% of Damage as Extra Chaos Damage while you are missing Runic Ward",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_457920946",
+          "en": "Gain #% of Damage as Extra Lightning Damage while you are missing Runic Ward",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_679019978",
+          "en": "#% of Damage is taken from Mana before Life while not on Low Mana",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_895564377",
+          "en": "Increases and Reductions to\n Cold and Fire Damage in Radius are transformed to apply to Lightning Damage",
+          "state": "missing"
+        },
+        {
+          "category": "explicit",
+          "id": "explicit.stat_915546383",
+          "en": "Gain #% of Physical Damage as Extra Damage of a random Element",
+          "state": "missing"
+        },
+        {
+          "category": "implicit",
+          "id": "implicit.stat_3691641145",
+          "en": "#% increased Damage taken",
+          "state": "missing"
+        },
+        {
+          "category": "fractured",
+          "id": "fractured.stat_3368921525",
+          "en": "Increases and Reductions to\n Fire and Lightning Damage in Radius are transformed to apply to Cold Damage",
+          "state": "missing"
+        },
+        {
+          "category": "fractured",
+          "id": "fractured.stat_3946450303",
+          "en": "Notable Passive Skills in Radius also grant #% to Cold Resistance",
+          "state": "missing"
+        },
+        {
+          "category": "crafted",
+          "id": "crafted.stat_1400313697",
+          "en": "Increases and Reductions to\n Cold and Lightning Damage in Radius are transformed to apply to Fire Damage",
+          "state": "missing"
+        },
+        {
+          "category": "crafted",
+          "id": "crafted.stat_1687542781",
+          "en": "Notable Passive Skills in Radius also grant #% to Lightning Resistance",
+          "state": "missing"
+        },
+        {
+          "category": "crafted",
+          "id": "crafted.stat_2888350852",
+          "en": "Gain #% of Damage as Extra Cold Damage while you are missing Runic Ward",
+          "state": "missing"
+        },
+        {
+          "category": "crafted",
+          "id": "crafted.stat_3368921525",
+          "en": "Increases and Reductions to\n Fire and Lightning Damage in Radius are transformed to apply to Cold Damage",
+          "state": "missing"
+        },
+        {
+          "category": "crafted",
+          "id": "crafted.stat_3946450303",
+          "en": "Notable Passive Skills in Radius also grant #% to Cold Resistance",
+          "state": "missing"
+        },
+        {
+          "category": "crafted",
+          "id": "crafted.stat_4011431182",
+          "en": "Gain #% of Damage as Extra Chaos Damage while you are missing Runic Ward",
+          "state": "missing"
+        },
+        {
+          "category": "crafted",
+          "id": "crafted.stat_457920946",
+          "en": "Gain #% of Damage as Extra Lightning Damage while you are missing Runic Ward",
+          "state": "missing"
+        },
+        {
+          "category": "crafted",
+          "id": "crafted.stat_895564377",
+          "en": "Increases and Reductions to\n Cold and Fire Damage in Radius are transformed to apply to Lightning Damage",
+          "state": "missing"
+        },
+        {
+          "category": "rune",
+          "id": "rune.stat_1062190843",
+          "en": "# to Level of all Storm Skill Gems",
+          "state": "missing"
+        },
+        {
+          "category": "rune",
+          "id": "rune.stat_1078570138",
+          "en": "# to Level of all Hazard Skill Gems",
+          "state": "missing"
+        },
+        {
+          "category": "rune",
+          "id": "rune.stat_1839315243",
+          "en": "# to Level of all Slam Skill Gems",
+          "state": "missing"
+        },
+        {
+          "category": "rune",
+          "id": "rune.stat_1914815166",
+          "en": "Recover #% of maximum Life over 2 Seconds when you use a Command Skill",
+          "state": "missing"
+        },
+        {
+          "category": "rune",
+          "id": "rune.stat_2621116283",
+          "en": "Gain #% of damage as Fire damage per 2% Chance to Block",
+          "state": "missing"
+        },
+        {
+          "category": "rune",
+          "id": "rune.stat_2849118560",
+          "en": "Bonded: #% reduced Damage taken from Projectile Hits",
+          "state": "missing"
+        },
+        {
+          "category": "rune",
+          "id": "rune.stat_3257561708",
+          "en": "When you generate an Endurance Charge, Allies in your Presence generate that Charge instead",
+          "state": "missing"
+        },
+        {
+          "category": "rune",
+          "id": "rune.stat_3353733343",
+          "en": "When you generate a Frenzy Charge, Allies in your Presence generate that Charge instead",
+          "state": "missing"
+        },
+        {
+          "category": "desecrated",
+          "id": "desecrated.stat_3762412853",
+          "en": "Attacks with this Weapon Penetrate #% Chaos Resistance",
+          "state": "missing"
+        }
+      ],
+      "finalTranslated": 8279,
+      "finalRate": "99.60%",
+      "templateAudit": {
+        "total": 8312,
+        "missing": 33,
+        "usable": 8196,
+        "unsafe": 83,
+        "issues": [
+          {
+            "id": "explicit.stat_1099200124",
+            "source": "official",
+            "en": "Gain a Power Charge every Second if you haven't lost Power Charges Recently",
+            "tw": "若你近期沒有失去暴擊球，每秒獲得1個暴擊球",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_1163615092",
+            "source": "official",
+            "en": "Projectiles have #% increased Critical Hit chance for each time they have Pierced",
+            "tw": "投射物每穿透1次，增加#%暴擊機率",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_1291132817",
+            "source": "official",
+            "en": "+1 to Armour per Strength",
+            "tw": "每1力量+1護甲值",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_1434716233",
+            "source": "official",
+            "en": "Warcries Empower an additional Attack",
+            "tw": "戰吼強化額外1次攻擊",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_1695767482",
+            "source": "official",
+            "en": "Inflict Corrupted Blood for # second on Block, dealing #% of\nyour maximum Life as Physical damage per second",
+            "tw": "格擋時對目標造成持續#秒的腐化之血\n每秒造成等同於你最大生命#%的物理傷害",
+            "reason": "多变量顺序未经确认"
+          },
+          {
+            "id": "explicit.stat_1827854662",
+            "source": "official",
+            "en": "Area contains an additional Incubator Queen",
+            "tw": "區域含有額外1位培育之后",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_1867725690",
+            "source": "official",
+            "en": "Hits with this Weapon have #% chance to Trigger Molten Shower per 25 Strength",
+            "tw": "每25力量，此武器造成的擊中有5%機率觸發熔火噴濺",
+            "reason": "双语占位符数量不一致"
+          },
+          {
+            "id": "explicit.stat_1955786041",
+            "source": "official",
+            "en": "Has # to # Physical damage, # to # per Boss's Face Broken",
+            "tw": "擁有#至#物理傷害，頭目每被打爛一張臉即#至#",
+            "reason": "多变量顺序未经确认"
+          },
+          {
+            "id": "explicit.stat_1967051901",
+            "source": "official",
+            "en": "Loads an additional bolt",
+            "tw": "裝填額外1發弩箭",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_2163764037",
+            "source": "official",
+            "en": "Gain Physical Thorns damage equal to #% - #% of maximum Life",
+            "tw": "獲得等同於最大生命#%-#%的物理荊棘傷害",
+            "reason": "多变量顺序未经确认"
+          },
+          {
+            "id": "explicit.stat_2189073790",
+            "source": "official",
+            "en": "Projectiles have #% chance to Fork if you've dealt a Melee Hit in the past eight seconds",
+            "tw": "如果你在過去8秒內以近戰擊中，則投射物有#%機率分裂",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_2388936716",
+            "source": "official",
+            "en": "Area has #% chance to contain a Strongbox",
+            "tw": "區域有#%機率含有1個保險箱",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_2396719220",
+            "source": "official",
+            "en": "Area contains an additional Magic Chest",
+            "tw": "區域含有1個額外魔法箱子",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_2421151933",
+            "source": "official",
+            "en": "Small Passive Skills in Radius also grant #% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds",
+            "tw": "範圍內小型天賦也會賦予 如果你在過去8秒內以投射物攻擊擊中，增加#%近戰傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_2439129490",
+            "source": "official",
+            "en": "Chaos Resistance is zero",
+            "tw": "混沌抗性為0",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_2571125745",
+            "source": "official",
+            "en": "Area has #% chance to contain a Shrine",
+            "tw": "區域有#%機率含有1個神殿",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_258955603",
+            "source": "official",
+            "en": "Alternating every 5 seconds:\nTake #% more Damage from Hits\nTake #% more Damage over time",
+            "tw": "每隔5秒替換：\n承受#%更多擊中傷害\n承受#%更多持續傷害",
+            "reason": "多变量顺序未经确认"
+          },
+          {
+            "id": "explicit.stat_2625554454",
+            "source": "official",
+            "en": "Every 10 seconds, gain a random non-damaging Shrine buff for 20 seconds",
+            "tw": "每10秒，獲得1種隨機非傷害型神殿增益效果，持續20秒",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_2879778895",
+            "source": "official",
+            "en": "Every 10 seconds, gain a random non-damaging Shrine buff for 20 seconds",
+            "tw": "每10秒，獲得1種隨機非傷害型神殿增益效果，持續20秒",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_288364275",
+            "source": "official",
+            "en": "Small Passive Skills in Radius also grant #% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds",
+            "tw": "範圍內小型天賦也會賦予 如果你在過去8秒內以近戰擊中，增加#%則投射物傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_2890355696",
+            "source": "official",
+            "en": "Area has #% chance to contain four additional Abysses",
+            "tw": "地圖有#%機率包含4道額外深淵",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_2890355696",
+            "source": "official",
+            "en": "Map has #% chance to contain four additional Abysses",
+            "tw": "地圖有#%機率包含4道額外深淵",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_3003542304",
+            "source": "official",
+            "en": "Projectiles have #% chance for an additional Projectile when Forking",
+            "tw": "投射物分裂時有#%機率發射1個額外投射物",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_3028809864",
+            "source": "official",
+            "en": "#% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds",
+            "tw": "如果你在過去8秒內以投射物攻擊擊中，增加#%近戰傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_3240183538",
+            "source": "official",
+            "en": "Area contains an additional Strongbox",
+            "tw": "地圖內含有額外的#個保險箱",
+            "reason": "双语占位符数量不一致"
+          },
+          {
+            "id": "explicit.stat_3276271783",
+            "source": "official",
+            "en": "Regenerate # Life per second per Maximum Energy Shield",
+            "tw": "每1點最大能量護盾使你每秒回復#生命",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_331648983",
+            "source": "official",
+            "en": "When you reload, triggers Gemini Surge to alternately\ngain # Cold Surge or # Fire Surge",
+            "tw": "當你裝填時，觸發雙靈波動，\n交替獲得#冰冷波動或#火焰波動",
+            "reason": "多变量顺序未经确认"
+          },
+          {
+            "id": "explicit.stat_3423006863",
+            "source": "official",
+            "en": "Arrows Pierce an additional Target",
+            "tw": "箭矢會穿透額外1名目標",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_343703314",
+            "source": "official",
+            "en": "Gain 1 Runefather's Boast per Power of targets affected by Runefather's Challenge you kill",
+            "tw": "擊殺受到符文之父的挑戰影響的目標時，獲得等同於其強度的符文之父的自誇",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_3550545679",
+            "source": "official",
+            "en": "Attacks consume an Endurance Charge to Critically Hit",
+            "tw": "攻擊會消耗1顆耐力球並造成暴擊",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_3596695232",
+            "source": "official",
+            "en": "#% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds",
+            "tw": "如果你在過去8秒內以近戰擊中，增加#%則投射物傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_360553763",
+            "source": "official",
+            "en": "Abyssal Monsters have increased Difficulty and Reward for each closed Pit",
+            "tw": "地圖內的深淵怪物根據每1關閉的坑洞增加難度和獎勵",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_360553763",
+            "source": "official",
+            "en": "Abyssal Monsters in Map have increased Difficulty and Reward for each closed Pit",
+            "tw": "地圖內的深淵怪物根據每1關閉的坑洞增加難度和獎勵",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_3868118796",
+            "source": "official",
+            "en": "Attacks Chain an additional time",
+            "tw": "攻擊會額外連鎖1次",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_3893788785",
+            "source": "official",
+            "en": "Bow Attacks consume #% of your maximum Life Flask Charges if possible to deal added Physical damage equal to #% of Flask's Life Recovery amount",
+            "tw": "情況許可時，弓的攻擊會消耗你所擁有最大生命藥劑充能的#%，造成等同於藥劑生命恢復量#%的附加物理傷害",
+            "reason": "多变量顺序未经确认"
+          },
+          {
+            "id": "explicit.stat_3932115504",
+            "source": "official",
+            "en": "Projectile Attacks have a #% chance to fire two additional Projectiles while moving",
+            "tw": "移動時，投射物攻擊有#%機率發射2個額外投射物",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_4098286334",
+            "source": "official",
+            "en": "Area has #% chance to contain an Essence",
+            "tw": "區域有#%機率含有1個精髓",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_4258720395",
+            "source": "official",
+            "en": "Notable Passive Skills in Radius also grant Projectiles have #% chance for an additional Projectile when Forking",
+            "tw": "範圍內核心天賦也會賦予 投射物分裂時有#%機率發射1個額外投射物",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_436406826",
+            "source": "official",
+            "en": "Players are Marked for Death for # seconds\nafter killing a Rare or Unique monster",
+            "tw": "擊殺1隻稀有或傳奇怪物後\n玩家受到死亡印記，持續#秒",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_447757144",
+            "source": "official",
+            "en": "When you Consume a Charge Trigger Chaotic Surge to gain # Chaos Surge",
+            "tw": "每當你消耗1顆能量球時，會觸發混沌波動，並獲得#混沌波動",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_566086661",
+            "source": "official",
+            "en": "Attacks with this Weapon have Added Cold Damage equal to #% to #% of maximum Mana",
+            "tw": "以此武器攻擊時會附加等同於#%至#%最大魔力的冰冷傷害",
+            "reason": "多变量顺序未经确认"
+          },
+          {
+            "id": "explicit.stat_796381300",
+            "source": "official",
+            "en": "Gain 0% to #% increased Movement Speed at random when Hit, until Hit again",
+            "tw": "擊中時隨機獲得#%的移動速度加成，直到再次擊中",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "explicit.stat_883169830",
+            "source": "official",
+            "en": "Projectiles deal #% increased Damage with Hits for each time they have Pierced",
+            "tw": "投射物每穿透1次，增加#%造成的擊中傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "implicit.stat_1434716233",
+            "source": "official",
+            "en": "Warcries Empower an additional Attack",
+            "tw": "戰吼強化額外1次攻擊",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "implicit.stat_1871805225",
+            "source": "official",
+            "en": "Remnants have #% chance to have an additional Suffix Modifier",
+            "tw": "遺跡有#%機率有1個額外後綴",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "implicit.stat_1967051901",
+            "source": "official",
+            "en": "Loads an additional bolt",
+            "tw": "裝填額外1發弩箭",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "implicit.stat_3003542304",
+            "source": "official",
+            "en": "Projectiles have #% chance for an additional Projectile when Forking",
+            "tw": "投射物分裂時有#%機率發射1個額外投射物",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "implicit.stat_3239978999",
+            "source": "official",
+            "en": "Excavated Chests have a #% chance to contain twice as many Items",
+            "tw": "發掘的保險箱有#%機率含有2倍的物品",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "fractured.stat_1967051901",
+            "source": "official",
+            "en": "Loads an additional bolt",
+            "tw": "裝填額外1發弩箭",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "fractured.stat_2421151933",
+            "source": "official",
+            "en": "Small Passive Skills in Radius also grant #% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds",
+            "tw": "範圍內小型天賦也會賦予 如果你在過去8秒內以投射物攻擊擊中，增加#%近戰傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "fractured.stat_288364275",
+            "source": "official",
+            "en": "Small Passive Skills in Radius also grant #% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds",
+            "tw": "範圍內小型天賦也會賦予 如果你在過去8秒內以近戰擊中，增加#%則投射物傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "fractured.stat_3003542304",
+            "source": "official",
+            "en": "Projectiles have #% chance for an additional Projectile when Forking",
+            "tw": "投射物分裂時有#%機率發射1個額外投射物",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "fractured.stat_3028809864",
+            "source": "official",
+            "en": "#% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds",
+            "tw": "如果你在過去8秒內以投射物攻擊擊中，增加#%近戰傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "fractured.stat_3596695232",
+            "source": "official",
+            "en": "#% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds",
+            "tw": "如果你在過去8秒內以近戰擊中，增加#%則投射物傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "fractured.stat_4258720395",
+            "source": "official",
+            "en": "Notable Passive Skills in Radius also grant Projectiles have #% chance for an additional Projectile when Forking",
+            "tw": "範圍內核心天賦也會賦予 投射物分裂時有#%機率發射1個額外投射物",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "enchant.stat_1967051901",
+            "source": "official",
+            "en": "Loads an additional bolt",
+            "tw": "裝填額外1發弩箭",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "rune.stat_1291132817",
+            "source": "official",
+            "en": "+1 to Armour per Strength",
+            "tw": "每1力量+1護甲值",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "rune.stat_1528013281",
+            "source": "official",
+            "en": "Bonded: Projectiles have #% chance for an additional Projectile when Forking",
+            "tw": "命定: 投射物分裂時有#%機率發射1個額外投射物",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "rune.stat_1693515857",
+            "source": "official",
+            "en": "Gain #% of Damage as Extra Physical Damage per ten percent missing Mana",
+            "tw": "每失去十分之一魔力，即獲得等同於#%傷害的額外物理傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "rune.stat_258955603",
+            "source": "official",
+            "en": "Alternating every 5 seconds:\nTake #% more Damage from Hits\nTake #% more Damage over time",
+            "tw": "每隔5秒替換：\n承受#%更多擊中傷害\n承受#%更多持續傷害",
+            "reason": "多变量顺序未经确认"
+          },
+          {
+            "id": "rune.stat_3863682550",
+            "source": "official",
+            "en": "Gain Guard equal to #% of maximum Life for 4 seconds on taking Savage Hit",
+            "tw": "承受殘暴打擊獲得等同於#%最大生命的守護",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "rune.stat_566086661",
+            "source": "official",
+            "en": "Attacks with this Weapon have Added Cold Damage equal to #% to #% of maximum Mana",
+            "tw": "以此武器攻擊時會附加等同於#%至#%最大魔力的冰冷傷害",
+            "reason": "多变量顺序未经确认"
+          },
+          {
+            "id": "rune.stat_807013157",
+            "source": "official",
+            "en": "Bonded: Every Rage also grants #% increased Spell Damage",
+            "tw": "命定: 每1盛怒同時增加#%法術傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_1434716233",
+            "source": "official",
+            "en": "Warcries Empower an additional Attack",
+            "tw": "戰吼強化額外1次攻擊",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_1827854662",
+            "source": "official",
+            "en": "Area contains an additional Incubator Queen",
+            "tw": "區域含有額外1位培育之后",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_1967051901",
+            "source": "official",
+            "en": "Loads an additional bolt",
+            "tw": "裝填額外1發弩箭",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_2421151933",
+            "source": "official",
+            "en": "Small Passive Skills in Radius also grant #% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds",
+            "tw": "範圍內小型天賦也會賦予 如果你在過去8秒內以投射物攻擊擊中，增加#%近戰傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_288364275",
+            "source": "official",
+            "en": "Small Passive Skills in Radius also grant #% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds",
+            "tw": "範圍內小型天賦也會賦予 如果你在過去8秒內以近戰擊中，增加#%則投射物傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_3003542304",
+            "source": "official",
+            "en": "Projectiles have #% chance for an additional Projectile when Forking",
+            "tw": "投射物分裂時有#%機率發射1個額外投射物",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_3028809864",
+            "source": "official",
+            "en": "#% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds",
+            "tw": "如果你在過去8秒內以投射物攻擊擊中，增加#%近戰傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_3596695232",
+            "source": "official",
+            "en": "#% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds",
+            "tw": "如果你在過去8秒內以近戰擊中，增加#%則投射物傷害",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_360553763",
+            "source": "official",
+            "en": "Abyssal Monsters have increased Difficulty and Reward for each closed Pit",
+            "tw": "地圖內的深淵怪物根據每1關閉的坑洞增加難度和獎勵",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_360553763",
+            "source": "official",
+            "en": "Abyssal Monsters in Map have increased Difficulty and Reward for each closed Pit",
+            "tw": "地圖內的深淵怪物根據每1關閉的坑洞增加難度和獎勵",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_3868118796",
+            "source": "official",
+            "en": "Attacks Chain an additional time",
+            "tw": "攻擊會額外連鎖1次",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_3932115504",
+            "source": "official",
+            "en": "Projectile Attacks have a #% chance to fire two additional Projectiles while moving",
+            "tw": "移動時，投射物攻擊有#%機率發射2個額外投射物",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_4258720395",
+            "source": "official",
+            "en": "Notable Passive Skills in Radius also grant Projectiles have #% chance for an additional Projectile when Forking",
+            "tw": "範圍內核心天賦也會賦予 投射物分裂時有#%機率發射1個額外投射物",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "desecrated.stat_436406826",
+            "source": "official",
+            "en": "Players are Marked for Death for # seconds\nafter killing a Rare or Unique monster",
+            "tw": "擊殺1隻稀有或傳奇怪物後\n玩家受到死亡印記，持續#秒",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "sanctum.stat_1175354969",
+            "source": "official",
+            "en": "The Herald of the Scourge drops an additional Invocation",
+            "tw": "災魘先鋒掉落1個額外祈禱",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "sanctum.stat_290775436",
+            "source": "official",
+            "en": "The Merchant has an additional Choice",
+            "tw": "商人有1個額外選擇",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "sanctum.stat_386901949",
+            "source": "official",
+            "en": "An additional Room is revealed on the Trial Map",
+            "tw": "試煉地圖額外揭露1個房間",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "sanctum.stat_3878191575",
+            "source": "official",
+            "en": "Zarokh, the Temporal drops an additional Barya",
+            "tw": "澤洛克，永恆之靈掉落額外1個巨靈之幣",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "sanctum.stat_698936647",
+            "source": "official",
+            "en": "Your Armour, Evasion and Energy Shield are zero",
+            "tw": "你的護甲、閃避、和能量護盾為0",
+            "reason": "双语固定数值不一致"
+          },
+          {
+            "id": "sanctum.stat_774484840",
+            "source": "official",
+            "en": "#% chance for Resolve Mitigation to be doubled when Hit by an Enemy",
+            "tw": "當被擊人擊中時，有#%機率使決心輕減為2倍",
+            "reason": "双语固定数值不一致"
+          }
+        ]
+      }
+    },
+    "static": {
+      "total": 798,
+      "eligible": 786,
+      "complete": 786,
+      "partial": 0,
+      "missing": 0,
+      "excluded": 12,
+      "untranslated": [],
+      "finalTranslated": 786,
+      "finalRate": "100.00%"
+    },
+    "filters": {
+      "total": 205,
+      "eligible": 203,
+      "complete": 203,
+      "partial": 0,
+      "missing": 0,
+      "excluded": 2,
+      "untranslated": [],
+      "finalTranslated": 203,
+      "finalRate": "100.00%",
+      "breakdown": {
+        "categories": {
+          "total": 7,
+          "eligible": 6,
+          "complete": 6,
+          "partial": 0,
+          "missing": 0,
+          "excluded": 1,
+          "untranslated": [],
+          "finalTranslated": 6,
+          "finalRate": "100.00%"
+        },
+        "filters": {
+          "total": 57,
+          "eligible": 56,
+          "complete": 56,
+          "partial": 0,
+          "missing": 0,
+          "excluded": 1,
+          "untranslated": [],
+          "finalTranslated": 56,
+          "finalRate": "100.00%"
+        },
+        "options": {
+          "total": 141,
+          "eligible": 141,
+          "complete": 141,
+          "partial": 0,
+          "missing": 0,
+          "excluded": 0,
+          "untranslated": [],
+          "finalTranslated": 141,
+          "finalRate": "100.00%"
+        }
+      }
+    }
+  },
+  "provenance": [
+    {
+      "language": "en",
+      "kind": "items",
+      "mode": "network"
+    },
+    {
+      "language": "en",
+      "kind": "stats",
+      "mode": "network"
+    },
+    {
+      "language": "en",
+      "kind": "static",
+      "mode": "network"
+    },
+    {
+      "language": "en",
+      "kind": "filters",
+      "mode": "network"
+    },
+    {
+      "language": "tw",
+      "kind": "items",
+      "mode": "network"
+    },
+    {
+      "language": "tw",
+      "kind": "stats",
+      "mode": "network"
+    },
+    {
+      "language": "tw",
+      "kind": "static",
+      "mode": "network"
+    },
+    {
+      "language": "tw",
+      "kind": "filters",
+      "mode": "network"
+    }
+  ]
+}

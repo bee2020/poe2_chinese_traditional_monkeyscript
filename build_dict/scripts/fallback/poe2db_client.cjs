@@ -26,7 +26,7 @@ function httpGet(url, options = {}) {
             res.on('data', chunk => chunks.push(chunk));
             res.on('end', () => {
                 const body = Buffer.concat(chunks).toString('utf8');
-                resolve({ statusCode: res.statusCode, headers: res.headers, body });
+                resolve({ statusCode: res.statusCode, headers: res.headers, body, url });
             });
         });
         req.on('error', err => resolve({ statusCode: 500, error: err }));
@@ -65,7 +65,7 @@ function parseModChunks(html) {
         // 生成指纹集合
         const fingerprints = [];
         if (code) fingerprints.push(`code_${code}`);
-        if (family) fingerprints.push(`fam_${family}_${gen}_${level}`);
+        if (family && gen && level) fingerprints.push(`fam_${family}_${gen}_${level}`);
 
         list.push({ fingerprints, str });
     }

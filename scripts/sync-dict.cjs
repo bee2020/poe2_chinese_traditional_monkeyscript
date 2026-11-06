@@ -10,8 +10,8 @@ if (!fs.existsSync(TARGET_DIR)) {
 
 console.log('[Sync-Dict] 开始从 poe2_chinese-traditional_dict 同步核心数据字典...');
 
-// 1. 同步 4 大核心权威 JSON
-const CORE_FILES = ['items.json', 'stats.json', 'static.json', 'filters.json'];
+// 1. 同步四类交易字典与独立天赋说明字典
+const CORE_FILES = ['items.json', 'stats.json', 'static.json', 'filters.json', 'passives.json'];
 
 CORE_FILES.forEach(file => {
   const src = path.join(SOURCE_DIR, file);

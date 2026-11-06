@@ -1,4 +1,5 @@
 import rawTwStats from '../dict/stats.json';
+import { compileStatTemplate } from '../core/statTemplate';
 
 const twStats: any = rawTwStats;
 
@@ -47,6 +48,7 @@ export function parseStatsData(response: any, dataMap: any): any {
                         const findTwEntry = findTwType.entries.find((twEntry: any) => twEntry.id === entry.id);
                         if (findTwEntry && findTwEntry.zh_tw) {
                             const twText = findTwEntry.zh_tw.text || findTwEntry.text;
+                            if (!compileStatTemplate(findTwEntry.text, findTwEntry.zh_tw.template || twText).template) return;
 
                             // 处理下拉选项类词缀 (例如带有 option.options)
                             if (entry.option && entry.option.options && entry.text && entry.text.indexOf('#') > -1) {
@@ -87,7 +89,11 @@ export function parseStatsData(response: any, dataMap: any): any {
                 type.entries.forEach((entry: any) => {
                     if (deald.indexOf(entry.id) === -1) {
                         if (entry.id && entry.id.includes('.') && statMap[entry.id.split('.')[1]]) {
-                            entry.text = statMap[entry.id.split('.')[1]];
+                            const twText = statMap[entry.id.split('.')[1]];
+                            if (compileStatTemplate(entry.text, twText).template) {
+                                entry.text = `${twText}(${entry.text})`;
+                                entry.twText = twText;
+                            }
                         }
                     }
                 });

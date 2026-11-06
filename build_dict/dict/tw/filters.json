@@ -818,7 +818,7 @@
           "tip": "Includes sockets with Socket-Bound Augments",
           "minMax": true,
           "zh_tw": {
-            "text": "Total Augment Sockets",
+            "text": "總增幅插槽",
             "source": "official"
           }
         }

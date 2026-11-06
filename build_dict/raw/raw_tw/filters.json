@@ -434,8 +434,8 @@
         },
         {
           "id": "total_augment_sockets",
-          "text": "Total Augment Sockets",
-          "tip": "Includes sockets with Socket-Bound Augments",
+          "text": "總增幅插槽",
+          "tip": "包含帶有插槽綁定增幅的插槽",
           "minMax": true
         }
       ]

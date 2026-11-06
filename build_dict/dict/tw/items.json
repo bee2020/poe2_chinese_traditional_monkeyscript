@@ -1020,9 +1020,9 @@
         },
         "zh_tw": {
           "type": "板甲腰帶",
-          "name": "Infernoclasp",
-          "text": "Infernoclasp 板甲腰帶",
-          "source": "poe2db_partial"
+          "name": "地獄之握 板甲腰帶",
+          "text": "地獄之握 板甲腰帶 板甲腰帶",
+          "source": "cache"
         }
       },
       {
@@ -1113,7 +1113,7 @@
         "type": "Ring",
         "zh_tw": {
           "type": "戒指",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -1124,10 +1124,10 @@
           "unique": true
         },
         "zh_tw": {
-          "type": "Ring",
+          "type": "戒指",
           "name": "艾許特拉之路",
-          "text": "艾許特拉之路 Ring",
-          "source": "poe2db"
+          "text": "艾許特拉之路 戒指",
+          "source": "cache"
         }
       },
       {
@@ -1138,10 +1138,10 @@
           "unique": true
         },
         "zh_tw": {
-          "type": "Ring",
+          "type": "戒指",
           "name": "卡蘭德之觸",
-          "text": "卡蘭德之觸 Ring",
-          "source": "poe2db"
+          "text": "卡蘭德之觸 戒指",
+          "source": "cache"
         }
       },
       {
@@ -1152,10 +1152,10 @@
           "unique": true
         },
         "zh_tw": {
-          "type": "Ring",
+          "type": "戒指",
           "name": "薩弗林的決心",
-          "text": "薩弗林的決心 Ring",
-          "source": "poe2db"
+          "text": "薩弗林的決心 戒指",
+          "source": "cache"
         }
       },
       {
@@ -1166,10 +1166,10 @@
           "unique": true
         },
         "zh_tw": {
-          "type": "Ring",
+          "type": "戒指",
           "name": "扎伊達的長壽",
-          "text": "扎伊達的長壽 Ring",
-          "source": "poe2db"
+          "text": "扎伊達的長壽 戒指",
+          "source": "cache"
         }
       },
       {
@@ -3287,9 +3287,9 @@
         },
         "zh_tw": {
           "type": "靈像塔盾",
-          "name": "The Wailing Wall",
-          "text": "The Wailing Wall 靈像塔盾",
-          "source": "poe2db_partial"
+          "name": "哀嚎之牆 靈像塔盾",
+          "text": "哀嚎之牆 靈像塔盾 靈像塔盾",
+          "source": "cache"
         }
       },
       {
@@ -4156,9 +4156,9 @@
         },
         "zh_tw": {
           "type": "黃金面紗",
-          "name": "Demigod's Virtue",
-          "text": "Demigod's Virtue 黃金面紗",
-          "source": "poe2db_partial"
+          "name": "半神的美德 黃金面紗",
+          "text": "半神的美德 黃金面紗 黃金面紗",
+          "source": "cache"
         }
       },
       {
@@ -5081,9 +5081,9 @@
         },
         "zh_tw": {
           "type": "分層鎖甲",
-          "name": "The Fallen Formation",
-          "text": "The Fallen Formation 分層鎖甲",
-          "source": "poe2db_partial"
+          "name": "殞落之形 分層鎖甲",
+          "text": "殞落之形 分層鎖甲 分層鎖甲",
+          "source": "cache"
         }
       },
       {
@@ -5228,9 +5228,9 @@
         },
         "zh_tw": {
           "type": "麻布裹手",
-          "name": "Blessed Bonds",
-          "text": "Blessed Bonds 麻布裹手",
-          "source": "poe2db_partial"
+          "name": "祝福之絆 麻布裹手",
+          "text": "祝福之絆 麻布裹手 麻布裹手",
+          "source": "cache"
         }
       },
       {
@@ -5844,9 +5844,9 @@
         },
         "zh_tw": {
           "type": "毛皮圓盾",
-          "name": "Merit of Service",
-          "text": "Merit of Service 毛皮圓盾",
-          "source": "poe2db_partial"
+          "name": "服役功績 毛皮圓盾",
+          "text": "服役功績 毛皮圓盾 毛皮圓盾",
+          "source": "cache"
         }
       },
       {
@@ -6117,9 +6117,9 @@
         },
         "zh_tw": {
           "type": "俠客鎧甲",
-          "name": "The Road Warrior",
-          "text": "The Road Warrior 俠客鎧甲",
-          "source": "poe2db_partial"
+          "name": "無畏戰士 俠客鎧甲",
+          "text": "無畏戰士 俠客鎧甲 俠客鎧甲",
+          "source": "cache"
         }
       },
       {
@@ -13033,9 +13033,9 @@
         },
         "zh_tw": {
           "type": "符煉枝條法器",
-          "name": "Deathrattle",
-          "text": "Deathrattle 符煉枝條法器",
-          "source": "poe2db_partial"
+          "name": "死亡之聲 枝條法器",
+          "text": "死亡之聲 枝條法器 符煉枝條法器",
+          "source": "cache"
         }
       },
       {
@@ -14356,9 +14356,9 @@
         },
         "zh_tw": {
           "type": "魂骨之冠",
-          "name": "The Deepest Tower",
-          "text": "The Deepest Tower 魂骨之冠",
-          "source": "poe2db_partial"
+          "name": "深邃尖塔 魂骨之冠",
+          "text": "深邃尖塔 魂骨之冠 魂骨之冠",
+          "source": "cache"
         }
       },
       {
@@ -14468,9 +14468,9 @@
         },
         "zh_tw": {
           "type": "鐵趾長靴",
-          "name": "Thunderstep",
-          "text": "Thunderstep 鐵趾長靴",
-          "source": "poe2db_partial"
+          "name": "雷霆步伐 鐵趾長靴",
+          "text": "雷霆步伐 鐵趾長靴 鐵趾長靴",
+          "source": "cache"
         }
       },
       {
@@ -15057,9 +15057,9 @@
         },
         "zh_tw": {
           "type": "枝條法器",
-          "name": "Deathrattle",
-          "text": "Deathrattle 枝條法器",
-          "source": "poe2db_partial"
+          "name": "死亡之聲 枝條法器",
+          "text": "死亡之聲 枝條法器 枝條法器",
+          "source": "cache"
         }
       },
       {
@@ -15768,11 +15768,7 @@
         }
       },
       {
-        "type": "Aldur's Legacy",
-        "zh_tw": {
-          "type": "Aldur's Legacy",
-          "source": "poe2db"
-        }
+        "type": "Aldur's Legacy"
       },
       {
         "type": "Aldur's Saga",
@@ -17535,7 +17531,7 @@
         "type": "Legacy of Edyrn's Tusks",
         "zh_tw": {
           "type": "傳承．埃狄恩的曲牙",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -21943,7 +21939,7 @@
         "type": "Dazzle",
         "zh_tw": {
           "type": "目眩",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -22069,7 +22065,7 @@
         "type": "Desperation",
         "zh_tw": {
           "type": "絕望",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -22517,7 +22513,7 @@
         "type": "Eternal Rage",
         "zh_tw": {
           "type": "無盡怒火",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -22930,7 +22926,7 @@
         "type": "Freeze",
         "zh_tw": {
           "type": "冰凍",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -23441,7 +23437,7 @@
         "type": "Ice Shards",
         "zh_tw": {
           "type": "寒冰碎片",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -26003,14 +25999,14 @@
         "type": "Tumult",
         "zh_tw": {
           "type": "紛亂",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
         "type": "Twister",
         "zh_tw": {
           "type": "旋風",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -26213,7 +26209,7 @@
         "type": "Uncut Skill Gem",
         "zh_tw": {
           "type": "未切割的技能寶石",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -26381,7 +26377,7 @@
         "type": "Uncut Support Gem",
         "zh_tw": {
           "type": "未切割的輔助寶石",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -26444,7 +26440,7 @@
         "type": "Upwelling I",
         "zh_tw": {
           "type": "湧升流 I",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -27198,7 +27194,7 @@
         "type": "Breachstone",
         "zh_tw": {
           "type": "裂痕石",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -27273,9 +27269,9 @@
         },
         "zh_tw": {
           "type": "探險碑牌",
-          "name": "Forgotten By Time",
-          "text": "Forgotten By Time 探險碑牌",
-          "source": "poe2db_partial"
+          "name": "時間之遺 探險碑牌",
+          "text": "時間之遺 探險碑牌 探險碑牌",
+          "source": "cache"
         }
       },
       {
@@ -27783,9 +27779,9 @@
         },
         "zh_tw": {
           "type": "拱形巨斧",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 拱形巨斧",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 拱形巨斧",
+          "source": "cache"
         }
       },
       {
@@ -27895,9 +27891,9 @@
         },
         "zh_tw": {
           "type": "強盜斧",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 強盜斧",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 強盜斧",
+          "source": "cache"
         }
       },
       {
@@ -27972,9 +27968,9 @@
         },
         "zh_tw": {
           "type": "鉤刺斧",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 鉤刺斧",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 鉤刺斧",
+          "source": "cache"
         }
       },
       {
@@ -28021,9 +28017,9 @@
         },
         "zh_tw": {
           "type": "祝福大劍",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 祝福大劍",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 祝福大劍",
+          "source": "cache"
         }
       },
       {
@@ -28105,9 +28101,9 @@
         },
         "zh_tw": {
           "type": "闊刃巨劍",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 闊刃巨劍",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 闊刃巨劍",
+          "source": "cache"
         }
       },
       {
@@ -28133,9 +28129,9 @@
         },
         "zh_tw": {
           "type": "闊劍",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 闊劍",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 闊劍",
+          "source": "cache"
         }
       },
       {
@@ -28189,9 +28185,9 @@
         },
         "zh_tw": {
           "type": "鎖鏈鏈錘",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 鎖鏈鏈錘",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 鎖鏈鏈錘",
+          "source": "cache"
         }
       },
       {
@@ -28231,9 +28227,9 @@
         },
         "zh_tw": {
           "type": "焦黑短劍",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 焦黑短劍",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 焦黑短劍",
+          "source": "cache"
         }
       },
       {
@@ -28343,9 +28339,9 @@
         },
         "zh_tw": {
           "type": "腐蝕長劍",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 腐蝕長劍",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 腐蝕長劍",
+          "source": "cache"
         }
       },
       {
@@ -28406,9 +28402,9 @@
         },
         "zh_tw": {
           "type": "巫婆小刀",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 巫婆小刀",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 巫婆小刀",
+          "source": "cache"
         }
       },
       {
@@ -28602,9 +28598,9 @@
         },
         "zh_tw": {
           "type": "鈍斧",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 鈍斧",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 鈍斧",
+          "source": "cache"
         }
       },
       {
@@ -28651,9 +28647,9 @@
         },
         "zh_tw": {
           "type": "優雅長柄刀",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 優雅長柄刀",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 優雅長柄刀",
+          "source": "cache"
         }
       },
       {
@@ -28714,9 +28710,9 @@
         },
         "zh_tw": {
           "type": "處刑者巨斧",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 處刑者巨斧",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 處刑者巨斧",
+          "source": "cache"
         }
       },
       {
@@ -28735,9 +28731,9 @@
         },
         "zh_tw": {
           "type": "加長砍斧",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 加長砍斧",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 加長砍斧",
+          "source": "cache"
         }
       },
       {
@@ -29029,9 +29025,9 @@
         },
         "zh_tw": {
           "type": "玻璃利片",
-          "name": "Winter's Bite",
-          "text": "Winter's Bite 玻璃利片",
-          "source": "poe2db_partial"
+          "name": "寒冬嚙蝕 玻璃利片",
+          "text": "寒冬嚙蝕 玻璃利片 玻璃利片",
+          "source": "cache"
         }
       },
       {
@@ -29225,9 +29221,9 @@
         },
         "zh_tw": {
           "type": "神聖鏈錘",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 神聖鏈錘",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 神聖鏈錘",
+          "source": "cache"
         }
       },
       {
@@ -29246,9 +29242,9 @@
         },
         "zh_tw": {
           "type": "鉤斧",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 鉤斧",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 鉤斧",
+          "source": "cache"
         }
       },
       {
@@ -29288,9 +29284,9 @@
         },
         "zh_tw": {
           "type": "狩獵長矛",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 狩獵長矛",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 狩獵長矛",
+          "source": "cache"
         }
       },
       {
@@ -29323,9 +29319,9 @@
         },
         "zh_tw": {
           "type": "鍛鐵巨劍",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 鍛鐵巨劍",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 鍛鐵巨劍",
+          "source": "cache"
         }
       },
       {
@@ -29345,9 +29341,9 @@
         },
         "zh_tw": {
           "type": "鐵木長矛",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 鐵木長矛",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 鐵木長矛",
+          "source": "cache"
         }
       },
       {
@@ -29478,9 +29474,9 @@
         },
         "zh_tw": {
           "type": "輕巧斧槍",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 輕巧斧槍",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 輕巧斧槍",
+          "source": "cache"
         }
       },
       {
@@ -29653,9 +29649,9 @@
         },
         "zh_tw": {
           "type": "月之匕首",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 月之匕首",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 月之匕首",
+          "source": "cache"
         }
       },
       {
@@ -30109,9 +30105,9 @@
         },
         "zh_tw": {
           "type": "波紋巨劍",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 波紋巨劍",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 波紋巨劍",
+          "source": "cache"
         }
       },
       {
@@ -30895,7 +30891,7 @@
         "type": "Runeforged Warden Bow",
         "zh_tw": {
           "type": "符鍛守護者之弓",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -30906,10 +30902,10 @@
           "unique": true
         },
         "zh_tw": {
-          "type": "Runeforged Warden Bow",
+          "type": "符鍛守護者之弓",
           "name": "鐵縛者",
-          "text": "鐵縛者 Runeforged Warden Bow",
-          "source": "poe2db"
+          "text": "鐵縛者 符鍛守護者之弓",
+          "source": "cache"
         }
       },
       {
@@ -31418,9 +31414,9 @@
         },
         "zh_tw": {
           "type": "短彎刀",
-          "name": "The Dancing Dervish",
-          "text": "The Dancing Dervish 短彎刀",
-          "source": "poe2db_partial"
+          "name": "狂舞德爾維希 短彎刀",
+          "text": "狂舞德爾維希 短彎刀 短彎刀",
+          "source": "cache"
         }
       },
       {
@@ -31467,9 +31463,9 @@
         },
         "zh_tw": {
           "type": "短劍",
-          "name": "Bluetongue",
-          "text": "Bluetongue 短劍",
-          "source": "poe2db_partial"
+          "name": "藍舌 短劍",
+          "text": "藍舌 短劍 短劍",
+          "source": "cache"
         }
       },
       {
@@ -31481,9 +31477,9 @@
         },
         "zh_tw": {
           "type": "短劍",
-          "name": "Redbeak",
-          "text": "Redbeak 短劍",
-          "source": "poe2db_partial"
+          "name": "赤紅短刃 短劍",
+          "text": "赤紅短刃 短劍 短劍",
+          "source": "cache"
         }
       },
       {
@@ -31608,9 +31604,9 @@
         },
         "zh_tw": {
           "type": "簡易匕首",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 簡易匕首",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 簡易匕首",
+          "source": "cache"
         }
       },
       {
@@ -31657,9 +31653,9 @@
         },
         "zh_tw": {
           "type": "剝皮刀",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 剝皮刀",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 剝皮刀",
+          "source": "cache"
         }
       },
       {
@@ -31720,9 +31716,9 @@
         },
         "zh_tw": {
           "type": "鍛造錘",
-          "name": "Wylund's Stake",
-          "text": "Wylund's Stake 鍛造錘",
-          "source": "poe2db_partial"
+          "name": "威倫德的木樁 鍛造錘",
+          "text": "威倫德的木樁 鍛造錘 鍛造錘",
+          "source": "cache"
         }
       },
       {
@@ -31811,9 +31807,9 @@
         },
         "zh_tw": {
           "type": "分裂鏈錘",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 分裂鏈錘",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 分裂鏈錘",
+          "source": "cache"
         }
       },
       {
@@ -31832,9 +31828,9 @@
         },
         "zh_tw": {
           "type": "分裂巨斧",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 分裂巨斧",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 分裂巨斧",
+          "source": "cache"
         }
       },
       {
@@ -32030,7 +32026,7 @@
         "type": "Tense Crossbow",
         "zh_tw": {
           "type": "緊繃十字弓",
-          "source": "poe2db_crawler"
+          "source": "cache"
         }
       },
       {
@@ -32041,10 +32037,10 @@
           "unique": true
         },
         "zh_tw": {
-          "type": "Tense Crossbow",
+          "type": "緊繃十字弓",
           "name": "壁壘猛禽",
-          "text": "壁壘猛禽 Tense Crossbow",
-          "source": "poe2db"
+          "text": "壁壘猛禽 緊繃十字弓",
+          "source": "cache"
         }
       },
       {
@@ -32175,9 +32171,9 @@
         },
         "zh_tw": {
           "type": "雙生鏈錘",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 雙生鏈錘",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 雙生鏈錘",
+          "source": "cache"
         }
       },
       {
@@ -32224,9 +32220,9 @@
         },
         "zh_tw": {
           "type": "嗜血之刃",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 嗜血之刃",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 嗜血之刃",
+          "source": "cache"
         }
       },
       {
@@ -32343,9 +32339,9 @@
         },
         "zh_tw": {
           "type": "戰爭長矛",
-          "name": "INCOMPLETE",
-          "text": "INCOMPLETE 戰爭長矛",
-          "source": "poe2db_partial"
+          "name": "未完成 黑曜石匕首",
+          "text": "未完成 黑曜石匕首 戰爭長矛",
+          "source": "cache"
         }
       },
       {
@@ -32615,9 +32611,9 @@
         },
         "zh_tw": {
           "type": "寶箱聖物",
-          "name": "The Remembered Tales",
-          "text": "The Remembered Tales 寶箱聖物",
-          "source": "poe2db_partial"
+          "name": "被銘記的故事 寶箱聖物",
+          "text": "被銘記的故事 寶箱聖物 寶箱聖物",
+          "source": "cache"
         }
       },
       {

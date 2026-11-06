@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
 
-console.log('🧪 开始执行 poe2_chinese_traditional_monkeyscript 端到端运行时验证...\n');
+console.log('🧪 开始执行 poe2_chinese_traditional_monkeyscript 产物、字典与真实解析器回归验证...\n');
 
 // 1. 验证目标产物文件
 const distFile = path.resolve(__dirname, 'dist/poe_trade.user.js');
@@ -27,21 +27,7 @@ assert(!fs.existsSync(path.resolve(__dirname, 'src/dict/allocates.json')), '严�
 
 console.log('✅ [3/5] 零死数据合规验证通过 (已彻底清除 typeTransMap.json 与 allocates.json)');
 
-// 4. 沙盒测试核心解析器逻辑与动态涂油天赋提取
-// 注入 Node.js 虚拟 DOM 宿主环境
-global.window = global;
-global.document = {
-    addEventListener: () => {},
-    querySelector: () => null,
-    querySelectorAll: () => [],
-    createElement: () => ({ style: {}, appendChild: () => {} })
-};
-global.localStorage = { getItem: () => null, setItem: () => {}, clear: () => {} };
-global.GM_getValue = () => null;
-global.GM_setValue = () => {};
-global.unsafeWindow = global.window;
-global.Response = class {};
-
+// 4. 验证字典中的物品与天赋数据
 // 通过源码或模块验证动态提取功能
 const statsJson = require('./src/dict/stats.json');
 const itemsJson = require('./src/dict/items.json');
@@ -89,33 +75,7 @@ assert.strictEqual(dynamicAllocates.get('Icebreaker'), '破冰者', 'Icebreaker 
 
 console.log('✅ [4/5] 纯动态涂油天赋 (875/875 条) 验证 100% 通过');
 
-// 5. 模拟 Fetch 接口卡片转译测试
-const mockFetchItem = {
-    item: {
-        baseType: "Crimson Amulet",
-        name: "Andvarius",
-        typeLine: "Gold Ring",
-        explicitMods: [
-            "+25 to maximum Life",
-            "Allocates Beef"
-        ],
-        extended: {
-            hashes: {
-                explicit: [
-                    ["explicit.stat_fake_life", [0]],
-                    ["enchant.stat_2954116742|25482", [1]]
-                ]
-            }
-        },
-        properties: [{ name: "Critical Hit Chance" }],
-        requirements: [{ name: "Level 20" }]
-    },
-    listing: {
-        whisper_token: "test_token_123",
-        whisper: "@test Hi, I want to buy your item"
-    }
-};
-
+// 5. 基础属性字典检查
 // 验证 props 繁体翻译
 const propsJson = require('./src/dict/props.json');
 assert.strictEqual(propsJson["Level"], "等級");
@@ -124,4 +84,8 @@ assert.strictEqual(propsJson["Armour"], "護甲");
 
 console.log('✅ [5/5] 繁体基础属性与需求字典验证 100% 通过');
 
-console.log('\n🌟🌟🌟 全流程所有测试项 100% 全部通过！工程已具备完整投产标准！🌟🌟🌟\n');
+require('./tests/stat-template.test.cjs');
+require('./tests/item-name.test.cjs');
+require('./tests/dictionary-report.test.cjs')().then(() => require('./tests/passive-description.test.cjs')()).then(() => require('./tests/stat-evidence.test.cjs')()).then(() => {
+    console.log('\n✅ 自动检查通过；浏览器页面交互仍需安装油猴脚本验证。\n');
+}).catch(error => { console.error(error); process.exitCode = 1; });

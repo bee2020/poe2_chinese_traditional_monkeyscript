@@ -19,12 +19,14 @@ async function runPipeline() {
         const oldSnapshot = takeDictSnapshot();
 
         // 第 1 步：从官方国际服与台服抓取 4 大原始 JSON
-        await fetchAllRaw();
+        const rawResult = await fetchAllRaw();
 
         // 第 2 步：构建 dict/tw/ 并对缺失项向 PoE2DB 发起真实查找补全
         const untranslatedReport = await buildTwDictionaries();
 
         // 第 3 步：生成包含 PoE2DB 查找成功/未查到列，以及底部实质变动清单的真实报告
+        untranslatedReport.provenance = rawResult.provenance;
+        untranslatedReport.sourceNote = `官方原始数据来源见下表；词缀及物品补全另使用 PoE2DB，物品索引状态：${untranslatedReport.summary.items.lookupStatus}。缓存结果不代表本次在线查询成功。`;
         generateDiffAndChangelog(untranslatedReport, oldSnapshot);
 
         const costSec = ((Date.now() - startTime) / 1000).toFixed(1);

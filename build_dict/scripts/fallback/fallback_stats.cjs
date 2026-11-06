@@ -5,6 +5,7 @@
  */
 const { httpGet, parseModChunks, mapConcurrent } = require('./poe2db_client.cjs');
 const { cleanAndToSign } = require('../utils/clean_util.cjs');
+const { extractEvidence, resolveEvidence } = require('./stat_evidence.cjs');
 
 // 全品类武器与装备基底页面列表 (覆盖所有基底固有词缀与特有属性)
 const ALL_EQUIPMENT_PAGES = [
@@ -19,6 +20,19 @@ const ALL_EQUIPMENT_PAGES = [
  * @param {string} tRaw 繁中词缀原文或 HTML
  * @param {Map} pool 目标双语池
  */
+const poolConflicts = new WeakMap();
+function savePoolEntry(key, value, pool) {
+    let conflicts = poolConflicts.get(pool);
+    if (!conflicts) { conflicts = new Set(); poolConflicts.set(pool, conflicts); }
+    if (conflicts.has(key)) return;
+    if (pool.has(key) && pool.get(key) !== value) {
+        pool.delete(key);
+        conflicts.add(key);
+        return;
+    }
+    pool.set(key, value);
+}
+
 function saveBilingualPair(uRaw, tRaw, pool) {
     if (!uRaw || !tRaw) return;
     const u = cleanAndToSign(uRaw, true).toLowerCase();
@@ -26,13 +40,13 @@ function saveBilingualPair(uRaw, tRaw, pool) {
     if (!u || !t || u.length < 3 || t.length < 2) return;
     if (/^(?:prefix|suffix|前綴|後綴|\d+|#|droplevel|alwaysallocate)$/i.test(u)) return;
 
-    pool.set(u, t);
+    savePoolEntry(u, t, pool);
 
     // 剥离部位/宝石槽位前缀 (如: Bow: #% increased Damage, Sapphire Suffix: #% increased...)
     const uNoSlot = u.replace(/^[a-z\s]+:\s*/i, '').trim();
     const tNoSlot = t.replace(/^[^:]+:\s*/i, '').trim();
     if (uNoSlot && tNoSlot && uNoSlot !== u) {
-        pool.set(uNoSlot, tNoSlot);
+        savePoolEntry(uNoSlot, tNoSlot, pool);
 
         // 逗号复合词缀拆分 (例如: A, B -> A' 和 B')
         if (uNoSlot.includes(',') && tNoSlot.includes(',')) {
@@ -40,7 +54,7 @@ function saveBilingualPair(uRaw, tRaw, pool) {
             const tParts = tNoSlot.split(',').map(s => s.trim()).filter(Boolean);
             if (uParts.length === tParts.length) {
                 for (let p = 0; p < uParts.length; p++) {
-                    pool.set(uParts[p], tParts[p]);
+                    savePoolEntry(uParts[p], tParts[p], pool);
                 }
             }
         }
@@ -56,111 +70,54 @@ function saveBilingualPair(uRaw, tRaw, pool) {
 function extractBilingualMods(usHtml, twHtml, pool) {
     if (!usHtml || !twHtml) return;
 
-    // 1. 结构化机器指纹强对齐 (Code + ModFamily + Generation + Level)
-    const usMods = parseModChunks(usHtml);
-    const twMods = parseModChunks(twHtml);
-    if (usMods.length > 0 && twMods.length > 0) {
-        const twFingerprintMap = new Map();
-        for (const tm of twMods) {
-            for (const fp of tm.fingerprints) twFingerprintMap.set(fp, tm.str);
+    // 只允许稳定标识对齐。重复标识出现不同内容时整组跳过。
+    const unique = (entries) => {
+        const map = new Map();
+        const conflicts = new Set();
+        for (const [key, text] of entries) {
+            if (conflicts.has(key)) continue;
+            if (map.has(key) && map.get(key) !== text) {
+                map.delete(key); conflicts.add(key);
+            } else map.set(key, text);
         }
-        for (const um of usMods) {
-            for (const fp of um.fingerprints) {
-                if (twFingerprintMap.has(fp)) {
-                    saveBilingualPair(um.str, twFingerprintMap.get(fp), pool);
-                    break;
-                }
-            }
-        }
-    }
-
-    // 2. 🌟 官方卡片级唯一 Slug (Href) 强对齐引擎 (彻底消除 179 项 vs 160 项导致的 DOM/Table 串行大错位)
-    const parseColCards = (html) => {
-        const cards = new Map();
-        const cols = html.match(/<div class="col">[\s\S]*?<\/div>(?=\s*<div class="col">|<\/div>\s*<\/div>)/gi) || [];
-        for (const col of cols) {
-            const hrefM = col.match(/href="([A-Za-z0-9_]+)"/);
-            if (!hrefM) continue;
-            const slug = hrefM[1];
-            if (['theme', 'about', 'login', 'us', 'tw', 'Keywords', 'Items', 'Modifiers'].includes(slug)) continue;
-
-            const modRegex = /<div class="(?:implicitMod|bondedMod|explicitMod|mutatedMod)">([\s\S]*?)<\/div>/g;
-            const mods = [];
-            let mm;
-            while ((mm = modRegex.exec(col)) !== null) {
-                const clean = cleanAndToSign(mm[1], true);
-                if (clean) mods.push(clean);
-            }
-            if (mods.length > 0) {
-                cards.set(slug, mods);
-            }
-        }
-        return cards;
+        return map;
     };
+    const align = (us, tw) => {
+        const u = unique(us), t = unique(tw);
+        for (const [key, text] of u) if (t.has(key)) saveBilingualPair(text, t.get(key), pool);
+    };
+    const machinePairs = html => parseModChunks(html).flatMap(mod =>
+        mod.fingerprints.map(key => [key, mod.str]));
+    align(machinePairs(usHtml), machinePairs(twHtml));
 
-    const usCards = parseColCards(usHtml);
-    const twCards = parseColCards(twHtml);
-    if (usCards.size > 0 && twCards.size > 0) {
-        for (const [slug, usMods] of usCards.entries()) {
-            const twMods = twCards.get(slug);
-            if (!twMods) continue; // 🌟 繁中缺失的卡片直接跳过，绝对杜绝后面任何词缀产生索引位移！
+    const taggedMods = html => {
+        const rows = [];
+        const pattern = /<(div|span|tr)\b[^>]*\bdata-(stat-id|mod-id|code)=["']([^"']+)["'][^>]*>([\s\S]*?)<\/\1>/gi;
+        for (const match of html.matchAll(pattern)) {
+            rows.push([`${match[2]}:${match[3]}`, cleanAndToSign(match[4], true)]);
+        }
+        return rows;
+    };
+    align(taggedMods(usHtml), taggedMods(twHtml));
 
-            const cardLimit = Math.min(usMods.length, twMods.length);
-            for (let i = 0; i < cardLimit; i++) {
-                saveBilingualPair(usMods[i], twMods[i], pool);
+    // Slug 定位同一物品后，同一词缀类型只有唯一一条时才可配对。
+    // 一个卡片有多条同类型词缀时，不以行数或先后顺序推断对应关系。
+    const cardMods = html => {
+        const rows = [];
+        for (const card of html.split(/<div class=["']col["']>/i).slice(1)) {
+            const href = card.match(/href=["'](?:\/(?:us|tw)\/)?([A-Za-z0-9_-]+)["']/);
+            if (!href) continue;
+            const groups = new Map();
+            const pattern = /<div class=["'](?:poe2 )?(implicitMod|bondedMod|explicitMod|mutatedMod)["'][^>]*>([\s\S]*?)<\/div>/g;
+            for (const match of card.matchAll(pattern)) {
+                if (!groups.has(match[1])) groups.set(match[1], []);
+                groups.get(match[1]).push(cleanAndToSign(match[2], true));
             }
+            for (const [kind, texts] of groups) if (texts.length === 1) rows.push([`${href[1]}:${kind}`, texts[0]]);
         }
-    }
-
-    // 3. 🌟 瓦尔栽培异变词缀对齐 (Vaal Mutated Mods: 如 Vaal_Cultivation_Orb 等中英文 187 项 1 对 1 精准对齐)
-    if (usHtml.includes('mutatedMod') && twHtml.includes('mutatedMod')) {
-        const mutatedRegex = /<div class="poe2 mutatedMod">([\s\S]*?)<\/div>/g;
-        const usMutated = [];
-        const twMutated = [];
-        let mm;
-        while ((mm = mutatedRegex.exec(usHtml)) !== null) {
-            const clean = cleanAndToSign(mm[1], true);
-            if (clean) usMutated.push(clean);
-        }
-        while ((mm = mutatedRegex.exec(twHtml)) !== null) {
-            const clean = cleanAndToSign(mm[1], true);
-            if (clean) twMutated.push(clean);
-        }
-        // 🛡️ 严格质检门：只有当中英文条目数量完全相等且大于 0 时才对齐，确保绝对不会错位
-        if (usMutated.length > 0 && usMutated.length === twMutated.length) {
-            for (let i = 0; i < usMutated.length; i++) {
-                saveBilingualPair(usMutated[i], twMutated[i], pool);
-            }
-        }
-    }
-
-    // 4. 🌟 独立 HTML Table 严格等长对齐引擎 (完全通用，零业务词硬编码，单表行数与单元格强一致校验)
-    const uTables = usHtml.match(/<table[\s\S]*?<\/table>/gi) || [];
-    const tTables = twHtml.match(/<table[\s\S]*?<\/table>/gi) || [];
-    if (uTables.length > 0 && uTables.length === tTables.length) {
-        for (let ti = 0; ti < uTables.length; ti++) {
-            const uRows = uTables[ti].match(/<tr[^>]*>([\s\S]*?)<\/tr>/gi) || [];
-            const tRows = tTables[ti].match(/<tr[^>]*>([\s\S]*?)<\/tr>/gi) || [];
-
-            // 🛡️ 门禁 1：单个 Table 行数必须完全严格相等，且大于 1 行；只要行数不相等直接跳过整个表，彻底杜绝串行！
-            if (uRows.length <= 1 || uRows.length !== tRows.length) continue;
-
-            // 🛡️ 门禁 2：逐行提取单元格对齐
-            for (let r = 1; r < uRows.length; r++) {
-                const uCells = uRows[r].match(/<td[^>]*>([\s\S]*?)<\/td>/gi) || [];
-                const tCells = tRows[r].match(/<td[^>]*>([\s\S]*?)<\/td>/gi) || [];
-                if (uCells.length === tCells.length && uCells.length > 0) {
-                    for (let c = 0; c < uCells.length; c++) {
-                        const u = cleanAndToSign(uCells[c], true);
-                        const t = cleanAndToSign(tCells[c], true);
-                        if (u && t && u !== t) {
-                            saveBilingualPair(u, t, pool);
-                        }
-                    }
-                }
-            }
-        }
-    }
+        return rows;
+    };
+    align(cardMods(usHtml), cardMods(twHtml));
 }
 
 // =============================================================================
@@ -239,6 +196,7 @@ async function searchPoe2dbStats(untranslatedStats, officialPairs = []) {
     ]);
 
     const globalBilingualPool = new Map();
+    const evidencePairs = [];
 
     // 3. 并发调度提取全部页面的结构化双语词缀
     const pageList = Array.from(allPages);
@@ -251,18 +209,9 @@ async function searchPoe2dbStats(untranslatedStats, officialPairs = []) {
 
         if (usRes.statusCode === 200 && twRes.statusCode === 200) {
             extractBilingualMods(usRes.body, twRes.body, globalBilingualPool);
+            evidencePairs.push(...extractEvidence(usRes.body, twRes.body, `https://poe2db.tw/us/${page}`));
 
-            // 暗金专属 og:description
-            const usOgMatch = usRes.body.match(/<meta property="og:description" content="([\s\S]*?)"/i);
-            const twOgMatch = twRes.body.match(/<meta property="og:description" content="([\s\S]*?)"/i);
-            if (usOgMatch && twOgMatch) {
-                const usOgLines = usOgMatch[1].split(/\\n|\n/).map(l => cleanAndToSign(l, true)).filter(Boolean);
-                const twOgLines = twOgMatch[1].split(/\\n|\n/).map(l => cleanAndToSign(l, true)).filter(Boolean);
-                const ogLimit = Math.min(usOgLines.length, twOgLines.length);
-                for (let j = 0; j < ogLimit; j++) {
-                    saveBilingualPair(usOgLines[j], twOgLines[j], globalBilingualPool);
-                }
-            }
+            // og:description 不含逐行稳定标识，不再按描述行下标配对。
         }
     });
 
@@ -274,6 +223,11 @@ async function searchPoe2dbStats(untranslatedStats, officialPairs = []) {
     // 5. 核心词缀 100% 真实对齐查表
     const statZhMap = new Map();
     for (const item of untranslatedStats) {
+        const verified = resolveEvidence(item.text, evidencePairs);
+        if (verified) {
+            statZhMap.set(item.id, verified);
+            continue;
+        }
         let enSign = cleanAndToSign(item.text, true).toLowerCase();
         let tw = globalBilingualPool.get(enSign);
 
@@ -318,4 +272,4 @@ async function searchPoe2dbStats(untranslatedStats, officialPairs = []) {
     return { foundCount, notFoundCount, statZhMap };
 }
 
-module.exports = { searchPoe2dbStats };
+module.exports = { searchPoe2dbStats, extractBilingualMods };

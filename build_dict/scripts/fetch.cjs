@@ -55,7 +55,7 @@ async function fetchAllRaw() {
         if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
     });
 
-    const results = { en: {}, tw: {} };
+    const results = { en: {}, tw: {}, provenance: [] };
 
     // 1. 抓取国际服官方英文
     console.log('\n🌐 正在抓取国际服官方英文数据 (pathofexile.com)...');
@@ -65,11 +65,13 @@ async function fetchAllRaw() {
             const json = await fetchEndpoint('www.pathofexile.com', api.endpoint);
             fs.writeFileSync(targetPath, JSON.stringify(json, null, 2), 'utf8');
             results.en[api.name] = json.result || json;
+            results.provenance.push({ language: 'en', kind: api.name, mode: 'network' });
             console.log(`  ✅ [EN] ${api.name}.json 抓取成功`);
         } catch (err) {
             console.warn(`  ⚠️ [EN] ${api.name} 在线抓取受限: ${err.message}，尝试使用现有本地文件...`);
             if (fs.existsSync(targetPath)) {
                 results.en[api.name] = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
+                results.provenance.push({ language: 'en', kind: api.name, mode: 'cache' });
                 console.log(`  📦 [EN] ${api.name}.json 已载入本地缓存`);
             } else {
                 throw err;
@@ -85,11 +87,13 @@ async function fetchAllRaw() {
             const json = await fetchEndpoint('pathofexile.tw', api.endpoint);
             fs.writeFileSync(targetPath, JSON.stringify(json, null, 2), 'utf8');
             results.tw[api.name] = json.result || json;
+            results.provenance.push({ language: 'tw', kind: api.name, mode: 'network' });
             console.log(`  ✅ [TW] ${api.name}.json 抓取成功`);
         } catch (err) {
             console.warn(`  ⚠️ [TW] ${api.name} 在线抓取受限: ${err.message}，尝试使用现有本地文件...`);
             if (fs.existsSync(targetPath)) {
                 results.tw[api.name] = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
+                results.provenance.push({ language: 'tw', kind: api.name, mode: 'cache' });
                 console.log(`  📦 [TW] ${api.name}.json 已载入本地缓存`);
             } else {
                 throw err;
