@@ -11,24 +11,24 @@
       "removed": [],
       "modified": [
         {
-          "key": "[\"entry\",\"rune\",\"rune.stat_10502714\"]",
-          "desc": "[rune] Bonded: # to Maximum Rage",
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_1019020209\"]",
+          "desc": "[explicit] #% increased Damage per Curse on you",
           "fields": [
             "translation"
           ],
           "before": {
-            "desc": "[rune] Bonded: # to Maximum Rage",
+            "desc": "[explicit] #% increased Damage per Curse on you",
             "original": {
-              "id": "rune.stat_10502714",
-              "text": "Bonded: # to Maximum Rage",
-              "type": "augment"
+              "id": "explicit.stat_1019020209",
+              "text": "#% increased Damage per Curse on you",
+              "type": "explicit"
             },
             "translation": {
-              "text": "#層最大盛怒",
-              "template": "{0}層最大盛怒",
+              "text": "你身上每有一個詛咒，增加#%傷害",
+              "template": "你身上每有一個詛咒，增加{0}%傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
-                "key": "[\"Legacy_of_Bristleboar\",\"bondedMod\",\"Body_Armours\",[\"Rage\"]]"
+                "url": "https://poe2db.tw/us/Unique_item",
+                "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
               }
             },
             "metadata": {
@@ -37,18 +37,112 @@
             "occurrences": 1
           },
           "after": {
-            "desc": "[rune] Bonded: # to Maximum Rage",
+            "desc": "[explicit] #% increased Damage per Curse on you",
             "original": {
-              "id": "rune.stat_10502714",
-              "text": "Bonded: # to Maximum Rage",
-              "type": "augment"
+              "id": "explicit.stat_1019020209",
+              "text": "#% increased Damage per Curse on you",
+              "type": "explicit"
             },
             "translation": {
-              "text": "#層最大盛怒",
-              "template": "{0}層最大盛怒",
+              "text": "你身上每有一個詛咒，增加#%傷害",
+              "template": "你身上每有一個詛咒，增加{0}%傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Soul_Core",
-                "key": "[\"Tzamotos_Soul_Core_of_Ferocity\",\"implicitMod\",\"Helmets\",[\"Rage\"]]"
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_1753977518\"]",
+          "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+            "original": {
+              "id": "explicit.stat_1753977518",
+              "text": "#% of Thorns Damage Leeched as Life",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "荊棘傷害的#%轉化為生命偷取",
+              "template": "荊棘傷害的{0}%轉化為生命偷取",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Unique_item",
+                "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+            "original": {
+              "id": "explicit.stat_1753977518",
+              "text": "#% of Thorns Damage Leeched as Life",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "荊棘傷害的#%轉化為生命偷取",
+              "template": "荊棘傷害的{0}%轉化為生命偷取",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_2319832234\"]",
+          "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
+            "original": {
+              "id": "explicit.stat_2319832234",
+              "text": "#% of Damage Taken Recouped as Life, Mana and Energy Shield",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
+              "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Unique_item",
+                "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
+            "original": {
+              "id": "explicit.stat_2319832234",
+              "text": "#% of Damage Taken Recouped as Life, Mana and Energy Shield",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
+              "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
               }
             },
             "metadata": {

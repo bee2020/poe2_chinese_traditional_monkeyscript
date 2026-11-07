@@ -505,7 +505,7 @@
             "template": "你身上每有一個詛咒，增加{0}%傷害",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Unique_item",
+              "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
               "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
             }
           }
@@ -3837,7 +3837,7 @@
             "template": "荊棘傷害的{0}%轉化為生命偷取",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Unique_item",
+              "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
               "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
             }
           }
@@ -6012,7 +6012,7 @@
             "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Unique_item",
+              "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
               "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
             }
           }
