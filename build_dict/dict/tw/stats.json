@@ -505,7 +505,7 @@
             "template": "你身上每有一個詛咒，增加{0}%傷害",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+              "url": "https://poe2db.tw/us/Unique_item",
               "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
             }
           }
@@ -3837,7 +3837,7 @@
             "template": "荊棘傷害的{0}%轉化為生命偷取",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+              "url": "https://poe2db.tw/us/Unique_item",
               "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
             }
           }
@@ -6012,7 +6012,7 @@
             "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+              "url": "https://poe2db.tw/us/Unique_item",
               "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
             }
           }
@@ -37685,6 +37685,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|59433",
+          "text": "Allocates Thirst for Endurance",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置耐力渴求",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|59541",
           "text": "Allocates Necrotised Flesh",
           "type": "fractured",
@@ -60471,8 +60480,8 @@
             "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Rune",
-              "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
+              "url": "https://poe2db.tw/us/Runic_Ward",
+              "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
             }
           }
         },
@@ -62095,7 +62104,7 @@
             "template": "衝刺時增加{0}%符文保護回復率",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Rune",
+              "url": "https://poe2db.tw/us/Runic_Ward",
               "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
             }
           }
@@ -63777,7 +63786,7 @@
             "template": "增加{0}%最大符文保護",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Rune",
+              "url": "https://poe2db.tw/us/Runic_Ward",
               "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
             }
           }

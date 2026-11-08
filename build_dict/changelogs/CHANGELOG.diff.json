@@ -7,7 +7,24 @@
       "modified": []
     },
     "stats": {
-      "added": [],
+      "added": [
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_2954116742|59433\"]",
+          "desc": "[fractured] Allocates Thirst for Endurance",
+          "original": {
+            "id": "fractured.stat_2954116742|59433",
+            "text": "Allocates Thirst for Endurance",
+            "type": "fractured"
+          },
+          "translation": {
+            "text": "配置耐力渴求"
+          },
+          "metadata": {
+            "source": "official"
+          },
+          "occurrences": 1
+        }
+      ],
       "removed": [],
       "modified": [
         {
@@ -27,7 +44,7 @@
               "text": "你身上每有一個詛咒，增加#%傷害",
               "template": "你身上每有一個詛咒，增加{0}%傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Unique_item",
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
                 "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
               }
             },
@@ -47,7 +64,7 @@
               "text": "你身上每有一個詛咒，增加#%傷害",
               "template": "你身上每有一個詛咒，增加{0}%傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "url": "https://poe2db.tw/us/Unique_item",
                 "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
               }
             },
@@ -74,7 +91,7 @@
               "text": "荊棘傷害的#%轉化為生命偷取",
               "template": "荊棘傷害的{0}%轉化為生命偷取",
               "evidence": {
-                "url": "https://poe2db.tw/us/Unique_item",
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
                 "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
               }
             },
@@ -94,7 +111,7 @@
               "text": "荊棘傷害的#%轉化為生命偷取",
               "template": "荊棘傷害的{0}%轉化為生命偷取",
               "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "url": "https://poe2db.tw/us/Unique_item",
                 "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
               }
             },
@@ -121,7 +138,7 @@
               "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
               "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
               "evidence": {
-                "url": "https://poe2db.tw/us/Unique_item",
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
                 "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
               }
             },
@@ -141,8 +158,149 @@
               "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
               "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
               "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "url": "https://poe2db.tw/us/Unique_item",
                 "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1377764687\"]",
+          "desc": "[rune] Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+            "original": {
+              "id": "rune.stat_1377764687",
+              "text": "Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "使用技能時每消耗一個連擊可獲得終極#秒",
+              "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+            "original": {
+              "id": "rune.stat_1377764687",
+              "text": "Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "使用技能時每消耗一個連擊可獲得終極#秒",
+              "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_2441825294\"]",
+          "desc": "[rune] #% increased Runic Ward Regeneration Rate while Sprinting",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] #% increased Runic Ward Regeneration Rate while Sprinting",
+            "original": {
+              "id": "rune.stat_2441825294",
+              "text": "#% increased Runic Ward Regeneration Rate while Sprinting",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "衝刺時增加#%符文保護回復率",
+              "template": "衝刺時增加{0}%符文保護回復率",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] #% increased Runic Ward Regeneration Rate while Sprinting",
+            "original": {
+              "id": "rune.stat_2441825294",
+              "text": "#% increased Runic Ward Regeneration Rate while Sprinting",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "衝刺時增加#%符文保護回復率",
+              "template": "衝刺時增加{0}%符文保護回復率",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_3634438849\"]",
+          "desc": "[rune] Bonded: #% increased maximum Runic Ward",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: #% increased maximum Runic Ward",
+            "original": {
+              "id": "rune.stat_3634438849",
+              "text": "Bonded: #% increased maximum Runic Ward",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%最大符文保護",
+              "template": "增加{0}%最大符文保護",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: #% increased maximum Runic Ward",
+            "original": {
+              "id": "rune.stat_3634438849",
+              "text": "Bonded: #% increased maximum Runic Ward",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%最大符文保護",
+              "template": "增加{0}%最大符文保護",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
               }
             },
             "metadata": {
@@ -208,9 +366,9 @@
       "finalRate": "99.92%"
     },
     "stats": {
-      "total": 8312,
-      "eligible": 8312,
-      "complete": 8279,
+      "total": 8313,
+      "eligible": 8313,
+      "complete": 8280,
       "partial": 0,
       "missing": 33,
       "excluded": 0,
@@ -414,12 +572,12 @@
           "state": "missing"
         }
       ],
-      "finalTranslated": 8279,
+      "finalTranslated": 8280,
       "finalRate": "99.60%",
       "templateAudit": {
-        "total": 8312,
+        "total": 8313,
         "missing": 33,
-        "usable": 8196,
+        "usable": 8197,
         "unsafe": 83,
         "issues": [
           {
