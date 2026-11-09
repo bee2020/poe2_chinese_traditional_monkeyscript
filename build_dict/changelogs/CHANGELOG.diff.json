@@ -7,45 +7,28 @@
       "modified": []
     },
     "stats": {
-      "added": [
-        {
-          "key": "[\"entry\",\"fractured\",\"fractured.stat_2954116742|59433\"]",
-          "desc": "[fractured] Allocates Thirst for Endurance",
-          "original": {
-            "id": "fractured.stat_2954116742|59433",
-            "text": "Allocates Thirst for Endurance",
-            "type": "fractured"
-          },
-          "translation": {
-            "text": "配置耐力渴求"
-          },
-          "metadata": {
-            "source": "official"
-          },
-          "occurrences": 1
-        }
-      ],
+      "added": [],
       "removed": [],
       "modified": [
         {
-          "key": "[\"entry\",\"explicit\",\"explicit.stat_1019020209\"]",
-          "desc": "[explicit] #% increased Damage per Curse on you",
+          "key": "[\"entry\",\"implicit\",\"implicit.stat_1050883682\"]",
+          "desc": "[implicit] Has no Accuracy Penalty from Range",
           "fields": [
             "translation"
           ],
           "before": {
-            "desc": "[explicit] #% increased Damage per Curse on you",
+            "desc": "[implicit] Has no Accuracy Penalty from Range",
             "original": {
-              "id": "explicit.stat_1019020209",
-              "text": "#% increased Damage per Curse on you",
-              "type": "explicit"
+              "id": "implicit.stat_1050883682",
+              "text": "Has no Accuracy Penalty from Range",
+              "type": "implicit"
             },
             "translation": {
-              "text": "你身上每有一個詛咒，增加#%傷害",
-              "template": "你身上每有一個詛咒，增加{0}%傷害",
+              "text": "遠程無命中懲罰",
+              "template": "遠程無命中懲罰",
               "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
-                "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
+                "url": "https://poe2db.tw/us/Physical_Damage",
+                "key": "[\"Extended_Cleaver\",\"implicitMod\",\"\",[\"Accuracy\"]]"
               }
             },
             "metadata": {
@@ -54,18 +37,18 @@
             "occurrences": 1
           },
           "after": {
-            "desc": "[explicit] #% increased Damage per Curse on you",
+            "desc": "[implicit] Has no Accuracy Penalty from Range",
             "original": {
-              "id": "explicit.stat_1019020209",
-              "text": "#% increased Damage per Curse on you",
-              "type": "explicit"
+              "id": "implicit.stat_1050883682",
+              "text": "Has no Accuracy Penalty from Range",
+              "type": "implicit"
             },
             "translation": {
-              "text": "你身上每有一個詛咒，增加#%傷害",
-              "template": "你身上每有一個詛咒，增加{0}%傷害",
+              "text": "遠程無命中懲罰",
+              "template": "遠程無命中懲罰",
               "evidence": {
-                "url": "https://poe2db.tw/us/Unique_item",
-                "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
+                "url": "https://poe2db.tw/us/Accuracy",
+                "key": "[\"Extended_Cleaver\",\"implicitMod\",\"\",[\"Accuracy\"]]"
               }
             },
             "metadata": {
@@ -75,24 +58,24 @@
           }
         },
         {
-          "key": "[\"entry\",\"explicit\",\"explicit.stat_1753977518\"]",
-          "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+          "key": "[\"entry\",\"rune\",\"rune.stat_1323874481\"]",
+          "desc": "[rune] Bonded: #% increased Attack Damage against Maimed Enemies",
           "fields": [
             "translation"
           ],
           "before": {
-            "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+            "desc": "[rune] Bonded: #% increased Attack Damage against Maimed Enemies",
             "original": {
-              "id": "explicit.stat_1753977518",
-              "text": "#% of Thorns Damage Leeched as Life",
-              "type": "explicit"
+              "id": "rune.stat_1323874481",
+              "text": "Bonded: #% increased Attack Damage against Maimed Enemies",
+              "type": "augment"
             },
             "translation": {
-              "text": "荊棘傷害的#%轉化為生命偷取",
-              "template": "荊棘傷害的{0}%轉化為生命偷取",
+              "text": "對癱瘓的敵人增加#%攻擊傷害",
+              "template": "對癱瘓的敵人增加{0}%攻擊傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
-                "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Hoghunt\",\"bondedMod\",\"Two_Hand_Maces\",[\"Attack\"]]"
               }
             },
             "metadata": {
@@ -101,65 +84,18 @@
             "occurrences": 1
           },
           "after": {
-            "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+            "desc": "[rune] Bonded: #% increased Attack Damage against Maimed Enemies",
             "original": {
-              "id": "explicit.stat_1753977518",
-              "text": "#% of Thorns Damage Leeched as Life",
-              "type": "explicit"
+              "id": "rune.stat_1323874481",
+              "text": "Bonded: #% increased Attack Damage against Maimed Enemies",
+              "type": "augment"
             },
             "translation": {
-              "text": "荊棘傷害的#%轉化為生命偷取",
-              "template": "荊棘傷害的{0}%轉化為生命偷取",
+              "text": "對癱瘓的敵人增加#%攻擊傷害",
+              "template": "對癱瘓的敵人增加{0}%攻擊傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Unique_item",
-                "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
-              }
-            },
-            "metadata": {
-              "source": "poe2db_verified_html"
-            },
-            "occurrences": 1
-          }
-        },
-        {
-          "key": "[\"entry\",\"explicit\",\"explicit.stat_2319832234\"]",
-          "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
-          "fields": [
-            "translation"
-          ],
-          "before": {
-            "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
-            "original": {
-              "id": "explicit.stat_2319832234",
-              "text": "#% of Damage Taken Recouped as Life, Mana and Energy Shield",
-              "type": "explicit"
-            },
-            "translation": {
-              "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
-              "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
-              "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
-                "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
-              }
-            },
-            "metadata": {
-              "source": "poe2db_verified_html"
-            },
-            "occurrences": 1
-          },
-          "after": {
-            "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
-            "original": {
-              "id": "explicit.stat_2319832234",
-              "text": "#% of Damage Taken Recouped as Life, Mana and Energy Shield",
-              "type": "explicit"
-            },
-            "translation": {
-              "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
-              "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
-              "evidence": {
-                "url": "https://poe2db.tw/us/Unique_item",
-                "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Hoghunt\",\"bondedMod\",\"Two_Hand_Maces\",[\"Attack\"]]"
               }
             },
             "metadata": {
@@ -185,8 +121,8 @@
               "text": "使用技能時每消耗一個連擊可獲得終極#秒",
               "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
-                "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
               }
             },
             "metadata": {
@@ -205,8 +141,478 @@
               "text": "使用技能時每消耗一個連擊可獲得終極#秒",
               "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Runic_Ward",
-                "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1457312571\"]",
+          "desc": "[rune] Bonded: #% chance for Slam Skills you use yourself to cause an additional Aftershock",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: #% chance for Slam Skills you use yourself to cause an additional Aftershock",
+            "original": {
+              "id": "rune.stat_1457312571",
+              "text": "Bonded: #% chance for Slam Skills you use yourself to cause an additional Aftershock",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "你自身使用的重擊技能有#%機率造成額外一次餘震",
+              "template": "你自身使用的重擊技能有{0}%機率造成額外一次餘震",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Ancient_Rune_of_the_Titan\",\"implicitMod\",\"Two_Hand_Maces\",[\"Aftershock\",\"Slam\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: #% chance for Slam Skills you use yourself to cause an additional Aftershock",
+            "original": {
+              "id": "rune.stat_1457312571",
+              "text": "Bonded: #% chance for Slam Skills you use yourself to cause an additional Aftershock",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "你自身使用的重擊技能有#%機率造成額外一次餘震",
+              "template": "你自身使用的重擊技能有{0}%機率造成額外一次餘震",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Ancient_Rune_of_the_Titan\",\"implicitMod\",\"Two_Hand_Maces\",[\"Aftershock\",\"Slam\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1512261731\"]",
+          "desc": "[rune] Bonded: Knocks Enemies Back on Hit",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: Knocks Enemies Back on Hit",
+            "original": {
+              "id": "rune.stat_1512261731",
+              "text": "Bonded: Knocks Enemies Back on Hit",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "擊中時會擊退敵人",
+              "template": "擊中時會擊退敵人",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Tyrannys_Grip\",\"bondedMod\",\"Spears\",[\"Hit\",\"Knockback\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: Knocks Enemies Back on Hit",
+            "original": {
+              "id": "rune.stat_1512261731",
+              "text": "Bonded: Knocks Enemies Back on Hit",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "擊中時會擊退敵人",
+              "template": "擊中時會擊退敵人",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Tyrannys_Grip\",\"bondedMod\",\"Spears\",[\"Hit\",\"Knockback\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1524834794\"]",
+          "desc": "[rune] Bonded: #% increased Damage per 15 Strength",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: #% increased Damage per 15 Strength",
+            "original": {
+              "id": "rune.stat_1524834794",
+              "text": "Bonded: #% increased Damage per 15 Strength",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "每15點力量增加#%傷害",
+              "template": "每15點力量增加{0}%傷害",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Facebreaker\",\"bondedMod\",\"Gloves\",[\"Strength\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: #% increased Damage per 15 Strength",
+            "original": {
+              "id": "rune.stat_1524834794",
+              "text": "Bonded: #% increased Damage per 15 Strength",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "每15點力量增加#%傷害",
+              "template": "每15點力量增加{0}%傷害",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Facebreaker\",\"bondedMod\",\"Gloves\",[\"Strength\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1651083789\"]",
+          "desc": "[rune] Bonded: Triggered Spells deal #% increased Spell Damage",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: Triggered Spells deal #% increased Spell Damage",
+            "original": {
+              "id": "rune.stat_1651083789",
+              "text": "Bonded: Triggered Spells deal #% increased Spell Damage",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "觸發法術增加#%造成的法術傷害",
+              "template": "觸發法術增加{0}%造成的法術傷害",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Dusk_Vigil\",\"bondedMod\",\"Staves\",[\"Spell\",\"Trigger\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: Triggered Spells deal #% increased Spell Damage",
+            "original": {
+              "id": "rune.stat_1651083789",
+              "text": "Bonded: Triggered Spells deal #% increased Spell Damage",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "觸發法術增加#%造成的法術傷害",
+              "template": "觸發法術增加{0}%造成的法術傷害",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Dusk_Vigil\",\"bondedMod\",\"Staves\",[\"Spell\",\"Trigger\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1729154880\"]",
+          "desc": "[rune] Bonded: Enemies in your Presence are Hindered",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: Enemies in your Presence are Hindered",
+            "original": {
+              "id": "rune.stat_1729154880",
+              "text": "Bonded: Enemies in your Presence are Hindered",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "你存在中的敵人被阻礙",
+              "template": "你存在中的敵人被阻礙",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Amor_Mandragora\",\"bondedMod\",\"Talismans\",[\"Hinder\",\"Presence\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: Enemies in your Presence are Hindered",
+            "original": {
+              "id": "rune.stat_1729154880",
+              "text": "Bonded: Enemies in your Presence are Hindered",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "你存在中的敵人被阻礙",
+              "template": "你存在中的敵人被阻礙",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Amor_Mandragora\",\"bondedMod\",\"Talismans\",[\"Hinder\",\"Presence\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1787822486\"]",
+          "desc": "[rune] Bonded: #% increased Flask Mana Recovery rate",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: #% increased Flask Mana Recovery rate",
+            "original": {
+              "id": "rune.stat_1787822486",
+              "text": "Bonded: #% increased Flask Mana Recovery rate",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%藥劑魔力恢復率",
+              "template": "增加{0}%藥劑魔力恢復率",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Briskwrap\",\"bondedMod\",\"Body_Armours\",[\"Flask\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: #% increased Flask Mana Recovery rate",
+            "original": {
+              "id": "rune.stat_1787822486",
+              "text": "Bonded: #% increased Flask Mana Recovery rate",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%藥劑魔力恢復率",
+              "template": "增加{0}%藥劑魔力恢復率",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Briskwrap\",\"bondedMod\",\"Body_Armours\",[\"Flask\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1888719480\"]",
+          "desc": "[rune] Bonded: Adds # to # Physical Damage",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: Adds # to # Physical Damage",
+            "original": {
+              "id": "rune.stat_1888719480",
+              "text": "Bonded: Adds # to # Physical Damage",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "附加#至#物理傷害",
+              "template": "附加{0}至{1}物理傷害",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Lesser_Tempered_Rune\",\"implicitMod\",\"Martial_Weapons\",[\"Physical\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: Adds # to # Physical Damage",
+            "original": {
+              "id": "rune.stat_1888719480",
+              "text": "Bonded: Adds # to # Physical Damage",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "附加#至#物理傷害",
+              "template": "附加{0}至{1}物理傷害",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Brynhands_Mark\",\"bondedMod\",\"One_Hand_Maces\",[]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1920436470\"]",
+          "desc": "[rune] Bonded: #% increased Armour while Shapeshifted",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: #% increased Armour while Shapeshifted",
+            "original": {
+              "id": "rune.stat_1920436470",
+              "text": "Bonded: #% increased Armour while Shapeshifted",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "變形時增加#%護甲",
+              "template": "變形時增加{0}%護甲",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_The_Unleashed\",\"bondedMod\",\"Body_Armours\",[\"Armour\",\"Shapeshift\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: #% increased Armour while Shapeshifted",
+            "original": {
+              "id": "rune.stat_1920436470",
+              "text": "Bonded: #% increased Armour while Shapeshifted",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "變形時增加#%護甲",
+              "template": "變形時增加{0}%護甲",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_The_Unleashed\",\"bondedMod\",\"Body_Armours\",[\"Armour\",\"Shapeshift\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1936645603\"]",
+          "desc": "[rune] Gain #% of Physical Damage as Extra Fire Damage",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Gain #% of Physical Damage as Extra Fire Damage",
+            "original": {
+              "id": "rune.stat_1936645603",
+              "text": "Gain #% of Physical Damage as Extra Fire Damage",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "獲得等同於#%物理傷害的額外火焰傷害",
+              "template": "獲得等同於{0}%物理傷害的額外火焰傷害",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Dusk_Vigil\",\"implicitMod\",\"Staves\",[\"Fire\",\"Gain\",\"Physical\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Gain #% of Physical Damage as Extra Fire Damage",
+            "original": {
+              "id": "rune.stat_1936645603",
+              "text": "Gain #% of Physical Damage as Extra Fire Damage",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "獲得等同於#%物理傷害的額外火焰傷害",
+              "template": "獲得等同於{0}%物理傷害的額外火焰傷害",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Dusk_Vigil\",\"implicitMod\",\"Staves\",[\"Fire\",\"Gain\",\"Physical\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_2291075173\"]",
+          "desc": "[rune] Bonded: Every five Rage also grants you #% increased Movement Speed",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: Every five Rage also grants you #% increased Movement Speed",
+            "original": {
+              "id": "rune.stat_2291075173",
+              "text": "Bonded: Every five Rage also grants you #% increased Movement Speed",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "每5盛怒同時使你增加#%移動速度",
+              "template": "每5盛怒同時使你增加{0}%移動速度",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Wings_of_Caelyn\",\"bondedMod\",\"Helmets\",[\"Rage\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: Every five Rage also grants you #% increased Movement Speed",
+            "original": {
+              "id": "rune.stat_2291075173",
+              "text": "Bonded: Every five Rage also grants you #% increased Movement Speed",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "每5盛怒同時使你增加#%移動速度",
+              "template": "每5盛怒同時使你增加{0}%移動速度",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Wings_of_Caelyn\",\"bondedMod\",\"Helmets\",[\"Rage\"]]"
               }
             },
             "metadata": {
@@ -232,7 +638,7 @@
               "text": "衝刺時增加#%符文保護回復率",
               "template": "衝刺時增加{0}%符文保護回復率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Runic_Ward",
                 "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
               }
             },
@@ -252,8 +658,290 @@
               "text": "衝刺時增加#%符文保護回復率",
               "template": "衝刺時增加{0}%符文保護回復率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Runic_Ward",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_2549764820\"]",
+          "desc": "[rune] Bonded: Regenerate #% of maximum Life per second while Surrounded",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: Regenerate #% of maximum Life per second while Surrounded",
+            "original": {
+              "id": "rune.stat_2549764820",
+              "text": "Bonded: Regenerate #% of maximum Life per second while Surrounded",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "被包圍時，每秒回復#%生命",
+              "template": "被包圍時，每秒回復{0}%生命",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Bramblejack\",\"bondedMod\",\"Body_Armours\",[\"Surrounded\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: Regenerate #% of maximum Life per second while Surrounded",
+            "original": {
+              "id": "rune.stat_2549764820",
+              "text": "Bonded: Regenerate #% of maximum Life per second while Surrounded",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "被包圍時，每秒回復#%生命",
+              "template": "被包圍時，每秒回復{0}%生命",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Bramblejack\",\"bondedMod\",\"Body_Armours\",[\"Surrounded\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_2721126863\"]",
+          "desc": "[rune] Bonded: Skills which Empower an Attack have #% chance to not count that Attack",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: Skills which Empower an Attack have #% chance to not count that Attack",
+            "original": {
+              "id": "rune.stat_2721126863",
+              "text": "Bonded: Skills which Empower an Attack have #% chance to not count that Attack",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "強化攻擊的技能有#%機率不計該次攻擊",
+              "template": "強化攻擊的技能有{0}%機率不計該次攻擊",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Serles_Grit\",\"bondedMod\",\"One_Hand_Maces\",[\"Attack\",\"Empowered\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: Skills which Empower an Attack have #% chance to not count that Attack",
+            "original": {
+              "id": "rune.stat_2721126863",
+              "text": "Bonded: Skills which Empower an Attack have #% chance to not count that Attack",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "強化攻擊的技能有#%機率不計該次攻擊",
+              "template": "強化攻擊的技能有{0}%機率不計該次攻擊",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Serles_Grit\",\"bondedMod\",\"One_Hand_Maces\",[\"Attack\",\"Empowered\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_2894111835\"]",
+          "desc": "[rune] Bonded: #% increased Presence Area of Effect",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: #% increased Presence Area of Effect",
+            "original": {
+              "id": "rune.stat_2894111835",
+              "text": "Bonded: #% increased Presence Area of Effect",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%存在範圍的範圍效果",
+              "template": "增加{0}%存在範圍的範圍效果",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_The_Vile_Knight\",\"bondedMod\",\"Helmets\",[\"Presence\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: #% increased Presence Area of Effect",
+            "original": {
+              "id": "rune.stat_2894111835",
+              "text": "Bonded: #% increased Presence Area of Effect",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%存在範圍的範圍效果",
+              "template": "增加{0}%存在範圍的範圍效果",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Fox_Idol\",\"implicitMod\",\"Sceptres\",[\"Presence\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_293832783\"]",
+          "desc": "[rune] When you stop Sprinting, gain Guard equal to #% of maximum Life per second spent Sprinting, up to a maximum of 20%, for 4 seconds",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] When you stop Sprinting, gain Guard equal to #% of maximum Life per second spent Sprinting, up to a maximum of 20%, for 4 seconds",
+            "original": {
+              "id": "rune.stat_293832783",
+              "text": "When you stop Sprinting, gain Guard equal to #% of maximum Life per second spent Sprinting, up to a maximum of 20%, for 4 seconds",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "當你停止衝刺時每已衝刺一秒，即獲得等同於#%最大生命的保護，最高20%，持續4秒",
+              "template": "當你停止衝刺時每已衝刺一秒，即獲得等同於{0}%最大生命的保護，最高20%，持續4秒",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Emergent_Protection\",\"implicitMod\",\"Boots\",[\"Guard\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] When you stop Sprinting, gain Guard equal to #% of maximum Life per second spent Sprinting, up to a maximum of 20%, for 4 seconds",
+            "original": {
+              "id": "rune.stat_293832783",
+              "text": "When you stop Sprinting, gain Guard equal to #% of maximum Life per second spent Sprinting, up to a maximum of 20%, for 4 seconds",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "當你停止衝刺時每已衝刺一秒，即獲得等同於#%最大生命的保護，最高20%，持續4秒",
+              "template": "當你停止衝刺時每已衝刺一秒，即獲得等同於{0}%最大生命的保護，最高20%，持續4秒",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Emergent_Protection\",\"implicitMod\",\"Boots\",[\"Guard\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_3374444303\"]",
+          "desc": "[rune] Bonded: #% increased Ignite Duration on Enemies",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: #% increased Ignite Duration on Enemies",
+            "original": {
+              "id": "rune.stat_3374444303",
+              "text": "Bonded: #% increased Ignite Duration on Enemies",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%敵人點燃持續時間",
+              "template": "增加{0}%敵人點燃持續時間",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Candlemaker\",\"bondedMod\",\"Gloves\",[]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: #% increased Ignite Duration on Enemies",
+            "original": {
+              "id": "rune.stat_3374444303",
+              "text": "Bonded: #% increased Ignite Duration on Enemies",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%敵人點燃持續時間",
+              "template": "增加{0}%敵人點燃持續時間",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Candlemaker\",\"bondedMod\",\"Gloves\",[]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_3494229254\"]",
+          "desc": "[rune] Bonded: #% increased Thorns Critical Damage Bonus",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: #% increased Thorns Critical Damage Bonus",
+            "original": {
+              "id": "rune.stat_3494229254",
+              "text": "Bonded: #% increased Thorns Critical Damage Bonus",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%荊棘暴擊傷害加成",
+              "template": "增加{0}%荊棘暴擊傷害加成",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Briarpatch\",\"bondedMod\",\"Boots\",[\"CriticalDamageBonus\",\"Thorns\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: #% increased Thorns Critical Damage Bonus",
+            "original": {
+              "id": "rune.stat_3494229254",
+              "text": "Bonded: #% increased Thorns Critical Damage Bonus",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%荊棘暴擊傷害加成",
+              "template": "增加{0}%荊棘暴擊傷害加成",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Briarpatch\",\"bondedMod\",\"Boots\",[\"CriticalDamageBonus\",\"Thorns\"]]"
               }
             },
             "metadata": {
@@ -279,7 +967,7 @@
               "text": "增加#%最大符文保護",
               "template": "增加{0}%最大符文保護",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Runic_Ward",
                 "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
               }
             },
@@ -299,8 +987,149 @@
               "text": "增加#%最大符文保護",
               "template": "增加{0}%最大符文保護",
               "evidence": {
-                "url": "https://poe2db.tw/us/Runic_Ward",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_3969727699\"]",
+          "desc": "[rune] Bonded: Warcry Skills have #% increased Area of Effect",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: Warcry Skills have #% increased Area of Effect",
+            "original": {
+              "id": "rune.stat_3969727699",
+              "text": "Bonded: Warcry Skills have #% increased Area of Effect",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "戰吼技能增加#%範圍效果",
+              "template": "戰吼技能增加{0}%範圍效果",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Deidbell\",\"bondedMod\",\"Helmets\",[\"Warcry\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: Warcry Skills have #% increased Area of Effect",
+            "original": {
+              "id": "rune.stat_3969727699",
+              "text": "Bonded: Warcry Skills have #% increased Area of Effect",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "戰吼技能增加#%範圍效果",
+              "template": "戰吼技能增加{0}%範圍效果",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Deidbell\",\"bondedMod\",\"Helmets\",[\"Warcry\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_4019240232\"]",
+          "desc": "[rune] Bonded: Damage Penetrates #% Lightning Resistance",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: Damage Penetrates #% Lightning Resistance",
+            "original": {
+              "id": "rune.stat_4019240232",
+              "text": "Bonded: Damage Penetrates #% Lightning Resistance",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "傷害穿透#%閃電抗性",
+              "template": "傷害穿透{0}%閃電抗性",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Brain_Rattler\",\"bondedMod\",\"Two_Hand_Maces\",[\"Penetration\",\"Resistances\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: Damage Penetrates #% Lightning Resistance",
+            "original": {
+              "id": "rune.stat_4019240232",
+              "text": "Bonded: Damage Penetrates #% Lightning Resistance",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "傷害穿透#%閃電抗性",
+              "template": "傷害穿透{0}%閃電抗性",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Brain_Rattler\",\"bondedMod\",\"Two_Hand_Maces\",[\"Penetration\",\"Resistances\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_625805922\"]",
+          "desc": "[rune] Bonded: #% increased Block chance per 100 total Item Armour on Equipped Armour Items",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: #% increased Block chance per 100 total Item Armour on Equipped Armour Items",
+            "original": {
+              "id": "rune.stat_625805922",
+              "text": "Bonded: #% increased Block chance per 100 total Item Armour on Equipped Armour Items",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "裝備護甲物品每擁有100總物品護甲值，即增加#%格擋機率",
+              "template": "裝備護甲物品每擁有100總物品護甲值，即增加{0}%格擋機率",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Ironbound\",\"bondedMod\",\"Bows\",[\"Block\",\"EquipArmour\",\"ItemArmour\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: #% increased Block chance per 100 total Item Armour on Equipped Armour Items",
+            "original": {
+              "id": "rune.stat_625805922",
+              "text": "Bonded: #% increased Block chance per 100 total Item Armour on Equipped Armour Items",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "裝備護甲物品每擁有100總物品護甲值，即增加#%格擋機率",
+              "template": "裝備護甲物品每擁有100總物品護甲值，即增加{0}%格擋機率",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Ironbound\",\"bondedMod\",\"Bows\",[\"Block\",\"EquipArmour\",\"ItemArmour\"]]"
               }
             },
             "metadata": {
