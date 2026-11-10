@@ -4,10 +4,382 @@
     "items": {
       "added": [],
       "removed": [],
-      "modified": []
+      "modified": [
+        {
+          "key": "[\"entry\",\"armour\",[\"Lamellar Mail\",\"The Fallen Formation\"]]",
+          "desc": "[armour] The Fallen Formation Lamellar Mail",
+          "fields": [
+            "translation",
+            "metadata"
+          ],
+          "before": {
+            "desc": "[armour] The Fallen Formation Lamellar Mail",
+            "original": {
+              "type": "Lamellar Mail",
+              "text": "The Fallen Formation Lamellar Mail",
+              "name": "The Fallen Formation",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "分層鎖甲",
+              "name": "殞落之形 分層鎖甲",
+              "text": "殞落之形 分層鎖甲 分層鎖甲"
+            },
+            "metadata": {
+              "source": "cache"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[armour] The Fallen Formation Lamellar Mail",
+            "original": {
+              "type": "Lamellar Mail",
+              "text": "The Fallen Formation Lamellar Mail",
+              "name": "The Fallen Formation",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "分層鎖甲",
+              "name": "殞落之形",
+              "text": "殞落之形 分層鎖甲"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"armour\",[\"Runemastered Spiritbone Crown\",\"Keeper of the Arc\"]]",
+          "desc": "[armour] Keeper of the Arc Runemastered Spiritbone Crown",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[armour] Keeper of the Arc Runemastered Spiritbone Crown",
+            "original": {
+              "type": "Runemastered Spiritbone Crown",
+              "text": "Keeper of the Arc Runemastered Spiritbone Crown",
+              "name": "Keeper of the Arc",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "符煉魂骨之冠",
+              "name": "電弧守護者",
+              "text": "電弧守護者 符煉魂骨之冠"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[armour] Keeper of the Arc Runemastered Spiritbone Crown",
+            "original": {
+              "type": "Runemastered Spiritbone Crown",
+              "text": "Keeper of the Arc Runemastered Spiritbone Crown",
+              "name": "Keeper of the Arc",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "符煉魂骨之冠",
+              "name": "弧之守護者",
+              "text": "弧之守護者 符煉魂骨之冠"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"armour\",[\"Spiritbone Crown\",\"Keeper of the Arc\"]]",
+          "desc": "[armour] Keeper of the Arc Spiritbone Crown",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[armour] Keeper of the Arc Spiritbone Crown",
+            "original": {
+              "type": "Spiritbone Crown",
+              "text": "Keeper of the Arc Spiritbone Crown",
+              "name": "Keeper of the Arc",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "魂骨之冠",
+              "name": "電弧守護者",
+              "text": "電弧守護者 魂骨之冠"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[armour] Keeper of the Arc Spiritbone Crown",
+            "original": {
+              "type": "Spiritbone Crown",
+              "text": "Keeper of the Arc Spiritbone Crown",
+              "name": "Keeper of the Arc",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "魂骨之冠",
+              "name": "弧之守護者",
+              "text": "弧之守護者 魂骨之冠"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"currency\",[\"Legacy of Edyrn's Tusks\",\"\"]]",
+          "desc": "[currency] Legacy of Edyrn's Tusks",
+          "fields": [
+            "metadata"
+          ],
+          "before": {
+            "desc": "[currency] Legacy of Edyrn's Tusks",
+            "original": {
+              "type": "Legacy of Edyrn's Tusks"
+            },
+            "translation": {
+              "type": "傳承．埃狄恩的曲牙"
+            },
+            "metadata": {
+              "source": "cache"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[currency] Legacy of Edyrn's Tusks",
+            "original": {
+              "type": "Legacy of Edyrn's Tusks"
+            },
+            "translation": {
+              "type": "傳承．埃狄恩的曲牙"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"currency\",[\"Legacy of Keeper of the Arc\",\"\"]]",
+          "desc": "[currency] Legacy of Keeper of the Arc",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[currency] Legacy of Keeper of the Arc",
+            "original": {
+              "type": "Legacy of Keeper of the Arc"
+            },
+            "translation": {
+              "type": "傳承．電弧守護者"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[currency] Legacy of Keeper of the Arc",
+            "original": {
+              "type": "Legacy of Keeper of the Arc"
+            },
+            "translation": {
+              "type": "傳承．弧之守護者"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"gem\",[\"Remnant Potency II\",\"\"]]",
+          "desc": "[gem] Remnant Potency II",
+          "fields": [
+            "metadata"
+          ],
+          "before": {
+            "desc": "[gem] Remnant Potency II",
+            "original": {
+              "type": "Remnant Potency II"
+            },
+            "translation": {
+              "type": "痕跡強度 II"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[gem] Remnant Potency II",
+            "original": {
+              "type": "Remnant Potency II"
+            },
+            "translation": {
+              "type": "痕跡強度 II"
+            },
+            "metadata": {
+              "source": "cache"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"gem\",[\"Remnant Potency III\",\"\"]]",
+          "desc": "[gem] Remnant Potency III",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[gem] Remnant Potency III",
+            "original": {
+              "type": "Remnant Potency III"
+            },
+            "translation": {
+              "type": "痕跡強度 III"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[gem] Remnant Potency III",
+            "original": {
+              "type": "Remnant Potency III"
+            },
+            "translation": {
+              "type": "痕跡強度 II"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"weapon\",[\"Runeforged Warden Bow\",\"\"]]",
+          "desc": "[weapon] Runeforged Warden Bow",
+          "fields": [
+            "metadata"
+          ],
+          "before": {
+            "desc": "[weapon] Runeforged Warden Bow",
+            "original": {
+              "type": "Runeforged Warden Bow"
+            },
+            "translation": {
+              "type": "符鍛守護者之弓"
+            },
+            "metadata": {
+              "source": "cache"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[weapon] Runeforged Warden Bow",
+            "original": {
+              "type": "Runeforged Warden Bow"
+            },
+            "translation": {
+              "type": "符鍛守護者之弓"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"weapon\",[\"Runeforged Warden Bow\",\"Ironbound\"]]",
+          "desc": "[weapon] Ironbound Runeforged Warden Bow",
+          "fields": [
+            "metadata"
+          ],
+          "before": {
+            "desc": "[weapon] Ironbound Runeforged Warden Bow",
+            "original": {
+              "type": "Runeforged Warden Bow",
+              "text": "Ironbound Runeforged Warden Bow",
+              "name": "Ironbound",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "符鍛守護者之弓",
+              "name": "鐵縛者",
+              "text": "鐵縛者 符鍛守護者之弓"
+            },
+            "metadata": {
+              "source": "cache"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[weapon] Ironbound Runeforged Warden Bow",
+            "original": {
+              "type": "Runeforged Warden Bow",
+              "text": "Ironbound Runeforged Warden Bow",
+              "name": "Ironbound",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "符鍛守護者之弓",
+              "name": "鐵縛者",
+              "text": "鐵縛者 符鍛守護者之弓"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        }
+      ]
     },
     "stats": {
-      "added": [],
+      "added": [
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_2954116742|43250\"]",
+          "desc": "[fractured] Allocates Adaptive Skin",
+          "original": {
+            "id": "fractured.stat_2954116742|43250",
+            "text": "Allocates Adaptive Skin",
+            "type": "fractured"
+          },
+          "translation": {
+            "text": "配置適應皮膚"
+          },
+          "metadata": {
+            "source": "official"
+          },
+          "occurrences": 1
+        }
+      ],
       "removed": [],
       "modified": [
         {
@@ -27,7 +399,7 @@
               "text": "遠程無命中懲罰",
               "template": "遠程無命中懲罰",
               "evidence": {
-                "url": "https://poe2db.tw/us/Physical_Damage",
+                "url": "https://poe2db.tw/us/Accuracy",
                 "key": "[\"Extended_Cleaver\",\"implicitMod\",\"\",[\"Accuracy\"]]"
               }
             },
@@ -47,8 +419,55 @@
               "text": "遠程無命中懲罰",
               "template": "遠程無命中懲罰",
               "evidence": {
-                "url": "https://poe2db.tw/us/Accuracy",
+                "url": "https://poe2db.tw/us/Physical_Damage",
                 "key": "[\"Extended_Cleaver\",\"implicitMod\",\"\",[\"Accuracy\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_10502714\"]",
+          "desc": "[rune] Bonded: # to Maximum Rage",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: # to Maximum Rage",
+            "original": {
+              "id": "rune.stat_10502714",
+              "text": "Bonded: # to Maximum Rage",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "#層最大盛怒",
+              "template": "{0}層最大盛怒",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Soul_Core",
+                "key": "[\"Tzamotos_Soul_Core_of_Ferocity\",\"implicitMod\",\"Helmets\",[\"Rage\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: # to Maximum Rage",
+            "original": {
+              "id": "rune.stat_10502714",
+              "text": "Bonded: # to Maximum Rage",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "#層最大盛怒",
+              "template": "{0}層最大盛怒",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Bristleboar\",\"bondedMod\",\"Body_Armours\",[\"Rage\"]]"
               }
             },
             "metadata": {
@@ -74,7 +493,7 @@
               "text": "對癱瘓的敵人增加#%攻擊傷害",
               "template": "對癱瘓的敵人增加{0}%攻擊傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Hoghunt\",\"bondedMod\",\"Two_Hand_Maces\",[\"Attack\"]]"
               }
             },
@@ -94,7 +513,7 @@
               "text": "對癱瘓的敵人增加#%攻擊傷害",
               "template": "對癱瘓的敵人增加{0}%攻擊傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Hoghunt\",\"bondedMod\",\"Two_Hand_Maces\",[\"Attack\"]]"
               }
             },
@@ -121,8 +540,8 @@
               "text": "使用技能時每消耗一個連擊可獲得終極#秒",
               "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Runic_Ward",
-                "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
               }
             },
             "metadata": {
@@ -141,8 +560,8 @@
               "text": "使用技能時每消耗一個連擊可獲得終極#秒",
               "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
-                "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
               }
             },
             "metadata": {
@@ -168,7 +587,7 @@
               "text": "你自身使用的重擊技能有#%機率造成額外一次餘震",
               "template": "你自身使用的重擊技能有{0}%機率造成額外一次餘震",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Ancient_Rune_of_the_Titan\",\"implicitMod\",\"Two_Hand_Maces\",[\"Aftershock\",\"Slam\"]]"
               }
             },
@@ -188,7 +607,7 @@
               "text": "你自身使用的重擊技能有#%機率造成額外一次餘震",
               "template": "你自身使用的重擊技能有{0}%機率造成額外一次餘震",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Ancient_Rune_of_the_Titan\",\"implicitMod\",\"Two_Hand_Maces\",[\"Aftershock\",\"Slam\"]]"
               }
             },
@@ -215,7 +634,7 @@
               "text": "擊中時會擊退敵人",
               "template": "擊中時會擊退敵人",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Tyrannys_Grip\",\"bondedMod\",\"Spears\",[\"Hit\",\"Knockback\"]]"
               }
             },
@@ -235,7 +654,7 @@
               "text": "擊中時會擊退敵人",
               "template": "擊中時會擊退敵人",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Tyrannys_Grip\",\"bondedMod\",\"Spears\",[\"Hit\",\"Knockback\"]]"
               }
             },
@@ -262,7 +681,7 @@
               "text": "每15點力量增加#%傷害",
               "template": "每15點力量增加{0}%傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Facebreaker\",\"bondedMod\",\"Gloves\",[\"Strength\"]]"
               }
             },
@@ -282,7 +701,7 @@
               "text": "每15點力量增加#%傷害",
               "template": "每15點力量增加{0}%傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Facebreaker\",\"bondedMod\",\"Gloves\",[\"Strength\"]]"
               }
             },
@@ -309,7 +728,7 @@
               "text": "觸發法術增加#%造成的法術傷害",
               "template": "觸發法術增加{0}%造成的法術傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Dusk_Vigil\",\"bondedMod\",\"Staves\",[\"Spell\",\"Trigger\"]]"
               }
             },
@@ -329,7 +748,7 @@
               "text": "觸發法術增加#%造成的法術傷害",
               "template": "觸發法術增加{0}%造成的法術傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Dusk_Vigil\",\"bondedMod\",\"Staves\",[\"Spell\",\"Trigger\"]]"
               }
             },
@@ -356,7 +775,7 @@
               "text": "你存在中的敵人被阻礙",
               "template": "你存在中的敵人被阻礙",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Amor_Mandragora\",\"bondedMod\",\"Talismans\",[\"Hinder\",\"Presence\"]]"
               }
             },
@@ -376,7 +795,7 @@
               "text": "你存在中的敵人被阻礙",
               "template": "你存在中的敵人被阻礙",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Amor_Mandragora\",\"bondedMod\",\"Talismans\",[\"Hinder\",\"Presence\"]]"
               }
             },
@@ -403,7 +822,7 @@
               "text": "增加#%藥劑魔力恢復率",
               "template": "增加{0}%藥劑魔力恢復率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Briskwrap\",\"bondedMod\",\"Body_Armours\",[\"Flask\"]]"
               }
             },
@@ -423,7 +842,7 @@
               "text": "增加#%藥劑魔力恢復率",
               "template": "增加{0}%藥劑魔力恢復率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Briskwrap\",\"bondedMod\",\"Body_Armours\",[\"Flask\"]]"
               }
             },
@@ -450,8 +869,8 @@
               "text": "附加#至#物理傷害",
               "template": "附加{0}至{1}物理傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
-                "key": "[\"Lesser_Tempered_Rune\",\"implicitMod\",\"Martial_Weapons\",[\"Physical\"]]"
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Legacy_of_Brynhands_Mark\",\"bondedMod\",\"One_Hand_Maces\",[]]"
               }
             },
             "metadata": {
@@ -470,8 +889,8 @@
               "text": "附加#至#物理傷害",
               "template": "附加{0}至{1}物理傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
-                "key": "[\"Legacy_of_Brynhands_Mark\",\"bondedMod\",\"One_Hand_Maces\",[]]"
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Lesser_Tempered_Rune\",\"implicitMod\",\"Martial_Weapons\",[\"Physical\"]]"
               }
             },
             "metadata": {
@@ -497,7 +916,7 @@
               "text": "變形時增加#%護甲",
               "template": "變形時增加{0}%護甲",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_The_Unleashed\",\"bondedMod\",\"Body_Armours\",[\"Armour\",\"Shapeshift\"]]"
               }
             },
@@ -517,7 +936,7 @@
               "text": "變形時增加#%護甲",
               "template": "變形時增加{0}%護甲",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_The_Unleashed\",\"bondedMod\",\"Body_Armours\",[\"Armour\",\"Shapeshift\"]]"
               }
             },
@@ -544,7 +963,7 @@
               "text": "獲得等同於#%物理傷害的額外火焰傷害",
               "template": "獲得等同於{0}%物理傷害的額外火焰傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Dusk_Vigil\",\"implicitMod\",\"Staves\",[\"Fire\",\"Gain\",\"Physical\"]]"
               }
             },
@@ -564,7 +983,7 @@
               "text": "獲得等同於#%物理傷害的額外火焰傷害",
               "template": "獲得等同於{0}%物理傷害的額外火焰傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Dusk_Vigil\",\"implicitMod\",\"Staves\",[\"Fire\",\"Gain\",\"Physical\"]]"
               }
             },
@@ -591,7 +1010,7 @@
               "text": "每5盛怒同時使你增加#%移動速度",
               "template": "每5盛怒同時使你增加{0}%移動速度",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Wings_of_Caelyn\",\"bondedMod\",\"Helmets\",[\"Rage\"]]"
               }
             },
@@ -611,7 +1030,7 @@
               "text": "每5盛怒同時使你增加#%移動速度",
               "template": "每5盛怒同時使你增加{0}%移動速度",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Wings_of_Caelyn\",\"bondedMod\",\"Helmets\",[\"Rage\"]]"
               }
             },
@@ -638,7 +1057,7 @@
               "text": "衝刺時增加#%符文保護回復率",
               "template": "衝刺時增加{0}%符文保護回復率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Runic_Ward",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
               }
             },
@@ -658,7 +1077,7 @@
               "text": "衝刺時增加#%符文保護回復率",
               "template": "衝刺時增加{0}%符文保護回復率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Runic_Ward",
                 "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
               }
             },
@@ -685,7 +1104,7 @@
               "text": "被包圍時，每秒回復#%生命",
               "template": "被包圍時，每秒回復{0}%生命",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Bramblejack\",\"bondedMod\",\"Body_Armours\",[\"Surrounded\"]]"
               }
             },
@@ -705,7 +1124,7 @@
               "text": "被包圍時，每秒回復#%生命",
               "template": "被包圍時，每秒回復{0}%生命",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Bramblejack\",\"bondedMod\",\"Body_Armours\",[\"Surrounded\"]]"
               }
             },
@@ -732,7 +1151,7 @@
               "text": "強化攻擊的技能有#%機率不計該次攻擊",
               "template": "強化攻擊的技能有{0}%機率不計該次攻擊",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Serles_Grit\",\"bondedMod\",\"One_Hand_Maces\",[\"Attack\",\"Empowered\"]]"
               }
             },
@@ -752,7 +1171,7 @@
               "text": "強化攻擊的技能有#%機率不計該次攻擊",
               "template": "強化攻擊的技能有{0}%機率不計該次攻擊",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Serles_Grit\",\"bondedMod\",\"One_Hand_Maces\",[\"Attack\",\"Empowered\"]]"
               }
             },
@@ -779,8 +1198,8 @@
               "text": "增加#%存在範圍的範圍效果",
               "template": "增加{0}%存在範圍的範圍效果",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
-                "key": "[\"Legacy_of_The_Vile_Knight\",\"bondedMod\",\"Helmets\",[\"Presence\"]]"
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "key": "[\"Fox_Idol\",\"implicitMod\",\"Sceptres\",[\"Presence\"]]"
               }
             },
             "metadata": {
@@ -799,8 +1218,8 @@
               "text": "增加#%存在範圍的範圍效果",
               "template": "增加{0}%存在範圍的範圍效果",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
-                "key": "[\"Fox_Idol\",\"implicitMod\",\"Sceptres\",[\"Presence\"]]"
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_The_Vile_Knight\",\"bondedMod\",\"Helmets\",[\"Presence\"]]"
               }
             },
             "metadata": {
@@ -826,7 +1245,7 @@
               "text": "當你停止衝刺時每已衝刺一秒，即獲得等同於#%最大生命的保護，最高20%，持續4秒",
               "template": "當你停止衝刺時每已衝刺一秒，即獲得等同於{0}%最大生命的保護，最高20%，持續4秒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Emergent_Protection\",\"implicitMod\",\"Boots\",[\"Guard\"]]"
               }
             },
@@ -846,7 +1265,7 @@
               "text": "當你停止衝刺時每已衝刺一秒，即獲得等同於#%最大生命的保護，最高20%，持續4秒",
               "template": "當你停止衝刺時每已衝刺一秒，即獲得等同於{0}%最大生命的保護，最高20%，持續4秒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Emergent_Protection\",\"implicitMod\",\"Boots\",[\"Guard\"]]"
               }
             },
@@ -873,7 +1292,7 @@
               "text": "增加#%敵人點燃持續時間",
               "template": "增加{0}%敵人點燃持續時間",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Candlemaker\",\"bondedMod\",\"Gloves\",[]]"
               }
             },
@@ -893,7 +1312,7 @@
               "text": "增加#%敵人點燃持續時間",
               "template": "增加{0}%敵人點燃持續時間",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Candlemaker\",\"bondedMod\",\"Gloves\",[]]"
               }
             },
@@ -920,7 +1339,7 @@
               "text": "增加#%荊棘暴擊傷害加成",
               "template": "增加{0}%荊棘暴擊傷害加成",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Briarpatch\",\"bondedMod\",\"Boots\",[\"CriticalDamageBonus\",\"Thorns\"]]"
               }
             },
@@ -940,7 +1359,7 @@
               "text": "增加#%荊棘暴擊傷害加成",
               "template": "增加{0}%荊棘暴擊傷害加成",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Briarpatch\",\"bondedMod\",\"Boots\",[\"CriticalDamageBonus\",\"Thorns\"]]"
               }
             },
@@ -967,7 +1386,7 @@
               "text": "增加#%最大符文保護",
               "template": "增加{0}%最大符文保護",
               "evidence": {
-                "url": "https://poe2db.tw/us/Runic_Ward",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
               }
             },
@@ -987,7 +1406,7 @@
               "text": "增加#%最大符文保護",
               "template": "增加{0}%最大符文保護",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Runic_Ward",
                 "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
               }
             },
@@ -1014,7 +1433,7 @@
               "text": "戰吼技能增加#%範圍效果",
               "template": "戰吼技能增加{0}%範圍效果",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Deidbell\",\"bondedMod\",\"Helmets\",[\"Warcry\"]]"
               }
             },
@@ -1034,7 +1453,7 @@
               "text": "戰吼技能增加#%範圍效果",
               "template": "戰吼技能增加{0}%範圍效果",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Deidbell\",\"bondedMod\",\"Helmets\",[\"Warcry\"]]"
               }
             },
@@ -1061,7 +1480,7 @@
               "text": "傷害穿透#%閃電抗性",
               "template": "傷害穿透{0}%閃電抗性",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Brain_Rattler\",\"bondedMod\",\"Two_Hand_Maces\",[\"Penetration\",\"Resistances\"]]"
               }
             },
@@ -1081,7 +1500,7 @@
               "text": "傷害穿透#%閃電抗性",
               "template": "傷害穿透{0}%閃電抗性",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Brain_Rattler\",\"bondedMod\",\"Two_Hand_Maces\",[\"Penetration\",\"Resistances\"]]"
               }
             },
@@ -1108,7 +1527,7 @@
               "text": "裝備護甲物品每擁有100總物品護甲值，即增加#%格擋機率",
               "template": "裝備護甲物品每擁有100總物品護甲值，即增加{0}%格擋機率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Bonded_Modifiers",
                 "key": "[\"Legacy_of_Ironbound\",\"bondedMod\",\"Bows\",[\"Block\",\"EquipArmour\",\"ItemArmour\"]]"
               }
             },
@@ -1128,7 +1547,7 @@
               "text": "裝備護甲物品每擁有100總物品護甲值，即增加#%格擋機率",
               "template": "裝備護甲物品每擁有100總物品護甲值，即增加{0}%格擋機率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Bonded_Modifiers",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Legacy_of_Ironbound\",\"bondedMod\",\"Bows\",[\"Block\",\"EquipArmour\",\"ItemArmour\"]]"
               }
             },
@@ -1195,9 +1614,9 @@
       "finalRate": "99.92%"
     },
     "stats": {
-      "total": 8313,
-      "eligible": 8313,
-      "complete": 8280,
+      "total": 8314,
+      "eligible": 8314,
+      "complete": 8281,
       "partial": 0,
       "missing": 33,
       "excluded": 0,
@@ -1401,12 +1820,12 @@
           "state": "missing"
         }
       ],
-      "finalTranslated": 8280,
+      "finalTranslated": 8281,
       "finalRate": "99.60%",
       "templateAudit": {
-        "total": 8313,
+        "total": 8314,
         "missing": 33,
-        "usable": 8197,
+        "usable": 8198,
         "unsafe": 83,
         "issues": [
           {

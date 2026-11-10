@@ -5081,9 +5081,9 @@
         },
         "zh_tw": {
           "type": "分層鎖甲",
-          "name": "殞落之形 分層鎖甲",
-          "text": "殞落之形 分層鎖甲 分層鎖甲",
-          "source": "cache"
+          "name": "殞落之形",
+          "text": "殞落之形 分層鎖甲",
+          "source": "poe2db"
         }
       },
       {
@@ -12557,8 +12557,8 @@
         },
         "zh_tw": {
           "type": "符煉魂骨之冠",
-          "name": "電弧守護者",
-          "text": "電弧守護者 符煉魂骨之冠",
+          "name": "弧之守護者",
+          "text": "弧之守護者 符煉魂骨之冠",
           "source": "poe2db"
         }
       },
@@ -14342,8 +14342,8 @@
         },
         "zh_tw": {
           "type": "魂骨之冠",
-          "name": "電弧守護者",
-          "text": "電弧守護者 魂骨之冠",
+          "name": "弧之守護者",
+          "text": "弧之守護者 魂骨之冠",
           "source": "poe2db"
         }
       },
@@ -17531,7 +17531,7 @@
         "type": "Legacy of Edyrn's Tusks",
         "zh_tw": {
           "type": "傳承．埃狄恩的曲牙",
-          "source": "cache"
+          "source": "poe2db"
         }
       },
       {
@@ -17607,7 +17607,7 @@
       {
         "type": "Legacy of Keeper of the Arc",
         "zh_tw": {
-          "type": "傳承．電弧守護者",
+          "type": "傳承．弧之守護者",
           "source": "poe2db"
         }
       },
@@ -24921,13 +24921,13 @@
         "type": "Remnant Potency II",
         "zh_tw": {
           "type": "痕跡強度 II",
-          "source": "poe2db"
+          "source": "cache"
         }
       },
       {
         "type": "Remnant Potency III",
         "zh_tw": {
-          "type": "痕跡強度 III",
+          "type": "痕跡強度 II",
           "source": "poe2db"
         }
       },
@@ -30891,7 +30891,7 @@
         "type": "Runeforged Warden Bow",
         "zh_tw": {
           "type": "符鍛守護者之弓",
-          "source": "cache"
+          "source": "poe2db"
         }
       },
       {
@@ -30905,7 +30905,7 @@
           "type": "符鍛守護者之弓",
           "name": "鐵縛者",
           "text": "鐵縛者 符鍛守護者之弓",
-          "source": "cache"
+          "source": "poe2db"
         }
       },
       {
