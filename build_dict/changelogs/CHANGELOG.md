@@ -1,6 +1,6 @@
 # POE2 官方交易字典最新编译报告 (CHANGELOG)
 
-> 🕒 报告时间（北京时间）：2026/11/10 14:32:45
+> 🕒 报告时间（北京时间）：2026/11/11 13:19:07
 
 ---
 
@@ -11,7 +11,7 @@
 | **🪙 通货材料** (static.json) | **786** | 786 | 🟢 0 项 | 🟢 无需补全 | **100.00%** |
 | **🔎 市集筛选** (filters.json) | **203** | 203 | 🟢 0 项 | 🟢 无需补全 | **100.00%** |
 | **📦 装备与暗金** (items.json) | **3898** | 0 | 🟡 3 项 | 完整 3895 / 部分 2 | **99.92%** |
-| **⚡ 核心词缀** (stats.json) | **8314** | 8228 | 🟡 33 项 | 完整 53 / 部分 0 | **99.60%** |
+| **⚡ 核心词缀** (stats.json) | **8315** | 8229 | 🟡 33 项 | 完整 53 / 部分 0 | **99.60%** |
 
 > 已排除占位项及无可见文本项；物品按名称和基底共同统计。完整率反映字段齐备程度，不代表全部译文已验证。
 
@@ -81,19 +81,13 @@
 
 ### 📦 装备与暗金变动 (items.json)
 
-**🟡 翻译与原文变更 (5 项)**
-
-- <code>[armour] The Fallen Formation Lamellar Mail</code> · 名称：<code>殞落之形 分層鎖甲</code> ➜ **<code>殞落之形</code>**
-- <code>[armour] Keeper of the Arc Runemastered Spiritbone Crown</code> · 名称：<code>電弧守護者</code> ➜ **<code>弧之守護者</code>**
-- <code>[armour] Keeper of the Arc Spiritbone Crown</code> · 名称：<code>電弧守護者</code> ➜ **<code>弧之守護者</code>**
-- <code>[currency] Legacy of Keeper of the Arc</code> · 基底：<code>傳承．電弧守護者</code> ➜ **<code>傳承．弧之守護者</code>**
-- <code>[gem] Remnant Potency III</code> · 基底：<code>痕跡強度 III</code> ➜ **<code>痕跡強度 II</code>**
+> 🟢 无内容变动
 
 ### ⚡ 核心词缀变动 (stats.json)
 
 **🟢 新增 (1 项)**
 
-- <code>[fractured] Allocates Adaptive Skin</code> ➜ <code>配置適應皮膚</code>
+- <code>[fractured] Allocates Guts</code> ➜ <code>配置膽量</code>
 
 ### 🪙 通货材料变动 (static.json)
 
