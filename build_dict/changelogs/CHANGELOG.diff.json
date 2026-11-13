@@ -27,7 +27,7 @@
               "text": "你身上每有一個詛咒，增加#%傷害",
               "template": "你身上每有一個詛咒，增加{0}%傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "url": "https://poe2db.tw/us/Unique_item",
                 "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
               }
             },
@@ -47,7 +47,7 @@
               "text": "你身上每有一個詛咒，增加#%傷害",
               "template": "你身上每有一個詛咒，增加{0}%傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Unique_item",
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
                 "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
               }
             },
@@ -74,7 +74,7 @@
               "text": "荊棘傷害的#%轉化為生命偷取",
               "template": "荊棘傷害的{0}%轉化為生命偷取",
               "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "url": "https://poe2db.tw/us/Unique_item",
                 "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
               }
             },
@@ -94,7 +94,7 @@
               "text": "荊棘傷害的#%轉化為生命偷取",
               "template": "荊棘傷害的{0}%轉化為生命偷取",
               "evidence": {
-                "url": "https://poe2db.tw/us/Unique_item",
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
                 "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
               }
             },
@@ -121,7 +121,7 @@
               "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
               "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
               "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "url": "https://poe2db.tw/us/Unique_item",
                 "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
               }
             },
@@ -141,7 +141,7 @@
               "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
               "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
               "evidence": {
-                "url": "https://poe2db.tw/us/Unique_item",
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
                 "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
               }
             },
@@ -168,7 +168,7 @@
               "text": "遠程無命中懲罰",
               "template": "遠程無命中懲罰",
               "evidence": {
-                "url": "https://poe2db.tw/us/Accuracy",
+                "url": "https://poe2db.tw/us/Physical_Damage",
                 "key": "[\"Extended_Cleaver\",\"implicitMod\",\"\",[\"Accuracy\"]]"
               }
             },
@@ -188,7 +188,7 @@
               "text": "遠程無命中懲罰",
               "template": "遠程無命中懲罰",
               "evidence": {
-                "url": "https://poe2db.tw/us/Physical_Damage",
+                "url": "https://poe2db.tw/us/Accuracy",
                 "key": "[\"Extended_Cleaver\",\"implicitMod\",\"\",[\"Accuracy\"]]"
               }
             },
@@ -215,8 +215,8 @@
               "text": "#層最大盛怒",
               "template": "{0}層最大盛怒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Soul_Core",
-                "key": "[\"Tzamotos_Soul_Core_of_Ferocity\",\"implicitMod\",\"Helmets\",[\"Rage\"]]"
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Bristleboar\",\"bondedMod\",\"Body_Armours\",[\"Rage\"]]"
               }
             },
             "metadata": {
@@ -235,8 +235,8 @@
               "text": "#層最大盛怒",
               "template": "{0}層最大盛怒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
-                "key": "[\"Legacy_of_Bristleboar\",\"bondedMod\",\"Body_Armours\",[\"Rage\"]]"
+                "url": "https://poe2db.tw/us/Soul_Core",
+                "key": "[\"Tzamotos_Soul_Core_of_Ferocity\",\"implicitMod\",\"Helmets\",[\"Rage\"]]"
               }
             },
             "metadata": {
@@ -262,8 +262,8 @@
               "text": "使用技能時每消耗一個連擊可獲得終極#秒",
               "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Runic_Ward",
-                "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
               }
             },
             "metadata": {
@@ -282,8 +282,8 @@
               "text": "使用技能時每消耗一個連擊可獲得終極#秒",
               "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
-                "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
               }
             },
             "metadata": {
@@ -309,7 +309,7 @@
               "text": "衝刺時增加#%符文保護回復率",
               "template": "衝刺時增加{0}%符文保護回復率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Runic_Ward",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
               }
             },
@@ -329,7 +329,7 @@
               "text": "衝刺時增加#%符文保護回復率",
               "template": "衝刺時增加{0}%符文保護回復率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Runic_Ward",
                 "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
               }
             },
@@ -356,7 +356,7 @@
               "text": "增加#%最大符文保護",
               "template": "增加{0}%最大符文保護",
               "evidence": {
-                "url": "https://poe2db.tw/us/Runic_Ward",
+                "url": "https://poe2db.tw/us/Rune",
                 "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
               }
             },
@@ -376,7 +376,7 @@
               "text": "增加#%最大符文保護",
               "template": "增加{0}%最大符文保護",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
+                "url": "https://poe2db.tw/us/Runic_Ward",
                 "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
               }
             },
