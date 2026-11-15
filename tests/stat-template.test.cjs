@@ -58,16 +58,48 @@ for (const translations of [['#最大生命', '#最大魔力'], ['#最大魔力'
     assert.equal(pool.size, 0, '冲突翻译必须被隔离，不能受完成顺序影响');
 }
 
-// 执行真正的 TS 解析器。编译只在内存中进行，不产生测试产物。
+// 固定词典只用于算法回归，避免在线译文措辞变化影响预期结果。
+const fixtureRows = [
+    ['explicit', 'stat_1345486764', '+1 to Maximum Spirit per # Maximum Life', '每#最大生命，+1最大精魂'],
+    ['explicit', 'stat_3299347043', '# to maximum Life', '#最大生命'],
+    ['explicit', 'stat_2241560081', '#% increased Attack Speed per 20 Dexterity', '每20敏捷增加#%攻擊速度'],
+    ['explicit', 'stat_2162097452', '# to Level of all Minion Skills', '全部召喚物技能等級#'],
+    ['explicit', 'spell', '#% increased Spell Damage', '增加#%法術傷害'],
+    ['explicit', 'dexterity', '# to Dexterity', '#點敏捷'],
+    ['implicit', 'prefix', '# Prefix Modifier allowed', '允許前綴#'],
+    ['implicit', 'suffix', '# Suffix Modifier allowed', '允許後綴#'],
+    ['granted', 'skill', 'Grants Skill: Level # Cast on Elemental Ailment', '賦予技能: 等級 # 元素異常狀態時施放'],
+    ['rune', 'stat_1524834794', 'Bonded: #% increased Damage per 15 Strength', '每15點力量增加#%傷害'],
+    ['rune', 'stat_995044379', '# to maximum Mana per 3 Item Armour on Equipped Helmet', '裝備的頭盔每有3物品護甲即#最大魔力'],
+    ['rune', 'stat_2291075173', 'Bonded: Every five Rage also grants you #% increased Movement Speed', '每5盛怒同時使你增加#%移動速度'],
+    ['rune', 'stat_293832783', 'When you stop Sprinting, gain Guard equal to #% of maximum Life per second spent Sprinting, up to a maximum of 20%, for 4 seconds', '當你停止衝刺時每已衝刺一秒，即獲得等同於#%最大生命的保護，最高20%，持續4秒'],
+    ...[['Conduit', '能量連結'], ['Heartstopper', '心靈永止'], ['Oasis', '幻景綠洲'], ['Bulwark', '守護']]
+        .map(([en, tw]) => ['explicit', en, en, tw]),
+    ...['Area', 'Map'].map(noun => ['explicit', 'stat_1031644647',
+        `Revived Monsters from Ritual Altars in ${noun} have #% increased chance to be Magic`, `測試${noun}魔法怪物機率增加#%`])
+];
+const fixtureStats = { result: [...new Set(fixtureRows.map(row => row[0]))].map(id => ({
+    id, entries: fixtureRows.filter(row => row[0] === id).map(([, key, text, tw]) => ({
+        id: `${id}.${key}`, text, zh_tw: { text: tw }
+    }))
+})) };
+// 执行真正的 TS 解析器；仅词典通过 require 在内存中注入。
 const result = buildSync({
     stdin: {
         contents: "export { parseFetchResults } from './src/parser/fetchParser'; export { parseStatsData } from './src/parser/statsParser'; export { translateStatText } from './src/core/statTranslator';",
         resolveDir: path.resolve(__dirname, '..'), loader: 'ts'
-    }, bundle: true, platform: 'node', format: 'cjs', write: false
+    }, bundle: true, platform: 'node', format: 'cjs', write: false, external: ['*/dict/stats.json']
 });
-const sandbox = { module: { exports: {} }, console, GM_setValue: () => {} };
-vm.runInNewContext(result.outputFiles[0].text, sandbox);
-const { parseFetchResults, parseStatsData, translateStatText } = sandbox.module.exports;
+function loadParser(stats) {
+    const sandbox = { module: { exports: {} }, console, GM_setValue: () => {}, require(id) {
+        assert(id.endsWith('/dict/stats.json'), `意外的外部依赖: ${id}`);
+        return stats;
+    } };
+    vm.runInNewContext(result.outputFiles[0].text, sandbox);
+    return sandbox.module.exports;
+}
+const fixtureParser = loadParser(fixtureStats);
+const { parseFetchResults, translateStatText } = fixtureParser;
 function parseMod(category, id, text, options = {}) {
     const mod = options.object ? { description: text, hash: id, extra: 123 } : text;
     const item = { [category + 'Mods']: [mod] };
@@ -105,6 +137,17 @@ for (const [category, text, expected] of [
     assert.equal(parseMod(category, null, text, { noHashes: true }), `${expected} (${text})`);
 }
 assert.equal(translateStatText('+3 to Level of all Minion Skills'), '全部召喚物技能等級+3');
+// 新旧合法语序都应通过；错误数值仍须由严格断言拦住。
+for (const [template, expected] of [['全部召喚物技能等級#', '全部召喚物技能等級+3'], ['#全部召喚物技能等級', '+3全部召喚物技能等級']]) {
+    const data = JSON.parse(JSON.stringify(fixtureStats));
+    data.result[0].entries.find(entry => entry.id === 'explicit.stat_2162097452').zh_tw.text = template;
+    const parser = loadParser(data);
+    assert.equal(parser.translateStatText('+3 to Level of all Minion Skills'), expected);
+    assert.notEqual(parser.translateStatText('+4 to Level of all Minion Skills'), expected);
+    const response = { result: [{ item: { explicitMods: ['+3 to Level of all Minion Skills'] } }] };
+    parser.parseFetchResults(response, {}, {});
+    assert.equal(response.result[0].item.explicitMods[0], `${expected} (+3 to Level of all Minion Skills)`);
+}
 assert.equal(parseMod('rune', 'rune.stat_1524834794', 'Bonded: 20% increased Damage per 15 Strength'),
     '每15點力量增加20%傷害 (Bonded: 20% increased Damage per 15 Strength)');
 assert.equal(parseMod('rune', 'rune.stat_995044379', '30 to maximum Mana per 3 Item Armour on Equipped Helmet'),
@@ -125,18 +168,35 @@ for (const noun of ['Area', 'Map']) {
 }
 
 const stats = require('../src/dict/stats.json');
+const realParser = loadParser(stats);
 const audit = auditStatTemplates(stats);
 assert.equal(audit.total, audit.usable + audit.unsafe + audit.missing);
+let realTranslationsChecked = 0;
 for (const category of stats.result) {
     for (const entry of category.entries) {
-        if (!entry.zh_tw?.text || compileStatTemplate(entry.text, entry.zh_tw.template || entry.zh_tw.text).template) continue;
+        if (!entry.zh_tw?.text) continue;
+        const { template } = compileStatTemplate(entry.text, entry.zh_tw.template || entry.zh_tw.text);
         let index = 0;
-        const input = entry.text.replace(/#/g, () => String(17 + index++ * 12));
-        assert.equal(parseMod(category.id, entry.id, input), input, `不安全模板必须保留英文: ${entry.id}`);
+        const input = entry.text.replace(/#|\{(\d+)\}/g, (_, slot) => String(17 + (slot === undefined ? index++ : Number(slot)) * 12));
+        const response = { result: [{ item: { [category.id + 'Mods']: [input], extended: { hashes: { [category.id]: [[entry.id, [0]]] } } } }] };
+        realParser.parseFetchResults(response, {}, {});
+        const actual = response.result[0].item[category.id + 'Mods'][0];
+        if (!template) {
+            assert.equal(actual, input, `不安全模板必须保留英文: ${entry.id}`);
+        } else {
+            const translated = realParser.translateStatText(input, category.id, [entry.id]);
+            // 同 ID 候选冲突时允许保留英文；成功翻译必须与当前模板一致。
+            if (translated !== null) {
+                assert.equal(translated, renderStatTemplate(template, input), `真实词典模板输出: ${entry.id}`);
+                realTranslationsChecked++;
+            }
+            assert.equal(actual, translated === null ? input : `${translated} (${input})`, `真实词典双语输出: ${entry.id}`);
+        }
     }
 }
+assert(realTranslationsChecked > 0, '真实词缀词典不能全部匹配失败');
 const metadata = JSON.parse(JSON.stringify(require('../build_dict/raw/raw_en/stats.json')));
-parseStatsData(metadata, {});
+realParser.parseStatsData(metadata, {});
 for (const issue of audit.issues) {
     const entry = metadata.result.flatMap(c => c.entries).find(e => e.id === issue.id);
     if (entry) assert.equal(entry.twText, undefined, `筛选器不能继续暴露不安全模板: ${issue.id}`);

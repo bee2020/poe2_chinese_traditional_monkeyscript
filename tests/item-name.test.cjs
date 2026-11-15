@@ -4,15 +4,28 @@ const vm = require('vm');
 const fs = require('fs');
 const { buildSync, transformSync } = require('esbuild');
 
+// 名称算法使用固定样例；真实词典另外按当前字段校验，不固定在线中文措辞。
+const itemFixture = [{ id: 'fixtures', entries: [
+    { type: 'Rattling Sceptre', zh_tw: { type: '雜響權杖' } },
+    { type: 'Tasalian Focus', zh_tw: { type: '塔薩里奧法器' } },
+    { type: 'Runeforged Tasalian Focus', zh_tw: { type: '符鍛塔薩里奧法器' } },
+    { name: 'The Dark Defiler', zh_tw: { name: '黑暗玷汙者' } }
+] }];
 const compiled = buildSync({
     stdin: {
         contents: "export {parseFetchResults} from './src/parser/fetchParser'; export {parseItemsData,translateItemText,formatTranslatedItemText} from './src/parser/itemsParser';",
         resolveDir: path.resolve(__dirname, '..'), loader: 'ts'
-    }, bundle: true, platform: 'node', format: 'cjs', write: false
+    }, bundle: true, platform: 'node', format: 'cjs', write: false, external: ['*/dict/items.json']
 });
-const sandbox = { module: { exports: {} }, console, GM_setValue: () => {} };
-vm.runInNewContext(compiled.outputFiles[0].text, sandbox);
-const { parseFetchResults, parseItemsData, translateItemText, formatTranslatedItemText } = sandbox.module.exports;
+function loadParser(items) {
+    const sandbox = { module: { exports: {} }, console, GM_setValue: () => {}, require(id) {
+        assert(id.endsWith('/dict/items.json'), `意外的外部依赖: ${id}`);
+        return items;
+    } };
+    vm.runInNewContext(compiled.outputFiles[0].text, sandbox);
+    return sandbox.module.exports;
+}
+const { parseFetchResults, parseItemsData, translateItemText, formatTranslatedItemText } = loadParser(itemFixture);
 
 assert.equal(formatTranslatedItemText('Rattling Sceptre'), '雜響權杖 (Rattling Sceptre)');
 assert.equal(formatTranslatedItemText('Exceptional Tasalian Focus'), '卓越塔薩里奧法器 (Exceptional Tasalian Focus)');
@@ -73,4 +86,22 @@ assert.equal(options.result[0].entries[2].text, '黑暗玷汙者 雜響權杖 (T
 const firstOptions = JSON.stringify(options);
 parseItemsData(options, {});
 assert.equal(JSON.stringify(options), firstOptions);
+const realItems = require('../src/dict/items.json');
+const realParser = loadParser(realItems);
+let checked = 0;
+for (const field of ['type', 'name']) {
+    const translations = new Map();
+    for (const group of realItems) for (const entry of group.entries || []) {
+        const original = entry[field], translated = entry.zh_tw?.[field];
+        if (!original || !translated?.trim() || original === translated) continue;
+        if (!translations.has(original)) translations.set(original, new Set());
+        translations.get(original).add(translated);
+    }
+    for (const [original, values] of translations) {
+        const expected = values.size === 1 ? `${[...values][0]} (${original})` : original;
+        assert.equal(realParser.formatTranslatedItemText(original, field), expected, `真实词典名称/冲突处理: ${original}`);
+        checked++;
+    }
+}
+assert(checked > 0, '真实物品词典不能没有可检查的译文');
 console.log('✅ 物品名称回归通过：精确双语、卓越前缀、空名称、未知组合、随机名称与重复处理');
