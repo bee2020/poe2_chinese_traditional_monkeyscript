@@ -505,7 +505,7 @@
             "template": "你身上每有一個詛咒，增加{0}%傷害",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Unique_item",
+              "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
               "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
             }
           }
@@ -785,7 +785,7 @@
           "text": "# to Level of all Cold Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部冰冷技能等級#",
+            "text": "#全部冰冷技能等級",
             "source": "official"
           }
         },
@@ -1141,7 +1141,7 @@
           "text": "# to Level of all Lightning Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部閃電技能等級#",
+            "text": "#全部閃電技能等級",
             "source": "official"
           }
         },
@@ -1438,7 +1438,7 @@
           "text": "# to Level of all Projectile Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部投射物技能等級#",
+            "text": "#全部投射物技能等級",
             "source": "official"
           }
         },
@@ -1573,7 +1573,7 @@
           "text": "# to Level of all Spell Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部法術技能等級#",
+            "text": "#全部法術技能等級",
             "source": "official"
           }
         },
@@ -3018,7 +3018,7 @@
           "text": "# to Level of all Lightning Spell Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部閃電法術技能等級#",
+            "text": "#全部閃電法術技能等級",
             "source": "official"
           }
         },
@@ -3279,7 +3279,7 @@
           "text": "# to Level of all Physical Spell Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部物理法術技能等級#",
+            "text": "#全部物理法術技能等級",
             "source": "official"
           }
         },
@@ -3837,7 +3837,7 @@
             "template": "荊棘傷害的{0}%轉化為生命偷取",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Unique_item",
+              "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
               "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
             }
           }
@@ -4756,7 +4756,7 @@
           "text": "# to Level of all Mark Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "#所有印記技能等級",
+            "text": "#全部印記技能等級",
             "source": "official"
           }
         },
@@ -5418,7 +5418,7 @@
           "text": "# to Level of all Minion Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部召喚物技能等級#",
+            "text": "#全部召喚物技能等級",
             "source": "official"
           }
         },
@@ -5706,7 +5706,7 @@
           "text": "# to Level of all Cold Spell Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部冰冷法術技能等級#",
+            "text": "#全部冰冷法術技能等級",
             "source": "official"
           }
         },
@@ -6012,7 +6012,7 @@
             "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Unique_item",
+              "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
               "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
             }
           }
@@ -17574,7 +17574,7 @@
           "text": "# to Level of all Attack Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部攻擊技能等級#",
+            "text": "#全部攻擊技能等級",
             "source": "official"
           }
         },
@@ -20927,7 +20927,7 @@
           "text": "# to Level of Elemental Weakness Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "元素要害技能等級#",
+            "text": "#元素要害技能等級",
             "source": "official"
           }
         },
@@ -23440,7 +23440,7 @@
           "text": "# to Level of all Chaos Spell Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部混沌法術技能等級#",
+            "text": "#全部混沌法術技能等級",
             "source": "official"
           }
         },
@@ -26649,7 +26649,7 @@
           "text": "# to Level of all Fire Spell Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部火焰法術技能等級#",
+            "text": "#全部火焰法術技能等級",
             "source": "official"
           }
         },
@@ -26946,7 +26946,7 @@
           "text": "# to Level of all Chaos Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部混沌技能等級#",
+            "text": "#全部混沌技能等級",
             "source": "official"
           }
         },
@@ -27491,7 +27491,7 @@
           "text": "# to Level of all Curse Skills",
           "type": "explicit",
           "zh_tw": {
-            "text": "全部詛咒技能等級#",
+            "text": "#全部詛咒技能等級",
             "source": "official"
           }
         },
@@ -28349,7 +28349,7 @@
           "text": "# to Level of all Cold Skills",
           "type": "implicit",
           "zh_tw": {
-            "text": "全部冰冷技能等級#",
+            "text": "#全部冰冷技能等級",
             "source": "official"
           }
         },
@@ -30291,7 +30291,7 @@
           "text": "# to Level of all Projectile Skills",
           "type": "fractured",
           "zh_tw": {
-            "text": "全部投射物技能等級#",
+            "text": "#全部投射物技能等級",
             "source": "official"
           }
         },
@@ -30309,7 +30309,7 @@
           "text": "# to Level of all Spell Skills",
           "type": "fractured",
           "zh_tw": {
-            "text": "全部法術技能等級#",
+            "text": "#全部法術技能等級",
             "source": "official"
           }
         },
@@ -30786,7 +30786,7 @@
           "text": "# to Level of all Lightning Spell Skills",
           "type": "fractured",
           "zh_tw": {
-            "text": "全部閃電法術技能等級#",
+            "text": "#全部閃電法術技能等級",
             "source": "official"
           }
         },
@@ -30903,7 +30903,7 @@
           "text": "# to Level of all Physical Spell Skills",
           "type": "fractured",
           "zh_tw": {
-            "text": "全部物理法術技能等級#",
+            "text": "#全部物理法術技能等級",
             "source": "official"
           }
         },
@@ -31443,7 +31443,7 @@
           "text": "# to Level of all Mark Skills",
           "type": "fractured",
           "zh_tw": {
-            "text": "#所有印記技能等級",
+            "text": "#全部印記技能等級",
             "source": "official"
           }
         },
@@ -31704,7 +31704,7 @@
           "text": "# to Level of all Minion Skills",
           "type": "fractured",
           "zh_tw": {
-            "text": "全部召喚物技能等級#",
+            "text": "#全部召喚物技能等級",
             "source": "official"
           }
         },
@@ -31803,7 +31803,7 @@
           "text": "# to Level of all Cold Spell Skills",
           "type": "fractured",
           "zh_tw": {
-            "text": "全部冰冷法術技能等級#",
+            "text": "#全部冰冷法術技能等級",
             "source": "official"
           }
         },
@@ -36029,6 +36029,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|43250",
+          "text": "Allocates Adaptive Skin",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置適應皮膚",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|4331",
           "text": "Allocates Guided Hand",
           "type": "fractured",
@@ -36340,6 +36349,15 @@
           "type": "fractured",
           "zh_tw": {
             "text": "配置廣域壁壘",
+            "source": "official"
+          }
+        },
+        {
+          "id": "fractured.stat_2954116742|46499",
+          "text": "Allocates Guts",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置膽量",
             "source": "official"
           }
         },
@@ -37685,6 +37703,15 @@
           }
         },
         {
+          "id": "fractured.stat_2954116742|59433",
+          "text": "Allocates Thirst for Endurance",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置耐力渴求",
+            "source": "official"
+          }
+        },
+        {
           "id": "fractured.stat_2954116742|59541",
           "text": "Allocates Necrotised Flesh",
           "type": "fractured",
@@ -38715,7 +38742,7 @@
           "text": "# to Level of all Attack Skills",
           "type": "fractured",
           "zh_tw": {
-            "text": "全部攻擊技能等級#",
+            "text": "#全部攻擊技能等級",
             "source": "official"
           }
         },
@@ -40363,7 +40390,7 @@
           "text": "# to Level of all Chaos Spell Skills",
           "type": "fractured",
           "zh_tw": {
-            "text": "全部混沌法術技能等級#",
+            "text": "#全部混沌法術技能等級",
             "source": "official"
           }
         },
@@ -40732,7 +40759,7 @@
           "text": "# to Level of all Fire Spell Skills",
           "type": "fractured",
           "zh_tw": {
-            "text": "全部火焰法術技能等級#",
+            "text": "#全部火焰法術技能等級",
             "source": "official"
           }
         },
@@ -41440,7 +41467,7 @@
           "text": "# to Level of all Spell Skills",
           "type": "crafted",
           "zh_tw": {
-            "text": "全部法術技能等級#",
+            "text": "#全部法術技能等級",
             "source": "official"
           }
         },
@@ -41891,7 +41918,7 @@
           "text": "# to Level of all Minion Skills",
           "type": "crafted",
           "zh_tw": {
-            "text": "全部召喚物技能等級#",
+            "text": "#全部召喚物技能等級",
             "source": "official"
           }
         },
@@ -50113,7 +50140,7 @@
           "text": "# to Level of all Attack Skills",
           "type": "crafted",
           "zh_tw": {
-            "text": "全部攻擊技能等級#",
+            "text": "#全部攻擊技能等級",
             "source": "official"
           }
         },
@@ -51143,7 +51170,7 @@
           "text": "# to Level of all Lightning Spell Skills",
           "type": "enchant",
           "zh_tw": {
-            "text": "全部閃電法術技能等級#",
+            "text": "#全部閃電法術技能等級",
             "source": "official"
           }
         },
@@ -51152,7 +51179,7 @@
           "text": "# to Level of all Physical Spell Skills",
           "type": "enchant",
           "zh_tw": {
-            "text": "全部物理法術技能等級#",
+            "text": "#全部物理法術技能等級",
             "source": "official"
           }
         },
@@ -51314,7 +51341,7 @@
           "text": "# to Level of all Minion Skills",
           "type": "enchant",
           "zh_tw": {
-            "text": "全部召喚物技能等級#",
+            "text": "#全部召喚物技能等級",
             "source": "official"
           }
         },
@@ -51350,7 +51377,7 @@
           "text": "# to Level of all Cold Spell Skills",
           "type": "enchant",
           "zh_tw": {
-            "text": "全部冰冷法術技能等級#",
+            "text": "#全部冰冷法術技能等級",
             "source": "official"
           }
         },
@@ -59801,7 +59828,7 @@
           "text": "# to Level of all Chaos Spell Skills",
           "type": "enchant",
           "zh_tw": {
-            "text": "全部混沌法術技能等級#",
+            "text": "#全部混沌法術技能等級",
             "source": "official"
           }
         },
@@ -59873,7 +59900,7 @@
           "text": "# to Level of all Fire Spell Skills",
           "type": "enchant",
           "zh_tw": {
-            "text": "全部火焰法術技能等級#",
+            "text": "#全部火焰法術技能等級",
             "source": "official"
           }
         },
@@ -60205,7 +60232,7 @@
           "text": "# to Level of all Lightning Skills",
           "type": "augment",
           "zh_tw": {
-            "text": "全部閃電技能等級#",
+            "text": "#全部閃電技能等級",
             "source": "official"
           }
         },
@@ -60286,7 +60313,7 @@
           "text": "# to Level of all Spell Skills",
           "type": "augment",
           "zh_tw": {
-            "text": "全部法術技能等級#",
+            "text": "#全部法術技能等級",
             "source": "official"
           }
         },
@@ -60471,8 +60498,8 @@
             "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Rune",
-              "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
+              "url": "https://poe2db.tw/us/Runic_Ward",
+              "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
             }
           }
         },
@@ -61446,7 +61473,7 @@
           "text": "# to Level of all Mark Skills",
           "type": "augment",
           "zh_tw": {
-            "text": "#所有印記技能等級",
+            "text": "#全部印記技能等級",
             "source": "official"
           }
         },
@@ -61902,7 +61929,7 @@
           "text": "# to Level of all Strike Skill Gems",
           "type": "augment",
           "zh_tw": {
-            "text": "#全部風暴技能寶石等級",
+            "text": "#全部打擊技能寶石等級",
             "source": "official"
           }
         },
@@ -62073,7 +62100,7 @@
           "text": "Bonded: # to Level of all Attack Skills",
           "type": "augment",
           "zh_tw": {
-            "text": "命定: 全部攻擊技能等級#",
+            "text": "命定: #全部攻擊技能等級",
             "source": "official"
           }
         },
@@ -62095,7 +62122,7 @@
             "template": "衝刺時增加{0}%符文保護回復率",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Rune",
+              "url": "https://poe2db.tw/us/Runic_Ward",
               "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
             }
           }
@@ -63140,7 +63167,7 @@
           "text": "Bonded: # to Level of all Minion Skills",
           "type": "augment",
           "zh_tw": {
-            "text": "命定: 全部召喚物技能等級#",
+            "text": "命定: #全部召喚物技能等級",
             "source": "official"
           }
         },
@@ -63777,7 +63804,7 @@
             "template": "增加{0}%最大符文保護",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Rune",
+              "url": "https://poe2db.tw/us/Runic_Ward",
               "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
             }
           }
@@ -64400,7 +64427,7 @@
           "text": "Bonded: # to Level of all Lightning Skills",
           "type": "augment",
           "zh_tw": {
-            "text": "命定: 全部閃電技能等級#",
+            "text": "命定: #全部閃電技能等級",
             "source": "official"
           }
         },
@@ -65166,7 +65193,7 @@
           "text": "# to Level of all Curse Skills",
           "type": "augment",
           "zh_tw": {
-            "text": "全部詛咒技能等級#",
+            "text": "#全部詛咒技能等級",
             "source": "official"
           }
         },
@@ -65933,7 +65960,7 @@
           "text": "# to Level of all Projectile Skills",
           "type": "desecrated",
           "zh_tw": {
-            "text": "全部投射物技能等級#",
+            "text": "#全部投射物技能等級",
             "source": "official"
           }
         },
@@ -65951,7 +65978,7 @@
           "text": "# to Level of all Spell Skills",
           "type": "desecrated",
           "zh_tw": {
-            "text": "全部法術技能等級#",
+            "text": "#全部法術技能等級",
             "source": "official"
           }
         },
@@ -66518,7 +66545,7 @@
           "text": "# to Level of all Lightning Spell Skills",
           "type": "desecrated",
           "zh_tw": {
-            "text": "全部閃電法術技能等級#",
+            "text": "#全部閃電法術技能等級",
             "source": "official"
           }
         },
@@ -66635,7 +66662,7 @@
           "text": "# to Level of all Physical Spell Skills",
           "type": "desecrated",
           "zh_tw": {
-            "text": "全部物理法術技能等級#",
+            "text": "#全部物理法術技能等級",
             "source": "official"
           }
         },
@@ -67310,7 +67337,7 @@
           "text": "# to Level of all Mark Skills",
           "type": "desecrated",
           "zh_tw": {
-            "text": "#所有印記技能等級",
+            "text": "#全部印記技能等級",
             "source": "official"
           }
         },
@@ -67616,7 +67643,7 @@
           "text": "# to Level of all Minion Skills",
           "type": "desecrated",
           "zh_tw": {
-            "text": "全部召喚物技能等級#",
+            "text": "#全部召喚物技能等級",
             "source": "official"
           }
         },
@@ -67724,7 +67751,7 @@
           "text": "# to Level of all Cold Spell Skills",
           "type": "desecrated",
           "zh_tw": {
-            "text": "全部冰冷法術技能等級#",
+            "text": "#全部冰冷法術技能等級",
             "source": "official"
           }
         },
@@ -71131,7 +71158,7 @@
           "text": "# to Level of all Chaos Spell Skills",
           "type": "desecrated",
           "zh_tw": {
-            "text": "全部混沌法術技能等級#",
+            "text": "#全部混沌法術技能等級",
             "source": "official"
           }
         },
@@ -71635,7 +71662,7 @@
           "text": "# to Level of all Fire Spell Skills",
           "type": "desecrated",
           "zh_tw": {
-            "text": "全部火焰法術技能等級#",
+            "text": "#全部火焰法術技能等級",
             "source": "official"
           }
         },

@@ -2,33 +2,1118 @@
   "baselineAvailable": true,
   "changes": {
     "items": {
-      "added": [],
-      "removed": [],
-      "modified": []
-    },
-    "stats": {
-      "added": [],
+      "added": [
+        {
+          "key": "[\"entry\",\"currency\",[\"Soul Core of Vizoma\",\"\"]]",
+          "desc": "[currency] Soul Core of Vizoma",
+          "original": {
+            "type": "Soul Core of Vizoma"
+          },
+          "translation": {
+            "type": "威索瑪靈魂核心"
+          },
+          "metadata": {
+            "source": "poe2db_crawler"
+          },
+          "occurrences": 1
+        }
+      ],
       "removed": [],
       "modified": [
         {
-          "key": "[\"entry\",\"rune\",\"rune.stat_10502714\"]",
-          "desc": "[rune] Bonded: # to Maximum Rage",
+          "key": "[\"entry\",\"armour\",[\"Lamellar Mail\",\"The Fallen Formation\"]]",
+          "desc": "[armour] The Fallen Formation Lamellar Mail",
+          "fields": [
+            "translation",
+            "metadata"
+          ],
+          "before": {
+            "desc": "[armour] The Fallen Formation Lamellar Mail",
+            "original": {
+              "type": "Lamellar Mail",
+              "text": "The Fallen Formation Lamellar Mail",
+              "name": "The Fallen Formation",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "分層鎖甲",
+              "name": "殞落之形 分層鎖甲",
+              "text": "殞落之形 分層鎖甲 分層鎖甲"
+            },
+            "metadata": {
+              "source": "cache"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[armour] The Fallen Formation Lamellar Mail",
+            "original": {
+              "type": "Lamellar Mail",
+              "text": "The Fallen Formation Lamellar Mail",
+              "name": "The Fallen Formation",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "分層鎖甲",
+              "name": "殞落之形",
+              "text": "殞落之形 分層鎖甲"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"armour\",[\"Runemastered Spiritbone Crown\",\"Keeper of the Arc\"]]",
+          "desc": "[armour] Keeper of the Arc Runemastered Spiritbone Crown",
           "fields": [
             "translation"
           ],
           "before": {
-            "desc": "[rune] Bonded: # to Maximum Rage",
+            "desc": "[armour] Keeper of the Arc Runemastered Spiritbone Crown",
             "original": {
-              "id": "rune.stat_10502714",
-              "text": "Bonded: # to Maximum Rage",
-              "type": "augment"
+              "type": "Runemastered Spiritbone Crown",
+              "text": "Keeper of the Arc Runemastered Spiritbone Crown",
+              "name": "Keeper of the Arc",
+              "flags": {
+                "unique": true
+              }
             },
             "translation": {
-              "text": "#層最大盛怒",
-              "template": "{0}層最大盛怒",
+              "type": "符煉魂骨之冠",
+              "name": "電弧守護者",
+              "text": "電弧守護者 符煉魂骨之冠"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[armour] Keeper of the Arc Runemastered Spiritbone Crown",
+            "original": {
+              "type": "Runemastered Spiritbone Crown",
+              "text": "Keeper of the Arc Runemastered Spiritbone Crown",
+              "name": "Keeper of the Arc",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "符煉魂骨之冠",
+              "name": "弧之守護者",
+              "text": "弧之守護者 符煉魂骨之冠"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"armour\",[\"Spiritbone Crown\",\"Keeper of the Arc\"]]",
+          "desc": "[armour] Keeper of the Arc Spiritbone Crown",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[armour] Keeper of the Arc Spiritbone Crown",
+            "original": {
+              "type": "Spiritbone Crown",
+              "text": "Keeper of the Arc Spiritbone Crown",
+              "name": "Keeper of the Arc",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "魂骨之冠",
+              "name": "電弧守護者",
+              "text": "電弧守護者 魂骨之冠"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[armour] Keeper of the Arc Spiritbone Crown",
+            "original": {
+              "type": "Spiritbone Crown",
+              "text": "Keeper of the Arc Spiritbone Crown",
+              "name": "Keeper of the Arc",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "魂骨之冠",
+              "name": "弧之守護者",
+              "text": "弧之守護者 魂骨之冠"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"currency\",[\"Legacy of Edyrn's Tusks\",\"\"]]",
+          "desc": "[currency] Legacy of Edyrn's Tusks",
+          "fields": [
+            "metadata"
+          ],
+          "before": {
+            "desc": "[currency] Legacy of Edyrn's Tusks",
+            "original": {
+              "type": "Legacy of Edyrn's Tusks"
+            },
+            "translation": {
+              "type": "傳承．埃狄恩的曲牙"
+            },
+            "metadata": {
+              "source": "cache"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[currency] Legacy of Edyrn's Tusks",
+            "original": {
+              "type": "Legacy of Edyrn's Tusks"
+            },
+            "translation": {
+              "type": "傳承．埃狄恩的曲牙"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"currency\",[\"Legacy of Keeper of the Arc\",\"\"]]",
+          "desc": "[currency] Legacy of Keeper of the Arc",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[currency] Legacy of Keeper of the Arc",
+            "original": {
+              "type": "Legacy of Keeper of the Arc"
+            },
+            "translation": {
+              "type": "傳承．電弧守護者"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[currency] Legacy of Keeper of the Arc",
+            "original": {
+              "type": "Legacy of Keeper of the Arc"
+            },
+            "translation": {
+              "type": "傳承．弧之守護者"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"gem\",[\"Remnant Potency II\",\"\"]]",
+          "desc": "[gem] Remnant Potency II",
+          "fields": [
+            "metadata"
+          ],
+          "before": {
+            "desc": "[gem] Remnant Potency II",
+            "original": {
+              "type": "Remnant Potency II"
+            },
+            "translation": {
+              "type": "痕跡強度 II"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[gem] Remnant Potency II",
+            "original": {
+              "type": "Remnant Potency II"
+            },
+            "translation": {
+              "type": "痕跡強度 II"
+            },
+            "metadata": {
+              "source": "cache"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"gem\",[\"Remnant Potency III\",\"\"]]",
+          "desc": "[gem] Remnant Potency III",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[gem] Remnant Potency III",
+            "original": {
+              "type": "Remnant Potency III"
+            },
+            "translation": {
+              "type": "痕跡強度 III"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[gem] Remnant Potency III",
+            "original": {
+              "type": "Remnant Potency III"
+            },
+            "translation": {
+              "type": "痕跡強度 II"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"weapon\",[\"Runeforged Warden Bow\",\"\"]]",
+          "desc": "[weapon] Runeforged Warden Bow",
+          "fields": [
+            "metadata"
+          ],
+          "before": {
+            "desc": "[weapon] Runeforged Warden Bow",
+            "original": {
+              "type": "Runeforged Warden Bow"
+            },
+            "translation": {
+              "type": "符鍛守護者之弓"
+            },
+            "metadata": {
+              "source": "cache"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[weapon] Runeforged Warden Bow",
+            "original": {
+              "type": "Runeforged Warden Bow"
+            },
+            "translation": {
+              "type": "符鍛守護者之弓"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"weapon\",[\"Runeforged Warden Bow\",\"Ironbound\"]]",
+          "desc": "[weapon] Ironbound Runeforged Warden Bow",
+          "fields": [
+            "metadata"
+          ],
+          "before": {
+            "desc": "[weapon] Ironbound Runeforged Warden Bow",
+            "original": {
+              "type": "Runeforged Warden Bow",
+              "text": "Ironbound Runeforged Warden Bow",
+              "name": "Ironbound",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "符鍛守護者之弓",
+              "name": "鐵縛者",
+              "text": "鐵縛者 符鍛守護者之弓"
+            },
+            "metadata": {
+              "source": "cache"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[weapon] Ironbound Runeforged Warden Bow",
+            "original": {
+              "type": "Runeforged Warden Bow",
+              "text": "Ironbound Runeforged Warden Bow",
+              "name": "Ironbound",
+              "flags": {
+                "unique": true
+              }
+            },
+            "translation": {
+              "type": "符鍛守護者之弓",
+              "name": "鐵縛者",
+              "text": "鐵縛者 符鍛守護者之弓"
+            },
+            "metadata": {
+              "source": "poe2db"
+            },
+            "occurrences": 1
+          }
+        }
+      ]
+    },
+    "stats": {
+      "added": [
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_2954116742|43250\"]",
+          "desc": "[fractured] Allocates Adaptive Skin",
+          "original": {
+            "id": "fractured.stat_2954116742|43250",
+            "text": "Allocates Adaptive Skin",
+            "type": "fractured"
+          },
+          "translation": {
+            "text": "配置適應皮膚"
+          },
+          "metadata": {
+            "source": "official"
+          },
+          "occurrences": 1
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_2954116742|46499\"]",
+          "desc": "[fractured] Allocates Guts",
+          "original": {
+            "id": "fractured.stat_2954116742|46499",
+            "text": "Allocates Guts",
+            "type": "fractured"
+          },
+          "translation": {
+            "text": "配置膽量"
+          },
+          "metadata": {
+            "source": "official"
+          },
+          "occurrences": 1
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_2954116742|59433\"]",
+          "desc": "[fractured] Allocates Thirst for Endurance",
+          "original": {
+            "id": "fractured.stat_2954116742|59433",
+            "text": "Allocates Thirst for Endurance",
+            "type": "fractured"
+          },
+          "translation": {
+            "text": "配置耐力渴求"
+          },
+          "metadata": {
+            "source": "official"
+          },
+          "occurrences": 1
+        }
+      ],
+      "removed": [],
+      "modified": [
+        {
+          "key": "[\"entry\",\"crafted\",\"crafted.stat_124131830\"]",
+          "desc": "[crafted] # to Level of all Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[crafted] # to Level of all Spell Skills",
+            "original": {
+              "id": "crafted.stat_124131830",
+              "text": "# to Level of all Spell Skills",
+              "type": "crafted"
+            },
+            "translation": {
+              "text": "全部法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[crafted] # to Level of all Spell Skills",
+            "original": {
+              "id": "crafted.stat_124131830",
+              "text": "# to Level of all Spell Skills",
+              "type": "crafted"
+            },
+            "translation": {
+              "text": "#全部法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"crafted\",\"crafted.stat_2162097452\"]",
+          "desc": "[crafted] # to Level of all Minion Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[crafted] # to Level of all Minion Skills",
+            "original": {
+              "id": "crafted.stat_2162097452",
+              "text": "# to Level of all Minion Skills",
+              "type": "crafted"
+            },
+            "translation": {
+              "text": "全部召喚物技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[crafted] # to Level of all Minion Skills",
+            "original": {
+              "id": "crafted.stat_2162097452",
+              "text": "# to Level of all Minion Skills",
+              "type": "crafted"
+            },
+            "translation": {
+              "text": "#全部召喚物技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"crafted\",\"crafted.stat_3035140377\"]",
+          "desc": "[crafted] # to Level of all Attack Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[crafted] # to Level of all Attack Skills",
+            "original": {
+              "id": "crafted.stat_3035140377",
+              "text": "# to Level of all Attack Skills",
+              "type": "crafted"
+            },
+            "translation": {
+              "text": "全部攻擊技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[crafted] # to Level of all Attack Skills",
+            "original": {
+              "id": "crafted.stat_3035140377",
+              "text": "# to Level of all Attack Skills",
+              "type": "crafted"
+            },
+            "translation": {
+              "text": "#全部攻擊技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"desecrated\",\"desecrated.stat_1202301673\"]",
+          "desc": "[desecrated] # to Level of all Projectile Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[desecrated] # to Level of all Projectile Skills",
+            "original": {
+              "id": "desecrated.stat_1202301673",
+              "text": "# to Level of all Projectile Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "全部投射物技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[desecrated] # to Level of all Projectile Skills",
+            "original": {
+              "id": "desecrated.stat_1202301673",
+              "text": "# to Level of all Projectile Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "#全部投射物技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"desecrated\",\"desecrated.stat_124131830\"]",
+          "desc": "[desecrated] # to Level of all Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[desecrated] # to Level of all Spell Skills",
+            "original": {
+              "id": "desecrated.stat_124131830",
+              "text": "# to Level of all Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "全部法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[desecrated] # to Level of all Spell Skills",
+            "original": {
+              "id": "desecrated.stat_124131830",
+              "text": "# to Level of all Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "#全部法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"desecrated\",\"desecrated.stat_1545858329\"]",
+          "desc": "[desecrated] # to Level of all Lightning Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[desecrated] # to Level of all Lightning Spell Skills",
+            "original": {
+              "id": "desecrated.stat_1545858329",
+              "text": "# to Level of all Lightning Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "全部閃電法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[desecrated] # to Level of all Lightning Spell Skills",
+            "original": {
+              "id": "desecrated.stat_1545858329",
+              "text": "# to Level of all Lightning Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "#全部閃電法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"desecrated\",\"desecrated.stat_1600707273\"]",
+          "desc": "[desecrated] # to Level of all Physical Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[desecrated] # to Level of all Physical Spell Skills",
+            "original": {
+              "id": "desecrated.stat_1600707273",
+              "text": "# to Level of all Physical Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "全部物理法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[desecrated] # to Level of all Physical Spell Skills",
+            "original": {
+              "id": "desecrated.stat_1600707273",
+              "text": "# to Level of all Physical Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "#全部物理法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"desecrated\",\"desecrated.stat_1992191903\"]",
+          "desc": "[desecrated] # to Level of all Mark Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[desecrated] # to Level of all Mark Skills",
+            "original": {
+              "id": "desecrated.stat_1992191903",
+              "text": "# to Level of all Mark Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "#所有印記技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[desecrated] # to Level of all Mark Skills",
+            "original": {
+              "id": "desecrated.stat_1992191903",
+              "text": "# to Level of all Mark Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "#全部印記技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"desecrated\",\"desecrated.stat_2162097452\"]",
+          "desc": "[desecrated] # to Level of all Minion Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[desecrated] # to Level of all Minion Skills",
+            "original": {
+              "id": "desecrated.stat_2162097452",
+              "text": "# to Level of all Minion Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "全部召喚物技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[desecrated] # to Level of all Minion Skills",
+            "original": {
+              "id": "desecrated.stat_2162097452",
+              "text": "# to Level of all Minion Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "#全部召喚物技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"desecrated\",\"desecrated.stat_2254480358\"]",
+          "desc": "[desecrated] # to Level of all Cold Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[desecrated] # to Level of all Cold Spell Skills",
+            "original": {
+              "id": "desecrated.stat_2254480358",
+              "text": "# to Level of all Cold Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "全部冰冷法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[desecrated] # to Level of all Cold Spell Skills",
+            "original": {
+              "id": "desecrated.stat_2254480358",
+              "text": "# to Level of all Cold Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "#全部冰冷法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"desecrated\",\"desecrated.stat_4226189338\"]",
+          "desc": "[desecrated] # to Level of all Chaos Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[desecrated] # to Level of all Chaos Spell Skills",
+            "original": {
+              "id": "desecrated.stat_4226189338",
+              "text": "# to Level of all Chaos Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "全部混沌法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[desecrated] # to Level of all Chaos Spell Skills",
+            "original": {
+              "id": "desecrated.stat_4226189338",
+              "text": "# to Level of all Chaos Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "#全部混沌法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"desecrated\",\"desecrated.stat_591105508\"]",
+          "desc": "[desecrated] # to Level of all Fire Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[desecrated] # to Level of all Fire Spell Skills",
+            "original": {
+              "id": "desecrated.stat_591105508",
+              "text": "# to Level of all Fire Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "全部火焰法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[desecrated] # to Level of all Fire Spell Skills",
+            "original": {
+              "id": "desecrated.stat_591105508",
+              "text": "# to Level of all Fire Spell Skills",
+              "type": "desecrated"
+            },
+            "translation": {
+              "text": "#全部火焰法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"enchant\",\"enchant.stat_1545858329\"]",
+          "desc": "[enchant] # to Level of all Lightning Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[enchant] # to Level of all Lightning Spell Skills",
+            "original": {
+              "id": "enchant.stat_1545858329",
+              "text": "# to Level of all Lightning Spell Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "全部閃電法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[enchant] # to Level of all Lightning Spell Skills",
+            "original": {
+              "id": "enchant.stat_1545858329",
+              "text": "# to Level of all Lightning Spell Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "#全部閃電法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"enchant\",\"enchant.stat_1600707273\"]",
+          "desc": "[enchant] # to Level of all Physical Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[enchant] # to Level of all Physical Spell Skills",
+            "original": {
+              "id": "enchant.stat_1600707273",
+              "text": "# to Level of all Physical Spell Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "全部物理法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[enchant] # to Level of all Physical Spell Skills",
+            "original": {
+              "id": "enchant.stat_1600707273",
+              "text": "# to Level of all Physical Spell Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "#全部物理法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"enchant\",\"enchant.stat_2162097452\"]",
+          "desc": "[enchant] # to Level of all Minion Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[enchant] # to Level of all Minion Skills",
+            "original": {
+              "id": "enchant.stat_2162097452",
+              "text": "# to Level of all Minion Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "全部召喚物技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[enchant] # to Level of all Minion Skills",
+            "original": {
+              "id": "enchant.stat_2162097452",
+              "text": "# to Level of all Minion Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "#全部召喚物技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"enchant\",\"enchant.stat_2254480358\"]",
+          "desc": "[enchant] # to Level of all Cold Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[enchant] # to Level of all Cold Spell Skills",
+            "original": {
+              "id": "enchant.stat_2254480358",
+              "text": "# to Level of all Cold Spell Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "全部冰冷法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[enchant] # to Level of all Cold Spell Skills",
+            "original": {
+              "id": "enchant.stat_2254480358",
+              "text": "# to Level of all Cold Spell Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "#全部冰冷法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"enchant\",\"enchant.stat_4226189338\"]",
+          "desc": "[enchant] # to Level of all Chaos Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[enchant] # to Level of all Chaos Spell Skills",
+            "original": {
+              "id": "enchant.stat_4226189338",
+              "text": "# to Level of all Chaos Spell Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "全部混沌法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[enchant] # to Level of all Chaos Spell Skills",
+            "original": {
+              "id": "enchant.stat_4226189338",
+              "text": "# to Level of all Chaos Spell Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "#全部混沌法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"enchant\",\"enchant.stat_591105508\"]",
+          "desc": "[enchant] # to Level of all Fire Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[enchant] # to Level of all Fire Spell Skills",
+            "original": {
+              "id": "enchant.stat_591105508",
+              "text": "# to Level of all Fire Spell Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "全部火焰法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[enchant] # to Level of all Fire Spell Skills",
+            "original": {
+              "id": "enchant.stat_591105508",
+              "text": "# to Level of all Fire Spell Skills",
+              "type": "enchant"
+            },
+            "translation": {
+              "text": "#全部火焰法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_1019020209\"]",
+          "desc": "[explicit] #% increased Damage per Curse on you",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] #% increased Damage per Curse on you",
+            "original": {
+              "id": "explicit.stat_1019020209",
+              "text": "#% increased Damage per Curse on you",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "你身上每有一個詛咒，增加#%傷害",
+              "template": "你身上每有一個詛咒，增加{0}%傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Rune",
-                "key": "[\"Legacy_of_Bristleboar\",\"bondedMod\",\"Body_Armours\",[\"Rage\"]]"
+                "url": "https://poe2db.tw/us/Unique_item",
+                "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
               }
             },
             "metadata": {
@@ -37,22 +1122,1515 @@
             "occurrences": 1
           },
           "after": {
-            "desc": "[rune] Bonded: # to Maximum Rage",
+            "desc": "[explicit] #% increased Damage per Curse on you",
             "original": {
-              "id": "rune.stat_10502714",
-              "text": "Bonded: # to Maximum Rage",
-              "type": "augment"
+              "id": "explicit.stat_1019020209",
+              "text": "#% increased Damage per Curse on you",
+              "type": "explicit"
             },
             "translation": {
-              "text": "#層最大盛怒",
-              "template": "{0}層最大盛怒",
+              "text": "你身上每有一個詛咒，增加#%傷害",
+              "template": "你身上每有一個詛咒，增加{0}%傷害",
               "evidence": {
-                "url": "https://poe2db.tw/us/Soul_Core",
-                "key": "[\"Tzamotos_Soul_Core_of_Ferocity\",\"implicitMod\",\"Helmets\",[\"Rage\"]]"
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
               }
             },
             "metadata": {
               "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_1078455967\"]",
+          "desc": "[explicit] # to Level of all Cold Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Cold Skills",
+            "original": {
+              "id": "explicit.stat_1078455967",
+              "text": "# to Level of all Cold Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部冰冷技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Cold Skills",
+            "original": {
+              "id": "explicit.stat_1078455967",
+              "text": "# to Level of all Cold Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部冰冷技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_1147690586\"]",
+          "desc": "[explicit] # to Level of all Lightning Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Lightning Skills",
+            "original": {
+              "id": "explicit.stat_1147690586",
+              "text": "# to Level of all Lightning Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部閃電技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Lightning Skills",
+            "original": {
+              "id": "explicit.stat_1147690586",
+              "text": "# to Level of all Lightning Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部閃電技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_1202301673\"]",
+          "desc": "[explicit] # to Level of all Projectile Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Projectile Skills",
+            "original": {
+              "id": "explicit.stat_1202301673",
+              "text": "# to Level of all Projectile Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部投射物技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Projectile Skills",
+            "original": {
+              "id": "explicit.stat_1202301673",
+              "text": "# to Level of all Projectile Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部投射物技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_124131830\"]",
+          "desc": "[explicit] # to Level of all Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Spell Skills",
+            "original": {
+              "id": "explicit.stat_124131830",
+              "text": "# to Level of all Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Spell Skills",
+            "original": {
+              "id": "explicit.stat_124131830",
+              "text": "# to Level of all Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_1545858329\"]",
+          "desc": "[explicit] # to Level of all Lightning Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Lightning Spell Skills",
+            "original": {
+              "id": "explicit.stat_1545858329",
+              "text": "# to Level of all Lightning Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部閃電法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Lightning Spell Skills",
+            "original": {
+              "id": "explicit.stat_1545858329",
+              "text": "# to Level of all Lightning Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部閃電法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_1600707273\"]",
+          "desc": "[explicit] # to Level of all Physical Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Physical Spell Skills",
+            "original": {
+              "id": "explicit.stat_1600707273",
+              "text": "# to Level of all Physical Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部物理法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Physical Spell Skills",
+            "original": {
+              "id": "explicit.stat_1600707273",
+              "text": "# to Level of all Physical Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部物理法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_1753977518\"]",
+          "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+            "original": {
+              "id": "explicit.stat_1753977518",
+              "text": "#% of Thorns Damage Leeched as Life",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "荊棘傷害的#%轉化為生命偷取",
+              "template": "荊棘傷害的{0}%轉化為生命偷取",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Unique_item",
+                "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+            "original": {
+              "id": "explicit.stat_1753977518",
+              "text": "#% of Thorns Damage Leeched as Life",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "荊棘傷害的#%轉化為生命偷取",
+              "template": "荊棘傷害的{0}%轉化為生命偷取",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_1992191903\"]",
+          "desc": "[explicit] # to Level of all Mark Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Mark Skills",
+            "original": {
+              "id": "explicit.stat_1992191903",
+              "text": "# to Level of all Mark Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#所有印記技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Mark Skills",
+            "original": {
+              "id": "explicit.stat_1992191903",
+              "text": "# to Level of all Mark Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部印記技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_2162097452\"]",
+          "desc": "[explicit] # to Level of all Minion Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Minion Skills",
+            "original": {
+              "id": "explicit.stat_2162097452",
+              "text": "# to Level of all Minion Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部召喚物技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Minion Skills",
+            "original": {
+              "id": "explicit.stat_2162097452",
+              "text": "# to Level of all Minion Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部召喚物技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_2254480358\"]",
+          "desc": "[explicit] # to Level of all Cold Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Cold Spell Skills",
+            "original": {
+              "id": "explicit.stat_2254480358",
+              "text": "# to Level of all Cold Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部冰冷法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Cold Spell Skills",
+            "original": {
+              "id": "explicit.stat_2254480358",
+              "text": "# to Level of all Cold Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部冰冷法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_2319832234\"]",
+          "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
+            "original": {
+              "id": "explicit.stat_2319832234",
+              "text": "#% of Damage Taken Recouped as Life, Mana and Energy Shield",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
+              "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Unique_item",
+                "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
+            "original": {
+              "id": "explicit.stat_2319832234",
+              "text": "#% of Damage Taken Recouped as Life, Mana and Energy Shield",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
+              "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
+                "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_3035140377\"]",
+          "desc": "[explicit] # to Level of all Attack Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Attack Skills",
+            "original": {
+              "id": "explicit.stat_3035140377",
+              "text": "# to Level of all Attack Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部攻擊技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Attack Skills",
+            "original": {
+              "id": "explicit.stat_3035140377",
+              "text": "# to Level of all Attack Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部攻擊技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_3709513762\"]",
+          "desc": "[explicit] # to Level of Elemental Weakness Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of Elemental Weakness Skills",
+            "original": {
+              "id": "explicit.stat_3709513762",
+              "text": "# to Level of Elemental Weakness Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "元素要害技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of Elemental Weakness Skills",
+            "original": {
+              "id": "explicit.stat_3709513762",
+              "text": "# to Level of Elemental Weakness Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#元素要害技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_4226189338\"]",
+          "desc": "[explicit] # to Level of all Chaos Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Chaos Spell Skills",
+            "original": {
+              "id": "explicit.stat_4226189338",
+              "text": "# to Level of all Chaos Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部混沌法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Chaos Spell Skills",
+            "original": {
+              "id": "explicit.stat_4226189338",
+              "text": "# to Level of all Chaos Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部混沌法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_591105508\"]",
+          "desc": "[explicit] # to Level of all Fire Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Fire Spell Skills",
+            "original": {
+              "id": "explicit.stat_591105508",
+              "text": "# to Level of all Fire Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部火焰法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Fire Spell Skills",
+            "original": {
+              "id": "explicit.stat_591105508",
+              "text": "# to Level of all Fire Spell Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部火焰法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_67169579\"]",
+          "desc": "[explicit] # to Level of all Chaos Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Chaos Skills",
+            "original": {
+              "id": "explicit.stat_67169579",
+              "text": "# to Level of all Chaos Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部混沌技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Chaos Skills",
+            "original": {
+              "id": "explicit.stat_67169579",
+              "text": "# to Level of all Chaos Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部混沌技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"explicit\",\"explicit.stat_805298720\"]",
+          "desc": "[explicit] # to Level of all Curse Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[explicit] # to Level of all Curse Skills",
+            "original": {
+              "id": "explicit.stat_805298720",
+              "text": "# to Level of all Curse Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "全部詛咒技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[explicit] # to Level of all Curse Skills",
+            "original": {
+              "id": "explicit.stat_805298720",
+              "text": "# to Level of all Curse Skills",
+              "type": "explicit"
+            },
+            "translation": {
+              "text": "#全部詛咒技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_1202301673\"]",
+          "desc": "[fractured] # to Level of all Projectile Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[fractured] # to Level of all Projectile Skills",
+            "original": {
+              "id": "fractured.stat_1202301673",
+              "text": "# to Level of all Projectile Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "全部投射物技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[fractured] # to Level of all Projectile Skills",
+            "original": {
+              "id": "fractured.stat_1202301673",
+              "text": "# to Level of all Projectile Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "#全部投射物技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_124131830\"]",
+          "desc": "[fractured] # to Level of all Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[fractured] # to Level of all Spell Skills",
+            "original": {
+              "id": "fractured.stat_124131830",
+              "text": "# to Level of all Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "全部法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[fractured] # to Level of all Spell Skills",
+            "original": {
+              "id": "fractured.stat_124131830",
+              "text": "# to Level of all Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "#全部法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_1545858329\"]",
+          "desc": "[fractured] # to Level of all Lightning Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[fractured] # to Level of all Lightning Spell Skills",
+            "original": {
+              "id": "fractured.stat_1545858329",
+              "text": "# to Level of all Lightning Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "全部閃電法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[fractured] # to Level of all Lightning Spell Skills",
+            "original": {
+              "id": "fractured.stat_1545858329",
+              "text": "# to Level of all Lightning Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "#全部閃電法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_1600707273\"]",
+          "desc": "[fractured] # to Level of all Physical Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[fractured] # to Level of all Physical Spell Skills",
+            "original": {
+              "id": "fractured.stat_1600707273",
+              "text": "# to Level of all Physical Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "全部物理法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[fractured] # to Level of all Physical Spell Skills",
+            "original": {
+              "id": "fractured.stat_1600707273",
+              "text": "# to Level of all Physical Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "#全部物理法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_1992191903\"]",
+          "desc": "[fractured] # to Level of all Mark Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[fractured] # to Level of all Mark Skills",
+            "original": {
+              "id": "fractured.stat_1992191903",
+              "text": "# to Level of all Mark Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "#所有印記技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[fractured] # to Level of all Mark Skills",
+            "original": {
+              "id": "fractured.stat_1992191903",
+              "text": "# to Level of all Mark Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "#全部印記技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_2162097452\"]",
+          "desc": "[fractured] # to Level of all Minion Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[fractured] # to Level of all Minion Skills",
+            "original": {
+              "id": "fractured.stat_2162097452",
+              "text": "# to Level of all Minion Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "全部召喚物技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[fractured] # to Level of all Minion Skills",
+            "original": {
+              "id": "fractured.stat_2162097452",
+              "text": "# to Level of all Minion Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "#全部召喚物技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_2254480358\"]",
+          "desc": "[fractured] # to Level of all Cold Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[fractured] # to Level of all Cold Spell Skills",
+            "original": {
+              "id": "fractured.stat_2254480358",
+              "text": "# to Level of all Cold Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "全部冰冷法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[fractured] # to Level of all Cold Spell Skills",
+            "original": {
+              "id": "fractured.stat_2254480358",
+              "text": "# to Level of all Cold Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "#全部冰冷法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_3035140377\"]",
+          "desc": "[fractured] # to Level of all Attack Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[fractured] # to Level of all Attack Skills",
+            "original": {
+              "id": "fractured.stat_3035140377",
+              "text": "# to Level of all Attack Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "全部攻擊技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[fractured] # to Level of all Attack Skills",
+            "original": {
+              "id": "fractured.stat_3035140377",
+              "text": "# to Level of all Attack Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "#全部攻擊技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_4226189338\"]",
+          "desc": "[fractured] # to Level of all Chaos Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[fractured] # to Level of all Chaos Spell Skills",
+            "original": {
+              "id": "fractured.stat_4226189338",
+              "text": "# to Level of all Chaos Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "全部混沌法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[fractured] # to Level of all Chaos Spell Skills",
+            "original": {
+              "id": "fractured.stat_4226189338",
+              "text": "# to Level of all Chaos Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "#全部混沌法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"fractured\",\"fractured.stat_591105508\"]",
+          "desc": "[fractured] # to Level of all Fire Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[fractured] # to Level of all Fire Spell Skills",
+            "original": {
+              "id": "fractured.stat_591105508",
+              "text": "# to Level of all Fire Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "全部火焰法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[fractured] # to Level of all Fire Spell Skills",
+            "original": {
+              "id": "fractured.stat_591105508",
+              "text": "# to Level of all Fire Spell Skills",
+              "type": "fractured"
+            },
+            "translation": {
+              "text": "#全部火焰法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"implicit\",\"implicit.stat_1078455967\"]",
+          "desc": "[implicit] # to Level of all Cold Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[implicit] # to Level of all Cold Skills",
+            "original": {
+              "id": "implicit.stat_1078455967",
+              "text": "# to Level of all Cold Skills",
+              "type": "implicit"
+            },
+            "translation": {
+              "text": "全部冰冷技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[implicit] # to Level of all Cold Skills",
+            "original": {
+              "id": "implicit.stat_1078455967",
+              "text": "# to Level of all Cold Skills",
+              "type": "implicit"
+            },
+            "translation": {
+              "text": "#全部冰冷技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1147690586\"]",
+          "desc": "[rune] # to Level of all Lightning Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] # to Level of all Lightning Skills",
+            "original": {
+              "id": "rune.stat_1147690586",
+              "text": "# to Level of all Lightning Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "全部閃電技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] # to Level of all Lightning Skills",
+            "original": {
+              "id": "rune.stat_1147690586",
+              "text": "# to Level of all Lightning Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "#全部閃電技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_124131830\"]",
+          "desc": "[rune] # to Level of all Spell Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] # to Level of all Spell Skills",
+            "original": {
+              "id": "rune.stat_124131830",
+              "text": "# to Level of all Spell Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "全部法術技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] # to Level of all Spell Skills",
+            "original": {
+              "id": "rune.stat_124131830",
+              "text": "# to Level of all Spell Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "#全部法術技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1377764687\"]",
+          "desc": "[rune] Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+            "original": {
+              "id": "rune.stat_1377764687",
+              "text": "Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "使用技能時每消耗一個連擊可獲得終極#秒",
+              "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+            "original": {
+              "id": "rune.stat_1377764687",
+              "text": "Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "使用技能時每消耗一個連擊可獲得終極#秒",
+              "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_1992191903\"]",
+          "desc": "[rune] # to Level of all Mark Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] # to Level of all Mark Skills",
+            "original": {
+              "id": "rune.stat_1992191903",
+              "text": "# to Level of all Mark Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "#所有印記技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] # to Level of all Mark Skills",
+            "original": {
+              "id": "rune.stat_1992191903",
+              "text": "# to Level of all Mark Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "#全部印記技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_2305301734\"]",
+          "desc": "[rune] # to Level of all Strike Skill Gems",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] # to Level of all Strike Skill Gems",
+            "original": {
+              "id": "rune.stat_2305301734",
+              "text": "# to Level of all Strike Skill Gems",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "#全部風暴技能寶石等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] # to Level of all Strike Skill Gems",
+            "original": {
+              "id": "rune.stat_2305301734",
+              "text": "# to Level of all Strike Skill Gems",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "#全部打擊技能寶石等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_243313994\"]",
+          "desc": "[rune] Bonded: # to Level of all Attack Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: # to Level of all Attack Skills",
+            "original": {
+              "id": "rune.stat_243313994",
+              "text": "Bonded: # to Level of all Attack Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "命定: 全部攻擊技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: # to Level of all Attack Skills",
+            "original": {
+              "id": "rune.stat_243313994",
+              "text": "Bonded: # to Level of all Attack Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "命定: #全部攻擊技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_2441825294\"]",
+          "desc": "[rune] #% increased Runic Ward Regeneration Rate while Sprinting",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] #% increased Runic Ward Regeneration Rate while Sprinting",
+            "original": {
+              "id": "rune.stat_2441825294",
+              "text": "#% increased Runic Ward Regeneration Rate while Sprinting",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "衝刺時增加#%符文保護回復率",
+              "template": "衝刺時增加{0}%符文保護回復率",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] #% increased Runic Ward Regeneration Rate while Sprinting",
+            "original": {
+              "id": "rune.stat_2441825294",
+              "text": "#% increased Runic Ward Regeneration Rate while Sprinting",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "衝刺時增加#%符文保護回復率",
+              "template": "衝刺時增加{0}%符文保護回復率",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_3155261831\"]",
+          "desc": "[rune] Bonded: # to Level of all Minion Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: # to Level of all Minion Skills",
+            "original": {
+              "id": "rune.stat_3155261831",
+              "text": "Bonded: # to Level of all Minion Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "命定: 全部召喚物技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: # to Level of all Minion Skills",
+            "original": {
+              "id": "rune.stat_3155261831",
+              "text": "Bonded: # to Level of all Minion Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "命定: #全部召喚物技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_3634438849\"]",
+          "desc": "[rune] Bonded: #% increased maximum Runic Ward",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: #% increased maximum Runic Ward",
+            "original": {
+              "id": "rune.stat_3634438849",
+              "text": "Bonded: #% increased maximum Runic Ward",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%最大符文保護",
+              "template": "增加{0}%最大符文保護",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: #% increased maximum Runic Ward",
+            "original": {
+              "id": "rune.stat_3634438849",
+              "text": "Bonded: #% increased maximum Runic Ward",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "增加#%最大符文保護",
+              "template": "增加{0}%最大符文保護",
+              "evidence": {
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
+              }
+            },
+            "metadata": {
+              "source": "poe2db_verified_html"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_4111152445\"]",
+          "desc": "[rune] Bonded: # to Level of all Lightning Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] Bonded: # to Level of all Lightning Skills",
+            "original": {
+              "id": "rune.stat_4111152445",
+              "text": "Bonded: # to Level of all Lightning Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "命定: 全部閃電技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] Bonded: # to Level of all Lightning Skills",
+            "original": {
+              "id": "rune.stat_4111152445",
+              "text": "Bonded: # to Level of all Lightning Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "命定: #全部閃電技能等級"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          }
+        },
+        {
+          "key": "[\"entry\",\"rune\",\"rune.stat_805298720\"]",
+          "desc": "[rune] # to Level of all Curse Skills",
+          "fields": [
+            "translation"
+          ],
+          "before": {
+            "desc": "[rune] # to Level of all Curse Skills",
+            "original": {
+              "id": "rune.stat_805298720",
+              "text": "# to Level of all Curse Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "全部詛咒技能等級#"
+            },
+            "metadata": {
+              "source": "official"
+            },
+            "occurrences": 1
+          },
+          "after": {
+            "desc": "[rune] # to Level of all Curse Skills",
+            "original": {
+              "id": "rune.stat_805298720",
+              "text": "# to Level of all Curse Skills",
+              "type": "augment"
+            },
+            "translation": {
+              "text": "#全部詛咒技能等級"
+            },
+            "metadata": {
+              "source": "official"
             },
             "occurrences": 1
           }
@@ -72,9 +2650,9 @@
   },
   "summary": {
     "items": {
-      "total": 3900,
-      "eligible": 3898,
-      "complete": 3895,
+      "total": 3901,
+      "eligible": 3899,
+      "complete": 3896,
       "partial": 2,
       "missing": 1,
       "excluded": 2,
@@ -110,13 +2688,13 @@
           "state": "partial"
         }
       ],
-      "finalTranslated": 3895,
+      "finalTranslated": 3896,
       "finalRate": "99.92%"
     },
     "stats": {
-      "total": 8312,
-      "eligible": 8312,
-      "complete": 8279,
+      "total": 8315,
+      "eligible": 8315,
+      "complete": 8282,
       "partial": 0,
       "missing": 33,
       "excluded": 0,
@@ -320,12 +2898,12 @@
           "state": "missing"
         }
       ],
-      "finalTranslated": 8279,
+      "finalTranslated": 8282,
       "finalRate": "99.60%",
       "templateAudit": {
-        "total": 8312,
+        "total": 8315,
         "missing": 33,
-        "usable": 8196,
+        "usable": 8199,
         "unsafe": 83,
         "issues": [
           {
