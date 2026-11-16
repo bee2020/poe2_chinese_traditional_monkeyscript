@@ -1,6 +1,6 @@
 # POE2 官方交易字典最新编译报告 (CHANGELOG)
 
-> 🕒 报告时间（北京时间）：2026/11/15 13:30:46
+> 🕒 报告时间（北京时间）：2026/11/16 13:30:17
 
 ---
 
@@ -11,7 +11,7 @@
 | **🪙 通货材料** (static.json) | **786** | 786 | 🟢 0 项 | 🟢 无需补全 | **100.00%** |
 | **🔎 市集筛选** (filters.json) | **203** | 203 | 🟢 0 项 | 🟢 无需补全 | **100.00%** |
 | **📦 装备与暗金** (items.json) | **3899** | 0 | 🟡 3 项 | 完整 3896 / 部分 2 | **99.92%** |
-| **⚡ 核心词缀** (stats.json) | **8315** | 8229 | 🟡 33 项 | 完整 53 / 部分 0 | **99.60%** |
+| **⚡ 核心词缀** (stats.json) | **8316** | 8230 | 🟡 33 项 | 完整 53 / 部分 0 | **99.60%** |
 
 > 已排除占位项及无可见文本项；物品按名称和基底共同统计。完整率反映字段齐备程度，不代表全部译文已验证。
 
@@ -81,80 +81,13 @@
 
 ### 📦 装备与暗金变动 (items.json)
 
-**🟡 翻译与原文变更 (5 项)**
-
-- <code>[armour] The Fallen Formation Lamellar Mail</code> · 名称：<code>殞落之形 分層鎖甲</code> ➜ **<code>殞落之形</code>**
-- <code>[armour] Keeper of the Arc Runemastered Spiritbone Crown</code> · 名称：<code>電弧守護者</code> ➜ **<code>弧之守護者</code>**
-- <code>[armour] Keeper of the Arc Spiritbone Crown</code> · 名称：<code>電弧守護者</code> ➜ **<code>弧之守護者</code>**
-- <code>[currency] Legacy of Keeper of the Arc</code> · 基底：<code>傳承．電弧守護者</code> ➜ **<code>傳承．弧之守護者</code>**
-- <code>[gem] Remnant Potency III</code> · 基底：<code>痕跡強度 III</code> ➜ **<code>痕跡強度 II</code>**
-
-**🟢 新增 (1 项)**
-
-- <code>[currency] Soul Core of Vizoma</code> ➜ <code>威索瑪靈魂核心</code>
+> 🟢 无内容变动
 
 ### ⚡ 核心词缀变动 (stats.json)
 
-**🟡 翻译与原文变更 (52 项)**
+**🟢 新增 (1 项)**
 
-- <code>[crafted] # to Level of all Spell Skills</code>：<code>全部法術技能等級#</code> ➜ **<code>#全部法術技能等級</code>**
-- <code>[crafted] # to Level of all Minion Skills</code>：<code>全部召喚物技能等級#</code> ➜ **<code>#全部召喚物技能等級</code>**
-- <code>[crafted] # to Level of all Attack Skills</code>：<code>全部攻擊技能等級#</code> ➜ **<code>#全部攻擊技能等級</code>**
-- <code>[desecrated] # to Level of all Projectile Skills</code>：<code>全部投射物技能等級#</code> ➜ **<code>#全部投射物技能等級</code>**
-- <code>[desecrated] # to Level of all Spell Skills</code>：<code>全部法術技能等級#</code> ➜ **<code>#全部法術技能等級</code>**
-- <code>[desecrated] # to Level of all Lightning Spell Skills</code>：<code>全部閃電法術技能等級#</code> ➜ **<code>#全部閃電法術技能等級</code>**
-- <code>[desecrated] # to Level of all Physical Spell Skills</code>：<code>全部物理法術技能等級#</code> ➜ **<code>#全部物理法術技能等級</code>**
-- <code>[desecrated] # to Level of all Mark Skills</code>：<code>#所有印記技能等級</code> ➜ **<code>#全部印記技能等級</code>**
-- <code>[desecrated] # to Level of all Minion Skills</code>：<code>全部召喚物技能等級#</code> ➜ **<code>#全部召喚物技能等級</code>**
-- <code>[desecrated] # to Level of all Cold Spell Skills</code>：<code>全部冰冷法術技能等級#</code> ➜ **<code>#全部冰冷法術技能等級</code>**
-- <code>[desecrated] # to Level of all Chaos Spell Skills</code>：<code>全部混沌法術技能等級#</code> ➜ **<code>#全部混沌法術技能等級</code>**
-- <code>[desecrated] # to Level of all Fire Spell Skills</code>：<code>全部火焰法術技能等級#</code> ➜ **<code>#全部火焰法術技能等級</code>**
-- <code>[enchant] # to Level of all Lightning Spell Skills</code>：<code>全部閃電法術技能等級#</code> ➜ **<code>#全部閃電法術技能等級</code>**
-- <code>[enchant] # to Level of all Physical Spell Skills</code>：<code>全部物理法術技能等級#</code> ➜ **<code>#全部物理法術技能等級</code>**
-- <code>[enchant] # to Level of all Minion Skills</code>：<code>全部召喚物技能等級#</code> ➜ **<code>#全部召喚物技能等級</code>**
-- <code>[enchant] # to Level of all Cold Spell Skills</code>：<code>全部冰冷法術技能等級#</code> ➜ **<code>#全部冰冷法術技能等級</code>**
-- <code>[enchant] # to Level of all Chaos Spell Skills</code>：<code>全部混沌法術技能等級#</code> ➜ **<code>#全部混沌法術技能等級</code>**
-- <code>[enchant] # to Level of all Fire Spell Skills</code>：<code>全部火焰法術技能等級#</code> ➜ **<code>#全部火焰法術技能等級</code>**
-- <code>[explicit] # to Level of all Cold Skills</code>：<code>全部冰冷技能等級#</code> ➜ **<code>#全部冰冷技能等級</code>**
-- <code>[explicit] # to Level of all Lightning Skills</code>：<code>全部閃電技能等級#</code> ➜ **<code>#全部閃電技能等級</code>**
-- <code>[explicit] # to Level of all Projectile Skills</code>：<code>全部投射物技能等級#</code> ➜ **<code>#全部投射物技能等級</code>**
-- <code>[explicit] # to Level of all Spell Skills</code>：<code>全部法術技能等級#</code> ➜ **<code>#全部法術技能等級</code>**
-- <code>[explicit] # to Level of all Lightning Spell Skills</code>：<code>全部閃電法術技能等級#</code> ➜ **<code>#全部閃電法術技能等級</code>**
-- <code>[explicit] # to Level of all Physical Spell Skills</code>：<code>全部物理法術技能等級#</code> ➜ **<code>#全部物理法術技能等級</code>**
-- <code>[explicit] # to Level of all Mark Skills</code>：<code>#所有印記技能等級</code> ➜ **<code>#全部印記技能等級</code>**
-- <code>[explicit] # to Level of all Minion Skills</code>：<code>全部召喚物技能等級#</code> ➜ **<code>#全部召喚物技能等級</code>**
-- <code>[explicit] # to Level of all Cold Spell Skills</code>：<code>全部冰冷法術技能等級#</code> ➜ **<code>#全部冰冷法術技能等級</code>**
-- <code>[explicit] # to Level of all Attack Skills</code>：<code>全部攻擊技能等級#</code> ➜ **<code>#全部攻擊技能等級</code>**
-- <code>[explicit] # to Level of Elemental Weakness Skills</code>：<code>元素要害技能等級#</code> ➜ **<code>#元素要害技能等級</code>**
-- <code>[explicit] # to Level of all Chaos Spell Skills</code>：<code>全部混沌法術技能等級#</code> ➜ **<code>#全部混沌法術技能等級</code>**
-- <code>[explicit] # to Level of all Fire Spell Skills</code>：<code>全部火焰法術技能等級#</code> ➜ **<code>#全部火焰法術技能等級</code>**
-- <code>[explicit] # to Level of all Chaos Skills</code>：<code>全部混沌技能等級#</code> ➜ **<code>#全部混沌技能等級</code>**
-- <code>[explicit] # to Level of all Curse Skills</code>：<code>全部詛咒技能等級#</code> ➜ **<code>#全部詛咒技能等級</code>**
-- <code>[fractured] # to Level of all Projectile Skills</code>：<code>全部投射物技能等級#</code> ➜ **<code>#全部投射物技能等級</code>**
-- <code>[fractured] # to Level of all Spell Skills</code>：<code>全部法術技能等級#</code> ➜ **<code>#全部法術技能等級</code>**
-- <code>[fractured] # to Level of all Lightning Spell Skills</code>：<code>全部閃電法術技能等級#</code> ➜ **<code>#全部閃電法術技能等級</code>**
-- <code>[fractured] # to Level of all Physical Spell Skills</code>：<code>全部物理法術技能等級#</code> ➜ **<code>#全部物理法術技能等級</code>**
-- <code>[fractured] # to Level of all Mark Skills</code>：<code>#所有印記技能等級</code> ➜ **<code>#全部印記技能等級</code>**
-- <code>[fractured] # to Level of all Minion Skills</code>：<code>全部召喚物技能等級#</code> ➜ **<code>#全部召喚物技能等級</code>**
-- <code>[fractured] # to Level of all Cold Spell Skills</code>：<code>全部冰冷法術技能等級#</code> ➜ **<code>#全部冰冷法術技能等級</code>**
-- <code>[fractured] # to Level of all Attack Skills</code>：<code>全部攻擊技能等級#</code> ➜ **<code>#全部攻擊技能等級</code>**
-- <code>[fractured] # to Level of all Chaos Spell Skills</code>：<code>全部混沌法術技能等級#</code> ➜ **<code>#全部混沌法術技能等級</code>**
-- <code>[fractured] # to Level of all Fire Spell Skills</code>：<code>全部火焰法術技能等級#</code> ➜ **<code>#全部火焰法術技能等級</code>**
-- <code>[implicit] # to Level of all Cold Skills</code>：<code>全部冰冷技能等級#</code> ➜ **<code>#全部冰冷技能等級</code>**
-- <code>[rune] # to Level of all Lightning Skills</code>：<code>全部閃電技能等級#</code> ➜ **<code>#全部閃電技能等級</code>**
-- <code>[rune] # to Level of all Spell Skills</code>：<code>全部法術技能等級#</code> ➜ **<code>#全部法術技能等級</code>**
-- <code>[rune] # to Level of all Mark Skills</code>：<code>#所有印記技能等級</code> ➜ **<code>#全部印記技能等級</code>**
-- <code>[rune] # to Level of all Strike Skill Gems</code>：<code>#全部風暴技能寶石等級</code> ➜ **<code>#全部打擊技能寶石等級</code>**
-- <code>[rune] Bonded: # to Level of all Attack Skills</code>：<code>命定: 全部攻擊技能等級#</code> ➜ **<code>命定: #全部攻擊技能等級</code>**
-- <code>[rune] Bonded: # to Level of all Minion Skills</code>：<code>命定: 全部召喚物技能等級#</code> ➜ **<code>命定: #全部召喚物技能等級</code>**
-
-> 仅展示前 50 项，其余 2 项见完整差异文件。
-
-**🟢 新增 (3 项)**
-
-- <code>[fractured] Allocates Adaptive Skin</code> ➜ <code>配置適應皮膚</code>
-- <code>[fractured] Allocates Guts</code> ➜ <code>配置膽量</code>
-- <code>[fractured] Allocates Thirst for Endurance</code> ➜ <code>配置耐力渴求</code>
+- <code>[fractured] Allocates Unbreakable</code> ➜ <code>配置堅不可破</code>
 
 ### 🪙 通货材料变动 (static.json)
 
