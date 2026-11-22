@@ -4,82 +4,31 @@
     "items": {
       "added": [],
       "removed": [],
-      "modified": [
-        {
-          "key": "[\"entry\",\"currency\",[\"Soul Core of Vizoma\",\"\"]]",
-          "desc": "[currency] Soul Core of Vizoma",
-          "fields": [
-            "metadata"
-          ],
-          "before": {
-            "desc": "[currency] Soul Core of Vizoma",
-            "original": {
-              "type": "Soul Core of Vizoma"
-            },
-            "translation": {
-              "type": "威索瑪靈魂核心"
-            },
-            "metadata": {
-              "source": "poe2db_crawler"
-            },
-            "occurrences": 1
-          },
-          "after": {
-            "desc": "[currency] Soul Core of Vizoma",
-            "original": {
-              "type": "Soul Core of Vizoma"
-            },
-            "translation": {
-              "type": "威索瑪靈魂核心"
-            },
-            "metadata": {
-              "source": "cache"
-            },
-            "occurrences": 1
-          }
-        }
-      ]
+      "modified": []
     },
     "stats": {
-      "added": [
-        {
-          "key": "[\"entry\",\"fractured\",\"fractured.stat_2954116742|13489\"]",
-          "desc": "[fractured] Allocates Unbreakable",
-          "original": {
-            "id": "fractured.stat_2954116742|13489",
-            "text": "Allocates Unbreakable",
-            "type": "fractured"
-          },
-          "translation": {
-            "text": "配置堅不可破"
-          },
-          "metadata": {
-            "source": "official"
-          },
-          "occurrences": 1
-        }
-      ],
+      "added": [],
       "removed": [],
       "modified": [
         {
-          "key": "[\"entry\",\"explicit\",\"explicit.stat_1019020209\"]",
-          "desc": "[explicit] #% increased Damage per Curse on you",
+          "key": "[\"entry\",\"rune\",\"rune.stat_1377764687\"]",
+          "desc": "[rune] Bonded: Gain Finality for # seconds per Combo expended when using Skills",
           "fields": [
             "translation"
           ],
           "before": {
-            "desc": "[explicit] #% increased Damage per Curse on you",
+            "desc": "[rune] Bonded: Gain Finality for # seconds per Combo expended when using Skills",
             "original": {
-              "id": "explicit.stat_1019020209",
-              "text": "#% increased Damage per Curse on you",
-              "type": "explicit"
+              "id": "rune.stat_1377764687",
+              "text": "Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+              "type": "augment"
             },
             "translation": {
-              "text": "你身上每有一個詛咒，增加#%傷害",
-              "template": "你身上每有一個詛咒，增加{0}%傷害",
+              "text": "使用技能時每消耗一個連擊可獲得終極#秒",
+              "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
-                "key": "[\"Armour\",\"mutatedMod\",\"\",[\"Curse\"]]"
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
               }
             },
             "metadata": {
@@ -88,18 +37,18 @@
             "occurrences": 1
           },
           "after": {
-            "desc": "[explicit] #% increased Damage per Curse on you",
+            "desc": "[rune] Bonded: Gain Finality for # seconds per Combo expended when using Skills",
             "original": {
-              "id": "explicit.stat_1019020209",
-              "text": "#% increased Damage per Curse on you",
-              "type": "explicit"
+              "id": "rune.stat_1377764687",
+              "text": "Bonded: Gain Finality for # seconds per Combo expended when using Skills",
+              "type": "augment"
             },
             "translation": {
-              "text": "你身上每有一個詛咒，增加#%傷害",
-              "template": "你身上每有一個詛咒，增加{0}%傷害",
+              "text": "使用技能時每消耗一個連擊可獲得終極#秒",
+              "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
               "evidence": {
-                "url": "https://poe2db.tw/us/Focus",
-                "key": "[\"Warding_Fetish\",\"implicitMod\",\"\",[\"Curse\"]]"
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
               }
             },
             "metadata": {
@@ -109,24 +58,24 @@
           }
         },
         {
-          "key": "[\"entry\",\"explicit\",\"explicit.stat_1753977518\"]",
-          "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+          "key": "[\"entry\",\"rune\",\"rune.stat_2441825294\"]",
+          "desc": "[rune] #% increased Runic Ward Regeneration Rate while Sprinting",
           "fields": [
             "translation"
           ],
           "before": {
-            "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+            "desc": "[rune] #% increased Runic Ward Regeneration Rate while Sprinting",
             "original": {
-              "id": "explicit.stat_1753977518",
-              "text": "#% of Thorns Damage Leeched as Life",
-              "type": "explicit"
+              "id": "rune.stat_2441825294",
+              "text": "#% increased Runic Ward Regeneration Rate while Sprinting",
+              "type": "augment"
             },
             "translation": {
-              "text": "荊棘傷害的#%轉化為生命偷取",
-              "template": "荊棘傷害的{0}%轉化為生命偷取",
+              "text": "衝刺時增加#%符文保護回復率",
+              "template": "衝刺時增加{0}%符文保護回復率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
-                "key": "[\"Energy_Shield\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
               }
             },
             "metadata": {
@@ -135,18 +84,18 @@
             "occurrences": 1
           },
           "after": {
-            "desc": "[explicit] #% of Thorns Damage Leeched as Life",
+            "desc": "[rune] #% increased Runic Ward Regeneration Rate while Sprinting",
             "original": {
-              "id": "explicit.stat_1753977518",
-              "text": "#% of Thorns Damage Leeched as Life",
-              "type": "explicit"
+              "id": "rune.stat_2441825294",
+              "text": "#% increased Runic Ward Regeneration Rate while Sprinting",
+              "type": "augment"
             },
             "translation": {
-              "text": "荊棘傷害的#%轉化為生命偷取",
-              "template": "荊棘傷害的{0}%轉化為生命偷取",
+              "text": "衝刺時增加#%符文保護回復率",
+              "template": "衝刺時增加{0}%符文保護回復率",
               "evidence": {
-                "url": "https://poe2db.tw/us/Amulets",
-                "key": "[\"Vengeance\",\"implicitMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
               }
             },
             "metadata": {
@@ -156,24 +105,24 @@
           }
         },
         {
-          "key": "[\"entry\",\"explicit\",\"explicit.stat_2319832234\"]",
-          "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
+          "key": "[\"entry\",\"rune\",\"rune.stat_3634438849\"]",
+          "desc": "[rune] Bonded: #% increased maximum Runic Ward",
           "fields": [
             "translation"
           ],
           "before": {
-            "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
+            "desc": "[rune] Bonded: #% increased maximum Runic Ward",
             "original": {
-              "id": "explicit.stat_2319832234",
-              "text": "#% of Damage Taken Recouped as Life, Mana and Energy Shield",
-              "type": "explicit"
+              "id": "rune.stat_3634438849",
+              "text": "Bonded: #% increased maximum Runic Ward",
+              "type": "augment"
             },
             "translation": {
-              "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
-              "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
+              "text": "增加#%最大符文保護",
+              "template": "增加{0}%最大符文保護",
               "evidence": {
-                "url": "https://poe2db.tw/us/Vaal_Cultivation_Orb",
-                "key": "[\"Low_Life\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
+                "url": "https://poe2db.tw/us/Runic_Ward",
+                "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
               }
             },
             "metadata": {
@@ -182,234 +131,22 @@
             "occurrences": 1
           },
           "after": {
-            "desc": "[explicit] #% of Damage Taken Recouped as Life, Mana and Energy Shield",
+            "desc": "[rune] Bonded: #% increased maximum Runic Ward",
             "original": {
-              "id": "explicit.stat_2319832234",
-              "text": "#% of Damage Taken Recouped as Life, Mana and Energy Shield",
-              "type": "explicit"
+              "id": "rune.stat_3634438849",
+              "text": "Bonded: #% increased maximum Runic Ward",
+              "type": "augment"
             },
             "translation": {
-              "text": "所承受傷害的#%補償為生命、魔力和能量護盾",
-              "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
+              "text": "增加#%最大符文保護",
+              "template": "增加{0}%最大符文保護",
               "evidence": {
-                "url": "https://poe2db.tw/us/Amulets",
-                "key": "[\"Glazed_Flesh\",\"implicitMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
+                "url": "https://poe2db.tw/us/Rune",
+                "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
               }
             },
             "metadata": {
               "source": "poe2db_verified_html"
-            },
-            "occurrences": 1
-          }
-        },
-        {
-          "key": "[\"entry\",\"explicit\",\"explicit.stat_3831171903|13\"]",
-          "desc": "[explicit] Conduit",
-          "fields": [
-            "metadata"
-          ],
-          "before": {
-            "desc": "[explicit] Conduit",
-            "original": {
-              "id": "explicit.stat_3831171903|13",
-              "text": "Conduit",
-              "type": "explicit"
-            },
-            "translation": {
-              "text": "能量連結",
-              "evidence": {
-                "urls": [
-                  "https://poe2db.tw/us/Conduit",
-                  "https://poe2db.tw/tw/Conduit"
-                ],
-                "passiveId": "passive_keystone_conduit",
-                "hash": "33979"
-              }
-            },
-            "metadata": {
-              "source": "poe2db_verified_name"
-            },
-            "occurrences": 1
-          },
-          "after": {
-            "desc": "[explicit] Conduit",
-            "original": {
-              "id": "explicit.stat_3831171903|13",
-              "text": "Conduit",
-              "type": "explicit"
-            },
-            "translation": {
-              "text": "能量連結",
-              "evidence": {
-                "urls": [
-                  "https://poe2db.tw/us/Conduit",
-                  "https://poe2db.tw/tw/Conduit"
-                ],
-                "passiveId": "passive_keystone_conduit",
-                "hash": "33979"
-              }
-            },
-            "metadata": {
-              "source": "poe2db_verified_cache"
-            },
-            "occurrences": 1
-          }
-        },
-        {
-          "key": "[\"entry\",\"explicit\",\"explicit.stat_3831171903|18\"]",
-          "desc": "[explicit] Heartstopper",
-          "fields": [
-            "metadata"
-          ],
-          "before": {
-            "desc": "[explicit] Heartstopper",
-            "original": {
-              "id": "explicit.stat_3831171903|18",
-              "text": "Heartstopper",
-              "type": "explicit"
-            },
-            "translation": {
-              "text": "心靈永止",
-              "evidence": {
-                "urls": [
-                  "https://poe2db.tw/us/Heartstopper",
-                  "https://poe2db.tw/tw/Heartstopper"
-                ],
-                "passiveId": "passive_keystone_heartstopper",
-                "hash": "34497"
-              }
-            },
-            "metadata": {
-              "source": "poe2db_verified_name"
-            },
-            "occurrences": 1
-          },
-          "after": {
-            "desc": "[explicit] Heartstopper",
-            "original": {
-              "id": "explicit.stat_3831171903|18",
-              "text": "Heartstopper",
-              "type": "explicit"
-            },
-            "translation": {
-              "text": "心靈永止",
-              "evidence": {
-                "urls": [
-                  "https://poe2db.tw/us/Heartstopper",
-                  "https://poe2db.tw/tw/Heartstopper"
-                ],
-                "passiveId": "passive_keystone_heartstopper",
-                "hash": "34497"
-              }
-            },
-            "metadata": {
-              "source": "poe2db_verified_cache"
-            },
-            "occurrences": 1
-          }
-        },
-        {
-          "key": "[\"entry\",\"explicit\",\"explicit.stat_3831171903|19\"]",
-          "desc": "[explicit] Oasis",
-          "fields": [
-            "metadata"
-          ],
-          "before": {
-            "desc": "[explicit] Oasis",
-            "original": {
-              "id": "explicit.stat_3831171903|19",
-              "text": "Oasis",
-              "type": "explicit"
-            },
-            "translation": {
-              "text": "幻景綠洲",
-              "evidence": {
-                "urls": [
-                  "https://poe2db.tw/us/Oasis",
-                  "https://poe2db.tw/tw/Oasis"
-                ],
-                "passiveId": "passive_keystone_oasis",
-                "hash": "25100"
-              }
-            },
-            "metadata": {
-              "source": "poe2db_verified_name"
-            },
-            "occurrences": 1
-          },
-          "after": {
-            "desc": "[explicit] Oasis",
-            "original": {
-              "id": "explicit.stat_3831171903|19",
-              "text": "Oasis",
-              "type": "explicit"
-            },
-            "translation": {
-              "text": "幻景綠洲",
-              "evidence": {
-                "urls": [
-                  "https://poe2db.tw/us/Oasis",
-                  "https://poe2db.tw/tw/Oasis"
-                ],
-                "passiveId": "passive_keystone_oasis",
-                "hash": "25100"
-              }
-            },
-            "metadata": {
-              "source": "poe2db_verified_cache"
-            },
-            "occurrences": 1
-          }
-        },
-        {
-          "key": "[\"entry\",\"explicit\",\"explicit.stat_3831171903|24\"]",
-          "desc": "[explicit] Bulwark",
-          "fields": [
-            "metadata"
-          ],
-          "before": {
-            "desc": "[explicit] Bulwark",
-            "original": {
-              "id": "explicit.stat_3831171903|24",
-              "text": "Bulwark",
-              "type": "explicit"
-            },
-            "translation": {
-              "text": "守護",
-              "evidence": {
-                "urls": [
-                  "https://poe2db.tw/us/Bulwark",
-                  "https://poe2db.tw/tw/Bulwark"
-                ],
-                "passiveId": "passive_keystone_bulwark",
-                "hash": "56605"
-              }
-            },
-            "metadata": {
-              "source": "poe2db_verified_name"
-            },
-            "occurrences": 1
-          },
-          "after": {
-            "desc": "[explicit] Bulwark",
-            "original": {
-              "id": "explicit.stat_3831171903|24",
-              "text": "Bulwark",
-              "type": "explicit"
-            },
-            "translation": {
-              "text": "守護",
-              "evidence": {
-                "urls": [
-                  "https://poe2db.tw/us/Bulwark",
-                  "https://poe2db.tw/tw/Bulwark"
-                ],
-                "passiveId": "passive_keystone_bulwark",
-                "hash": "56605"
-              }
-            },
-            "metadata": {
-              "source": "poe2db_verified_cache"
             },
             "occurrences": 1
           }

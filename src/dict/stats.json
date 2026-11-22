@@ -60507,8 +60507,8 @@
             "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Runic_Ward",
-              "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
             }
           }
         },
@@ -62131,7 +62131,7 @@
             "template": "衝刺時增加{0}%符文保護回復率",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Runic_Ward",
+              "url": "https://poe2db.tw/us/Rune",
               "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
             }
           }
@@ -63813,7 +63813,7 @@
             "template": "增加{0}%最大符文保護",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Runic_Ward",
+              "url": "https://poe2db.tw/us/Rune",
               "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
             }
           }
