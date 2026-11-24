@@ -28339,7 +28339,7 @@
             "template": "遠程無命中懲罰",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Accuracy",
+              "url": "https://poe2db.tw/us/Physical_Damage",
               "key": "[\"Extended_Cleaver\",\"implicitMod\",\"\",[\"Accuracy\"]]"
             }
           }
@@ -37303,6 +37303,15 @@
           "type": "fractured",
           "zh_tw": {
             "text": "配置欺詐面具",
+            "source": "official"
+          }
+        },
+        {
+          "id": "fractured.stat_2954116742|55375",
+          "text": "Allocates Licking Wounds",
+          "type": "fractured",
+          "zh_tw": {
+            "text": "配置舔舐傷口",
             "source": "official"
           }
         },
@@ -60153,8 +60162,8 @@
             "template": "{0}層最大盛怒",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Rune",
-              "key": "[\"Legacy_of_Bristleboar\",\"bondedMod\",\"Body_Armours\",[\"Rage\"]]"
+              "url": "https://poe2db.tw/us/Soul_Core",
+              "key": "[\"Tzamotos_Soul_Core_of_Ferocity\",\"implicitMod\",\"Helmets\",[\"Rage\"]]"
             }
           }
         },
@@ -60507,8 +60516,8 @@
             "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Runic_Ward",
-              "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
+              "url": "https://poe2db.tw/us/Rune",
+              "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
             }
           }
         },
@@ -62131,7 +62140,7 @@
             "template": "衝刺時增加{0}%符文保護回復率",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Runic_Ward",
+              "url": "https://poe2db.tw/us/Rune",
               "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
             }
           }
@@ -63813,7 +63822,7 @@
             "template": "增加{0}%最大符文保護",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Runic_Ward",
+              "url": "https://poe2db.tw/us/Rune",
               "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
             }
           }
