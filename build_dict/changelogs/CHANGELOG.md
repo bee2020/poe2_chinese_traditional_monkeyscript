@@ -1,6 +1,6 @@
 # POE2 官方交易字典最新编译报告 (CHANGELOG)
 
-> 🕒 报告时间（北京时间）：2026/11/24 17:00:28
+> 🕒 报告时间（北京时间）：2026/11/26 15:28:20
 
 ---
 
@@ -85,9 +85,7 @@
 
 ### ⚡ 核心词缀变动 (stats.json)
 
-**🟢 新增 (1 项)**
-
-- <code>[fractured] Allocates Licking Wounds</code> ➜ <code>配置舔舐傷口</code>
+> 🟢 无内容变动
 
 ### 🪙 通货材料变动 (static.json)
 

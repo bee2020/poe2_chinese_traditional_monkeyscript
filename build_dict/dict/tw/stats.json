@@ -505,8 +505,8 @@
             "template": "你身上每有一個詛咒，增加{0}%傷害",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Focus",
-              "key": "[\"Warding_Fetish\",\"implicitMod\",\"\",[\"Curse\"]]"
+              "url": "https://poe2db.tw/us/Unique_item",
+              "key": "[\"Shackles_of_the_Wretched\",\"mutatedMod\",\"\",[\"Curse\"]]"
             }
           }
         },
@@ -3837,8 +3837,8 @@
             "template": "荊棘傷害的{0}%轉化為生命偷取",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Amulets",
-              "key": "[\"Vengeance\",\"implicitMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
+              "url": "https://poe2db.tw/us/Unique_item",
+              "key": "[\"Belly_of_the_Beast\",\"mutatedMod\",\"\",[\"LifeLeech\",\"Thorns\"]]"
             }
           }
         },
@@ -6012,8 +6012,8 @@
             "template": "所承受傷害的{0}%補償為生命、魔力和能量護盾",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Amulets",
-              "key": "[\"Glazed_Flesh\",\"implicitMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
+              "url": "https://poe2db.tw/us/Unique_item",
+              "key": "[\"Serpents_Lesson\",\"mutatedMod\",\"\",[\"EnergyShield\",\"Recoup\"]]"
             }
           }
         },
@@ -60516,8 +60516,8 @@
             "template": "使用技能時每消耗一個連擊可獲得終極{0}秒",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Rune",
-              "key": "[\"Legacy_of_Duality\",\"bondedMod\",\"Quarterstaves\",[\"Combo\",\"Finality\"]]"
+              "url": "https://poe2db.tw/us/Runic_Ward",
+              "key": "[\"Duality\",\"explicitMod\",\"\",[\"Combo\",\"Finality\"]]"
             }
           }
         },
@@ -62140,7 +62140,7 @@
             "template": "衝刺時增加{0}%符文保護回復率",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Rune",
+              "url": "https://poe2db.tw/us/Runic_Ward",
               "key": "[\"Emergent_Possibility\",\"implicitMod\",\"Boots\",[\"Ward\"]]"
             }
           }
@@ -63822,7 +63822,7 @@
             "template": "增加{0}%最大符文保護",
             "source": "poe2db_verified_html",
             "evidence": {
-              "url": "https://poe2db.tw/us/Rune",
+              "url": "https://poe2db.tw/us/Runic_Ward",
               "key": "[\"Warding_Rune_of_Obsession\",\"bondedMod\",\"Wands\",[\"Ward\"]]"
             }
           }
